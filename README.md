@@ -29,7 +29,7 @@ This program is composed by several different process:
 * master: the main process and the father of all the other process. It `fork()` to generate the new child process and through an `exevp()` it overwrites the child with a new computation.
 * [description:](https://github.com/leleviola/arp/blob/master/drone_sim/description.c) Introductivewindow to show all the commnd to use for the input to the user.
 * [server:](https://github.com/leleviola/arp/blob/master/drone_sim/server.c) the blackboard  of the project, implemented through a shared memory with the drone that compute all the user's inputs
-* * [map:](https://github.com/leleviola/arp/blob/master/drone_sim/map.c) window that show the geometrical position of the drone in the arena and the position's numeeric values.
+* * [window:](https://github.com/leleviola/arp/blob/master/drone_sim/window.c) window that show the geometrical position of the drone in the arena and the position's numeeric values.
 * [drone:](https://github.com/leleviola/arp/blob/master/drone_sim/drone.c) the computation side of the project, it takes the input, process it with the optimal exstimation of the drone position in the real world and share the data with the server.
 * [input:](https://github.com/leleviola/arp/blob/master/drone_sim/input.c)  Takes the user's char input. It is important to notice that the user graphic interface is a child of the input. That's needed to have a $modular$ project. In the future it will be easier (if needed) to cange the graphic interface without changing any main process of the package.
 * * [inputc:](https://github.com/leleviola/arp/blob/master/drone_sim/inputcou.c) the user graphic interface to take to user's inut only from the keyboard and only from the showed keys.
