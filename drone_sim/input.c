@@ -1,30 +1,69 @@
 #include <stdio.h>
-#include <string.h> 
-#include <fcntl.h> 
-#include <sys/stat.h> 
-#include <sys/types.h> 
-#include <unistd.h> 
 #include <stdlib.h>
+#include <unistd.h>
 #include <sys/wait.h>
+#include <sys/types.h>
+#include <errno.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <time.h>
 #include <signal.h>
-#include <termios.h>
-#include <sys/shm.h>
-#include <sys/mman.h>
-#include <stdbool.h>
-pid_t wd_pid = -1;
+#include <string.h>
 
-typedef struct{
-    bool exit_flag;
-} Flag;
+/*
+Acquired all the char and sends to the drone through pipes
+*/
+
+#define DEBUG 1
+#define NUMMOTIONS 9
+
+//v#ifndef DEBUG
+//managing signal
+//void sig_handler(int , siginfo_t *, void *);
+
+void writeToLog(FILE *, const char *);
+pid_t wd_pid;
+
+// #endif
+int spawn(const char* program, char ** arg_list) {
+    pid_t child_pid;
+    FILE *err;
+    err = fopen("logfiles/errors.log", "a");  // errors log file
+    if (err < 0) {
+        perror("INPUT, fopen: error file main");
+        return 1;
+    }
+  
+    if ((child_pid = fork()) == -1) {
+        perror("fork failed");
+        // strcat(msgerr, "INPUT: error in fork of ");
+        writeToLog(err, "INPUT: error in fork of inputcou");
+        exit(EXIT_FAILURE);
+    }
+    if (child_pid != 0)
+        return child_pid;
+    else {
+        execvp (program, arg_list);
+        perror("exec failed for inputcou");
+        writeToLog(err, "INPUT: error in execvp of inputcou");
+        exit(EXIT_FAILURE);
+    }
+}
 
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
     if (signo == SIGUSR1) {
-        FILE *debug = fopen("logfiles/debug.log", "a");
+        FILE *debug;
+        debug = fopen("logfiles/debug.log", "a");
+        if (debug < 0) {
+            perror("INPUT, fopen: debug file sgnl 2");
+            exit(EXIT_FAILURE);
+        }
         // SIGUSR1 received
         wd_pid = info->si_pid;
         //received_signal =1;
-        fprintf(debug, "%s\n", "INPUT: signal SIGUSR1 received from WATCH DOG");
+        writeToLog(debug, "INPUT: signal SIGUSR1 received from WATCH DOG");
         //printf("SERVER: Signal SIGUSR1 received from watch dog\n");
         //printf("SERVER: sending signal to wd\n");
         kill(wd_pid, SIGUSR1);
@@ -32,63 +71,66 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
     }
     
     if (signo == SIGUSR2){
-        FILE *debug = fopen("logfiles/debug.log", "a");
-        fprintf(debug, "%s\n", "INPUT: terminating by WATCH DOG");
+        FILE *debug;
+        debug = fopen("logfiles/debug.log", "a");
+        if (debug < 0) {
+            perror("INPUT, fopen: debug file signl2");
+            exit(EXIT_FAILURE);
+        }
+        writeToLog(debug, "INPUT: terminating by WATCH DOG");
         fclose(debug);
         exit(EXIT_FAILURE);
     }
     
+    
 }
 
-void writeToLog(FILE * logFile, const char *message) {
+void writeToLog(FILE *logFile, const char *message) {
+    // function to write on the files
+    time_t crtime;
+    time(&crtime);
+    fprintf(logFile,"%s => ", ctime(&crtime));
     fprintf(logFile, "%s\n", message);
     fflush(logFile);
+    /*void writeToLog(FILE * logFile, const char *message) {
+    //lock(logFile);
+    fprintf(logFile, "%s\n", message);
+    fflush(logFile);
+    //unlock(logFile);
+    / lock() per impedire che altri usino il log file -> unlock()
+}*/
 }
 
-char getKeyPress() {
-    struct termios oldt, newt;
-    char ch;
+int main (int argc, char* argv[])
+{
+    //pipe creation
+    int inpfd[2];
+    char pidstr[2][70];
+    pid_t cid;
+    int ch;
+    char realchar = '\0';
+    int counter[NUMMOTIONS];
+    FILE *inputfile;
+    FILE *debug;
+    FILE * errors;
 
-    // Get the current terminal settings
-    if (tcgetattr(STDIN_FILENO, &oldt) == -1) {
-        perror("tcgetattr");
-        // Handle the error or exit as needed
-        exit(EXIT_FAILURE);  // Return a default value indicating an error
+    debug = fopen("logfiles/debug.log", "a");
+    if (debug < 0) {
+        perror("INPUT, fopen: debug file main");
+        return 1;
+    }    // debug log file
+    errors = fopen("logfiles/errors.log", "a");  // errors log file
+    if (errors < 0) {
+        perror("INPUT, fopen: eroor file main");
+        return 1;
     }
-
-    // Disable buffering and echoing for stdin
-    newt = oldt;
-    newt.c_lflag &= ~(ICANON | ECHO);
-
-    if (tcsetattr(STDIN_FILENO, TCSANOW, &newt) == -1) {
-        perror("tcsetattr");
-        // Handle the error or exit as needed
-        exit(EXIT_FAILURE);  // Return a default value indicating an error
-    }
-
-    // Read a single character
-    ch = getchar();
-
-    // Restore the old terminal settings
-    if (tcsetattr(STDIN_FILENO, TCSANOW, &oldt) == -1) {
-        perror("tcsetattr");
-        // Handle the error or exit as needed
-        exit(EXIT_FAILURE);  // Return a default value indicating an error
-    }
-    return ch;
-}
-
-int main(int argc, char* argv[]){
-    FILE * debug = fopen("logfiles/debug.log", "a");
-    FILE * errors = fopen("logfiles/errors.log", "a");
     writeToLog(debug, "INPUT: process started");
     printf("I'm in input\n");
-    char ch;
-    int writefd;
-    sscanf(argv[1], "%d", &writefd);
-    Flag * flags;
-    
-    // SIGNALS
+
+    // Samu to implement your tie ifyou want
+
+
+    //configure the handler for sigusr1
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
     sa.sa_sigaction = sig_handler;
@@ -105,85 +147,52 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "INPUT: error in sigaction()");
         exit(EXIT_FAILURE);
     }
-    /*
-    // SHARED MEMORY OPENING AND MAPPING
-    const char * shm_name = "/flagsmem";
-    const int SIZE = 4096;
-    int shm_fd;
-    shm_fd = shm_open(shm_name, O_CREAT| O_RDWR, 0666); // open shared memory segment for read and write
-    if (shm_fd == 1) {
-        perror("shared memory segment failed\n");
-        writeToLog(errors, "DRONE:shared memory segment failed");
-        exit(EXIT_FAILURE);
-    }
-    
+    writeToLog(debug, "INPUT: Signal succesfully created");
 
-    flags = (Flag *)mmap(0, SIZE, PROT_WRITE, MAP_SHARED, shm_fd, 0); // protocol write
-    if (flags == MAP_FAILED) {
-        perror("Map failed");
-        writeToLog(errors, "Map Failed");
-        return 1;
-    }
-    flags->exit_flag = false;*/
-    // SHARED MEMORY
+    //create input file
 
-    
-    // KEY READING
-    while(1){
-        
-        ch = getKeyPress();
-        
-        // Interpret the command and perform corresponding action
-        switch (ch) {
-            case 'w':
-                printf("Drone moving forward-left.\n");
-                
-                break;
-            case 's':
-                printf("Drone moving left.\n");
-               
-                break;
-            case 'd':
-                printf("Drone is breaking.\n");
-                
-                break;
-            case 'f':
-                printf("Drone moving right.\n");
-                break;
-            case 'e':
-                printf("Drone moving forward.\n");
-                break;
-            case 'r':
-                printf("Drone moving forward-right.\n");
-                break;
-            case 'x':
-                printf("Drone moving back-left.\n");
-                break;
-            case 'c':
-                printf("Drone moving back.\n");
-                break;
-            case 'v':
-                printf("Drone moving back-right.\n");
-                break;
-            case 'q':
-                printf("INPUT: Exiting program...\n");
-                kill(wd_pid, SIGUSR2);
-                //flags->exit_flag = true;
-                exit(EXIT_FAILURE);  // Exit the program
-            case 'u':
-                printf("Resetting drone...\n");
-                break;
-            case 'b':
-                printf("Goes on by inertia\n");
-                break;
-            default:
-                //printf("INPUT: Unknown command. Please enter a valid command.\n");
-                break;
+// #ifndef DEBUG
+    // opening pipe through input and userinterface
+    if (pipe(inpfd) < 0) {
+        perror("pipe input ncurses");
+        writeToLog(errors, "INPUT: pipe input ncurses");
+        return 2;
+    }
+    for (int i = 0; i < 2; i++) {
+        sprintf(pidstr[i], "%d", inpfd[i]);
+    }
+
+    char * argcou[] = {"konsole", "-e","./inputcou",pidstr[0], pidstr[1], NULL};
+    cid = spawn("konsole",argcou);
+    // closing write
+    close(inpfd[1]);
+    // Doing input process
+    int pinpdrone[2];
+
+    // opening pipe trough drone and input
+    for (int i = 0; i < 2; i++) {
+        pinpdrone[i] = atoi(argv[i]); // converts from the string to the integer
+    }
+    close(pinpdrone[0]);
+
+    // while to get char
+    while(ch != 'Q') {
+        if ((read(inpfd[0], &ch, sizeof(char))) < 0) {
+            perror("read input ncurses");
+            writeToLog(errors, "Input: read pipe input ncurses");
+            return 3;
         }
-
-        write(writefd, &ch, sizeof(char));
-        fsync(writefd);
+        if ((write(pinpdrone[1], &ch, sizeof(char))) < 0) {
+            perror("write input ncurses");
+            writeToLog(errors, "Input: write to drone pipe");
+            return 3;
+        }
     }
+    // closing read
+    close(inpfd[0]);
+    close(pinpdrone[1]);
 
+    wait(NULL); // wait for the child to terminate
+// #endif
     return 0;
 }

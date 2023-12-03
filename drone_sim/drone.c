@@ -16,19 +16,19 @@
 #include <stdbool.h>
 #include <time.h>
 #include <sys/file.h>
+#define SEM_PATH_1 "/sem_drone1"
+#define SEM_PATH_2 "/sem_drone2"
 
 #define MASS 0.249    // kg
 #define FRICTION_COEFFICIENT 0.1    // N*s*m
-#define FORCE_MODULE 1 //N
-#define T 0.1 //s
 
-//typedef enum {NO=0, OVER=1, UNDER=2} EDGE;
+typedef enum {NO=0, OVER=1, UNDER=2} EDGE;
 
 typedef struct {
     int x;
     int y;
-    //EDGE isOnEdgex; // if it is on the edges, for assignment 2
-    //EDGE isOnEdgey;
+    EDGE isOnEdgex; // if it is on the edges, for assignment 2
+    EDGE isOnEdgey;
 } Drone;    // Drone object
 
 pid_t wd_pid = -1;
@@ -82,7 +82,10 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
         FILE *debug = fopen("logfiles/debug.log", "a");
         // SIGUSR1 received
         wd_pid = info->si_pid;
+        //received_signal =1;
         fprintf(debug, "%s\n", "DRONE: signal SIGUSR1 received from WATCH DOG");
+        //printf("SERVER: Signal SIGUSR1 received from watch dog\n");
+        //printf("SERVER: sending signal to wd\n");
         kill(wd_pid, SIGUSR1);
         fclose(debug);
     }
@@ -110,7 +113,15 @@ int main(int argc, char* argv[]){
     char input;
 
     Drone * drone;    // drone object
+    sem_t *sem_drone;  // semaphore for writing and reading drone
+// OPENING SEMAPHORES
+    sem_drone = sem_open(SEM_PATH_1, O_RDWR);  // Open existing semaphore
 
+    if (sem_drone == SEM_FAILED) {
+        perror("sem_open");
+        writeToLog(errors, "DRONE: error in opening semaphore");
+        exit(EXIT_FAILURE);
+    }
 // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -146,6 +157,17 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "Map Failed");
         return 1;
     }
+    
+
+    // initialization of parameters
+    // these are the phisical characteristics of the drone, beacuse of this are not imported from the server
+    // I have to make them imported from a parameter file
+    float modF = 1;   //N
+    
+    float T = 0.1;  //s
+    /*
+    float a = m/(T*T);  // 25
+    float b = k/T;  // 5*/
 
     int F[2]={0, 0};    // drone initially stopped
 
@@ -160,25 +182,44 @@ int main(int argc, char* argv[]){
     int vf[] = {1,1};
     
     //import drone initial position from the server
-    sleep(2); // gives the time to the server to initialize starting values
+    sleep(2); // gives the time to the server to initialize staring values
     int x0 = drone->x;  //starting x
     int y0 = drone->y;  //starting y
 
     float vx = 0, vy = 0;   // velocities
 
+
+    int x_1;    //xi-1
+    
+    int x_2;    //xi-2
+    int y_1;    //yi-1
+    int y_2;    //yi-2
+    float vx_1, vy_1;
+    float ax, ay;
+
     printf("DRONE: starting position: x = %d; y = %d \n",x0, y0);
     //initializes the drone's coordinates
     int x = x0;
     int y = y0;
-    int re; //return of the read function
+    
+    int re;
     //int edgx, edgy;
     while(1){
         bool brake = false;
         // t->t+1
-
         //edgx = drone->isOnEdgex;
         //edgy = drone->isOnEdgey;
+        /*
+        x_1 = x;
+        
+        x_2 = x_1;
+        
+        y_1 = y;
+        y_2 = y_1;
 
+        vx_1 = vx;
+        vy_1 = vy;
+        */
         // select for skipping the switch if no key is pressed
         struct timeval timeout;
         timeout.tv_sec = 0;  
@@ -199,19 +240,23 @@ int main(int argc, char* argv[]){
         }
         else{
             
-            re = read(keyfd, &input, sizeof(char)); //reads input
+            re = read(keyfd, &input, sizeof(char));
             if (re== -1){
                 perror("read");
-                writeToLog(errors, "DRONE: error in read");
             }
+            printf("%d\n ", re);
+        
+            printf(" %c \n", input);
+
+            // aggiungere select per far andare avanti
             switch (input) {
                 case 'w':
                     for(int i=0; i<2; i++)
-                        F[i] =F[i] + FORCE_MODULE * wf[i];
+                        F[i] =F[i] + modF * wf[i];
                     break;
                 case 's':
                     for(int i=0; i<2; i++)
-                        F[i] =F[i] + FORCE_MODULE * sf[i];
+                        F[i] =F[i] + modF * sf[i];
                     break;
                 case 'd':
                     // goes on by inertia
@@ -222,52 +267,41 @@ int main(int argc, char* argv[]){
                     // frena
                     
                     F[0] = 0;
-                    F[1] = 0;
+                    
                     if ((int)vx>0){
-                        F[0] += -FORCE_MODULE;
+                        F[0] += -1;
                         brake = true;
                     }
                     else if ((int)vx<0){
-                        F[0] += FORCE_MODULE;
+                        F[0] += 1;
                         brake = true;
                     }
                     else
                         F[0] = 0;
-
-                    if ((int)vy>0){
-                        F[1] += -FORCE_MODULE;
-                        brake = true;
-                    }
-                    else if ((int)vy<0){
-                        F[1] += +FORCE_MODULE;
-                        brake = true;
-                    }
-                    else
-                        F[1] = 0;
                     break;
                 case 'f':
                     for(int i=0; i<2; i++)
-                        F[i] += FORCE_MODULE * ff[i];
+                        F[i] += modF * ff[i];
                     break;
                 case 'e':
                     for(int i=0; i<2; i++)
-                        F[i] += FORCE_MODULE * ef[i];
+                        F[i] +=modF * ef[i];
                     break;
                 case 'r':
                     for(int i=0; i<2; i++)
-                        F[i] = F[i] + FORCE_MODULE * rf[i];
+                        F[i] = F[i] + modF * rf[i];
                     break;
                 case 'x':
                     for(int i=0; i<2; i++)
-                        F[i] = F[i] + FORCE_MODULE * xf[i];
+                        F[i] = F[i] + modF * xf[i];
                     break;
                 case 'c':
                     for(int i=0; i<2; i++)
-                        F[i] = F[i] + FORCE_MODULE * cf[i];
+                        F[i] = F[i] + modF * cf[i];
                     break;
                 case 'v':
                     for(int i=0; i<2;i++)
-                        F[i] = F[i] + FORCE_MODULE * vf[i];
+                        F[i] = F[i] + modF * vf[i];
                     break;
                 case 'q':
                     //kill(wd_pid, SIGUSR2);
@@ -281,6 +315,13 @@ int main(int argc, char* argv[]){
                     F[1] = 0;
                     vx = 0;
                     vy = 0;
+                    /*
+                    x_1 = 0;
+                    x_2 = 0;
+                    y_1 = 0;
+                    y_2 = 0;
+                    vx_1 = 0;
+                    vx_1 = 0;*/
                     break;
                 default:
                     break;
@@ -289,7 +330,6 @@ int main(int argc, char* argv[]){
         updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
         if(brake){
             F[0] = 0;
-            F[1] = 0;
         }
 
         /* //THIS REGARDS 2ND ASSIGNMENT
@@ -325,6 +365,7 @@ int main(int argc, char* argv[]){
         exit(EXIT_FAILURE);
     }
 
+    sem_close(sem_drone);
     munmap(drone, SIZE);
     fclose(debug);
     fclose(errors);

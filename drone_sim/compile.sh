@@ -3,8 +3,9 @@ gcc -c win.c
 # gcc -shared -o  libwindow.so window.o
 cd ..
 # Compile the main files
-gcc -c inputcou.c
+gcc -c inputcou_fabietto.c
 gcc -c description.c 
+gcc -c input_fabietto.c -o input_fabietto.
 
 gcc -o inputc inputcou_fabietto.o library/win.o -lncurses
 gcc -o description description.o library/win.o -lncurses
@@ -38,7 +39,7 @@ if [ $? -eq 0 ]; then
         echo "Errore durante la compilazione di wd.c"
     fi
 
-cc -o "input" "input_fabietto.c"
+cc -o "input" "input.c"
 
 if [ $? -eq 0 ]; then
         echo "Compilazione di input_fabietto.c completata con successo"

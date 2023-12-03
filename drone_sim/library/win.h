@@ -1,5 +1,5 @@
-#ifndef WINDOW_H
-#define WINDOW_H
+#ifndef WIN_H
+#define WIN_H
 #include <ncurses.h>
 #include <curses.h>
 #include <time.h>

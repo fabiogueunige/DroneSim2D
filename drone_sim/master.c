@@ -31,23 +31,38 @@ void writeToLog(FILE *logFile, const char *message) {
 }
 
 int spawn(const char * program, char ** arg_list) {
-    FILE * errors = fopen("logfiles/errors.log", "w");
+    FILE * err = fopen("logfiles/errors.log", "a");
+    if (err < 0) {
+        perror("MASTER: fopen: errors file");
+        return 1;
+    }
     pid_t child_pid = fork();
     if (child_pid != 0)
         return child_pid;
     else {
         execvp (program, arg_list);
         perror("exec failed");
-        writeToLog(errors, "MASTER: execvp failed");
+        writeToLog(err, "MASTER: execvp failed");
         exit(EXIT_FAILURE);
     }
-    fclose(errors);
+    fclose(err);
 }
 
 int main(int argc, char* argv[]){
 
-    FILE * debug = fopen("logfiles/debug.log", "w");
-    FILE * errors = fopen("logfiles/errors.log", "w");
+    FILE * debug;
+    FILE * errors;
+
+    debug = fopen("logfiles/debug.log", "w");
+    if ((debug) < 0) {
+        perror("Master, fopen: debug file");
+        return 1;
+    }
+    errors = fopen("logfiles/errors.log", "w");
+    if (errors < 0) {
+        perror("Master, fopen: errors file");
+        return 1;
+    }
 
 // CREATING PIPE
     int pipe_fd1[2];    // pipe from input to drone
@@ -66,18 +81,19 @@ int main(int argc, char* argv[]){
     char * drone_path[] = {"./drone", piperd, NULL};
     char * input_path[] = {"./input",pipewr ,NULL};
     
-    ///char * argdes_path[] = {"konsole", "-e","./description", NULL};
+    char * argdes_path[] = {"konsole", "-e","./description", NULL};
     
     pid_t server;
     pid_t input;
     pid_t drone;
     pid_t wd;
-    /*
+
     pid_t pid_des;
     
 /// INTRO
     // char keyy;
-     pid_des = spawn ("./description", argdes_path, errors);
+    pid_des = spawn("konsole", argdes_path);
+    
     
     printf("\t\t  ____________________________________\n");
     printf("\t\t |                                    |\n");
@@ -102,44 +118,16 @@ int main(int argc, char* argv[]){
 
     printf("Okay, now you can press");
     printf(" any key to start the program.\n");
+
     wait(NULL);
     writeToLog(debug, "MASTER: Description terminated");
-    */
     
-// INTRO
-    char keyy;
-    bool right_key= false;
-    printf("\t\t  ____________________________________\n");
-    printf("\t\t |                                    |\n");
-    printf("\t\t |   Advanced and Robot Programming   |\n");
-    printf("\t\t |           DRONE: part 1            |\n");
-    printf("\t\t |____________________________________|\n");
-    printf("\n");
-    printf("\t\t             by Samuele Viola\n\n");
-    printf("explanation...\n");
-    printf("Press s to start or q to quit, then press ENTER...\n");
-    scanf("%c", &keyy);
-    do{
-        if (keyy == 's'){
-            right_key = true;
-            printf("LET'S GO!");
-        }
-        else if(keyy == 'q'){
-            right_key = true;
-            exit(EXIT_SUCCESS);
-        }
-        else{
-            right_key = false;
-            printf("\nPress s to start or q to quit, then press ENTER...\n");
-            scanf("%c", &keyy);
-        }
-    }while(!right_key);
 
 // EXECUTING PROCESSES
     server = spawn("./server", server_path);
     usleep(500000);
     drone = spawn("./drone", drone_path);
-     usleep(500000);
+    usleep(500000);
     input =  spawn("./input", input_path);
     //usleep(500000);
     pid_t pidList[] = {server, drone, input};

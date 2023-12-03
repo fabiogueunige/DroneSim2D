@@ -124,6 +124,3 @@ void printCounter(WINDOW *win, int num) {
     mvwprintw(win, y, x + 1, "%d", num);
     wrefresh(win);
 }
-int main(){
-    return 0;
-}

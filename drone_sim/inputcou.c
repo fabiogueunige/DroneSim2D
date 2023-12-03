@@ -20,7 +20,7 @@ void counterImplementation (int *cnt, char ct, int lung);
 
 int main (int argc, char* argv[])
 {
-    WINDOW *cwin[NUMWINDOWS];
+    WINDOW *cwin[NUMWINDOWS + 1];
     int counter[4] = {0,0,0,0}; // s, e, f, c
     char realchar = '\0';
     int lng = 4;

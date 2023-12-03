@@ -19,7 +19,7 @@ int main (int argc, char* argv[])
 {
     // WINDOW *external_window;
     // WINDOW *printing_window;
-    WINDOW *arrw[NUMWINDOWS + 1]; // change numwindows in library
+    WINDOW *arrw[NUMWINDOWS]; // change numwindows in library
     char ch;
     int i, index = 0;
     // change with the new windows.c and the new functiones
