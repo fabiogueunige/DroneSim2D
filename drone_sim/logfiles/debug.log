@@ -1,0 +1,74 @@
+Sun Dec  3 02:44:22 2023
+ => SERVER: process started
+Sun Dec  3 02:44:22 2023
+ => SERVER: generated shared memory
+Sun Dec  3 02:44:22 2023
+ => SERVER: initialized starting values
+Sun Dec  3 02:44:23 2023
+ => DRONE: process started
+INPUT: process started
+Sun Dec  3 02:44:24 2023
+ => WINDOW: process started
+Sun Dec  3 02:44:24 2023
+ => WATCH DOG: process started
+Sun Dec  3 02:44:24 2023
+ => WATCH DOG: sending signals to processes
+SERVER: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:24 2023
+ => WATCH DOG: SERVER received signal
+DRONE: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:24 2023
+ => WATCH DOG: DRONE received signal
+INPUT: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:24 2023
+ => WATCH DOG: INPUT received signal
+Sun Dec  3 02:44:34 2023
+ => WATCH DOG: sending signals to processes
+SERVER: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:34 2023
+ => WATCH DOG: SERVER received signal
+DRONE: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:34 2023
+ => WATCH DOG: DRONE received signal
+INPUT: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:34 2023
+ => WATCH DOG: INPUT received signal
+Sun Dec  3 02:44:44 2023
+ => WATCH DOG: sending signals to processes
+SERVER: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:44 2023
+ => WATCH DOG: SERVER received signal
+DRONE: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:44 2023
+ => WATCH DOG: DRONE received signal
+INPUT: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:44 2023
+ => WATCH DOG: INPUT received signal
+Sun Dec  3 02:44:54 2023
+ => WATCH DOG: sending signals to processes
+SERVER: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:54 2023
+ => WATCH DOG: SERVER received signal
+DRONE: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:54 2023
+ => WATCH DOG: DRONE received signal
+INPUT: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:44:54 2023
+ => WATCH DOG: INPUT received signal
+Sun Dec  3 02:45:03 2023
+ => SERVER: opened window
+Sun Dec  3 02:45:03 2023
+ => SERVER: generated shared memory
+Sun Dec  3 02:45:03 2023
+ => SERVER: initialized starting values
+Sun Dec  3 02:45:04 2023
+ => WATCH DOG: sending signals to processes
+SERVER: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:45:04 2023
+ => WATCH DOG: SERVER received signal
+DRONE: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:45:04 2023
+ => WATCH DOG: DRONE received signal
+INPUT: signal SIGUSR1 received from WATCH DOG
+Sun Dec  3 02:45:04 2023
+ => WATCH DOG: INPUT received signal
