@@ -10,6 +10,15 @@
 #include <time.h>
 #include <sys/file.h>
 
+#define NUMPROCESS 6
+#define SERVER 0
+#define DRONE 1
+#define INPUT 2
+#define WATCHDOG 3
+#define OBSTACLES 4
+#define TARGETS 5
+
+
 void writeToLog(FILE *logFile, const char *message) {
     time_t crtime;
     time(&crtime);
@@ -32,8 +41,14 @@ void writeToLog(FILE *logFile, const char *message) {
 
 int spawn(const char * program, char ** arg_list) {
     FILE * errors = fopen("logfiles/errors.log", "a");
-    pid_t child_pid = fork();
-    if (child_pid != 0)
+    pid_t child_pid;
+    if ((child_pid = fork()) == -1) {
+        perror("fork");
+        printf("error in fork");
+        writeToLog(errors, "MASTER: fork failed");
+        return -1;
+    }
+    else if (child_pid == 0)
         return child_pid;
     else {
         execvp (program, arg_list);
@@ -48,8 +63,45 @@ int main(int argc, char* argv[]){
 
     FILE * debug = fopen("logfiles/debug.log", "w");
     FILE * errors = fopen("logfiles/errors.log", "w");
+/*
+// Creating PIPE (new version)
+    int pipe_fd[NUMPROCESS][2];   
+    for (int i = 0; i < NUMPROCESS; i++){
+        if (pipe(pipe_fd[i]) == -1){
+            perror("error in pipe");
+            writeToLog(errors, "MASTER: error opening pipe;");
+        }
+    }
 
-// CREATING PIPE
+    char piperd[NUMPROCESS][10];    // string that contains the readable fd of pipe_fd
+    char pipewr[NUMPROCESS][10];    // string that contains the writeable fd of pipe_fd
+    for (int i = 0; i < NUMPROCESS; i++){
+        sprintf(piperd[i], "%d", pipe_fd[i][0]);
+        sprintf(pipewr[i], "%d", pipe_fd[i][1]);
+    }
+
+    // processes path
+    char * server_path[] = {"./server", NULL};
+    char * drone_path[] = {"./drone", piperd[DRONE], piperd[INPUT], piperd[OBSTACLES], piperd[TARGETS], NULL};
+    char * input_path[] = {"./input",pipewr[INPUT] ,NULL};
+    char * obstacles_path[] = {"./obstacles", pipewr[OBSTACLES], NULL};
+    char * targets_path[] = {"./targets", pipewr[TARGETS], NULL};
+    
+    ///char * argdes_path[] = {"konsole", "-e","./description", NULL};
+    pid_t pid [NUMPROCESS];
+
+*/
+
+    /*
+    pid_t server;
+    pid_t input;
+    pid_t drone;
+    pid_t obstacles;
+    pid_t targets;
+    pid_t wd;
+    */
+
+// CREATING PIPE (old version)
     int pipe_fd1[2];    // pipe from input to drone
     if (pipe(pipe_fd1) == -1){
         perror("error in pipe");
@@ -66,20 +118,35 @@ int main(int argc, char* argv[]){
     char * drone_path[] = {"./drone", piperd, NULL};
     char * input_path[] = {"./input",pipewr ,NULL};
     
-    ///char * argdes_path[] = {"konsole", "-e","./description", NULL};
+    ///
     
     pid_t server;
     pid_t input;
     pid_t drone;
     pid_t wd;
     
+// Starting the introduction
+    pid_t pid_des;
+    if ((pid_des = fork()) == -1) {
+        perror("fork description");
+        return 2;
+    }
+    if (pid_des == 0) {
+        // child description process
+        char * argdes[] = {"konsole", "-e","./description", NULL};
+        if (execvp("konsole", argdes) == -1){
+            perror("exec failed");
+            return -1;
+        }
+    }
+
 // INTRO
     char keyy;
     bool right_key= false;
     printf("\t\t  ____________________________________\n");
     printf("\t\t |                                    |\n");
     printf("\t\t |   Advanced and Robot Programming   |\n");
-    printf("\t\t |           DRONE: part 1            |\n");
+    printf("\t\t |           DRONE: part 2            |\n");
     printf("\t\t |____________________________________|\n");
     printf("\n");
     printf("\t\t    by Samuele Viola and Fabio Guelfi\n\n");
@@ -101,23 +168,10 @@ int main(int argc, char* argv[]){
     printf("\t\t\t | U: RESET THE DRONE   |\n");
     printf("\t\t\t | Q: QUIT THE GAME     |\n");
     printf("\t\t\t |______________________|\n\n\n");
-    printf("Press s to start or q to quit, then press ENTER...\n");
-    scanf("%c", &keyy);
-    do{
-        if (keyy == 's'){
-            right_key = true;
-            printf("\n\n\n\n\t\t\t\tLET'S GO!\n\n\n\n");
-        }
-        else if(keyy == 'q'){
-            right_key = true;
-            exit(EXIT_SUCCESS);
-        }
-        else{
-            right_key = false;
-            printf("\nPress s to start or q to quit, then press ENTER...\n");
-            scanf("%c", &keyy);
-        }
-    }while(!right_key);
+    printf("Press any key to start\n");
+    
+    // waiting for the user to press a key to end the introduction
+    wait(NULL);
 
 // EXECUTING PROCESSES
     server = spawn("./server", server_path);
