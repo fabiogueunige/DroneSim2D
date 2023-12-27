@@ -1,0 +1,28 @@
+Tue Dec 26 20:23:32 2023
+ => SERVER: process started
+Tue Dec 26 20:23:32 2023
+ => SERVER: generated shared memory
+Tue Dec 26 20:23:32 2023
+ => SERVER: initialized starting values
+Tue Dec 26 20:23:32 2023
+ => WINDOW: process started
+Tue Dec 26 20:23:32 2023
+ => WINDOW: 13275
+Tue Dec 26 20:23:32 2023
+ => DRONE: process started
+INPUT: process started
+Tue Dec 26 20:23:34 2023
+ => WATCH DOG: process started
+Tue Dec 26 20:23:34 2023
+ => WATCH DOG: sending signals to processes
+INPUT: signal SIGUSR1 received from WATCH DOG
+SERVER: signal SIGUSR1 received from WATCH DOG
+DRONE: signal SIGUSR1 received from WATCH DOG
+SERVER: signal SIGUSR1 received from WATCH DOG
+INPUT: signal SIGUSR1 received from WATCH DOG
+INPUT: signal SIGUSR1 received from WATCH DOG
+SERVER: signal SIGUSR1 received from WATCH DOG
+DRONE: signal SIGUSR1 received from WATCH DOG
+Tue Dec 26 20:23:34 2023
+ => WATCH DOG: SERVER is not responding, terminating the program...
+SERVER: terminating with return value 1...

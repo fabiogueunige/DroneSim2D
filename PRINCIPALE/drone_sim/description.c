@@ -10,7 +10,7 @@
 #include <semaphore.h>
 #include <sys/mman.h>
 #include <signal.h>
-#include "library/window.h"
+#include "library/win.h"
 
 #define DEBUG 1
 
@@ -19,7 +19,7 @@ int main (int argc, char* argv[])
 {
     // WINDOW *external_window;
     // WINDOW *printing_window;
-    WINDOW *arrw[NUMWINDOWS + 1]; // change numwindows in library
+    WINDOW *arrw[NUMWINDOWS]; // change numwindows in library
     char ch;
     int i, index = 0;
     // change with the new windows.c and the new functiones
@@ -43,7 +43,7 @@ int main (int argc, char* argv[])
     init_pair(1,COLOR_GREEN,COLOR_BLACK);
     squareCreation(arrw,h,w, &nrows,&ncols);
     printw("Description of the game: \n");
-    printw("\nThis game is a simple game of a drone control, where the user can press \nthis buttons to drive the robot to avoid the obstacles and reach the targets.\n");
+    // printw("\nThis game is a simple game of a drone control, where the user can press \nthis buttons to drive the robot to avoid the obstacles and reach the targets.\n");
     // wrefresh(external_window);
     refresh();
     // wrefresh(printing_window);
@@ -54,10 +54,10 @@ int main (int argc, char* argv[])
             case BTTW:
                 print_btt_windows(arrw[i], 'w');
                 break;
-            case BTTE:  
+            case BTTE:
                 print_btt_windows(arrw[i], 'e');
                 break;
-            case BTTR:        
+            case BTTR:  
                 print_btt_windows(arrw[i], 'r');
                 break;
             case BTTS:
@@ -65,7 +65,6 @@ int main (int argc, char* argv[])
                 break;
             case BTTD:
                 print_btt_windows(arrw[i], 'd');
-                //arrw[i] = create_new_window(Wrow, Wcol, Starty, Startx);
                 break;
             case BTTF:
                 print_btt_windows(arrw[i], 'f');
@@ -92,6 +91,7 @@ int main (int argc, char* argv[])
     }
 
     printw("\nPress any key to exit\n");
+    sleep (4);
     refresh();
     ch = getch();
     printw("Enjoy");
@@ -105,5 +105,3 @@ int main (int argc, char* argv[])
     return 0;
 }
     
-
-

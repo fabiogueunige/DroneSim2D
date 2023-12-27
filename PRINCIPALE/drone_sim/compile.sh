@@ -1,4 +1,11 @@
 # Compila il programma C
+cd library/
+gcc -c win.c 
+# gcc -shared -o  libwindow.so window.o
+cd ..
+# Compile the main files
+gcc -c description.c 
+
 cc  -o "master" "master.c"
 if [ $? -eq 0 ]; then
         echo "Compilazione di master.c completata con successo"
@@ -27,6 +34,9 @@ if [ $? -eq 0 ]; then
         echo "Errore durante la compilazione di wd.c"
     fi
 
+
+gcc -o description description.o library/win.o -lncurses
+
 cc -o "input" "input.c" "-lncurses"
 
 if [ $? -eq 0 ]; then
@@ -41,6 +51,4 @@ if [ $? -eq 0 ]; then
     else
         echo "Errore durante la compilazione di window.c"
     fi
-
-
 
