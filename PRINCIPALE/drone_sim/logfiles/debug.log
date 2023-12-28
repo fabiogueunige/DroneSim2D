@@ -1,62 +1,40 @@
-Thu Dec 28 18:18:32 2023
+Thu Dec 28 18:24:10 2023
  => SERVER: process started
-Thu Dec 28 18:18:32 2023
+Thu Dec 28 18:24:10 2023
  => SERVER: generated shared memory
-Thu Dec 28 18:18:32 2023
+Thu Dec 28 18:24:10 2023
  => SERVER: initialized starting values
-Thu Dec 28 18:18:32 2023
- => WINDOW: process started
-Thu Dec 28 18:18:32 2023
- => WINDOW: 11577
-Thu Dec 28 18:18:32 2023
+Thu Dec 28 18:24:11 2023
  => DRONE: process started
+Thu Dec 28 18:24:11 2023
+ => WINDOW: process started
+Thu Dec 28 18:24:11 2023
+ => WINDOW: 13132
 INPUT: process started
 OBSTACLES: process started
 TARGETS: process started
-Thu Dec 28 18:18:35 2023
+Thu Dec 28 18:24:13 2023
  => WATCH DOG: process started
-Thu Dec 28 18:18:35 2023
+Thu Dec 28 18:24:13 2023
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:18:35 2023
+Thu Dec 28 18:24:13 2023
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:18:35 2023
+Thu Dec 28 18:24:13 2023
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:18:35 2023
+Thu Dec 28 18:24:13 2023
  => WATCH DOG: INPUT received signal
-Thu Dec 28 18:18:46 2023
+Thu Dec 28 18:24:24 2023
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:18:46 2023
+Thu Dec 28 18:24:24 2023
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:18:46 2023
+Thu Dec 28 18:24:24 2023
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:18:46 2023
- => WATCH DOG: INPUT received signal
-Thu Dec 28 18:18:56 2023
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:18:56 2023
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:18:56 2023
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:18:56 2023
- => WATCH DOG: INPUT received signal
-Thu Dec 28 18:19:06 2023
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:19:06 2023
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:19:06 2023
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:19:06 2023
+Thu Dec 28 18:24:24 2023
  => WATCH DOG: INPUT received signal
 SERVER: terminating with return value 1...

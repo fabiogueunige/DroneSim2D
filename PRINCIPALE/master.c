@@ -11,13 +11,15 @@
 #include <sys/file.h>
 
 #define NUMPROCESS 6
-#define NUMPIPE 7 //diventa 7
+#define NUMPIPE 1 //diventa 7
 #define SERVER 0
 #define DRONE 1
 #define INPUT 2
 #define OBSTACLES 3
 #define TARGETS 4
 #define WATCHDOG 5
+
+
 
 void writeToLog(FILE *logFile, const char *message) {
     time_t crtime;
@@ -41,8 +43,14 @@ void writeToLog(FILE *logFile, const char *message) {
 
 int spawn(const char * program, char ** arg_list) {
     FILE * errors = fopen("logfiles/errors.log", "a");
-    pid_t child_pid = fork();
-    if (child_pid != 0)
+    pid_t child_pid;
+    if ((child_pid = fork()) == -1) {
+        perror("fork");
+        printf("error in fork");
+        writeToLog(errors, "MASTER: fork failed");
+        return -1;
+    }
+    else if (child_pid == 0)
         return child_pid;
     else {
         execvp (program, arg_list);
@@ -59,12 +67,11 @@ int main(int argc, char* argv[]){
     FILE * errors = fopen("logfiles/errors.log", "w");
 
     pid_t proIds[NUMPROCESS];
-    char pidStr[NUMPROCESS - 1][50];
-    char piperd[NUMPIPE][10];    // string that contains the readable fd of pipe_fd
-    char pipewr[NUMPIPE][10];
-    int pipe_fd[NUMPIPE][2]; 
-
-    // CREATING PIPE
+    // pid_t pid_des;
+    pid_t server;
+    char piperd[NUMPIPE][70];    // string that contains the readable fd of pipe_fd
+    char pipewr[NUMPIPE][70];    // string that contains the writeable fd of pipe_fd
+    int pipe_fd[NUMPIPE][2];    // all the pipes
 /*
     pipe 0: input -> drone  = indr
     pipe 1: drone -> server = drse
@@ -74,36 +81,47 @@ int main(int argc, char* argv[]){
     pipe 5: server -> targets = seta
     pipe 6: targets -> server = tase
 */
-    // generates all the pipes
-    for (int i = 0; i < NUMPIPE; i++){
+    // Pipe lele drone input
+    
+    /*for (int i = 0; i < NUMPIPE; i++){
         if (pipe(pipe_fd[i]) == -1){
             perror("error in pipe");
             writeToLog(errors, "MASTER: error opening pipe;");
         }
     }
-    // converts the fd of the pipes in strings
+
     for (int i = 0; i < NUMPIPE; i++){
         sprintf(piperd[i], "%d", pipe_fd[i][0]);
         sprintf(pipewr[i], "%d", pipe_fd[i][1]);
+    }*/
+    int pipe_fd1[2];    // pipe from input to drone
+    if (pipe(pipe_fd1) == -1){
+        perror("error in pipe");
+        writeToLog(errors, "MASTER: error opening pipe;");
     }
 
+    char piperdi[10];    // string that contains the readable fd of pipe_fd
+    char pipewri[10];    // string that contains the writeable fd of pipe_fd
+    sprintf(piperdi, "%d", pipe_fd1[0]);
+    sprintf(pipewri, "%d", pipe_fd1[1]);
 
     // processes path
-    char * server_path[] = {"./server", piperd[1], pipewr[2],pipewr[3],piperd[4],pipewr[5],piperd[6], NULL};
-    char * drone_path[] = {"./drone", piperd[0],pipewr[1],piperd[2], NULL};
-    char * input_path[] = {"./input",pipewr[0], NULL};
-    char *obstacles_path[] = {"./obstacles",piperd[3], pipewr[4], NULL};
-    char *targets_path[] = {"./targets",piperd[5], pipewr[6], NULL};
-    
-    ///char * argdes_path[] = {"konsole", "-e","./description", NULL};
+    char * server_path[] = {"./server", NULL};
+    char * drone_path[] = {"./drone", piperdi, NULL};
+    char * input_path[] = {"./input",pipewri,NULL};
 
-    // INTRO
-    char keyy;
-    bool right_key= false;
+    //char *server_path[] = {"./server", NULL};
+    //char *drone_path[] = {"./drone",piperd[0] , NULL};
+    //char *input_path[] = {"./input",pipewr[0],NULL};
+    char *obstacles_path[] = {"./obstacles",NULL};
+    char *targets_path[] = {"./targets", NULL};
+    //char *argdes[] = {"konsole", "-e", "./description", NULL};
+
+// INTRO
     printf("\t\t  ____________________________________\n");
     printf("\t\t |                                    |\n");
     printf("\t\t |   Advanced and Robot Programming   |\n");
-    printf("\t\t |           DRONE: part 1            |\n");
+    printf("\t\t |           DRONE: part 2            |\n");
     printf("\t\t |____________________________________|\n");
     printf("\n");
     printf("\t\t    by Samuele Viola and Fabio Guelfi\n\n");
@@ -125,54 +143,64 @@ int main(int argc, char* argv[]){
     printf("\t\t\t | U: RESET THE DRONE   |\n");
     printf("\t\t\t | Q: QUIT THE GAME     |\n");
     printf("\t\t\t |______________________|\n\n\n");
-    printf("Press s to start or q to quit, then press ENTER...\n");
-    scanf("%c", &keyy);
-    do{
-        if (keyy == 's'){
-            right_key = true;
-            printf("\n\n\n\n\t\t\t\tLET'S GO!\n\n\n\n");
+    printf("Press any key to start\n");
+    
+/* description
+    if ((pid_des = fork()) == -1) {
+        perror("fork description");
+        return 2;
+    }
+    if (pid_des == 0) {
+        // child description process
+        if (execvp("konsole", argdes) == -1){
+            perror("exec failed");
+            return -1;
         }
-        else if(keyy == 'q'){
-            right_key = true;
-            exit(EXIT_SUCCESS);
-        }
-        else{
-            right_key = false;
-            printf("\nPress s to start or q to quit, then press ENTER...\n");
-            scanf("%c", &keyy);
-        }
-    }while(!right_key);
+    }
+*/
+    // wait(NULL); // Per descriptionwriteToLog(debug, "MASTER: Description terminated");
+    writeToLog(debug, "MASTER: Description terminated");
 
-    // EXECUTING PROCESSES
-    proIds[SERVER] = spawn("./server", server_path);
+    server = spawn("./server", server_path);
+    printf("server pid: %d\n", server);
     usleep(500000);
     proIds[DRONE] = spawn("./drone", drone_path);
+    printf("drone pid: %d\n", proIds[DRONE]);
     usleep(500000);
     proIds[INPUT] = spawn("./input", input_path);
+    printf("input pid: %d\n", proIds[INPUT]);
     usleep(500000);
     proIds[OBSTACLES] = spawn("./obstacles", obstacles_path);
+    printf("obstacles pid: %d\n", proIds[OBSTACLES]);
     usleep(500000);
     proIds[TARGETS] = spawn("./targets", targets_path);
+    printf("targets pid: %d\n", proIds[TARGETS]);
 
-    // Executing watchdog
-    for (size_t i = 0; i < (NUMPROCESS - 1); ++i) {  // this for cycle passes  to pidString all elements of pidList
-        sprintf(pidStr[i], "%d", proIds[i]);
-    }
-    char *wd_path[] = {"./wd", pidStr[SERVER], pidStr[DRONE], pidStr[INPUT], pidStr[OBSTACLES], pidStr[TARGETS], NULL}; 
-    sleep(1);
-    proIds[WATCHDOG] = spawn("./wd", wd_path);
-    
-    // Waiting for processes to end
-    for(int i = 0; i<4; i++){   //waits for all processes to end
-        wait(NULL); 
-    }
-    
+
     for (int i = 0; i < NUMPIPE; i++){ // Chiude pipe nel master
         close(pipe_fd[i][0]);
         close(pipe_fd[i][1]);
     }
 
+    // Costruisce il watchdog  
+    char pidStr[NUMPROCESS - 1][50];
+
+    for (size_t i = 0; i < (NUMPROCESS - 1); ++i) {  // this for cycle passes  to pidString all elements of pidList
+        sprintf(pidStr[i], "%d", proIds[i]);
+    }
+
+    char *wd_path[] = {"./wd", pidStr[SERVER], pidStr[DRONE], pidStr[INPUT], pidStr[OBSTACLES], pidStr[TARGETS], NULL}; // passes to the watch dog all the pid of the processes
+    sleep(1);
+    proIds[WATCHDOG] = spawn("./wd", wd_path);
+    
+    for(int i = 0; i < NUMPROCESS; i++) {   //waits for all processes to end
+        wait(NULL); 
+    }
+
     fclose(debug);
     fclose(errors);
     return 0;
-}
+} 
+    
+
+    
