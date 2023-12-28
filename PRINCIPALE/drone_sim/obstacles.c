@@ -14,6 +14,17 @@
 pid_t wd_pid = -1;
 bool exit_flag = false;
 
+struct obstacle {
+    int x;
+    int y;
+};
+
+typedef struct {
+    int rows;
+    int cols;
+    int nobstacles;
+} window;
+
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
     if (signo == SIGUSR1) {
@@ -46,7 +57,27 @@ int main (int argc, char *argv[])
     FILE * errors = fopen("logfiles/errors.log", "a");
     writeToLog(debug, "OBSTACLES: process started");
     printf("OBSTACLES: process started\n");
+    struct window *window;
+    
+    
+    // these var are used because there aren't pipes, but these values are imported by server
+    int rows = 100;
+    int cols = 100;
+    int nobstacles = 20;
 
+    /* for 3d assignment :
+    if (nobstacles>20){
+        printf("OBSTACLES: too many obstacles, max 20\n");
+    }
+    */
+    
+    char pos_obstacles[nobstacles][10];
+
+    int nobstacles_edge = 2 * (rows + cols);
+
+
+    struct obstacle *obstacles[nobstacles];
+    struct obstacle *edges[nobstacles_edge];
 
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -65,8 +96,18 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-
-
+    // create obstacles
+    for (int i = 0; i < nobstacles; i++){
+        //obstacles[i] = malloc(sizeof(struct obstacle)); //allocate memory for each obstacle
+        obstacles[i]->x = rand() % cols;
+        obstacles[i]->y = rand() % rows;
+        int x = obstacles[i]->x;
+        int y = obstacles[i]->y;
+        printf("OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
+        fprintf(debug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
+        sprintf(pos_obstacles[i], "%d,%d", x, y);
+        // write to server with pipe ...
+    }
 
     return 0;
 }

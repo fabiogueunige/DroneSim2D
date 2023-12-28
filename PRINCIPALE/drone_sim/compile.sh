@@ -52,3 +52,16 @@ if [ $? -eq 0 ]; then
         echo "Errore durante la compilazione di window.c"
     fi
 
+cc -o "obstacles" "obstacles.c" 
+if [ $? -eq 0 ]; then
+        echo "Compilazione di obstacles.c completata con successo"
+    else
+        echo "Errore durante la compilazione di obstacles.c"
+    fi
+    
+cc -o "targets" "targets.c" 
+if [ $? -eq 0 ]; then
+        echo "Compilazione di targets.c completata con successo"
+    else
+        echo "Errore durante la compilazione di targets.c"
+    fi
