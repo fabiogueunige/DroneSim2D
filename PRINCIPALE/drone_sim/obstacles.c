@@ -10,6 +10,10 @@
 #include <termios.h>
 #include <sys/mman.h>
 #include <stdbool.h>
+#include <time.h>
+
+
+#define MAX_OBSTACLES 20
 
 pid_t wd_pid = -1;
 bool exit_flag = false;
@@ -63,7 +67,8 @@ int main (int argc, char *argv[])
     // these var are used because there aren't pipes, but these values are imported by server
     int rows = 100;
     int cols = 100;
-    int nobstacles = 20;
+    srand(time(NULL));
+    int nobstacles = rand() % MAX_OBSTACLES;
 
     /* for 3d assignment :
     if (nobstacles>20){
@@ -98,7 +103,7 @@ int main (int argc, char *argv[])
 
     // create obstacles
     for (int i = 0; i < nobstacles; i++){
-        //obstacles[i] = malloc(sizeof(struct obstacle)); //allocate memory for each obstacle
+        obstacles[i] = malloc(sizeof(struct obstacle)); //allocate memory for each obstacle
         obstacles[i]->x = rand() % cols;
         obstacles[i]->y = rand() % rows;
         int x = obstacles[i]->x;

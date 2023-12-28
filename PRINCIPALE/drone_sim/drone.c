@@ -21,6 +21,8 @@
 #define FRICTION_COEFFICIENT 0.1    // N*s*m
 #define FORCE_MODULE 1 //N
 #define T 0.1 //s   time instants' duration
+#define NROWS 100
+#define NCOLS 100
 
 typedef struct {
     int x;
@@ -37,6 +39,8 @@ struct obstacle {
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
+float rho0 = 5; //m
+float eta = 5; 
 
 void writeToLog(FILE *logFile, const char *message) {
     time_t crtime;
@@ -61,6 +65,27 @@ void writeToLog(FILE *logFile, const char *message) {
 // Function to calculate viscous friction force
 float calculateFrictionForce(float velocity) {
     return -FRICTION_COEFFICIENT * (velocity-5);
+}
+
+int calculateRepulsiveForcex(int x, int y, int xo, int yo){
+    // calculate repulsive force in x direction
+    float rho = sqrt(pow(x-xo, 2) + pow(y-yo, 2));
+    float theta = atan2(y-yo, x-xo);
+    if (rho < rho0){
+        return eta* (1/rho - 1/rho0) * (1/pow(rho, 2)) * sin(theta);
+    }
+    else
+        return 0;
+}
+
+int calculateRepulsiveForcey(int x, int y, int xo, int yo){
+    // calclate repulsive force in y direction
+    float rho = sqrt(pow(x-xo, 2) + pow(y-yo, 2));
+    float theta = atan2(y-yo, x-xo);
+    if (rho < rho0)
+        return (eta * (1/rho - 1/rho0) * (1/pow(rho, 2)) * cos(theta));
+    else
+        return 0;
 }
 
 // Function to update position and velocity based on applied force
@@ -188,6 +213,10 @@ int main(int argc, char* argv[]){
     int x = x0;
     int y = y0;
     int re; //return of the read function
+
+    // reads obstacle position from server
+    struct obstacle edges[2*(NROWS+NCOLS)]; //edges
+
     while(!sigint_rec){
         bool brake = false;
         // t->t+1
