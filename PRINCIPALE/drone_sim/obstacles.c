@@ -10,6 +10,10 @@
 #include <termios.h>
 #include <sys/mman.h>
 #include <stdbool.h>
+#include <time.h>
+
+
+#define MAX_OBSTACLES 20
 
 pid_t wd_pid = -1;
 bool exit_flag = false;
@@ -58,12 +62,18 @@ int main (int argc, char *argv[])
     writeToLog(debug, "OBSTACLES: process started");
     printf("OBSTACLES: process started\n");
     struct window *window;
-    
+
+    // opening pipes
+    int pipeSefd[2];
+    sscanf(argv[1], "%d", &pipeSefd[0]);
+    sscanf(argv[2], "%d", &pipeSefd[1]);
+    writeToLog(debug, "OBSTACLES: pipes opened");
     
     // these var are used because there aren't pipes, but these values are imported by server
     int rows = 100;
     int cols = 100;
-    int nobstacles = 20;
+    srand(time(NULL));
+    int nobstacles = rand() % MAX_OBSTACLES;
 
     /* for 3d assignment :
     if (nobstacles>20){
@@ -98,7 +108,7 @@ int main (int argc, char *argv[])
 
     // create obstacles
     for (int i = 0; i < nobstacles; i++){
-        //obstacles[i] = malloc(sizeof(struct obstacle)); //allocate memory for each obstacle
+        obstacles[i] = malloc(sizeof(struct obstacle)); //allocate memory for each obstacle
         obstacles[i]->x = rand() % cols;
         obstacles[i]->y = rand() % rows;
         int x = obstacles[i]->x;
@@ -107,6 +117,14 @@ int main (int argc, char *argv[])
         fprintf(debug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
         sprintf(pos_obstacles[i], "%d,%d", x, y);
         // write to server with pipe ...
+    }
+
+    // closing pipes
+    for (int i = 0; i < 2; i++){
+        if (close(pipeSefd[i]) == -1){
+            perror("error in closing pipe");
+            writeToLog(errors, "OBSTACLES: error in closing pipe");
+        }
     }
 
     return 0;

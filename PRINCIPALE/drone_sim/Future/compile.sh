@@ -5,6 +5,7 @@ gcc -c win.c
 cd ..
 # Compile the main files
 gcc -c description.c 
+gcc -c inpCourses.c
 
 cc  -o "master" "master.c"
 if [ $? -eq 0 ]; then
@@ -36,13 +37,14 @@ if [ $? -eq 0 ]; then
 
 
 gcc -o description description.o library/win.o -lncurses
+gcc -o inpCourses inpCourses.o library/win.o -lncurses
 
-cc -o "input" "input.c" "-lncurses"
+cc -o "input" "inp.c"
 
 if [ $? -eq 0 ]; then
-        echo "Compilazione di input.c completata con successo"
+        echo "Compilazione di inp.c completata con successo"
     else
-        echo "Errore durante la compilazione di input.c"
+        echo "Errore durante la compilazione di inp.c"
     fi
 
 cc -o "window" "window.c" "-lncurses"
