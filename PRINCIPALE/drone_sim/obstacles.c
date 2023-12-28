@@ -17,7 +17,6 @@ bool exit_flag = false;
 struct obstacle {
     int x;
     int y;
-    // other members...
 };
 
 typedef struct {
@@ -60,10 +59,19 @@ int main (int argc, char *argv[])
     printf("OBSTACLES: process started\n");
     struct window *window;
     
+    
     // these var are used because there aren't pipes, but these values are imported by server
     int rows = 100;
     int cols = 100;
     int nobstacles = 20;
+
+    /* for 3d assignment :
+    if (nobstacles>20){
+        printf("OBSTACLES: too many obstacles, max 20\n");
+    }
+    */
+    
+    char pos_obstacles[nobstacles][10];
 
     int nobstacles_edge = 2 * (rows + cols);
 
@@ -90,19 +98,16 @@ int main (int argc, char *argv[])
 
     // create obstacles
     for (int i = 0; i < nobstacles; i++){
-        obstacles[i] = malloc(sizeof(struct obstacle));
+        //obstacles[i] = malloc(sizeof(struct obstacle)); //allocate memory for each obstacle
         obstacles[i]->x = rand() % cols;
         obstacles[i]->y = rand() % rows;
         int x = obstacles[i]->x;
         int y = obstacles[i]->y;
         printf("OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
-        sleep(1);
-
-        // sends obstacles to server
-
+        fprintf(debug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
+        sprintf(pos_obstacles[i], "%d,%d", x, y);
+        // write to server with pipe ...
     }
-
-
 
     return 0;
 }

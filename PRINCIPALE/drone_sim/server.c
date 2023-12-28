@@ -26,6 +26,13 @@ typedef struct {
     int fx, fy;
 } Drone;    // Drone object
 
+typedef struct {
+    int rows;
+    int cols;
+    int nobstacles;
+    int ntargets;
+} window;
+
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
     if (signo == SIGUSR1) {
@@ -88,7 +95,9 @@ int main(int argc, char* argv[]){
     FILE * errors = fopen("logfiles/errors.log", "a");  // errors log file
     writeToLog(debug, "SERVER: process started");
     printf("SERVER : process started\n");
-    Drone * drone;
+    Drone * drone;  // drone object
+    window * window; // window object: it gives me the number of rows, cols, obstacles and targets
+
     char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
 // OPENING SEMAPHORES
     sem_t *sem_drone;   // semaphore for writing and reading drone

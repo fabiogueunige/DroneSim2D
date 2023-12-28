@@ -13,10 +13,18 @@
 
 pid_t wd_pid = -1;
 bool exit_flag = false;
+
 typedef struct {
-    float x;
-    float y;
+    int x;
+    int y;
 } targets;
+
+typedef struct {
+    int rows;
+    int cols;
+    int nobstacles;
+    int ntargets;
+} window;
 
 
 
@@ -53,6 +61,16 @@ int main (int argc, char *argv[])
     writeToLog(debug, "TARGETS: process started");
     printf("TARGETS: process started\n");
 
+    
+    int rows, cols, ntargets;
+    
+    
+    // rows and cols and ntargets value is passed from server using pipes, now they will be initialized here
+    rows = 100;
+    cols = 100;
+    ntargets = 10;
+    targets targets[ntargets];
+    char pos_targets[ntargets][10];
 
 
     struct sigaction sa; //initialize sigaction
@@ -72,8 +90,13 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-
-
+    for(int i = 0; i<ntargets; i++){
+        targets[i].x = rand() % rows;
+        targets[i].y = rand() % cols;
+        printf("TARGETS: target %d: x = %d, y = %d\n", i, targets[i].x, targets[i].y);
+        sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
+        // write to server with pipe
+    }
 
     return 0;
 }

@@ -30,6 +30,11 @@ typedef struct {
     int fx, fy;
 } Drone;    // Drone object
 
+struct obstacle {
+    int x;
+    int y;
+};
+
 pid_t wd_pid = -1;
 bool sigint_rec = false;
 
