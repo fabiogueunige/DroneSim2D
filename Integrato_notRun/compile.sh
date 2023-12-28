@@ -1,11 +1,16 @@
-# Compila il programma C
 cd library/
 gcc -c win.c 
 # gcc -shared -o  libwindow.so window.o
 cd ..
 # Compile the main files
+gcc -c inputcou_fabietto.c
 gcc -c description.c 
+gcc -c input_fabietto.c -o input_fabietto.
 
+gcc -o inputc inputcou_fabietto.o library/win.o -lncurses
+gcc -o description description.o library/win.o -lncurses
+
+# Compila il programma C
 cc  -o "master" "master.c"
 if [ $? -eq 0 ]; then
         echo "Compilazione di master.c completata con successo"
@@ -34,13 +39,10 @@ if [ $? -eq 0 ]; then
         echo "Errore durante la compilazione di wd.c"
     fi
 
-
-gcc -o description description.o library/win.o -lncurses
-
-cc -o "input" "input.c" "-lncurses"
+cc -o "input" "input.c"
 
 if [ $? -eq 0 ]; then
-        echo "Compilazione di input.c completata con successo"
+        echo "Compilazione di input_fabietto.c completata con successo"
     else
         echo "Errore durante la compilazione di input.c"
     fi
@@ -52,16 +54,5 @@ if [ $? -eq 0 ]; then
         echo "Errore durante la compilazione di window.c"
     fi
 
-cc -o "obstacles" "obstacles.c" 
-if [ $? -eq 0 ]; then
-        echo "Compilazione di obstacles.c completata con successo"
-    else
-        echo "Errore durante la compilazione di obstacles.c"
-    fi
-    
-cc -o "targets" "targets.c" 
-if [ $? -eq 0 ]; then
-        echo "Compilazione di targets.c completata con successo"
-    else
-        echo "Errore durante la compilazione di targets.c"
-    fi
+
+

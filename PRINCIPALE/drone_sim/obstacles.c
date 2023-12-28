@@ -1,0 +1,108 @@
+#include <stdio.h>
+#include <string.h> 
+#include <fcntl.h> 
+#include <sys/stat.h> 
+#include <sys/types.h> 
+#include <unistd.h> 
+#include <stdlib.h>
+#include <sys/wait.h>
+#include <signal.h>
+#include <termios.h>
+#include <sys/mman.h>
+#include <stdbool.h>
+
+pid_t wd_pid = -1;
+bool exit_flag = false;
+
+struct obstacle {
+    int x;
+    int y;
+    // other members...
+};
+
+typedef struct {
+    int rows;
+    int cols;
+    int nobstacles;
+} window;
+
+void sig_handler(int signo, siginfo_t *info, void *context) {
+
+    if (signo == SIGUSR1) {
+        FILE *debug = fopen("logfiles/debug.log", "a");
+        // SIGUSR1 received
+        wd_pid = info->si_pid;
+        fprintf(debug, "%s\n", "OBSTACLES: signal SIGUSR1 received from WATCH DOG");
+        kill(wd_pid, SIGUSR1);
+        fclose(debug);
+    }
+    
+    if (signo == SIGUSR2){
+        FILE *debug = fopen("logfiles/debug.log", "a");
+        fprintf(debug, "%s\n", "OBSTACLES: terminating by WATCH DOG");
+        fclose(debug);
+        exit(EXIT_FAILURE);
+    }
+    
+}
+
+void writeToLog(FILE * logFile, const char *message) {
+    fprintf(logFile, "%s\n", message);
+    fflush(logFile);
+}
+
+
+int main (int argc, char *argv[]) 
+{
+    FILE * debug = fopen("logfiles/debug.log", "a");
+    FILE * errors = fopen("logfiles/errors.log", "a");
+    writeToLog(debug, "OBSTACLES: process started");
+    printf("OBSTACLES: process started\n");
+    struct window *window;
+    
+    // these var are used because there aren't pipes, but these values are imported by server
+    int rows = 100;
+    int cols = 100;
+    int nobstacles = 20;
+
+    int nobstacles_edge = 2 * (rows + cols);
+
+
+    struct obstacle *obstacles[nobstacles];
+    struct obstacle *edges[nobstacles_edge];
+
+    struct sigaction sa; //initialize sigaction
+    sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
+    sa.sa_sigaction = sig_handler;
+
+    // Register the signal handler for SIGUSR1
+    if (sigaction(SIGUSR1, &sa, NULL) == -1) {
+        perror("sigaction");
+        writeToLog(errors, "INPUT: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+
+    if(sigaction(SIGUSR2, &sa, NULL) == -1){
+        perror("sigaction");
+        writeToLog(errors, "INPUT: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+
+    // create obstacles
+    for (int i = 0; i < nobstacles; i++){
+        obstacles[i] = malloc(sizeof(struct obstacle));
+        obstacles[i]->x = rand() % cols;
+        obstacles[i]->y = rand() % rows;
+        int x = obstacles[i]->x;
+        int y = obstacles[i]->y;
+        printf("OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
+        sleep(1);
+
+        // sends obstacles to server
+
+    }
+
+
+
+    return 0;
+}
