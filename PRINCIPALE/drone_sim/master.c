@@ -70,7 +70,7 @@ int main(int argc, char* argv[]){
     pipe 1: drone -> server = drse
     pipe 2: server -> drone = sedr
     pipe 3: server -> obstacles = seob
-    pipe 4: obstacles -> server = obse
+    pipe 4: obstacles -> server = obse 
     pipe 5: server -> targets = seta
     pipe 6: targets -> server = tase
 */

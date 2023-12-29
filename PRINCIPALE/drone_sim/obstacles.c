@@ -82,8 +82,12 @@ int main (int argc, char *argv[])
     */
     
     char pos_obstacles[nobstacles][10];
-
+    char pos_edges[2*(rows+cols)][10];
     int nobstacles_edge = 2 * (rows + cols);
+    int strlength;
+    strlength = 10 * nobstacles + 10;
+
+    char pos_all_obs[strlength];
 
 
     struct obstacle *obstacles[nobstacles];
@@ -119,7 +123,36 @@ int main (int argc, char *argv[])
         // write to server with pipe ...
     }
 
+    // create edges
+    for (int i = 0; i< rows; i++){
+        edges[i] = malloc(sizeof(struct obstacle));
+        edges[i]->x = 0;
+        edges[i]->y = i;
+        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
+        edges[i+rows+cols]->x = cols-1;
+        edges[i+rows+cols]->y = i;
+        printf("OBSTACLES: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        printf("OBSTACLES: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+        sprintf(pos_edges[i], "%d,%d", edges[i]->x, edges[i]->y);
+        sprintf(pos_edges[i+rows+cols], "%d,%d", edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+        // write to server with pipe ...
+    }
+    
+    for (int i = rows; i< rows+cols; i++){
+        edges[i] = malloc(sizeof(struct obstacle));
+        edges[i]->x = i;
+        edges[i]->y = 0;
+        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
+        edges[i+rows+cols]->x = i;
+        edges[i+rows+cols]->y = cols-1;
+        printf("OBSTACLES: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        printf("OBSTACLES: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+        sprintf(pos_edges[i], "%d,%d", edges[i]->x, edges[i]->y);
+        // write to server with pipe ...
+    }
+
     // closing pipes
+    
     for (int i = 0; i < 2; i++){
         if (close(pipeSefd[i]) == -1){
             perror("error in closing pipe");

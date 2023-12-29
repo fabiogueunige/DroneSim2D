@@ -106,6 +106,7 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
     sprintf(s, "WINDOW: %d", fsfa);
     writeToLog(debug, s);
 	while(1){
+        
 		x = drone->x;
 		y = drone->y;
         vx = (drone->vx) - 5;

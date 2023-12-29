@@ -90,10 +90,12 @@ int main(int argc, char* argv[]){
     printf("SERVER : process started\n");
     Drone * drone;
     char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
+    
 // OPENING SEMAPHORES
     sem_t *sem_drone;   // semaphore for writing and reading drone
     sem_drone = sem_open(SEM_PATH_1, O_CREAT | O_RDWR, 0666, 1);    // Initial value: 1
     
+
     // OPENING WINDOW
     // Join the elements of the array into a single command string
     char command[100];
@@ -115,10 +117,10 @@ int main(int argc, char* argv[]){
         }
     }
 
-    // Opening pipes
-    int pipeDrfd[2];    // pipe for drone
-    int pipeObfd[2];    // pipe for obstacles
-    int pipeTafd[2];    // pipe for targets
+    // PIPES
+    int pipeDrfd[2];    // pipe for drone: 0 for reading, 1 for writing
+    int pipeObfd[2];    // pipe for obstacles: 0 for reading, 1 for writing
+    int pipeTafd[2];    // pipe for targets: 0 for reading, 1 for writing
 
     sscanf(argv[1], "%d", &pipeDrfd[0]);
     sscanf(argv[2], "%d", &pipeDrfd[1]);
@@ -127,6 +129,8 @@ int main(int argc, char* argv[]){
     sscanf(argv[5], "%d", &pipeTafd[1]);
     sscanf(argv[6], "%d", &pipeTafd[0]);
     writeToLog(debug, "SERVER: pipes opened");
+
+    
 
 // SHARED MEMORY INITIALIZATION AND MAPPING
     const char * shm_name = "/dronemem"; //name of the shm
@@ -166,6 +170,7 @@ int main(int argc, char* argv[]){
     drone->y =20;
     sem_post(sem_drone);
 
+
    // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -191,8 +196,19 @@ int main(int argc, char* argv[]){
     }
     int edgx = 100;
     int edgy = 40;
+    int x, y;
 
-    while(!sigint_rec);
+    while(!sigint_rec){
+        read(pipeDrfd[0], &x, sizeof(int)); // reads from drone
+        read(pipeDrfd[0], &y, sizeof(int));
+        /*
+        read(pipeDrfd[0], &drone->vx, sizeof(float));
+        read(pipeDrfd[0], &drone->vy, sizeof(float));
+        read(pipeDrfd[0], &drone->fx, sizeof(int));
+        read(pipeDrfd[0], &drone->fy, sizeof(int));*/
+
+        printf("%d \n", drone->x);
+    }
 
     // waits window to terminate
     if(wait(NULL)==-1){

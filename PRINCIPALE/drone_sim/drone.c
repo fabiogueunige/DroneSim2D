@@ -131,8 +131,11 @@ int main(int argc, char* argv[]){
     FILE * errors = fopen("logfiles/errors.log", "a");
     writeToLog(debug, "DRONE: process started");
     printf("DRONE: process started\n");
+
     fd_set read_fds;
+    fd_set write_fds;
     FD_ZERO(&read_fds);
+    //FD_ZERO(&write_fds);
     
     int keyfd; //readable file descriptor for key pressed in input 
     sscanf(argv[1], "%d", &keyfd);
@@ -141,7 +144,7 @@ int main(int argc, char* argv[]){
     Drone * drone;    // drone object
 
     // Pipe reading from arguments
-    int pipeSefd[2]; // pipe server and drone
+    int pipeSefd[2]; // pipe server and drone: 0 for reading from and 1 for writing to
     sscanf(argv[2], "%d", &pipeSefd[1]);
     sscanf(argv[3], "%d", &pipeSefd[0]);
     writeToLog(debug, "DRONE: pipes opened");
@@ -205,7 +208,8 @@ int main(int argc, char* argv[]){
 
     float vx = 5, vy = 5;
     drone->vx = vx;
-    drone->vy = vy;   // velocities initialized to (5,5) because:
+    drone->vy = vy;   
+    // velocities initialized to (5,5) because:
     /*doing some test, we saw that the drone used to move to right when vx was >= 10, while 
     was used to move left when vx was <= 0. Because of this issue also the breaking, when
     it was moving left reported problems.
@@ -235,9 +239,12 @@ int main(int argc, char* argv[]){
         timeout.tv_sec = 0;  
         timeout.tv_usec = 100000; // Set the timeout to 0.1 seconds
         FD_SET(keyfd, &read_fds);
+        FD_SET(pipeSefd[0], &read_fds);
+        //FD_SET(pipeSefd[1], &write_fds);    // adds the pipe to the set of fd to write to
         int ready;
         do {//because signal from watch dog stops system calls and read gives error, so if it gives it with errno == EINTR, it repeat the select sys call
-            ready = select(keyfd + 1, &read_fds, NULL, NULL, &timeout);
+            int maxfd = (keyfd > pipeSefd[0]) ? keyfd : pipeSefd[0];
+            ready = select(maxfd, &read_fds, NULL, NULL, &timeout);
         } while (ready == -1 && errno == EINTR);
 
         
@@ -249,93 +256,98 @@ int main(int argc, char* argv[]){
         if (ready == 0){
         }
         else{
-            
-            re = read(keyfd, &input, sizeof(char)); //reads input
-            if (re== -1){
-                perror("read");
-                writeToLog(errors, "DRONE: error in read");
-            }
-            switch (input) {
-                case 'w':
-                    for(int i=0; i<2; i++)
-                        F[i] =F[i] + FORCE_MODULE * wf[i];
-                    break;
-                case 's':
-                    for(int i=0; i<2; i++)
-                        F[i] =F[i] + FORCE_MODULE * sf[i];
-                    break;
-                case 'd':
-                    // goes on by inertia
-                    F[0] = 0;
-                    F[1] = 0;
-                    break;
-                case 'b':
-                    // brake
-                    
-                    F[0] = 0;
-                    F[1] = 0;
-                    if ((int)vx>5){
-                        F[0] += -FORCE_MODULE;
-                        brake = true;
-                    }
-                    else if ((int)vx<5){
-                        F[0] += FORCE_MODULE;
-                        brake = true;
-                    }
-                    else
+            if(FD_ISSET(keyfd, &read_fds)){
+                // reading key pressed
+                re = read(keyfd, &input, sizeof(char)); //reads input
+                if (re== -1){
+                    perror("read");
+                    writeToLog(errors, "DRONE: error in read");
+                }
+                switch (input) {
+                    case 'w':
+                        for(int i=0; i<2; i++)
+                            F[i] =F[i] + FORCE_MODULE * wf[i];
+                        break;
+                    case 's':
+                        for(int i=0; i<2; i++)
+                            F[i] =F[i] + FORCE_MODULE * sf[i];
+                        break;
+                    case 'd':
+                        // goes on by inertia
                         F[0] = 0;
-                        brake = false;
-
-                    if ((int)vy>5){
-                        F[1] += -FORCE_MODULE;
-                        brake = true;
-                    }
-                    else if ((int)vy<5){
-                        F[1] += +FORCE_MODULE;
-                        brake = true;
-                    }
-                    else
                         F[1] = 0;
-                        brake = false;
-                    break;
-                case 'f':
-                    for(int i=0; i<2; i++)
-                        F[i] += FORCE_MODULE * ff[i];
-                    break;
-                case 'e':
-                    for(int i=0; i<2; i++)
-                        F[i] += FORCE_MODULE * ef[i];
-                    break;
-                case 'r':
-                    for(int i=0; i<2; i++)
-                        F[i] = F[i] + FORCE_MODULE * rf[i];
-                    break;
-                case 'x':
-                    for(int i=0; i<2; i++)
-                        F[i] = F[i] + FORCE_MODULE * xf[i];
-                    break;
-                case 'c':
-                    for(int i=0; i<2; i++)
-                        F[i] = F[i] + FORCE_MODULE * cf[i];
-                    break;
-                case 'v':
-                    for(int i=0; i<2;i++)
-                        F[i] = F[i] + FORCE_MODULE * vf[i];
-                    break;
-                case 'q':
-                    exit(EXIT_SUCCESS);  // Exit the program
-                case 'u':
-                    //reset
-                    
-                    x = x0;
-                    y = y0;
-                    F[0] = 0;
-                    F[1] = 0;
-                    vx = 5;
-                    vy = 5;
-                    break;
-                default:
-                    break;
+                        break;
+                    case 'b':
+                        // brake
+                        
+                        F[0] = 0;
+                        F[1] = 0;
+                        if ((int)vx>5){
+                            F[0] += -FORCE_MODULE;
+                            brake = true;
+                        }
+                        else if ((int)vx<5){
+                            F[0] += FORCE_MODULE;
+                            brake = true;
+                        }
+                        else
+                            F[0] = 0;
+                            brake = false;
+
+                        if ((int)vy>5){
+                            F[1] += -FORCE_MODULE;
+                            brake = true;
+                        }
+                        else if ((int)vy<5){
+                            F[1] += +FORCE_MODULE;
+                            brake = true;
+                        }
+                        else
+                            F[1] = 0;
+                            brake = false;
+                        break;
+                    case 'f':
+                        for(int i=0; i<2; i++)
+                            F[i] += FORCE_MODULE * ff[i];
+                        break;
+                    case 'e':
+                        for(int i=0; i<2; i++)
+                            F[i] += FORCE_MODULE * ef[i];
+                        break;
+                    case 'r':
+                        for(int i=0; i<2; i++)
+                            F[i] = F[i] + FORCE_MODULE * rf[i];
+                        break;
+                    case 'x':
+                        for(int i=0; i<2; i++)
+                            F[i] = F[i] + FORCE_MODULE * xf[i];
+                        break;
+                    case 'c':
+                        for(int i=0; i<2; i++)
+                            F[i] = F[i] + FORCE_MODULE * cf[i];
+                        break;
+                    case 'v':
+                        for(int i=0; i<2;i++)
+                            F[i] = F[i] + FORCE_MODULE * vf[i];
+                        break;
+                    case 'q':
+                        exit(EXIT_SUCCESS);  // Exit the program
+                    case 'u':
+                        //reset
+                        
+                        x = x0;
+                        y = y0;
+                        F[0] = 0;
+                        F[1] = 0;
+                        vx = 5;
+                        vy = 5;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else if(FD_ISSET(pipeSefd[0], &read_fds)){
+                // reading obstacles and target
             }
         }
         updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
@@ -345,6 +357,17 @@ int main(int argc, char* argv[]){
         drone->vy = vy;
         drone->fx = F[0];
         drone->fy = F[1];
+        //write(pipeSefd[1], &drone, sizeof(Drone *));
+        //printf("%d\n", x);
+
+        write(pipeSefd[1], &x, sizeof(int));
+        write(pipeSefd[1], &y, sizeof(int));
+        /*
+        write(pipeSefd[1], &drone->vx, sizeof(float));
+        write(pipeSefd[1], &drone->vy, sizeof(float));
+        write(pipeSefd[1], &drone->fx, sizeof(int));
+        write(pipeSefd[1], &drone->fy, sizeof(int));
+        */
 
         if(brake){
             F[0] = 0;
