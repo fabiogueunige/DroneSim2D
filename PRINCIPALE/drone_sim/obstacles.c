@@ -84,6 +84,10 @@ int main (int argc, char *argv[])
     char pos_obstacles[nobstacles][10];
     char pos_edges[2*(rows+cols)][10];
     int nobstacles_edge = 2 * (rows + cols);
+    int strlength;
+    strlength = 10 * nobstacles + 10;
+
+    char pos_all_obs[strlength];
 
 
     struct obstacle *obstacles[nobstacles];
