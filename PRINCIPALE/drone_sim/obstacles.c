@@ -62,7 +62,12 @@ int main (int argc, char *argv[])
     writeToLog(debug, "OBSTACLES: process started");
     printf("OBSTACLES: process started\n");
     struct window *window;
-    
+
+    // opening pipes
+    int pipeSefd[2];
+    sscanf(argv[1], "%d", &pipeSefd[0]);
+    sscanf(argv[2], "%d", &pipeSefd[1]);
+    writeToLog(debug, "OBSTACLES: pipes opened");
     
     // these var are used because there aren't pipes, but these values are imported by server
     int rows = 100;
@@ -78,7 +83,6 @@ int main (int argc, char *argv[])
     
     char pos_obstacles[nobstacles][10];
     char pos_edges[2*(rows+cols)][10];
-
     int nobstacles_edge = 2 * (rows + cols);
 
 
@@ -141,6 +145,15 @@ int main (int argc, char *argv[])
         printf("OBSTACLES: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
         sprintf(pos_edges[i], "%d,%d", edges[i]->x, edges[i]->y);
         // write to server with pipe ...
+    }
+
+    // closing pipes
+    
+    for (int i = 0; i < 2; i++){
+        if (close(pipeSefd[i]) == -1){
+            perror("error in closing pipe");
+            writeToLog(errors, "OBSTACLES: error in closing pipe");
+        }
     }
 
     return 0;

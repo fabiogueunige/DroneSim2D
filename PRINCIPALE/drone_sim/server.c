@@ -26,13 +26,6 @@ typedef struct {
     int fx, fy;
 } Drone;    // Drone object
 
-typedef struct {
-    int rows;
-    int cols;
-    int nobstacles;
-    int ntargets;
-} window;
-
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
     if (signo == SIGUSR1) {
@@ -95,13 +88,14 @@ int main(int argc, char* argv[]){
     FILE * errors = fopen("logfiles/errors.log", "a");  // errors log file
     writeToLog(debug, "SERVER: process started");
     printf("SERVER : process started\n");
-    Drone * drone;  // drone object
-    window * window; // window object: it gives me the number of rows, cols, obstacles and targets
-
+    Drone * drone;
     char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
+    
 // OPENING SEMAPHORES
     sem_t *sem_drone;   // semaphore for writing and reading drone
     sem_drone = sem_open(SEM_PATH_1, O_CREAT | O_RDWR, 0666, 1);    // Initial value: 1
+    
+
     // OPENING WINDOW
     // Join the elements of the array into a single command string
     char command[100];
@@ -122,6 +116,21 @@ int main(int argc, char* argv[]){
             exit(EXIT_FAILURE);
         }
     }
+
+    // PIPES
+    int pipeDrfd[2];    // pipe for drone: 0 for reading, 1 for writing
+    int pipeObfd[2];    // pipe for obstacles: 0 for reading, 1 for writing
+    int pipeTafd[2];    // pipe for targets: 0 for reading, 1 for writing
+
+    sscanf(argv[1], "%d", &pipeDrfd[0]);
+    sscanf(argv[2], "%d", &pipeDrfd[1]);
+    sscanf(argv[3], "%d", &pipeObfd[1]);
+    sscanf(argv[4], "%d", &pipeObfd[0]);
+    sscanf(argv[5], "%d", &pipeTafd[1]);
+    sscanf(argv[6], "%d", &pipeTafd[0]);
+    writeToLog(debug, "SERVER: pipes opened");
+
+    
 
 // SHARED MEMORY INITIALIZATION AND MAPPING
     const char * shm_name = "/dronemem"; //name of the shm
@@ -161,6 +170,7 @@ int main(int argc, char* argv[]){
     drone->y =20;
     sem_post(sem_drone);
 
+
    // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -186,8 +196,19 @@ int main(int argc, char* argv[]){
     }
     int edgx = 100;
     int edgy = 40;
+    int x, y;
 
-    while(!sigint_rec);
+    while(!sigint_rec){
+        read(pipeDrfd[0], &x, sizeof(int)); // reads from drone
+        read(pipeDrfd[0], &y, sizeof(int));
+        /*
+        read(pipeDrfd[0], &drone->vx, sizeof(float));
+        read(pipeDrfd[0], &drone->vy, sizeof(float));
+        read(pipeDrfd[0], &drone->fx, sizeof(int));
+        read(pipeDrfd[0], &drone->fy, sizeof(int));*/
+
+        printf("%d \n", drone->x);
+    }
 
     // waits window to terminate
     if(wait(NULL)==-1){
@@ -211,6 +232,22 @@ int main(int argc, char* argv[]){
     printf("FAILED FLAG: %d\n", failed);
     fprintf(debug, "%d\n", failed);
     fflush(debug);
+
+    // closing pipes
+    for (int i = 0; i < 2; i++){
+        if (close(pipeDrfd[i]) == -1){
+            perror("error in closing pipe");
+            writeToLog(errors, "SERVER: error in closing pipe Drone");
+        }
+        if (close(pipeObfd[i]) == -1){
+            perror("error in closing pipe");
+            writeToLog(errors, "SERVER: error in closing pipe obstacles");
+        }
+        if (close(pipeTafd[i]) == -1){
+            perror("error in closing pipe");
+            writeToLog(errors, "SERVER: error in closing pipe Targets");
+        }
+    }
 
     fclose(debug);
     fclose(errors);

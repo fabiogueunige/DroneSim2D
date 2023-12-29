@@ -61,7 +61,12 @@ int main (int argc, char *argv[])
     writeToLog(debug, "TARGETS: process started");
     printf("TARGETS: process started\n");
 
-    
+    // opening pipes
+    int pipeSefd[2];
+    sscanf(argv[1], "%d", &pipeSefd[0]);
+    sscanf(argv[2], "%d", &pipeSefd[1]);
+    writeToLog(debug, "TARGETS: pipes opened");
+
     int rows, cols, ntargets;
     
     
@@ -98,5 +103,12 @@ int main (int argc, char *argv[])
         // write to server with pipe
     }
 
+    // closing pipes
+    for (int i = 0; i < 2; i++){
+        if (close(pipeSefd[i]) == -1){
+            perror("error in closing pipe");
+            writeToLog(errors, "TARGETS: error in closing pipe");
+        }
+    }
     return 0;
 }
