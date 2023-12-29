@@ -80,14 +80,16 @@ int main (int argc, char *argv[])
         printf("OBSTACLES: too many obstacles, max 20\n");
     }
     */
-    
+
+    if ((write(pipeSefd[1], &nobstacles, sizeof(int))) == -1){ // implementare lettura su server
+        perror("error in writing to pipe");
+        writeToLog(errors, "OBSTACLES: error in writing to pipe number of obstacles");
+        exit(EXIT_FAILURE);
+    }
+
     char pos_obstacles[nobstacles][10];
     char pos_edges[2*(rows+cols)][10];
     int nobstacles_edge = 2 * (rows + cols);
-    int strlength;
-    strlength = 10 * nobstacles + 10;
-
-    char pos_all_obs[strlength];
 
 
     struct obstacle *obstacles[nobstacles];
@@ -121,6 +123,11 @@ int main (int argc, char *argv[])
         fprintf(debug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
         sprintf(pos_obstacles[i], "%d,%d", x, y);
         // write to server with pipe ...
+        if (write(pipeSefd[1], &obstacles[i], sizeof(struct obstacle *)) == -1){
+            perror("error in writing to pipe");
+            writeToLog(errors, "OBSTACLES: error in writing to pipe obstacles");
+            exit(EXIT_FAILURE);
+        }
     }
 
     // create edges
