@@ -138,8 +138,8 @@ int main (int argc, char *argv[])
         edges[i+rows+cols] = malloc(sizeof(struct obstacle));
         edges[i+rows+cols]->x = cols-1;
         edges[i+rows+cols]->y = i;
-        printf("OBSTACLES: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        printf("OBSTACLES: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+        // printf("OBSTACLES: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        // printf("OBSTACLES: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
         sprintf(pos_edges[i], "%d,%d", edges[i]->x, edges[i]->y);
         sprintf(pos_edges[i+rows+cols], "%d,%d", edges[i+rows+cols]->x, edges[i+rows+cols]->y);
         // write to server with pipe ...
