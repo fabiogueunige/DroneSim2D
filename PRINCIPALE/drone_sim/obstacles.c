@@ -73,20 +73,6 @@ int main (int argc, char *argv[])
     int rows = 100;
     int cols = 100;
     
-
-    /* for 3d assignment :
-    if (nobstacles>20){
-        printf("OBSTACLES: too many obstacles, max 20\n");
-    }
-    */
-    
-    char pos_edges[2*(rows+cols)][10];
-    int nobstacles_edge = 2 * (rows + cols);
-
-
-    
-    struct obstacle *edges[nobstacles_edge];
-
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
     sa.sa_sigaction = sig_handler;
@@ -104,36 +90,7 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-
-    
-
-    // create edges
-    for (int i = 0; i< rows; i++){
-        edges[i] = malloc(sizeof(struct obstacle));
-        edges[i]->x = 0;
-        edges[i]->y = i;
-        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
-        edges[i+rows+cols]->x = cols-1;
-        edges[i+rows+cols]->y = i;
-        // printf("OBSTACLES: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        // printf("OBSTACLES: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
-        sprintf(pos_edges[i], "%d,%d", edges[i]->x, edges[i]->y);
-        sprintf(pos_edges[i+rows+cols], "%d,%d", edges[i+rows+cols]->x, edges[i+rows+cols]->y);
-        // write to server with pipe ...
-    }
-    
-    for (int i = rows; i< rows+cols; i++){
-        edges[i] = malloc(sizeof(struct obstacle));
-        edges[i]->x = i;
-        edges[i]->y = 0;
-        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
-        edges[i+rows+cols]->x = i;
-        edges[i+rows+cols]->y = cols-1;
-        printf("OBSTACLES: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        printf("OBSTACLES: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
-        sprintf(pos_edges[i], "%d,%d", edges[i]->x, edges[i]->y);
-        // write to server with pipe ...
-    }
+    // obstacle generation cycle
     for(int i=0; i<3; i++){
         srand(time(NULL));
         int nobstacles = rand() % MAX_OBSTACLES;
@@ -154,7 +111,7 @@ int main (int argc, char *argv[])
             int y = obstacles[i]->y;
             printf("OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
             fprintf(debug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
-            sprintf(pos_obstacles[i], "%d,%d", x, y);
+            //sprintf(pos_obstacles[i], "%d,%d", x, y);
             // write to server with pipe ...
             if (write(pipeSefd[1], obstacles[i], sizeof(struct obstacle)) == -1){
                 perror("error in writing to pipe");
@@ -162,7 +119,7 @@ int main (int argc, char *argv[])
                 exit(EXIT_FAILURE);
             }
         }
-        sleep(10);
+        sleep(30);
     }
     // closing pipes
     

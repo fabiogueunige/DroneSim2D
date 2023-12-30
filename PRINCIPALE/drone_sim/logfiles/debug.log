@@ -1,133 +1,35 @@
-Sat Dec 30 15:34:31 2023
+Sat Dec 30 15:47:20 2023
  => SERVER: process started
-Sat Dec 30 15:34:31 2023
+Sat Dec 30 15:47:20 2023
  => SERVER: pipes opened
-Sat Dec 30 15:34:31 2023
+Sat Dec 30 15:47:20 2023
  => SERVER: generated shared memory
-Sat Dec 30 15:34:31 2023
+Sat Dec 30 15:47:20 2023
  => SERVER: initialized starting values
-Sat Dec 30 15:34:31 2023
+Sat Dec 30 15:47:21 2023
  => WINDOW: process started
-Sat Dec 30 15:34:31 2023
- => WINDOW: 16605
-Sat Dec 30 15:34:31 2023
+Sat Dec 30 15:47:21 2023
+ => WINDOW: 17422
+Sat Dec 30 15:47:21 2023
  => DRONE: process started
-Sat Dec 30 15:34:31 2023
+Sat Dec 30 15:47:21 2023
  => DRONE: pipes opened
 INPUT: process started
 OBSTACLES: process started
 OBSTACLES: pipes opened
 TARGETS: process started
 TARGETS: pipes opened
-Sat Dec 30 15:34:34 2023
+Sat Dec 30 15:47:23 2023
  => WATCH DOG: process started
-Sat Dec 30 15:34:34 2023
+Sat Dec 30 15:47:23 2023
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Sat Dec 30 15:34:34 2023
+Sat Dec 30 15:47:23 2023
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Sat Dec 30 15:34:34 2023
+Sat Dec 30 15:47:23 2023
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Sat Dec 30 15:34:35 2023
+Sat Dec 30 15:47:23 2023
  => WATCH DOG: INPUT received signal
 SERVER: terminating with return value 1...
-acle 7 created at (29, 38)
-OBSTACLES: obstacle 8 created at (97, 3)
-OBSTACLES: obstacle 9 created at (51, 85)
-OBSTACLES: obstacle 10 created at (20, 30)
-OBSTACLES: obstacle 11 created at (84, 43)
-OBSTACLES: obstacle 12 created at (83, 73)
-OBSTACLES: obstacle 13 created at (40, 90)
-OBSTACLES: obstacle 14 created at (14, 54)
-OBSTACLES: obstacle 15 created at (8, 19)
-OBSTACLES: obstacle 16 created at (88, 10)
-OBSTACLES: obstacle 0 created at (26, 87)
-OBSTACLES: obstacle 1 created at (66, 37)
-OBSTACLES: obstacle 2 created at (71, 59)
-OBSTACLES: obstacle 3 created at (25, 63)
-OBSTACLES: obstacle 4 created at (61, 24)
-OBSTACLES: obstacle 5 created at (10, 17)
-OBSTACLES: obstacle 6 created at (27, 59)
-OBSTACLES: obstacle 0 created at (76, 44)
-OBSTACLES: obstacle 1 created at (20, 81)
-OBSTACLES: obstacle 2 created at (44, 21)
-OBSTACLES: obstacle 3 created at (41, 29)
-OBSTACLES: obstacle 4 created at (54, 84)
-OBSTACLES: obstacle 5 created at (72, 88)
-OBSTACLES: obstacle 6 created at (6, 35)
-OBSTACLES: obstacle 7 created at (43, 79)
-OBSTACLES: obstacle 8 created at (31, 55)
-OBSTACLES: obstacle 9 created at (93, 12)
-OBSTACLES: obstacle 10 created at (3, 6)
-OBSTACLES: obstacle 11 created at (50, 27)
-OBSTACLES: obstacle 0 created at (86, 36)
-OBSTACLES: obstacle 0 created at (65, 71)
-OBSTACLES: obstacle 1 created at (49, 53)
-OBSTACLES: obstacle 2 created at (92, 5)
-OBSTACLES: obstacle 0 created at (12, 89)
-OBSTACLES: obstacle 1 created at (85, 93)
-OBSTACLES: obstacle 2 created at (76, 23)
-OBSTACLES: obstacle 3 created at (48, 31)
-OBSTACLES: obstacle 4 created at (95, 27)
-OBSTACLES: obstacle 5 created at (99, 77)
-OBSTACLES: obstacle 6 created at (46, 59)
-OBSTACLES: obstacle 7 created at (62, 74)
-OBSTACLES: obstacle 8 created at (3, 2)
-OBSTACLES: obstacle 9 created at (78, 48)
-OBSTACLES: obstacle 10 created at (84, 71)
-OBSTACLES: obstacle 11 created at (27, 12)
-OBSTACLES: obstacle 12 created at (8, 2)
-OBSTACLES: obstacle 13 created at (15, 48)
-OBSTACLES: obstacle 14 created at (30, 73)
-OBSTACLES: obstacle 0 created at (31, 50)
-OBSTACLES: obstacle 1 created at (82, 28)
-OBSTACLES: obstacle 2 created at (76, 92)
-OBSTACLES: obstacle 3 created at (47, 19)
-OBSTACLES: obstacle 0 created at (56, 24)
-OBSTACLES: obstacle 1 created at (1, 92)
-OBSTACLES: obstacle 2 created at (66, 26)
-OBSTACLES: obstacle 3 created at (8, 29)
-OBSTACLES: obstacle 4 created at (49, 20)
-OBSTACLES: obstacle 5 created at (60, 52)
-OBSTACLES: obstacle 0 created at (65, 64)
-OBSTACLES: obstacle 1 created at (10, 19)
-OBSTACLES: obstacle 2 created at (13, 18)
-OBSTACLES: obstacle 3 created at (28, 17)
-OBSTACLES: obstacle 4 created at (44, 82)
-OBSTACLES: obstacle 5 created at (52, 33)
-OBSTACLES: obstacle 6 created at (48, 47)
-OBSTACLES: obstacle 7 created at (26, 47)
-OBSTACLES: obstacle 8 created at (94, 10)
-OBSTACLES: obstacle 9 created at (92, 44)
-OBSTACLES: obstacle 10 created at (0, 87)
-OBSTACLES: obstacle 11 created at (78, 59)
-OBSTACLES: obstacle 12 created at (6, 3)
-OBSTACLES: obstacle 0 created at (35, 22)
-OBSTACLES: obstacle 1 created at (80, 35)
-OBSTACLES: obstacle 2 created at (19, 61)
-OBSTACLES: obstacle 3 created at (87, 13)
-OBSTACLES: obstacle 4 created at (18, 58)
-OBSTACLES: obstacle 5 created at (6, 13)
-OBSTACLES: obstacle 6 created at (30, 66)
-OBSTACLES: obstacle 7 created at (35, 8)
-OBSTACLES: obstacle 8 created at (89, 26)
-OBSTACLES: obstacle 9 created at (32, 14)
-OBSTACLES: obstacle 10 created at (41, 68)
-OBSTACLES: obstacle 11 created at (74, 51)
-OBSTACLES: obstacle 12 created at (53, 25)
-OBSTACLES: obstacle 13 created at (13, 21)
-OBSTACLES: obstacle 0 created at (26, 75)
-OBSTACLES: obstacle 1 created at (73, 90)
-OBSTACLES: obstacle 2 created at (40, 28)
-OBSTACLES: obstacle 0 created at (73, 76)
-OBSTACLES: obstacle 1 created at (95, 13)
-OBSTACLES: obstacle 2 created at (45, 40)
-OBSTACLES: obstacle 3 created at (57, 1)
-OBSTACLES: obstacle 4 created at (2, 42)
-OBSTACLES: obstacle 5 created at (53, 61)
-OBSTACLES: obstacle 6 created at (14, 41)
-OBSTACLES: obstacle 7 created at (16, 13)
-OBSTACLES: obstacle 8 created at (86, 48)
-OBSTACLES: obstacle 9 created at (2

@@ -97,6 +97,11 @@ int main(int argc, char* argv[]){
     printf("SERVER : process started\n");
     Drone * drone;
     int nobstacles;
+    int rows = 50;
+    int cols = 100;
+    int nobstacles_edge = 2 * (rows + cols);
+    struct obstacle *edges[nobstacles_edge];
+
     char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
     
 // OPENING SEMAPHORES
@@ -204,9 +209,31 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
     }
-    int edgx = 100;
-    int edgy = 40;
-    int x, y;
+    int x, y;// drone coordinates
+
+    // EDGES GENERATION
+    for (int i = 0; i< rows; i++){
+        edges[i] = malloc(sizeof(struct obstacle));
+        edges[i]->x = 0;
+        edges[i]->y = i;
+        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
+        edges[i+rows+cols]->x = cols-1;
+        edges[i+rows+cols]->y = i;
+        printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+        // write to server with pipe ...
+    }
+    
+    for (int i = rows; i< rows+cols; i++){
+        edges[i] = malloc(sizeof(struct obstacle));
+        edges[i]->x = i;
+        edges[i]->y = 0;
+        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
+        edges[i+rows+cols]->x = i;
+        edges[i+rows+cols]->y = cols-1;
+        printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+    }
 
     while(!sigint_rec){
         // select wich pipe to read from between drone and obstacles
