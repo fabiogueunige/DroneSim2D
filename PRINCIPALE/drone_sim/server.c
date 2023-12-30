@@ -13,6 +13,8 @@
 #include<stdbool.h>
 #include <time.h>
 #include <sys/file.h>
+#include <sys/select.h>
+#include <errno.h>
 #define SEM_PATH_1 "/sem_drone1"
 
 pid_t wd_pid = -1;
@@ -25,6 +27,11 @@ typedef struct {
     float vx, vy;
     int fx, fy;
 } Drone;    // Drone object
+
+struct obstacle {
+    int x;
+    int y;
+};
 
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
@@ -89,6 +96,7 @@ int main(int argc, char* argv[]){
     writeToLog(debug, "SERVER: process started");
     printf("SERVER : process started\n");
     Drone * drone;
+    int nobstacles;
     char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
     
 // OPENING SEMAPHORES
@@ -121,6 +129,8 @@ int main(int argc, char* argv[]){
     int pipeDrfd[2];    // pipe for drone: 0 for reading, 1 for writing
     int pipeObfd[2];    // pipe for obstacles: 0 for reading, 1 for writing
     int pipeTafd[2];    // pipe for targets: 0 for reading, 1 for writing
+    fd_set read_fds;
+    FD_ZERO(&read_fds);
 
     sscanf(argv[1], "%d", &pipeDrfd[0]);
     sscanf(argv[2], "%d", &pipeDrfd[1]);
@@ -199,15 +209,62 @@ int main(int argc, char* argv[]){
     int x, y;
 
     while(!sigint_rec){
+        // select wich pipe to read from between drone and obstacles
+        FD_SET(pipeDrfd[0], &read_fds);
+        FD_SET(pipeObfd[0], &read_fds);
+        int max_fd = (pipeDrfd[0] > pipeObfd[0]) ? pipeDrfd[0] : pipeObfd[0];
+        int sel;
+        // ciclo do while per evitare errori dovuuti a segnali
+        
+        do{
+            sel = select(max_fd, &read_fds, NULL, NULL, NULL);
+        }while(sel == -1 && errno == EINTR);
+        if(sel ==-1){
+            perror("error in select");
+            writeToLog(errors, "SERVER: error in select");
+            exit(EXIT_FAILURE);
+        }
+        else if(sel>0){
+            if(FD_ISSET(pipeDrfd[0], &read_fds)){
+                read(pipeDrfd[0], &x, sizeof(int)); // reads from drone
+                read(pipeDrfd[0], &y, sizeof(int));
+                printf("SERVER: drone position: (%d, %d)\n", x, y);
+                /*
+                read(pipeDrfd[0], &drone->vx, sizeof(float));
+                read(pipeDrfd[0], &drone->vy, sizeof(float));
+                read(pipeDrfd[0], &drone->fx, sizeof(int));
+                read(pipeDrfd[0], &drone->fy, sizeof(int));*/
+
+                printf("%d \n", drone->x);
+            }
+            if(FD_ISSET(pipeObfd[0], &read_fds)){
+                
+                read(pipeObfd[0], &nobstacles, sizeof(int)); // reads from drone nobstacles
+                struct obstacle *obstacles[nobstacles];
+                for(int i = 0; i<nobstacles; i++){
+                    obstacles[i] = malloc(sizeof(struct obstacle));
+                    read(pipeObfd[0], &obstacles[i], sizeof(struct obstacle *));
+                    printf("SERVER: obstacle %d position: (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
+                }
+                /*
+                read(pipeDrfd[0], &drone->vx, sizeof(float));
+                read(pipeDrfd[0], &drone->vy, sizeof(float));
+                read(pipeDrfd[0], &drone->fx, sizeof(int));
+                read(pipeDrfd[0], &drone->fy, sizeof(int));*/
+
+                //printf("%d \n", drone->x);
+            }
+        }
+        /*
         read(pipeDrfd[0], &x, sizeof(int)); // reads from drone
         read(pipeDrfd[0], &y, sizeof(int));
-        /*
+        
         read(pipeDrfd[0], &drone->vx, sizeof(float));
         read(pipeDrfd[0], &drone->vy, sizeof(float));
         read(pipeDrfd[0], &drone->fx, sizeof(int));
         read(pipeDrfd[0], &drone->fy, sizeof(int));*/
 
-        printf("%d \n", drone->x);
+        //printf("%d \n", drone->x);
     }
 
     // waits window to terminate

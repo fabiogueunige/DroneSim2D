@@ -1,40 +1,71 @@
-Thu Dec 28 18:24:10 2023
+Sat Dec 30 13:17:10 2023
  => SERVER: process started
-Thu Dec 28 18:24:10 2023
+Sat Dec 30 13:17:10 2023
+ => SERVER: pipes opened
+Sat Dec 30 13:17:10 2023
  => SERVER: generated shared memory
-Thu Dec 28 18:24:10 2023
+Sat Dec 30 13:17:10 2023
  => SERVER: initialized starting values
-Thu Dec 28 18:24:11 2023
+Sat Dec 30 13:17:11 2023
  => DRONE: process started
-Thu Dec 28 18:24:11 2023
+Sat Dec 30 13:17:11 2023
+ => DRONE: pipes opened
+Sat Dec 30 13:17:11 2023
  => WINDOW: process started
-Thu Dec 28 18:24:11 2023
- => WINDOW: 13132
+Sat Dec 30 13:17:11 2023
+ => WINDOW: 7474
 INPUT: process started
 OBSTACLES: process started
+OBSTACLES: pipes opened
+OBSTACLES: obstacle 0 created at (11, 96)
+OBSTACLES: obstacle 1 created at (13, 59)
+OBSTACLES: obstacle 2 created at (35, 26)
+OBSTACLES: obstacle 3 created at (78, 35)
 TARGETS: process started
-Thu Dec 28 18:24:13 2023
+TARGETS: pipes opened
+Sat Dec 30 13:17:13 2023
  => WATCH DOG: process started
-Thu Dec 28 18:24:13 2023
+Sat Dec 30 13:17:13 2023
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:24:13 2023
+Sat Dec 30 13:17:13 2023
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:24:13 2023
+Sat Dec 30 13:17:13 2023
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:24:13 2023
+Sat Dec 30 13:17:13 2023
  => WATCH DOG: INPUT received signal
-Thu Dec 28 18:24:24 2023
+Sat Dec 30 13:17:23 2023
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:24:24 2023
+Sat Dec 30 13:17:23 2023
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:24:24 2023
+Sat Dec 30 13:17:23 2023
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Thu Dec 28 18:24:24 2023
+Sat Dec 30 13:17:23 2023
  => WATCH DOG: INPUT received signal
-SERVER: terminating with return value 1...
+Sat Dec 30 13:17:33 2023
+ => WATCH DOG: sending signals to processes
+SERVER: signal SIGUSR1 received from WATCH DOG
+Sat Dec 30 13:17:33 2023
+ => WATCH DOG: SERVER received signal
+DRONE: signal SIGUSR1 received from WATCH DOG
+Sat Dec 30 13:17:33 2023
+ => WATCH DOG: DRONE received signal
+INPUT: signal SIGUSR1 received from WATCH DOG
+Sat Dec 30 13:17:33 2023
+ => WATCH DOG: INPUT received signal
+Sat Dec 30 13:17:43 2023
+ => WATCH DOG: sending signals to processes
+SERVER: signal SIGUSR1 received from WATCH DOG
+Sat Dec 30 13:17:43 2023
+ => WATCH DOG: SERVER received signal
+DRONE: signal SIGUSR1 received from WATCH DOG
+Sat Dec 30 13:17:43 2023
+ => WATCH DOG: DRONE received signal
+INPUT: signal SIGUSR1 received from WATCH DOG
+Sat Dec 30 13:17:43 2023
+ => WATCH DOG: INPUT received signal

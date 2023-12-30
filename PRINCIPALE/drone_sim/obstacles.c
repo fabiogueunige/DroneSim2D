@@ -11,6 +11,7 @@
 #include <sys/mman.h>
 #include <stdbool.h>
 #include <time.h>
+#include <string.h>
 
 
 #define MAX_OBSTACLES 20
@@ -80,14 +81,23 @@ int main (int argc, char *argv[])
         printf("OBSTACLES: too many obstacles, max 20\n");
     }
     */
+   if ((write(pipeSefd[1], &nobstacles, sizeof(int))) == -1){ // implementare lettura su server
+        perror("error in writing to pipe");
+        writeToLog(errors, "OBSTACLES: error in writing to pipe number of obstacles");
+        exit(EXIT_FAILURE);
+    }
     
     char pos_obstacles[nobstacles][10];
     char pos_edges[2*(rows+cols)][10];
     int nobstacles_edge = 2 * (rows + cols);
-    int strlength;
-    strlength = 10 * nobstacles + 10;
-
+    int strlength;  
+    strlength = 10 * nobstacles + 11; // deve diventare calcolo comune al server
+    char num2str[10]; // per trasformare da int a char
     char pos_all_obs[strlength];
+
+    sprintf(num2str, "%d", nobstacles);
+    strcat(pos_all_obs, num2str);
+    strcat(pos_all_obs, "]");
 
 
     struct obstacle *obstacles[nobstacles];
@@ -120,8 +130,26 @@ int main (int argc, char *argv[])
         printf("OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
         fprintf(debug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
         sprintf(pos_obstacles[i], "%d,%d", x, y);
-        // write to server with pipe ...
+        // write to server with pipe ... // implementare lettura su server
+        if (write(pipeSefd[1], &obstacles[i], sizeof(struct obstacle)) == -1){
+            perror("error in writing to pipe");
+            writeToLog(errors, "OBSTACLES: error in writing to pipe obstacles");
+            exit(EXIT_FAILURE);
+        }
+        // oppure 
+        sprintf(num2str, "%d", obstacles[i]->x);
+        strcat(pos_all_obs, num2str);
+        strcat(pos_all_obs, "|");
+        sprintf(num2str, "%d", obstacles[i]->y);
+        strcat(pos_all_obs, num2str);
+        strcat(pos_all_obs, "|");
     }
+    if (write(pipeSefd[1], pos_all_obs, (sizeof(char) * strlength)) == -1) {
+        perror("error in writing to pipe");
+        writeToLog(errors, "OBSTACLES: error in writing to pipe obstacles");
+        exit(EXIT_FAILURE);
+    }
+
 
     // create edges
     for (int i = 0; i< rows; i++){

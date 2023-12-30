@@ -103,7 +103,7 @@ int main(int argc, char* argv[]){
     printf("\t\t  ____________________________________\n");
     printf("\t\t |                                    |\n");
     printf("\t\t |   Advanced and Robot Programming   |\n");
-    printf("\t\t |           DRONE: part 1            |\n");
+    printf("\t\t |           DRONE: part 2            |\n");
     printf("\t\t |____________________________________|\n");
     printf("\n");
     printf("\t\t    by Samuele Viola and Fabio Guelfi\n\n");
