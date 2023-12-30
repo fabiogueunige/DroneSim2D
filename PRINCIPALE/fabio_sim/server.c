@@ -211,20 +211,38 @@ int main(int argc, char* argv[]){
     while(!sigint_rec){
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
-        FD_SET(pipeObfd[0], &read_fds);
+        FD_SET(pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
         int max_fd = (pipeDrfd[0] > pipeObfd[0]) ? pipeDrfd[0] : pipeObfd[0];
         int sel;
         // ciclo do while per evitare errori dovuuti a segnali
         
         do{
-            sel = select(max_fd, &read_fds, NULL, NULL, NULL);
+            sel = select(max_fd +1, &read_fds, NULL, NULL, NULL);
         }while(sel == -1 && errno == EINTR);
+        
         if(sel ==-1){
             perror("error in select");
             writeToLog(errors, "SERVER: error in select");
             exit(EXIT_FAILURE);
         }
         else if(sel>0){
+            if(FD_ISSET(pipeObfd[0], &read_fds)){
+                printf("SERVER: reading from obstacles\n");
+
+                read(pipeObfd[0], &nobstacles, sizeof(int)); // reads from drone nobstacles
+                printf("SERVER: number of obstacles: %d\n", nobstacles);
+                write(pipeDrfd[1], &nobstacles, sizeof(int)); // writes to drone nobstacles
+
+                struct obstacle *obstacles[nobstacles];
+                for(int i = 0; i<nobstacles; i++){
+                    obstacles[i] = malloc(sizeof(struct obstacle));
+                    read(pipeObfd[0], obstacles[i], sizeof(struct obstacle));
+                    printf("SERVER: obstacle %d position: (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
+                    write(pipeDrfd[1], obstacles[i], sizeof(struct obstacle));
+                }
+                //write(pipeDrfd[1], obstacles, sizeof(obstacles));
+            }
+
             if(FD_ISSET(pipeDrfd[0], &read_fds)){
                 read(pipeDrfd[0], &x, sizeof(int)); // reads from drone
                 read(pipeDrfd[0], &y, sizeof(int));
@@ -237,15 +255,7 @@ int main(int argc, char* argv[]){
 
                 printf("%d \n", drone->x);
             }
-            if(FD_ISSET(pipeObfd[0], &read_fds)){
-                
-                read(pipeObfd[0], &nobstacles, sizeof(int)); // reads from drone nobstacles
-                struct obstacle *obstacles[nobstacles];
-                for(int i = 0; i<nobstacles; i++){
-                    obstacles[i] = malloc(sizeof(struct obstacle));
-                    read(pipeObfd[0], &obstacles[i], sizeof(struct obstacle *));
-                    printf("SERVER: obstacle %d position: (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
-                }
+            
                 /*
                 read(pipeDrfd[0], &drone->vx, sizeof(float));
                 read(pipeDrfd[0], &drone->vy, sizeof(float));
@@ -253,7 +263,7 @@ int main(int argc, char* argv[]){
                 read(pipeDrfd[0], &drone->fy, sizeof(int));*/
 
                 //printf("%d \n", drone->x);
-            }
+            
         }
         /*
         read(pipeDrfd[0], &x, sizeof(int)); // reads from drone

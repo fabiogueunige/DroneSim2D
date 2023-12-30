@@ -140,6 +140,7 @@ int main(int argc, char* argv[]){
     int keyfd; //readable file descriptor for key pressed in input 
     sscanf(argv[1], "%d", &keyfd);
     char input;
+    int nobstacles; // initializes nobstacles
 
     Drone * drone;    // drone object
 
@@ -244,10 +245,9 @@ int main(int argc, char* argv[]){
         int ready;
         do {//because signal from watch dog stops system calls and read gives error, so if it gives it with errno == EINTR, it repeat the select sys call
             int maxfd = (keyfd > pipeSefd[0]) ? keyfd : pipeSefd[0];
-            ready = select(maxfd, &read_fds, NULL, NULL, &timeout);
+            ready = select(maxfd + 1, &read_fds, NULL, NULL, &timeout);
         } while (ready == -1 && errno == EINTR);
 
-        
         if (ready == -1){
             perror("select");
             writeToLog(errors, "DRONE: error in select");
@@ -256,6 +256,25 @@ int main(int argc, char* argv[]){
         if (ready == 0){
         }
         else{
+            if(FD_ISSET(pipeSefd[0], &read_fds)){
+                // reading obstacles and target
+                read(pipeSefd[0], &nobstacles, sizeof(int));
+                printf("DRONE: number of obstacles: %d\n", nobstacles);
+                struct obstacle *obstacles[nobstacles];
+                for(int i=0; i<nobstacles; i++){
+                    obstacles[i] = malloc(sizeof(struct obstacle));
+                    read(pipeSefd[0], obstacles[i], sizeof(struct obstacle));
+                    printf("DRONE: obstacle %d created at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
+                }
+                /*
+                read(pipeSefd[0], obstacles, sizeof(obstacles));
+                printf("DRONE: obstacle 1 created at (%d, %d)\n", obstacles[0]->x, obstacles[0]->y);
+                for (int i = 0; i < nobstacles; i++){
+                    printf("DRONE: obstacle %d created at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
+                }*/
+
+
+            }
             if(FD_ISSET(keyfd, &read_fds)){
                 // reading key pressed
                 re = read(keyfd, &input, sizeof(char)); //reads input
