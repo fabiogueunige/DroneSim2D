@@ -33,6 +33,40 @@ struct obstacle {
     int y;
 };
 
+void writeToLog(FILE *logFile, const char *message) {
+    time_t crtime;
+    time(&crtime);
+    int lockResult = flock(fileno(logFile), LOCK_EX);
+    if (lockResult == -1) {
+        perror("Failed to lock the log file");
+        // Handle the error as needed (e.g., exit or return)
+        return;
+    }
+    fprintf(logFile,"%s => ", ctime(&crtime));
+    fprintf(logFile, "%s\n", message);
+    fflush(logFile);
+
+    int unlockResult = flock(fileno(logFile), LOCK_UN);
+    if (unlockResult == -1) {
+        perror("Failed to unlock the log file");
+        // Handle the error as needed (e.g., exit or return)
+    }
+}
+
+int spawn(const char * program, char ** arg_list) {
+    FILE * errors = fopen("logfiles/errors.log", "a");
+    pid_t child_pid = fork();
+    if (child_pid != 0)
+        return child_pid;
+    else {
+        execvp (program, arg_list);
+        perror("exec failed");
+        writeToLog(errors, "SERVER: execvp failed for window");
+        exit(EXIT_FAILURE);
+    }
+    fclose(errors);
+}
+
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
     if (signo == SIGUSR1) {
@@ -70,67 +104,46 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
     }
 }
 
-void writeToLog(FILE *logFile, const char *message) {
-    time_t crtime;
-    time(&crtime);
-    int lockResult = flock(fileno(logFile), LOCK_EX);
-    if (lockResult == -1) {
-        perror("Failed to lock the log file");
-        // Handle the error as needed (e.g., exit or return)
-        return;
-    }
-    fprintf(logFile,"%s => ", ctime(&crtime));
-    fprintf(logFile, "%s\n", message);
-    fflush(logFile);
-
-    int unlockResult = flock(fileno(logFile), LOCK_UN);
-    if (unlockResult == -1) {
-        perror("Failed to unlock the log file");
-        // Handle the error as needed (e.g., exit or return)
-    }
-}
-
 int main(int argc, char* argv[]){
     FILE * debug = fopen("logfiles/debug.log", "a");    // debug log file
     FILE * errors = fopen("logfiles/errors.log", "a");  // errors log file
     writeToLog(debug, "SERVER: process started");
     printf("SERVER : process started\n");
+    
     Drone * drone;
     int nobstacles;
-    char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
     
+    char piperd[10];
+    pid_t window_pid;
 // OPENING SEMAPHORES
     sem_t *sem_drone;   // semaphore for writing and reading drone
     sem_drone = sem_open(SEM_PATH_1, O_CREAT | O_RDWR, 0666, 1);    // Initial value: 1
     
 
-    // OPENING WINDOW
-    // Join the elements of the array into a single command string
-    char command[100];
-    snprintf(command, sizeof(command), "%s %s %s", window_path[0], window_path[1], window_path[2]);
-    pid_t window_pid = fork();
-    if (window_pid ==-1){
-        //error in fork
-        perror("error in fork");
-        writeToLog(errors, "SERVER: error in fork()");
-    }
-    if (window_pid == 0){
-        //child process
-        int system_return = system(command);
-        writeToLog(debug, "SERVER: opened window");
-        if (system_return != 0) {
-            perror("system");
-            writeToLog(errors, "SERVER: error in system");
-            exit(EXIT_FAILURE);
-        }
-    }
+    // OPENING WINDOW   
 
     // PIPES
+    int pipeWdfd[2];    // pipe for window: 0 for reading, 1 for writing
+    if (pipe(pipeWdfd) == -1){
+        perror("error in pipe");
+        writeToLog(errors, "SERVER: error opening pipe for Window;");
+    }
+    sprintf(piperd, "%d", pipeWdfd[0]);
+    // printf("SERVER: piperd (%s)\n", piperd);
+    char *window_path[] = {"konsole", "-e", "./window",piperd, NULL};  // path of window process
+    
+    
+    window_pid = spawn(window_path[0], window_path);
+    
+    close (pipeWdfd[0]);
     int pipeDrfd[2];    // pipe for drone: 0 for reading, 1 for writing
     int pipeObfd[2];    // pipe for obstacles: 0 for reading, 1 for writing
     int pipeTafd[2];    // pipe for targets: 0 for reading, 1 for writing
+    
     fd_set read_fds;
     FD_ZERO(&read_fds);
+
+    // opening window pipe
 
     sscanf(argv[1], "%d", &pipeDrfd[0]);
     sscanf(argv[2], "%d", &pipeDrfd[1]);
@@ -208,6 +221,8 @@ int main(int argc, char* argv[]){
     int edgy = 40;
     int x, y;
 
+    
+
     while(!sigint_rec){
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
@@ -232,6 +247,7 @@ int main(int argc, char* argv[]){
                 read(pipeObfd[0], &nobstacles, sizeof(int)); // reads from drone nobstacles
                 printf("SERVER: number of obstacles: %d\n", nobstacles);
                 write(pipeDrfd[1], &nobstacles, sizeof(int)); // writes to drone nobstacles
+                write(pipeWdfd[1], &nobstacles, sizeof(int)); // writes to window nobstacles
 
                 struct obstacle *obstacles[nobstacles];
                 for(int i = 0; i<nobstacles; i++){
@@ -239,6 +255,7 @@ int main(int argc, char* argv[]){
                     read(pipeObfd[0], obstacles[i], sizeof(struct obstacle));
                     printf("SERVER: obstacle %d position: (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
                     write(pipeDrfd[1], obstacles[i], sizeof(struct obstacle));
+                    write(pipeWdfd[1], obstacles[i], sizeof(struct obstacle));
                 }
                 //write(pipeDrfd[1], obstacles, sizeof(obstacles));
             }
@@ -301,6 +318,7 @@ int main(int argc, char* argv[]){
     fflush(debug);
 
     // closing pipes
+    close (pipeWdfd[1]);
     for (int i = 0; i < 2; i++){
         if (close(pipeDrfd[i]) == -1){
             perror("error in closing pipe");

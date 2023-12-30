@@ -24,6 +24,11 @@ typedef struct {
     int fx, fy;
 } Drone;
 
+struct obstacle {
+    int x;
+    int y;
+};
+
 
 void writeToLog(FILE *logFile, const char *message) {
     time_t crtime;
@@ -58,11 +63,15 @@ int main(char argc, char*argv[]){
 	printf("WINDOW: process started\n");
 	FILE * debug = fopen("logfiles/debug.log", "a");    // debug log file
 	FILE * errors = fopen("logfiles/errors.log", "a");  // errors log file
+
+    int pipeSere;
+    
     writeToLog(debug, "WINDOW: process started");
 
     initscr();	//Start curses mode 
 	Drone * drone;
 	char symbol = '%';	// '%' is the symbol of the drone
+    int nobstacles = 0;
 	
 	curs_set(0);
 
@@ -96,6 +105,11 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
         writeToLog(errors, "WINDOW: map failed for drone");
         return 1;
     }
+    
+    sscanf(argv[1], "%d", &pipeSere);
+    /*
+    writeToLog(debug, argv[1]);
+    */
 
 	int x;
 	int y;
@@ -106,6 +120,29 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
     sprintf(s, "WINDOW: %d", fsfa);
     writeToLog(debug, s);
 	while(1){
+
+        // READ FROM PIPE
+        if((read(pipeSere, &nobstacles, sizeof(int))) == -1)
+        {
+            perror("read");
+            writeToLog(errors, "WINDOW: error reading from pipe");
+            exit(EXIT_FAILURE);
+        } // reads from drone nobstacles
+        char str[40];
+        sprintf(str, "WINDOW: %d obstacles", nobstacles);
+        writeToLog(debug, str);
+        struct obstacle *obstacles[nobstacles];
+        for (int i= 0; i < nobstacles; i++){
+            obstacles[i] = malloc(sizeof(struct obstacle));
+            if((read(pipeSere, obstacles[i], sizeof(struct obstacle))) == -1)
+            {
+                perror("read");
+                writeToLog(errors, "WINDOW: error reading from pipe");
+                exit(EXIT_FAILURE);
+            } // reads from drone obstacles
+            writeToLog(debug, "");
+        }
+
         
 		x = drone->x;
 		y = drone->y;
