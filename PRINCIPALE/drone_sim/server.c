@@ -14,6 +14,7 @@
 #include <time.h>
 #include <sys/file.h>
 #include <sys/select.h>
+#include <errno.h>
 #define SEM_PATH_1 "/sem_drone1"
 
 pid_t wd_pid = -1;
@@ -212,7 +213,12 @@ int main(int argc, char* argv[]){
         FD_SET(pipeDrfd[0], &read_fds);
         FD_SET(pipeObfd[0], &read_fds);
         int max_fd = (pipeDrfd[0] > pipeObfd[0]) ? pipeDrfd[0] : pipeObfd[0];
-        int sel = select(max_fd, &read_fds, NULL, NULL, NULL);
+        int sel;
+        // ciclo do while per evitare errori dovuuti a segnali
+        
+        do{
+            sel = select(max_fd, &read_fds, NULL, NULL, NULL);
+        }while(sel == -1 && errno == EINTR);
         if(sel ==-1){
             perror("error in select");
             writeToLog(errors, "SERVER: error in select");
