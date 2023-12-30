@@ -72,7 +72,7 @@ int calculateRepulsiveForcex(int x, int y, int xo, int yo){
     float rho = sqrt(pow(x-xo, 2) + pow(y-yo, 2));
     float theta = atan2(y-yo, x-xo);
     if (rho < rho0){
-        return eta* (1/rho - 1/rho0) * (1/pow(rho, 2)) * sin(theta);
+        return eta* (1/rho - 1/rho0) * (1/pow(rho, 2)) * cos(theta);
     }
     else
         return 0;
@@ -83,7 +83,7 @@ int calculateRepulsiveForcey(int x, int y, int xo, int yo){
     float rho = sqrt(pow(x-xo, 2) + pow(y-yo, 2));
     float theta = atan2(y-yo, x-xo);
     if (rho < rho0)
-        return (eta * (1/rho - 1/rho0) * (1/pow(rho, 2)) * cos(theta));
+        return (eta * (1/rho - 1/rho0) * (1/pow(rho, 2)) * sin(theta));
     else
         return 0;
 }
@@ -190,6 +190,7 @@ int main(int argc, char* argv[]){
     }
 
     int F[2]={0, 0};    // drone initially stopped
+    int frx = 0, fry = 0;   // repulsive force in x and y direction
 
     // initialization of the command forces vectors
     int wf[] = {-1,-1};
@@ -266,13 +267,12 @@ int main(int argc, char* argv[]){
                     read(pipeSefd[0], obstacles[i], sizeof(struct obstacle));
                     printf("DRONE: obstacle %d created at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
                 }
-                /*
-                read(pipeSefd[0], obstacles, sizeof(obstacles));
-                printf("DRONE: obstacle 1 created at (%d, %d)\n", obstacles[0]->x, obstacles[0]->y);
-                for (int i = 0; i < nobstacles; i++){
-                    printf("DRONE: obstacle %d created at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
-                }*/
 
+                // compute repulsive force of obstacles
+                for (int i = 0; i < nobstacles; i++){
+                    frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
+                    fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
+                }
 
             }
             if(FD_ISSET(keyfd, &read_fds)){
