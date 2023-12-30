@@ -219,6 +219,7 @@ int main(int argc, char* argv[]){
         do{
             sel = select(max_fd, &read_fds, NULL, NULL, NULL);
         }while(sel == -1 && errno == EINTR);
+        
         if(sel ==-1){
             perror("error in select");
             writeToLog(errors, "SERVER: error in select");
