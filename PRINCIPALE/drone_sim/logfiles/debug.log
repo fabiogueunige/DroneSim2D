@@ -1,35 +1,66 @@
-Sat Dec 30 15:47:20 2023
+Sun Dec 31 11:46:04 2023
  => SERVER: process started
-Sat Dec 30 15:47:20 2023
+Sun Dec 31 11:46:04 2023
  => SERVER: pipes opened
-Sat Dec 30 15:47:20 2023
+Sun Dec 31 11:46:04 2023
  => SERVER: generated shared memory
-Sat Dec 30 15:47:20 2023
+Sun Dec 31 11:46:04 2023
  => SERVER: initialized starting values
-Sat Dec 30 15:47:21 2023
+Sun Dec 31 11:46:04 2023
  => WINDOW: process started
-Sat Dec 30 15:47:21 2023
- => WINDOW: 17422
-Sat Dec 30 15:47:21 2023
+Sun Dec 31 11:46:04 2023
+ => WINDOW: 37423
+Sun Dec 31 11:46:04 2023
  => DRONE: process started
-Sat Dec 30 15:47:21 2023
+Sun Dec 31 11:46:04 2023
  => DRONE: pipes opened
 INPUT: process started
 OBSTACLES: process started
 OBSTACLES: pipes opened
 TARGETS: process started
 TARGETS: pipes opened
-Sat Dec 30 15:47:23 2023
+Sun Dec 31 11:46:07 2023
  => WATCH DOG: process started
-Sat Dec 30 15:47:23 2023
+Sun Dec 31 11:46:07 2023
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Sat Dec 30 15:47:23 2023
+Sun Dec 31 11:46:07 2023
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Sat Dec 30 15:47:23 2023
+Sun Dec 31 11:46:07 2023
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Sat Dec 30 15:47:23 2023
+Sun Dec 31 11:46:07 2023
  => WATCH DOG: INPUT received signal
-SERVER: terminating with return value 1...
+OBSTACLES: signal SIGUSR1 received from WATCH DOG
+Sun Dec 31 11:46:08 2023
+ => WATCH DOG: OBSTACLE received signal
+Sun Dec 31 11:46:18 2023
+ => WATCH DOG: sending signals to processes
+SERVER: signal SIGUSR1 received from WATCH DOG
+Sun Dec 31 11:46:18 2023
+ => WATCH DOG: SERVER received signal
+DRONE: signal SIGUSR1 received from WATCH DOG
+Sun Dec 31 11:46:18 2023
+ => WATCH DOG: DRONE received signal
+INPUT: signal SIGUSR1 received from WATCH DOG
+Sun Dec 31 11:46:18 2023
+ => WATCH DOG: INPUT received signal
+OBSTACLES: signal SIGUSR1 received from WATCH DOG
+Sun Dec 31 11:46:18 2023
+ => WATCH DOG: OBSTACLE received signal
+Sun Dec 31 11:46:28 2023
+ => WATCH DOG: sending signals to processes
+SERVER: signal SIGUSR1 received from WATCH DOG
+Sun Dec 31 11:46:28 2023
+ => WATCH DOG: SERVER received signal
+DRONE: signal SIGUSR1 received from WATCH DOG
+Sun Dec 31 11:46:28 2023
+ => WATCH DOG: DRONE received signal
+INPUT: signal SIGUSR1 received from WATCH DOG
+Sun Dec 31 11:46:28 2023
+ => WATCH DOG: INPUT received signal
+OBSTACLES: signal SIGUSR1 received from WATCH DOG
+Sun Dec 31 11:46:28 2023
+ => WATCH DOG: OBSTACLE received signal
+SERVER: terminating with return value 0...

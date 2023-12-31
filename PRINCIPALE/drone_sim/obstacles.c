@@ -16,7 +16,7 @@
 #define MAX_OBSTACLES 20
 
 pid_t wd_pid = -1;
-bool exit_flag = false;
+bool sigint_rec = false;
 
 struct obstacle {
     int x;
@@ -45,6 +45,14 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
         fprintf(debug, "%s\n", "OBSTACLES: terminating by WATCH DOG");
         fclose(debug);
         exit(EXIT_FAILURE);
+    }
+    if (signo == SIGINT){
+        //pressed q or CTRL+C
+        printf("OBSTACLE: Terminating with return value 0...");
+        FILE *debug = fopen("logfiles/debug.log", "a");
+        fprintf(debug, "%s\n", "OBSTACLE: terminating with return value 0...");
+        fclose(debug);
+        sigint_rec = true;
     }
     
 }
@@ -91,7 +99,7 @@ int main (int argc, char *argv[])
     }
 
     // obstacle generation cycle
-    for(int i=0; i<3; i++){
+    while(!sigint_rec){
         srand(time(NULL));
         int nobstacles = rand() % MAX_OBSTACLES;
         char pos_obstacles[nobstacles][10];

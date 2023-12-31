@@ -63,7 +63,7 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
         //pressed q or CTRL+C
         printf("SERVER: Terminating with return value 0...");
         FILE *debug = fopen("logfiles/debug.log", "a");
-        fprintf(debug, "%s\n", "SERVER: terminating with return value 1...");
+        fprintf(debug, "%s\n", "SERVER: terminating with return value 0...");
         fclose(debug);
         kill(window_pid, SIGTERM);
         sigint_rec = true;
@@ -107,12 +107,18 @@ int main(int argc, char* argv[]){
 // OPENING SEMAPHORES
     sem_t *sem_drone;   // semaphore for writing and reading drone
     sem_drone = sem_open(SEM_PATH_1, O_CREAT | O_RDWR, 0666, 1);    // Initial value: 1
-    
 
     // OPENING WINDOW
     // Join the elements of the array into a single command string
     char command[100];
-    snprintf(command, sizeof(command), "%s %s %s", window_path[0], window_path[1], window_path[2]);
+    // pipe to window
+    int pipeWdfd[2];
+    if(pipe(pipeWdfd) == -1){
+        perror("error in pipe");
+        writeToLog(errors, "SERVER: error in pipe");
+        exit(EXIT_FAILURE);
+    }
+    snprintf(command, sizeof(command), "%s %s %s %d", window_path[0], window_path[1], window_path[2], pipeWdfd[0]);
     pid_t window_pid = fork();
     if (window_pid ==-1){
         //error in fork
@@ -234,6 +240,12 @@ int main(int argc, char* argv[]){
         printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
         printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
     }
+    // sends edges to window
+    write(pipeWdfd[1], &nobstacles_edge, sizeof(int));
+    /*
+    for(int i = 0; i<nobstacles_edge; i++){
+        write(pipeWdfd[1], edges[i], sizeof(struct obstacle));
+    }*/
 
     while(!sigint_rec){
         // select wich pipe to read from between drone and obstacles
@@ -342,7 +354,8 @@ int main(int argc, char* argv[]){
             writeToLog(errors, "SERVER: error in closing pipe Targets");
         }
     }
-
+    close(pipeWdfd[0]);
+    close(pipeWdfd[1]);
     fclose(debug);
     fclose(errors);
     return 0;

@@ -24,6 +24,10 @@ typedef struct {
     int fx, fy;
 } Drone;
 
+struct obstacle {
+    int x;
+    int y;
+};
 
 void writeToLog(FILE *logFile, const char *message) {
     time_t crtime;
@@ -62,8 +66,8 @@ int main(char argc, char*argv[]){
 
     initscr();	//Start curses mode 
 	Drone * drone;
+    struct obstacle * obstacles;
 	char symbol = '%';	// '%' is the symbol of the drone
-	
 	curs_set(0);
 
 // SIGNALS
@@ -96,6 +100,17 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
         writeToLog(errors, "WINDOW: map failed for drone");
         return 1;
     }
+    
+    /*
+    int pipeSefd;
+    pipeSefd = atoi(argv[1]);
+    writeToLog(debug, "WINDOW: pipe opened");
+    int nedges;
+    read(pipeSefd, &nedges, sizeof(int));
+    char *a[2];
+    sprintf(a[0], "%d", nedges);
+    writeToLog(debug, a[0]);
+    */
 
 	int x;
 	int y;
