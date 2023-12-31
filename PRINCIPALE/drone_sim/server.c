@@ -218,13 +218,17 @@ int main(int argc, char* argv[]){
     int x, y;// drone coordinates
 
     // EDGES GENERATION
+    write(pipeWdfd[1], &nobstacles_edge, sizeof(int));
+
     for (int i = 0; i< rows; i++){
         edges[i] = malloc(sizeof(struct obstacle));
         edges[i]->x = 0;
         edges[i]->y = i;
+        write(pipeWdfd[1], edges[1], sizeof(struct obstacle));
         edges[i+rows+cols] = malloc(sizeof(struct obstacle));
         edges[i+rows+cols]->x = cols-1;
         edges[i+rows+cols]->y = i;
+        write(pipeWdfd[1], edges[i+rows+cols], sizeof(struct obstacle));
         printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
         printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
         // write to server with pipe ...
@@ -234,14 +238,16 @@ int main(int argc, char* argv[]){
         edges[i] = malloc(sizeof(struct obstacle));
         edges[i]->x = i;
         edges[i]->y = 0;
+        write(pipeWdfd[1], edges[i], sizeof(struct obstacle));
         edges[i+rows+cols] = malloc(sizeof(struct obstacle));
         edges[i+rows+cols]->x = i;
         edges[i+rows+cols]->y = cols-1;
+        write(pipeWdfd[1], edges[i+rows+cols], sizeof(struct obstacle));
         printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
         printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
     }
     // sends edges to window
-    write(pipeWdfd[1], &nobstacles_edge, sizeof(int));
+    
     /*
     for(int i = 0; i<nobstacles_edge; i++){
         write(pipeWdfd[1], edges[i], sizeof(struct obstacle));

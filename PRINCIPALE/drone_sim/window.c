@@ -14,6 +14,7 @@
 #include <stdbool.h>
 #include <time.h>
 #include <sys/file.h>
+#include <sys/select.h>
 #define T 0.1 //s   time instants' duration
 
 
@@ -59,14 +60,16 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
     fclose(debug);
 }
 int main(char argc, char*argv[]){
-	printf("WINDOW: process started\n");
-	FILE * debug = fopen("logfiles/debug.log", "a");    // debug log file
+	
+	FILE * windebug = fopen("logfiles/windebug.log", "w");    // debug log file
 	FILE * errors = fopen("logfiles/errors.log", "a");  // errors log file
-    writeToLog(debug, "WINDOW: process started");
+    
+    writeToLog(windebug, "WINDOW: process started");
 
     initscr();	//Start curses mode 
 	Drone * drone;
-    struct obstacle * obstacles;
+
+    
 	char symbol = '%';	// '%' is the symbol of the drone
 	curs_set(0);
 
@@ -100,28 +103,60 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
         writeToLog(errors, "WINDOW: map failed for drone");
         return 1;
     }
-    
-    /*
+
+    // OPENING PIPE
     int pipeSefd;
+    fd_set readfds;
     pipeSefd = atoi(argv[1]);
-    writeToLog(debug, "WINDOW: pipe opened");
+    writeToLog(windebug, "WINDOW: pipe opened");
+    FD_ZERO(&readfds);
+    FD_SET(pipeSefd, &readfds);
+    // EDGE IMPORT FROM SERVER
     int nedges;
+    char edge_symbol = '#';
     read(pipeSefd, &nedges, sizeof(int));
-    char *a[2];
-    sprintf(a[0], "%d", nedges);
-    writeToLog(debug, a[0]);
-    */
+
+    struct obstacle * edges[nedges];
+    
+    //printf("WINDOW: nedges = %d\n", nedges);
+    
+    char a[7];
+    sprintf(a, "%d", nedges);
+    writeToLog(windebug, a);
+    for(int i = 0; i<nedges; i++){
+        //writeToLog(debug, "WINDOW: reading edges");
+        int sel = select(pipeSefd + 1, &readfds, NULL, NULL, NULL);
+        if (sel == -1){
+            perror("select");
+            writeToLog(errors, "WINDOW: error in select()");
+            exit(EXIT_FAILURE);
+        }
+        else if(sel>0){
+            
+            read(pipeSefd, &edges[i], sizeof(struct obstacle));
+            //printf("WINDOW: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
+            writeToLog(windebug, "WINDOW: edge read");
+            /*
+            char ksdhc[50];
+            sprintf(ksdhc, "WINDOW: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
+            writeToLog(debug, ksdhc);*/
+        
+        }
+        else{
+            writeToLog(errors, "WINDOW: select() timeout");
+        break; // exit the loop if select() returns 0
+    }
+        //read(pipeSefd, &edges[i], sizeof(struct obstacle));
+        //sprintf(debug, "WINDOW: edge %d: x = %d, y = %d \n", i, edges[i].x, edges[i].y);
+    }
 
 	int x;
 	int y;
     float vx, vy;
     int fx, fy;
-    pid_t fsfa = getpid();
-    char s [50];
-    sprintf(s, "WINDOW: %d", fsfa);
-    writeToLog(debug, s);
+
 	while(1){
-        
+        writeToLog(windebug, "WINDOW: cycle");
 		x = drone->x;
 		y = drone->y;
         vx = (drone->vx) - 5;
@@ -131,6 +166,13 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
 		clear();
 		mvprintw(y, x, "%c", symbol);
         mvprintw(LINES - 1, COLS - 80, "X: %d, Y: %d, Vx: %f m/s, Vy: %f m/s, Fx: %d N, Fy: %d N", x, y, vx, vy, fx, fy);
+        /*
+        for(int i = 0; i<nedges; i++){
+            int ex = edges[i].x;
+            int ey = edges[i].y;
+            mvprintw(ex, ey, "%c", edge_symbol);
+        }*/
+
         refresh();  // Print changes to the screen
     }
 	// CLOSE AND UNLINK SHARED MEMORY
