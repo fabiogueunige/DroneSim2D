@@ -149,10 +149,7 @@ int main(int argc, char* argv[]){
     sscanf(argv[2], "%d", &pipeSefd[1]);
     sscanf(argv[3], "%d", &pipeSefd[0]);
     writeToLog(debug, "DRONE: pipes opened");
-
-
-
-
+    
 // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -228,10 +225,20 @@ int main(int argc, char* argv[]){
     int x = x0;
     int y = y0;
     int re; //return of the read function
-
+    int nedges = 2*(NROWS+NCOLS); // number of edges
     // reads obstacle position from server
-    struct obstacle edges[2*(NROWS+NCOLS)]; //edges
+    struct obstacle *edges[nedges]; //edges
+    struct obstacle *obstacles[20]; //obstacles
 
+    // reads edges
+    /*
+    for(int i = 0; i<nedges; i++){
+            edges[i] = malloc(sizeof(struct obstacle));
+            read(pipeSefd[0], edges[i], sizeof(struct obstacle));
+            //printf("WINDOW: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
+            printf("DRONE: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
+    }*/
+    // 
     while(!sigint_rec){
         bool brake = false;
         // t->t+1
@@ -261,17 +268,11 @@ int main(int argc, char* argv[]){
                 // reading obstacles and target
                 read(pipeSefd[0], &nobstacles, sizeof(int));
                 printf("DRONE: number of obstacles: %d\n", nobstacles);
-                struct obstacle *obstacles[nobstacles];
+                //struct obstacle *obstacles[nobstacles];
                 for(int i=0; i<nobstacles; i++){
                     obstacles[i] = malloc(sizeof(struct obstacle));
                     read(pipeSefd[0], obstacles[i], sizeof(struct obstacle));
                     printf("DRONE: obstacle %d created at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
-                }
-
-                // compute repulsive force of obstacles
-                for (int i = 0; i < nobstacles; i++){
-                    frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
-                    fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
                 }
 
             }
@@ -282,93 +283,105 @@ int main(int argc, char* argv[]){
                     perror("read");
                     writeToLog(errors, "DRONE: error in read");
                 }
-                switch (input) {
-                    case 'w':
-                        for(int i=0; i<2; i++)
-                            F[i] =F[i] + FORCE_MODULE * wf[i];
-                        break;
-                    case 's':
-                        for(int i=0; i<2; i++)
-                            F[i] =F[i] + FORCE_MODULE * sf[i];
-                        break;
-                    case 'd':
-                        // goes on by inertia
-                        F[0] = 0;
-                        F[1] = 0;
-                        break;
-                    case 'b':
-                        // brake
-                        
-                        F[0] = 0;
-                        F[1] = 0;
-                        if ((int)vx>5){
-                            F[0] += -FORCE_MODULE;
-                            brake = true;
-                        }
-                        else if ((int)vx<5){
-                            F[0] += FORCE_MODULE;
-                            brake = true;
-                        }
-                        else
-                            F[0] = 0;
-                            brake = false;
-
-                        if ((int)vy>5){
-                            F[1] += -FORCE_MODULE;
-                            brake = true;
-                        }
-                        else if ((int)vy<5){
-                            F[1] += +FORCE_MODULE;
-                            brake = true;
-                        }
-                        else
-                            F[1] = 0;
-                            brake = false;
-                        break;
-                    case 'f':
-                        for(int i=0; i<2; i++)
-                            F[i] += FORCE_MODULE * ff[i];
-                        break;
-                    case 'e':
-                        for(int i=0; i<2; i++)
-                            F[i] += FORCE_MODULE * ef[i];
-                        break;
-                    case 'r':
-                        for(int i=0; i<2; i++)
-                            F[i] = F[i] + FORCE_MODULE * rf[i];
-                        break;
-                    case 'x':
-                        for(int i=0; i<2; i++)
-                            F[i] = F[i] + FORCE_MODULE * xf[i];
-                        break;
-                    case 'c':
-                        for(int i=0; i<2; i++)
-                            F[i] = F[i] + FORCE_MODULE * cf[i];
-                        break;
-                    case 'v':
-                        for(int i=0; i<2;i++)
-                            F[i] = F[i] + FORCE_MODULE * vf[i];
-                        break;
-                    case 'q':
-                        exit(EXIT_SUCCESS);  // Exit the program
-                    case 'u':
-                        //reset
-                        
-                        x = x0;
-                        y = y0;
-                        F[0] = 0;
-                        F[1] = 0;
-                        vx = 5;
-                        vy = 5;
-                        break;
-                    default:
-                        break;
-                }
-            }
-            else if(FD_ISSET(pipeSefd[0], &read_fds)){
-                // reading obstacles and target
+                
             }
         }
+        switch (input) {
+            case 'w':
+                for(int i=0; i<2; i++)
+                    F[i] =F[i] + FORCE_MODULE * wf[i];
+                break;
+            case 's':
+                for(int i=0; i<2; i++)
+                    F[i] =F[i] + FORCE_MODULE * sf[i];
+                break;
+            case 'd':
+                // goes on by inertia
+                F[0] = 0;
+                F[1] = 0;
+                break;
+            case 'b':
+                // brake
+                
+                F[0] = 0;
+                F[1] = 0;
+                if ((int)vx>5){
+                    F[0] += -FORCE_MODULE;
+                    brake = true;
+                }
+                else if ((int)vx<5){
+                    F[0] += FORCE_MODULE;
+                    brake = true;
+                }
+                else
+                    F[0] = 0;
+                    brake = false;
+
+                if ((int)vy>5){
+                    F[1] += -FORCE_MODULE;
+                    brake = true;
+                }
+                else if ((int)vy<5){
+                    F[1] += +FORCE_MODULE;
+                    brake = true;
+                }
+                else
+                    F[1] = 0;
+                    brake = false;
+                break;
+            case 'f':
+                for(int i=0; i<2; i++)
+                    F[i] += FORCE_MODULE * ff[i];
+                break;
+            case 'e':
+                for(int i=0; i<2; i++)
+                    F[i] += FORCE_MODULE * ef[i];
+                break;
+            case 'r':
+                for(int i=0; i<2; i++)
+                    F[i] = F[i] + FORCE_MODULE * rf[i];
+                break;
+            case 'x':
+                for(int i=0; i<2; i++)
+                    F[i] = F[i] + FORCE_MODULE * xf[i];
+                break;
+            case 'c':
+                for(int i=0; i<2; i++)
+                    F[i] = F[i] + FORCE_MODULE * cf[i];
+                break;
+            case 'v':
+                for(int i=0; i<2;i++)
+                    F[i] = F[i] + FORCE_MODULE * vf[i];
+                break;
+            case 'q':
+                exit(EXIT_SUCCESS);  // Exit the program
+            case 'u':
+                //reset
+                
+                x = x0;
+                y = y0;
+                F[0] = 0;
+                F[1] = 0;
+                vx = 5;
+                vy = 5;
+                break;
+            default:
+                break;
+        }
+        // compute repulsive force of obstacles
+        for (int i = 0; i < nobstacles; i++){
+            frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
+            fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
+        }
+        /*
+        // compute repulsive force of edges
+        for(int i = 0; i < nedges; i++){
+            frx += calculateRepulsiveForcex(x, y, edges[i]->x, edges[i]->y);
+            fry += calculateRepulsiveForcey(x, y, edges[i]->x, edges[i]->y);
+        }*/
+        F[0]+=frx;
+        F[1]+=fry;
+        printf("%d %d\n", frx, fry);
         updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
         drone->x = x;
         drone->y = y;

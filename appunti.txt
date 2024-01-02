@@ -1,0 +1,6 @@
+da fare:
+- passare edge a drone
+- sistemare repulsive force
+- passare i target a tutti i processi utili e elaborare cosa fanno fare al drone
+- passare struttura drone anziche int tra drone e server e passarla anche a window, dopodiché sarà possibile togliere le shared memory
+- una volta fatti i target, mettere il check del watch dog a target

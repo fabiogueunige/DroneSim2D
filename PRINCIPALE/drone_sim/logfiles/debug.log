@@ -1,34 +1,34 @@
-Tue Jan  2 16:47:41 2024
+Tue Jan  2 17:51:30 2024
  => SERVER: process started
-Tue Jan  2 16:47:41 2024
+Tue Jan  2 17:51:30 2024
  => SERVER: pipes opened
-Tue Jan  2 16:47:41 2024
+Tue Jan  2 17:51:30 2024
  => SERVER: generated shared memory
-Tue Jan  2 16:47:41 2024
+Tue Jan  2 17:51:30 2024
  => SERVER: initialized starting values
-Tue Jan  2 16:47:41 2024
+Tue Jan  2 17:51:31 2024
  => DRONE: process started
-Tue Jan  2 16:47:41 2024
+Tue Jan  2 17:51:31 2024
  => DRONE: pipes opened
 INPUT: process started
 OBSTACLES: process started
 OBSTACLES: pipes opened
 TARGETS: process started
 TARGETS: pipes opened
-Tue Jan  2 16:47:44 2024
+Tue Jan  2 17:51:33 2024
  => WATCH DOG: process started
-Tue Jan  2 16:47:44 2024
+Tue Jan  2 17:51:33 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Tue Jan  2 16:47:44 2024
+Tue Jan  2 17:51:33 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Tue Jan  2 16:47:44 2024
+Tue Jan  2 17:51:33 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Tue Jan  2 16:47:44 2024
+Tue Jan  2 17:51:33 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Tue Jan  2 16:47:44 2024
+Tue Jan  2 17:51:33 2024
  => WATCH DOG: OBSTACLE received signal
 SERVER: terminating with return value 0...

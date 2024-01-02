@@ -127,7 +127,7 @@ int main (int argc, char *argv[])
                 exit(EXIT_FAILURE);
             }
         }
-        sleep(30);
+        sleep(50);
     }
     // closing pipes
     
