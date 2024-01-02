@@ -29,7 +29,7 @@ struct obstacle {
     int x;
     int y;
 };
-
+/*
 void writeToLog(FILE *logFile, const char *message) {
     time_t crtime;
     time(&crtime);
@@ -48,7 +48,16 @@ void writeToLog(FILE *logFile, const char *message) {
         perror("Failed to unlock the log file");
         // Handle the error as needed (e.g., exit or return)
     }
+}*/
+
+void writeToLog(FILE *logFile, const char *message) {
+    time_t crtime;
+    time(&crtime);
+    fprintf(logFile,"%s => ", ctime(&crtime));
+    fprintf(logFile, "%s\n", message);
+    fflush(logFile);
 }
+
 
 void sig_handler(int signo, siginfo_t *info, void *context) {
     FILE * debug = fopen("logfiles/debug.log", "a");    // debug log file
@@ -112,10 +121,10 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
     FD_ZERO(&readfds);
     FD_SET(pipeSefd, &readfds);
     // EDGE IMPORT FROM SERVER
-    int nedges;
+    int nedges, nobstacles;
     char edge_symbol = '#';
+    char obs_symbol = 'o';
     read(pipeSefd, &nedges, sizeof(int));
-
     struct obstacle * edges[nedges];
     
     //printf("WINDOW: nedges = %d\n", nedges);
@@ -123,6 +132,7 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
     char a[7];
     sprintf(a, "%d", nedges);
     writeToLog(windebug, a);
+
     for(int i = 0; i<nedges; i++){
         //writeToLog(debug, "WINDOW: reading edges");
         int sel = select(pipeSefd + 1, &readfds, NULL, NULL, NULL);
@@ -132,8 +142,8 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
             exit(EXIT_FAILURE);
         }
         else if(sel>0){
-            
-            read(pipeSefd, &edges[i], sizeof(struct obstacle));
+            edges[i] = malloc(sizeof(struct obstacle));
+            read(pipeSefd, edges[i], sizeof(struct obstacle));
             //printf("WINDOW: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
             writeToLog(windebug, "WINDOW: edge read");
             /*
@@ -149,14 +159,54 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
         //read(pipeSefd, &edges[i], sizeof(struct obstacle));
         //sprintf(debug, "WINDOW: edge %d: x = %d, y = %d \n", i, edges[i].x, edges[i].y);
     }
-
+    writeToLog(windebug, "WINDOW: all edges has been read");
 	int x;
 	int y;
     float vx, vy;
     int fx, fy;
-
+    struct obstacle * obs[20];
 	while(1){
+        char buffer[4];
         writeToLog(windebug, "WINDOW: cycle");
+        FD_SET(pipeSefd, &readfds);
+        int sel = select(pipeSefd + 1, &readfds, NULL, NULL, NULL);
+        if (sel == -1){
+            perror("select");
+            writeToLog(errors, "WINDOW: error in select()");
+            exit(EXIT_FAILURE);
+        }
+        else if(sel>0){
+        //read(pipeSefd, &x, sizeof(int));
+        //read(pipeSefd, &y, sizeof(int));
+        //read(pipeSefd, buffer, sizeof(buffer)-1);
+        ssize_t numRead = read(pipeSefd, buffer, sizeof(buffer)-1);
+        if (numRead == -1) {
+            perror("read");
+            return 1;
+        }
+        writeToLog(windebug, buffer);
+        //buffer[numRead] = '\0';
+        if(strcmp(buffer, "obs") == 0){
+            // datas for obstacles
+            writeToLog(windebug, "WINDOW: reading obstacles");
+            
+            read(pipeSefd, &nobstacles, sizeof(int));
+            char a[100];
+            sprintf(a, "WINDOW: number of obstacles %d", nobstacles);
+            writeToLog(windebug, a);
+            //struct obstacle * obs[nobstacles];
+            for (int i = 0; i<nobstacles; i++){
+                    obs[i] = malloc(sizeof(struct obstacle));
+                    read(pipeSefd, obs[i], sizeof(struct obstacle));
+            }
+            
+        }
+        else if(strcmp(buffer, "coo") == 0){
+            // read the coordinates
+            writeToLog(windebug, "WINDOW: reading drone");
+        }
+        
+        }
 		x = drone->x;
 		y = drone->y;
         vx = (drone->vx) - 5;
@@ -166,14 +216,19 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
 		clear();
 		mvprintw(y, x, "%c", symbol);
         mvprintw(LINES - 1, COLS - 80, "X: %d, Y: %d, Vx: %f m/s, Vy: %f m/s, Fx: %d N, Fy: %d N", x, y, vx, vy, fx, fy);
+        
+        for (int i = 0; i<nobstacles; i++){
+            mvprintw(obs[i]->y, obs[i]->x, "%c", obs_symbol);
+        }
         /*
         for(int i = 0; i<nedges; i++){
-            int ex = edges[i].x;
-            int ey = edges[i].y;
-            mvprintw(ex, ey, "%c", edge_symbol);
+            // it is too slow and it is not necessary
+            writeToLog(windebug, "WINDOW: printing edges");
+            mvprintw(edges[i]->y, edges[i]->x, "%c", edge_symbol);
         }*/
 
         refresh();  // Print changes to the screen
+
     }
 	// CLOSE AND UNLINK SHARED MEMORY
     if (close(shm_fd) == -1) {
@@ -187,6 +242,6 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
     munmap(drone, SIZE);
 
 	endwin();	// end curses mode
-
+    close(pipeSefd);
     return 0;
 }

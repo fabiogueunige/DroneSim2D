@@ -78,7 +78,7 @@ int main (int argc, char *argv[])
     writeToLog(debug, "OBSTACLES: pipes opened");
     
     // these var are used because there aren't pipes, but these values are imported by server
-    int rows = 100;
+    int rows = 50;
     int cols = 100;
     
     struct sigaction sa; //initialize sigaction

@@ -141,7 +141,9 @@ int main(int argc, char* argv[]){
     int pipeObfd[2];    // pipe for obstacles: 0 for reading, 1 for writing
     int pipeTafd[2];    // pipe for targets: 0 for reading, 1 for writing
     fd_set read_fds;
+    fd_set write_fds;
     FD_ZERO(&read_fds);
+    FD_ZERO(&write_fds);
 
     sscanf(argv[1], "%d", &pipeDrfd[0]);
     sscanf(argv[2], "%d", &pipeDrfd[1]);
@@ -151,7 +153,7 @@ int main(int argc, char* argv[]){
     sscanf(argv[6], "%d", &pipeTafd[0]);
     writeToLog(debug, "SERVER: pipes opened");
 
-    
+    char *obs = "obs";
 
 // SHARED MEMORY INITIALIZATION AND MAPPING
     const char * shm_name = "/dronemem"; //name of the shm
@@ -224,7 +226,7 @@ int main(int argc, char* argv[]){
         edges[i] = malloc(sizeof(struct obstacle));
         edges[i]->x = 0;
         edges[i]->y = i;
-        write(pipeWdfd[1], edges[1], sizeof(struct obstacle));
+        write(pipeWdfd[1], edges[i], sizeof(struct obstacle));
         edges[i+rows+cols] = malloc(sizeof(struct obstacle));
         edges[i+rows+cols]->x = cols-1;
         edges[i+rows+cols]->y = i;
@@ -257,12 +259,15 @@ int main(int argc, char* argv[]){
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
         FD_SET(pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
+
+        FD_SET(pipeWdfd[1], &write_fds);
+        //FD_SET(pipeDrfd[1], &write_fds);
         int max_fd = (pipeDrfd[0] > pipeObfd[0]) ? pipeDrfd[0] : pipeObfd[0];
         int sel;
         // ciclo do while per evitare errori dovuuti a segnali
         
         do{
-            sel = select(max_fd +1, &read_fds, NULL, NULL, NULL);
+            sel = select(max_fd +1, &read_fds, &write_fds, NULL, NULL);
         }while(sel == -1 && errno == EINTR);
         
         if(sel ==-1){
@@ -273,17 +278,19 @@ int main(int argc, char* argv[]){
         else if(sel>0){
             if(FD_ISSET(pipeObfd[0], &read_fds)){
                 printf("SERVER: reading from obstacles\n");
-
                 read(pipeObfd[0], &nobstacles, sizeof(int)); // reads from drone nobstacles
                 printf("SERVER: number of obstacles: %d\n", nobstacles);
                 write(pipeDrfd[1], &nobstacles, sizeof(int)); // writes to drone nobstacles
-
+                //strcpy(data_info, "obs");
+                write(pipeWdfd[1], obs, strlen(obs)); // writes to window that it will sends obstacles
+                write(pipeWdfd[1], &nobstacles, sizeof(int)); // writes to window nobstacles
                 struct obstacle *obstacles[nobstacles];
                 for(int i = 0; i<nobstacles; i++){
                     obstacles[i] = malloc(sizeof(struct obstacle));
                     read(pipeObfd[0], obstacles[i], sizeof(struct obstacle));
                     printf("SERVER: obstacle %d position: (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
                     write(pipeDrfd[1], obstacles[i], sizeof(struct obstacle));
+                    write(pipeWdfd[1], obstacles[i], sizeof(struct obstacle));
                 }
                 //write(pipeDrfd[1], obstacles, sizeof(obstacles));
             }
@@ -298,8 +305,21 @@ int main(int argc, char* argv[]){
                 read(pipeDrfd[0], &drone->fx, sizeof(int));
                 read(pipeDrfd[0], &drone->fy, sizeof(int));*/
 
-                printf("%d \n", drone->x);
+                //printf("%d \n", drone->x);
             }
+            //if(FD_ISSET(pipeWdfd[1], &write_fds)){
+            printf("SERVER: writing to window\n");
+            write(pipeWdfd[1], &x, sizeof(int));
+            write(pipeWdfd[1], &y, sizeof(int));
+
+                /*
+                write(pipeWdfd[1], &drone->vx, sizeof(float));
+                write(pipeWdfd[1], &drone->vy, sizeof(float));
+                write(pipeWdfd[1], &drone->fx, sizeof(int));
+                write(pipeWdfd[1], &drone->fy, sizeof(int));
+            */
+            //}
+            
             
                 /*
                 read(pipeDrfd[0], &drone->vx, sizeof(float));
@@ -310,16 +330,7 @@ int main(int argc, char* argv[]){
                 //printf("%d \n", drone->x);
             
         }
-        /*
-        read(pipeDrfd[0], &x, sizeof(int)); // reads from drone
-        read(pipeDrfd[0], &y, sizeof(int));
         
-        read(pipeDrfd[0], &drone->vx, sizeof(float));
-        read(pipeDrfd[0], &drone->vy, sizeof(float));
-        read(pipeDrfd[0], &drone->fx, sizeof(int));
-        read(pipeDrfd[0], &drone->fy, sizeof(int));*/
-
-        //printf("%d \n", drone->x);
     }
 
     // waits window to terminate
