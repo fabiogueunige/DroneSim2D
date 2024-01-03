@@ -230,6 +230,7 @@ int main(int argc, char* argv[]){
         exit(EXIT_FAILURE);
     }
 
+    
     for (int i = 0; i< rows; i++){
         edges[i] = malloc(sizeof(struct obstacle));
         edges[i]->x = 0;
@@ -263,6 +264,11 @@ int main(int argc, char* argv[]){
             writeToLog(errors, "SERVER: error in writing to pipe the obstacle");
             exit(EXIT_FAILURE);
         }
+        if ((write(pipeDrfd[1], edges[i], sizeof(struct obstacle))) == -1){
+            perror("error in writing to pipe");
+            writeToLog(errors, "SERVER: error in writing to pipe the obstacle");
+            exit(EXIT_FAILURE);
+        }
         //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
         edges[i+rows+cols] = malloc(sizeof(struct obstacle));
         edges[i+rows+cols]->x = i;
@@ -276,6 +282,7 @@ int main(int argc, char* argv[]){
         printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
         printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
     }
+    
     // sends edges to window
     
     /*

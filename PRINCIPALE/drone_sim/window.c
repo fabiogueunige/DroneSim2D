@@ -86,11 +86,11 @@ int main(char argc, char*argv[]){
 	curs_set(0);
 
 // SIGNALS
-struct sigaction sa; //initialize sigaction
+    struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
     sa.sa_sigaction = sig_handler;
 
-if (sigaction(SIGUSR1, &sa, NULL) == -1) {
+    if (sigaction(SIGUSR1, &sa, NULL) == -1) {
         perror("Error setting up SIGINT handler");
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
@@ -166,8 +166,8 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
         }
         else{
             writeToLog(errors, "WINDOW: select() timeout");
-        break; // exit the loop if select() returns 0
-    }
+            break; // exit the loop if select() returns 0
+        }
         //read(pipeSefd, &edges[i], sizeof(struct obstacle));
         //sprintf(debug, "WINDOW: edge %d: x = %d, y = %d \n", i, edges[i].x, edges[i].y);
     }

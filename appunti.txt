@@ -1,6 +1,8 @@
 da fare:
-- passare edge a drone
+- Mettere nel server la lettura dei target (codice in target) nel punto giusto. Guarda anche commenti server
+- passare edge a drone. IO non li passerei ne a drone ne a window, come non li salverei nel server!!
+Quindi dal server deciderei il numero di righe e colonne della finetra e la creerei in window, come passerei quei valori nel drone. Nel server posso disegnarli con | o -, mentre nel drone conoscendo quei valori posso farlo rimbalzare per x =0 e x= cols etc... (implemento nel mio branch per non togliere codice tuo o creare casini)
 - sistemare repulsive force
 - passare i target a tutti i processi utili e elaborare cosa fanno fare al drone
-- passare struttura drone anziche int tra drone e server e passarla anche a window, dopodiché sarà possibile togliere le shared memory
+- passare struttura drone anziche int tra drone e server (ok) e passarla anche a window, dopodiché sarà possibile togliere le shared memory
 - una volta fatti i target, mettere il check del watch dog a target

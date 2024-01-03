@@ -21,8 +21,9 @@
 #define FRICTION_COEFFICIENT 0.1    // N*s*m
 #define FORCE_MODULE 1 //N
 #define T 0.1 //s   time instants' duration
-#define NROWS 100
+#define NROWS 50
 #define NCOLS 100
+#define DISTH 2 // distance threshold
 
 typedef struct {
     int x;
@@ -32,10 +33,10 @@ typedef struct {
     int fx, fy;
 } Drone;    // Drone object
 
-struct obstacle {
+typedef struct {
     int x;
     int y;
-};
+}obstacle;
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
@@ -86,6 +87,32 @@ int calculateRepulsiveForcey(int x, int y, int xo, int yo){
         return (eta * (1/rho - 1/rho0) * (1/pow(rho, 2)) * sin(theta));
     else
         return 0;
+}
+
+void calculateRepulsiveForceF(obstacle * obs, Drone *dr, int *forceX, int *forceY) {
+    int maxForce = 1;
+    
+    double distanceX = dr->x - obs->x;
+    double distanceY = dr->y - obs->y;
+
+    double distance = sqrt(pow(distanceX, 2) + pow(distanceY, 2));
+    
+    if (-0.2 < distance && distance < 0.2) {
+        dr->vx = -(dr->vx);
+        dr->vy = -(dr->vy);
+        dr->fx = -(dr->fx);
+        dr->fy = -(dr->fy);
+        *forceX = 0;
+        *forceY = 0;
+    }
+    else if (distance < DISTH) {
+        *forceX = (int)round(maxForce * exp((1 / distance) * (distance - DISTH) * (distanceX / distance)));
+        *forceY = (int)round(maxForce * exp((1 / distance) * (distance - DISTH) * (distanceY / distance)));
+    } 
+    else {
+        *forceX = 0;
+        *forceY = 0;
+    }
 }
 
 // Function to update position and velocity based on applied force
@@ -232,10 +259,11 @@ int main(int argc, char* argv[]){
     
     int nedges = 2*(NROWS+NCOLS); // number of edges
     // reads obstacle position from server
-    struct obstacle *edges[nedges]; //edges
-    struct obstacle *obstacles[20]; //obstacles
+    obstacle *edges[nedges]; //edges
+    obstacle *obstacles[20]; //obstacles
 
     // reads edges
+    
     /*
     for(int i = 0; i<nedges; i++){
             edges[i] = malloc(sizeof(struct obstacle));
@@ -279,8 +307,8 @@ int main(int argc, char* argv[]){
                 printf("DRONE: number of obstacles: %d\n", nobstacles);
                 //struct obstacle *obstacles[nobstacles];
                 for(int i=0; i<nobstacles; i++){
-                    obstacles[i] = malloc(sizeof(struct obstacle));
-                    if ((read(pipeSefd[0], obstacles[i], sizeof(struct obstacle))) == -1){
+                    obstacles[i] = malloc(sizeof(obstacle));
+                    if ((read(pipeSefd[0], obstacles[i], sizeof(obstacle))) == -1){
                         perror("error in reading from pipe");
                         writeToLog(errors, "DRONE: error in reading from pipe obstacles");
                         exit(EXIT_FAILURE);
@@ -382,14 +410,20 @@ int main(int argc, char* argv[]){
         }
         // compute repulsive force of obstacles
         for (int i = 0; i < nobstacles; i++){
-            frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
+            /*frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
             fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
+            */
+            //calculateRepulsiveForceF(obstacles[i], drone, &frx, &fry);
+            printf("DRONE: obstacle %d: x = %d, y = %d, frx = %d, fry = %d\n", i, obstacles[i]->x, obstacles[i]->y, frx, fry);
         }
         /*
         // compute repulsive force of edges
         for(int i = 0; i < nedges; i++){
             frx += calculateRepulsiveForcex(x, y, edges[i]->x, edges[i]->y);
             fry += calculateRepulsiveForcey(x, y, edges[i]->x, edges[i]->y);
+        
+            calculateRepulsiveForceF(obsta, Drone *dr, int *forceX, int *forceY)
+        
         }*/
         F[0]+=frx;
         F[1]+=fry;
@@ -433,5 +467,7 @@ int main(int argc, char* argv[]){
     munmap(drone, SIZE);
     fclose(debug);
     fclose(errors);
+    free(drone);
+
     return 0;
 }
