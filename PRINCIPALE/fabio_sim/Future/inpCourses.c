@@ -117,7 +117,7 @@ int main (int argc, char* argv[])
         if (realchar != '\0') {
 // #ifndef DEBUG
             //write in the pipe
-            if ((write(pipeInputwr,&realchar,sizeof(char))) < 0) {
+            if ((write(pipeInputwr, &realchar, sizeof(char))) < 0) {
                 perror("error writing on input");
                 return 3;
             }
