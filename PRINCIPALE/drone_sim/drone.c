@@ -129,9 +129,6 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
 int main(int argc, char* argv[]){
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
-    writeToLog(debug, "DRONE: process started");
-    printf("DRONE: process started\n");
-
     fd_set read_fds;
     fd_set write_fds;
     FD_ZERO(&read_fds);
@@ -141,11 +138,19 @@ int main(int argc, char* argv[]){
     sscanf(argv[1], "%d", &keyfd);
     char input;
     int nobstacles; // initializes nobstacles
-
     Drone * drone;    // drone object
-
+    int pipeSefd[2];
+    
+    // FILE Opening
+    if (debug == NULL || errors == NULL){
+        perror("error in opening log files");
+        exit(EXIT_FAILURE);
+    }
+    writeToLog(debug, "DRONE: process started");
+    printf("DRONE: process started\n");
+    
     // Pipe reading from arguments
-    int pipeSefd[2]; // pipe server and drone: 0 for reading from and 1 for writing to
+    // pipe server and drone: 0 for reading from and 1 for writing to
     sscanf(argv[2], "%d", &pipeSefd[1]);
     sscanf(argv[3], "%d", &pipeSefd[0]);
     writeToLog(debug, "DRONE: pipes opened");
@@ -224,7 +229,7 @@ int main(int argc, char* argv[]){
     //initializes the drone's coordinates
     int x = x0;
     int y = y0;
-    int re; //return of the read function
+    
     int nedges = 2*(NROWS+NCOLS); // number of edges
     // reads obstacle position from server
     struct obstacle *edges[nedges]; //edges
@@ -266,24 +271,31 @@ int main(int argc, char* argv[]){
         else{
             if(FD_ISSET(pipeSefd[0], &read_fds)){
                 // reading obstacles and target
-                read(pipeSefd[0], &nobstacles, sizeof(int));
+                if ((read(pipeSefd[0], &nobstacles, sizeof(int))) == -1){
+                    perror("error in reading from pipe");
+                    writeToLog(errors, "DRONE: error in reading from pipe number of obstacles");
+                    exit(EXIT_FAILURE);
+                }
                 printf("DRONE: number of obstacles: %d\n", nobstacles);
                 //struct obstacle *obstacles[nobstacles];
                 for(int i=0; i<nobstacles; i++){
                     obstacles[i] = malloc(sizeof(struct obstacle));
-                    read(pipeSefd[0], obstacles[i], sizeof(struct obstacle));
+                    if ((read(pipeSefd[0], obstacles[i], sizeof(struct obstacle))) == -1){
+                        perror("error in reading from pipe");
+                        writeToLog(errors, "DRONE: error in reading from pipe obstacles");
+                        exit(EXIT_FAILURE);
+                    }
                     printf("DRONE: obstacle %d created at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
                 }
 
             }
             if(FD_ISSET(keyfd, &read_fds)){
                 // reading key pressed
-                re = read(keyfd, &input, sizeof(char)); //reads input
-                if (re== -1){
-                    perror("read");
-                    writeToLog(errors, "DRONE: error in read");
-                }
-                
+                if ((read(keyfd, &input, sizeof(char))) == -1){
+                    perror("error in reading from pipe");
+                    writeToLog(errors, "DRONE: error in reading from pipe the input");
+                    exit(EXIT_FAILURE);
+                } 
             }
         }
         switch (input) {
@@ -389,18 +401,12 @@ int main(int argc, char* argv[]){
         drone->vy = vy;
         drone->fx = F[0];
         drone->fy = F[1];
-        //write(pipeSefd[1], &drone, sizeof(Drone *));
-        //printf("%d\n", x);
-
-        write(pipeSefd[1], &x, sizeof(int));
-        write(pipeSefd[1], &y, sizeof(int));
-        /*
-        write(pipeSefd[1], &drone->vx, sizeof(float));
-        write(pipeSefd[1], &drone->vy, sizeof(float));
-        write(pipeSefd[1], &drone->fx, sizeof(int));
-        write(pipeSefd[1], &drone->fy, sizeof(int));
-        */
-
+        
+        if ((write(pipeSefd[1], drone, sizeof(Drone))) == -1){
+            perror("error in writing to pipe");
+            writeToLog(errors, "DRONE: error in writing to pipe x");
+            exit(EXIT_FAILURE);
+        }
         if(brake){
             F[0] = 0;
             F[1] = 0;

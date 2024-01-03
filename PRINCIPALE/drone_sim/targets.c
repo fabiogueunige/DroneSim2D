@@ -58,6 +58,11 @@ int main (int argc, char *argv[])
 {
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
+    
+    if (debug == NULL || errors == NULL){
+        perror("error in opening log files");
+        exit(EXIT_FAILURE);
+    }
     writeToLog(debug, "TARGETS: process started");
     printf("TARGETS: process started\n");
 
@@ -94,13 +99,41 @@ int main (int argc, char *argv[])
         writeToLog(errors, "INPUT: error in sigaction()");
         exit(EXIT_FAILURE);
     }
+    /* Not in server: Put:
+    if ((read(pipeSefd[0], &ntargets, sizeof(int))) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "TARGETS: error in reading from pipe");
+    }
+    */
+    if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
+        perror("error in writing to pipe");
+        writeToLog(errors, "TARGETS: error in writing to pipe");
+    }
+    /* Not in server: Put:
+    int ntargets;
+    if ((read(pipeTafd[0], &ntargets, sizeof(int))) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "SERVER: error in reading from pipe ntargets");
+    }
+    */
 
     for(int i = 0; i<ntargets; i++){
         targets[i].x = rand() % rows;
         targets[i].y = rand() % cols;
         printf("TARGETS: target %d: x = %d, y = %d\n", i, targets[i].x, targets[i].y);
         sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
-        // write to server with pipe
+        
+        if ((write(pipeSefd[1], pos_targets[i],sizeof(pos_targets[i]))) == -1){
+            perror("error in writing to pipe");
+            writeToLog(errors, "TARGETS: error in writing to pipe");
+        }
+        // write to server with pipe (NOT IMPLEMENTED IN SERVER
+        /* Metti:
+        if ((read(pipeTafd[0]. pos_targets[i], sizeof(pos_targets[i]))) == -1){
+            perror("error in reading from pipe of targets");
+            writeToLog(errors, "TARGETS: error in reading from pipe");
+        }
+        */
     }
 
     // closing pipes
@@ -110,5 +143,8 @@ int main (int argc, char *argv[])
             writeToLog(errors, "TARGETS: error in closing pipe");
         }
     }
+
+    fclose(debug);
+    fclose(errors);
     return 0;
 }

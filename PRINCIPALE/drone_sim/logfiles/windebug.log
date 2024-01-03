@@ -1,1439 +1,3284 @@
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: process started
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: pipe opened
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => 300
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: edge read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: all edges has been read
-Tue Jan  2 17:51:31 2024
+Wed Jan  3 18:01:30 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:32 2024
+Wed Jan  3 18:01:31 2024
  => obs
-Tue Jan  2 17:51:32 2024
+Wed Jan  3 18:01:31 2024
  => WINDOW: reading obstacles
-Tue Jan  2 17:51:32 2024
- => WINDOW: number of obstacles 3
-Tue Jan  2 17:51:32 2024
+Wed Jan  3 18:01:31 2024
+ => WINDOW: number of obstacles 11
+Wed Jan  3 18:01:31 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:32 2024
- => ///
-Tue Jan  2 17:51:32 2024
- => WINDOW: cycle
-Tue Jan  2 17:51:32 2024
- => /
-Tue Jan  2 17:51:32 2024
- => WINDOW: cycle
-Tue Jan  2 17:51:32 2024
- => 
-Tue Jan  2 17:51:32 2024
- => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:31 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:31 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:31 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:31 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:31 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:31 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:31 2024
+ => 
+Wed Jan  3 18:01:31 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:31 2024
+ => 
+Wed Jan  3 18:01:31 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:31 2024
+ => @
+Wed Jan  3 18:01:31 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:31 2024
+ => 
+Wed Jan  3 18:01:31 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:31 2024
+ => 
+Wed Jan  3 18:01:31 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => @
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => @
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => @
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => @
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => @
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:32 2024
+ => 
+Wed Jan  3 18:01:32 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
- => bs
-Tue Jan  2 17:51:33 2024
- => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
- => =
-Tue Jan  2 17:51:33 2024
- => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
- => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => obs
+Wed Jan  3 18:01:33 2024
+ => WINDOW: reading obstacles
+Wed Jan  3 18:01:33 2024
+ => WINDOW: number of obstacles 18
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => @
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:33 2024
+ => 
+Wed Jan  3 18:01:33 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => @
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => @
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => @
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => @
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => @
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => @
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => @
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => @
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => @
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => @
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:34 2024
+ => 
+Wed Jan  3 18:01:34 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => @
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => @
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => @
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => @
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => @
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => @
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => @
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => @
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => @
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => Ù¬@
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => @
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:35 2024
+ => 
+Wed Jan  3 18:01:35 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 	Æ@
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => @
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => ë@
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => @
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => ºA
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => @
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => `+A
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => @
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:33 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
+ => CNA
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => @
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
+ => +vA
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => @
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
- => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
+ => s‘A
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
+ => @
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
+ => !ªA
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => @	
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
  => 
 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
- => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
+ => ÅA
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
+ => @
+
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
- => 
-Tue Jan  2 17:51:34 2024
- => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => âA
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => @
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
+ => “
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => @
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
+ => 
+Wed Jan  3 18:01:36 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:36 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
- => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
+ => B
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
+ => @
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
- => 
-Tue Jan  2 17:51:34 2024
- => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
- => 
-Tue Jan  2 17:51:34 2024
- => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
+ => "B
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:34 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => @
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => ï4B
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => @
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
  =>  
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => $
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => ,HB
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => @
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => (
-Tue Jan  2 17:51:35 2024
- => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => %
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => ,
-Tue Jan  2 17:51:35 2024
- => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => ?\B
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => 0
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => @
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => 5
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => +
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => :
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => qB
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => @
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 1
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => aƒB
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => @
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 8
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => ’ŽB
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => @
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
  => ?
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => D
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => šB
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:37 2024
+ => @
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => G
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => ÿ¥B
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => @
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:37 2024
+ => 
+Wed Jan  3 18:01:37 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => P
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 4²B
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => @
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => Y
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => º¾B
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => @
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => c
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => ŒËB
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => @
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => n
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => ©ØB
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => @
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => y
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => æB
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => @
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => …
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => ³óB
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => I
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => @
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => N
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => ’
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => Í
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => T
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => @
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => Ÿ
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => Z
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => áC
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => `
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => @
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => ­
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => f
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => C
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => @
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
- => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => ¼
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
+ => 
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
+ => aC
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:35 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
- => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:38 2024
+ => @ 
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:38 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:38 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:38 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => Ì
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
- => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => 
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => ËC
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
- => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => @!
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => Ü
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
- => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => 
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => P%C
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
- => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => @"
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
- => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => í
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => 
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => î,C
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
- => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => @#
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => ÿ
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
- => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => 
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => ¤4C
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
- => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => @$
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
- => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
+ => 
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:36 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
- => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => s<C
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => @%
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => 
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => &
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
- => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => 
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => WDC
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
- => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => @&
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
- => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => :
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => 
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => RLC
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
- => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => @'
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
- => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => O
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
- => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => aTC
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => @(
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => 
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => e
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
- => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => 
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => „\C
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
- => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => @)
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
- => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => |
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => 
+Wed Jan  3 18:01:39 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:39 2024
+ => ºdC
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:37 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
- => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:39 2024
+ => @*
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:39 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:39 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
- => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
+ => ”
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
- => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
+ => mC
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
+ => @+
+Wed Jan  3 18:01:40 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:40 2024
+ => 
+Wed Jan  3 18:01:40 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:40 2024
+ => ¬
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
- => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
+ => 
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:40 2024
+ => ^uC
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
- => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
+ => @,
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
- => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
+ => Å
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:40 2024
+ => 
+Wed Jan  3 18:01:40 2024
+ => WINDOW: cycle
+Wed Jan  3 18:01:40 2024
+ => É}C
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
- => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
+ => @-
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => 
-Tue Jan  2 17:51:38 2024
+Wed Jan  3 18:01:40 2024
  => WINDOW: cycle

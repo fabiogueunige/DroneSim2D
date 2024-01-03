@@ -69,11 +69,14 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
     fclose(debug);
 }
 int main(char argc, char*argv[]){
-	
-	FILE * windebug = fopen("logfiles/windebug.log", "w");    // debug log file
+	FILE * debug = fopen("logfiles/debug.log", "a");
+	FILE * winfile = fopen("logfiles/window.log", "w");    // debug log file
 	FILE * errors = fopen("logfiles/errors.log", "a");  // errors log file
-    
-    writeToLog(windebug, "WINDOW: process started");
+    if (winfile == NULL || debug == NULL || errors == NULL){
+        perror("error in opening log files");
+        exit(EXIT_FAILURE);
+    }
+    writeToLog(debug, "WINDOW: process started");
 
     initscr();	//Start curses mode 
 	Drone * drone;
@@ -117,21 +120,26 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
     int pipeSefd;
     fd_set readfds;
     pipeSefd = atoi(argv[1]);
-    writeToLog(windebug, "WINDOW: pipe opened");
+    writeToLog(debug, "WINDOW: pipe opened");
     FD_ZERO(&readfds);
     FD_SET(pipeSefd, &readfds);
     // EDGE IMPORT FROM SERVER
     int nedges, nobstacles;
     char edge_symbol = '#';
     char obs_symbol = 'o';
-    read(pipeSefd, &nedges, sizeof(int));
+    
+    if ((read(pipeSefd, &nedges, sizeof(int))) == -1){
+        perror("read");
+        writeToLog(errors, "WINDOW: error in read nedges");
+        exit(EXIT_FAILURE);
+    }
     struct obstacle * edges[nedges];
     
     //printf("WINDOW: nedges = %d\n", nedges);
     
     char a[7];
     sprintf(a, "%d", nedges);
-    writeToLog(windebug, a);
+    writeToLog(winfile, a);
 
     for(int i = 0; i<nedges; i++){
         //writeToLog(debug, "WINDOW: reading edges");
@@ -143,9 +151,13 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
         }
         else if(sel>0){
             edges[i] = malloc(sizeof(struct obstacle));
-            read(pipeSefd, edges[i], sizeof(struct obstacle));
+            if ((read(pipeSefd, edges[i], sizeof(struct obstacle))) == -1){
+                perror("read");
+                writeToLog(errors, "WINDOW: error in read edges");
+                exit(EXIT_FAILURE);
+            }
             //printf("WINDOW: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
-            writeToLog(windebug, "WINDOW: edge read");
+            writeToLog(winfile, "WINDOW: edge read");
             /*
             char ksdhc[50];
             sprintf(ksdhc, "WINDOW: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
@@ -159,7 +171,7 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
         //read(pipeSefd, &edges[i], sizeof(struct obstacle));
         //sprintf(debug, "WINDOW: edge %d: x = %d, y = %d \n", i, edges[i].x, edges[i].y);
     }
-    writeToLog(windebug, "WINDOW: all edges has been read");
+    writeToLog(winfile, "WINDOW: all edges has been read");
 	int x;
 	int y;
     float vx, vy;
@@ -167,7 +179,7 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
     struct obstacle * obs[20];
 	while(1){
         char buffer[4];
-        writeToLog(windebug, "WINDOW: cycle");
+        writeToLog(winfile, "WINDOW: cycle");
         FD_SET(pipeSefd, &readfds);
         int sel = select(pipeSefd + 1, &readfds, NULL, NULL, NULL);
         if (sel == -1){
@@ -176,36 +188,52 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
             exit(EXIT_FAILURE);
         }
         else if(sel>0){
-        //read(pipeSefd, &x, sizeof(int));
-        //read(pipeSefd, &y, sizeof(int));
-        //read(pipeSefd, buffer, sizeof(buffer)-1);
-        ssize_t numRead = read(pipeSefd, buffer, sizeof(buffer)-1);
-        if (numRead == -1) {
-            perror("read");
-            return 1;
-        }
-        writeToLog(windebug, buffer);
-        //buffer[numRead] = '\0';
-        if(strcmp(buffer, "obs") == 0){
-            // datas for obstacles
-            writeToLog(windebug, "WINDOW: reading obstacles");
-            
-            read(pipeSefd, &nobstacles, sizeof(int));
-            char a[100];
-            sprintf(a, "WINDOW: number of obstacles %d", nobstacles);
-            writeToLog(windebug, a);
-            //struct obstacle * obs[nobstacles];
-            for (int i = 0; i<nobstacles; i++){
-                    obs[i] = malloc(sizeof(struct obstacle));
-                    read(pipeSefd, obs[i], sizeof(struct obstacle));
+            /* Qui fa saltare il programma
+            if ((read(pipeSefd, drone, sizeof(Drone))) == -1){
+                perror("read");
+                writeToLog(errors, "WINDOW: error in read drone from Server");
+                exit(EXIT_FAILURE);
+            }*/
+            //read(pipeSefd, buffer, sizeof(buffer)-1);
+            ssize_t numRead = read(pipeSefd, buffer, sizeof(buffer)-1);
+            if (numRead == -1) {
+                perror("read");
+                return 1;
             }
-            
-        }
-        else if(strcmp(buffer, "coo") == 0){
-            // read the coordinates
-            writeToLog(windebug, "WINDOW: reading drone");
-        }
-        
+            writeToLog(winfile, buffer);
+            //buffer[numRead] = '\0';
+            if(strcmp(buffer, "obs") == 0){
+                // datas for obstacles
+                writeToLog(winfile, "WINDOW: reading obstacles");
+                
+                if ((read(pipeSefd, &nobstacles, sizeof(int))) == -1){
+                    perror("read");
+                    writeToLog(errors, "WINDOW: error in read nobstacles");
+                    exit(EXIT_FAILURE);
+                }
+                char a[100];
+                sprintf(a, "WINDOW: number of obstacles %d", nobstacles);
+                writeToLog(winfile, a);
+                //struct obstacle * obs[nobstacles];
+                for (int i = 0; i<nobstacles; i++){
+                    obs[i] = malloc(sizeof(struct obstacle));
+                    if ((read(pipeSefd, obs[i], sizeof(struct obstacle))) == -1){
+                        perror("read");
+                        writeToLog(errors, "WINDOW: error in read obstacles");
+                        exit(EXIT_FAILURE);
+                    }
+                }
+            }
+            else if(strcmp(buffer, "coo") == 0){
+                // read the coordinates
+                /* Qui fa saltare il programma
+                if ((read(pipeSefd, drone, sizeof(Drone))) == -1){
+                    perror("read");
+                    writeToLog(errors, "WINDOW: error in read drone from Server");
+                    exit(EXIT_FAILURE);
+                }*/
+                writeToLog(winfile, "WINDOW: reading drone");
+            }  
         }
 		x = drone->x;
 		y = drone->y;
@@ -243,5 +271,8 @@ if (sigaction(SIGUSR1, &sa, NULL) == -1) {
 
 	endwin();	// end curses mode
     close(pipeSefd);
+    fclose(debug);
+    fclose(winfile);
+    fclose(errors);
     return 0;
 }

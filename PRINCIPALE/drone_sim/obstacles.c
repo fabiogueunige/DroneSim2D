@@ -67,6 +67,14 @@ int main (int argc, char *argv[])
 {
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
+    // these var are used because there aren't pipes, but these values are imported by server
+    int rows = 50;
+    int cols = 100;
+    if (debug == NULL || errors == NULL){
+        perror("error in opening log files");
+        exit(EXIT_FAILURE);
+    }
+
     writeToLog(debug, "OBSTACLES: process started");
     printf("OBSTACLES: process started\n");
     struct window *window;
@@ -76,11 +84,7 @@ int main (int argc, char *argv[])
     sscanf(argv[1], "%d", &pipeSefd[0]);
     sscanf(argv[2], "%d", &pipeSefd[1]);
     writeToLog(debug, "OBSTACLES: pipes opened");
-    
-    // these var are used because there aren't pipes, but these values are imported by server
-    int rows = 50;
-    int cols = 100;
-    
+
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
     sa.sa_sigaction = sig_handler;
@@ -138,5 +142,7 @@ int main (int argc, char *argv[])
         }
     }
 
+    fclose(debug);
+    fclose(errors);
     return 0;
 }
