@@ -37,8 +37,8 @@ struct obstacle {
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
-float rho0 = 5; //m
-float eta = 5; 
+float rho0 = 6; //m
+float eta = 10; 
 
 void writeToLog(FILE *logFile, const char *message) {
     time_t crtime;
@@ -259,11 +259,11 @@ int main(int argc, char* argv[]){
         edges[i+rows+cols]->y = i;
         
         //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
-        printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+        printf("DRONE: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        printf("DRONE: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
         // write to server with pipe ...
     }
-    
+
     for (int i = rows; i< rows+cols; i++){
         edges[i] = malloc(sizeof(struct obstacle));
         edges[i]->x = i;
@@ -275,8 +275,8 @@ int main(int argc, char* argv[]){
         edges[i+rows+cols]->y = cols-1;
         
         //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
-        printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+        printf("DRONE: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        printf("DRONE: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
     }
     // reads edges
     /*
@@ -431,8 +431,8 @@ int main(int argc, char* argv[]){
         for (int i = 0; i < nobstacles; i++){
             frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
             fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
-        }
-        /*
+        }*/
+        
         // compute repulsive force of edges
         for(int i = 0; i < nedges; i++){
             frx += calculateRepulsiveForcex(x, y, edges[i]->x, edges[i]->y);
@@ -441,7 +441,8 @@ int main(int argc, char* argv[]){
         F[0]+=frx;
         F[1]+=fry;
         printf("%d %d\n", frx, fry);
-        */
+        frx = 0;
+        fry = 0;
         updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
         drone->x = x;
         drone->y = y;
