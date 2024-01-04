@@ -86,11 +86,11 @@ int main(char argc, char*argv[]){
 	curs_set(0);
 
 // SIGNALS
-    struct sigaction sa; //initialize sigaction
+struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
     sa.sa_sigaction = sig_handler;
 
-    if (sigaction(SIGUSR1, &sa, NULL) == -1) {
+if (sigaction(SIGUSR1, &sa, NULL) == -1) {
         perror("Error setting up SIGINT handler");
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
@@ -127,12 +127,28 @@ int main(char argc, char*argv[]){
     int nedges, nobstacles;
     char edge_symbol = '#';
     char obs_symbol = 'o';
-    
+    // READ ROWS AND COLS
+    int rows, cols;
+    if((read(pipeSefd, &rows, sizeof(int))) == -1){
+        perror("read");
+        writeToLog(errors, "WINDOW: error in read rows");
+        exit(EXIT_FAILURE);
+    }
+    if((read(pipeSefd, &cols, sizeof(int))) == -1){
+        perror("read");
+        writeToLog(errors, "WINDOW: error in read cols");
+        exit(EXIT_FAILURE);
+    }
+    char a[100];
+    sprintf(a, "WINDOW: rows = %d, cols = %d", rows, cols);
+    writeToLog(winfile, a);
+    /*
     if ((read(pipeSefd, &nedges, sizeof(int))) == -1){
         perror("read");
         writeToLog(errors, "WINDOW: error in read nedges");
         exit(EXIT_FAILURE);
     }
+    
     struct obstacle * edges[nedges];
     
     //printf("WINDOW: nedges = %d\n", nedges);
@@ -158,20 +174,20 @@ int main(char argc, char*argv[]){
             }
             //printf("WINDOW: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
             writeToLog(winfile, "WINDOW: edge read");
-            /*
+            
             char ksdhc[50];
             sprintf(ksdhc, "WINDOW: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
-            writeToLog(debug, ksdhc);*/
+            writeToLog(debug, ksdhc);
         
         }
         else{
             writeToLog(errors, "WINDOW: select() timeout");
-            break; // exit the loop if select() returns 0
-        }
+        break; // exit the loop if select() returns 0
+    }
         //read(pipeSefd, &edges[i], sizeof(struct obstacle));
         //sprintf(debug, "WINDOW: edge %d: x = %d, y = %d \n", i, edges[i].x, edges[i].y);
-    }
-    writeToLog(winfile, "WINDOW: all edges has been read");
+    }*/
+    //writeToLog(winfile, "WINDOW: all edges has been read");
 	int x;
 	int y;
     float vx, vy;

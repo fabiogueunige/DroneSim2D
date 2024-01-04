@@ -21,9 +21,6 @@
 #define FRICTION_COEFFICIENT 0.1    // N*s*m
 #define FORCE_MODULE 1 //N
 #define T 0.1 //s   time instants' duration
-#define NROWS 50
-#define NCOLS 100
-#define DISTH 2 // distance threshold
 
 typedef struct {
     int x;
@@ -33,10 +30,10 @@ typedef struct {
     int fx, fy;
 } Drone;    // Drone object
 
-typedef struct {
+struct obstacle {
     int x;
     int y;
-}obstacle;
+};
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
@@ -87,32 +84,6 @@ int calculateRepulsiveForcey(int x, int y, int xo, int yo){
         return (eta * (1/rho - 1/rho0) * (1/pow(rho, 2)) * sin(theta));
     else
         return 0;
-}
-
-void calculateRepulsiveForceF(obstacle * obs, Drone *dr, int *forceX, int *forceY) {
-    int maxForce = 1;
-    
-    double distanceX = dr->x - obs->x;
-    double distanceY = dr->y - obs->y;
-
-    double distance = sqrt(pow(distanceX, 2) + pow(distanceY, 2));
-    
-    if (-0.2 < distance && distance < 0.2) {
-        dr->vx = -(dr->vx);
-        dr->vy = -(dr->vy);
-        dr->fx = -(dr->fx);
-        dr->fy = -(dr->fy);
-        *forceX = 0;
-        *forceY = 0;
-    }
-    else if (distance < DISTH) {
-        *forceX = (int)round(maxForce * exp((1 / distance) * (distance - DISTH) * (distanceX / distance)));
-        *forceY = (int)round(maxForce * exp((1 / distance) * (distance - DISTH) * (distanceY / distance)));
-    } 
-    else {
-        *forceX = 0;
-        *forceY = 0;
-    }
 }
 
 // Function to update position and velocity based on applied force
@@ -257,13 +228,26 @@ int main(int argc, char* argv[]){
     int x = x0;
     int y = y0;
     
-    int nedges = 2*(NROWS+NCOLS); // number of edges
-    // reads obstacle position from server
-    obstacle *edges[nedges]; //edges
-    obstacle *obstacles[20]; //obstacles
-
-    // reads edges
     
+    // reads obstacle position from server
+    struct obstacle *obstacles[20]; //obstacles
+    // READS WINDOW DIMENSIONS
+    int rows, cols;
+    
+    if ((read(pipeSefd[0], &rows, sizeof(int))) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "DRONE: error in reading from pipe rows");
+        exit(EXIT_FAILURE);
+    }
+    if ((read(pipeSefd[0], &cols, sizeof(int))) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "DRONE: error in reading from pipe cols");
+        exit(EXIT_FAILURE);
+    }
+    printf("DRONE: rows = %d, cols = %d\n", rows, cols);
+    int nedges = 2*(rows+cols); // number of edges
+    struct obstacle *edges[nedges]; //edges
+    // reads edges
     /*
     for(int i = 0; i<nedges; i++){
             edges[i] = malloc(sizeof(struct obstacle));
@@ -271,6 +255,7 @@ int main(int argc, char* argv[]){
             //printf("WINDOW: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
             printf("DRONE: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
     }*/
+
     // 
     while(!sigint_rec){
         bool brake = false;
@@ -307,8 +292,8 @@ int main(int argc, char* argv[]){
                 printf("DRONE: number of obstacles: %d\n", nobstacles);
                 //struct obstacle *obstacles[nobstacles];
                 for(int i=0; i<nobstacles; i++){
-                    obstacles[i] = malloc(sizeof(obstacle));
-                    if ((read(pipeSefd[0], obstacles[i], sizeof(obstacle))) == -1){
+                    obstacles[i] = malloc(sizeof(struct obstacle));
+                    if ((read(pipeSefd[0], obstacles[i], sizeof(struct obstacle))) == -1){
                         perror("error in reading from pipe");
                         writeToLog(errors, "DRONE: error in reading from pipe obstacles");
                         exit(EXIT_FAILURE);
@@ -323,111 +308,109 @@ int main(int argc, char* argv[]){
                     perror("error in reading from pipe");
                     writeToLog(errors, "DRONE: error in reading from pipe the input");
                     exit(EXIT_FAILURE);
+
                 } 
+                    switch (input) {
+                case 'w':
+                    for(int i=0; i<2; i++)
+                        F[i] =F[i] + FORCE_MODULE * wf[i];
+                    break;
+                case 's':
+                    for(int i=0; i<2; i++)
+                        F[i] =F[i] + FORCE_MODULE * sf[i];
+                    break;
+                case 'd':
+                    // goes on by inertia
+                    F[0] = 0;
+                    F[1] = 0;
+                    break;
+                case 'b':
+                    // brake
+                    
+                    F[0] = 0;
+                    F[1] = 0;
+                    if ((int)vx>5){
+                        F[0] += -FORCE_MODULE;
+                        brake = true;
+                    }
+                    else if ((int)vx<5){
+                        F[0] += FORCE_MODULE;
+                        brake = true;
+                    }
+                    else
+                        F[0] = 0;
+                        brake = false;
+
+                    if ((int)vy>5){
+                        F[1] += -FORCE_MODULE;
+                        brake = true;
+                    }
+                    else if ((int)vy<5){
+                        F[1] += +FORCE_MODULE;
+                        brake = true;
+                    }
+                    else
+                        F[1] = 0;
+                        brake = false;
+                    break;
+                case 'f':
+                    for(int i=0; i<2; i++)
+                        F[i] += FORCE_MODULE * ff[i];
+                    break;
+                case 'e':
+                    for(int i=0; i<2; i++)
+                        F[i] += FORCE_MODULE * ef[i];
+                    break;
+                case 'r':
+                    for(int i=0; i<2; i++)
+                        F[i] = F[i] + FORCE_MODULE * rf[i];
+                    break;
+                case 'x':
+                    for(int i=0; i<2; i++)
+                        F[i] = F[i] + FORCE_MODULE * xf[i];
+                    break;
+                case 'c':
+                    for(int i=0; i<2; i++)
+                        F[i] = F[i] + FORCE_MODULE * cf[i];
+                    break;
+                case 'v':
+                    for(int i=0; i<2;i++)
+                        F[i] = F[i] + FORCE_MODULE * vf[i];
+                    break;
+                case 'q':
+                    exit(EXIT_SUCCESS);  // Exit the program
+                case 'u':
+                    //reset drone
+                    x = x0;
+                    y = y0;
+                    F[0] = 0;
+                    F[1] = 0;
+                    vx = 5;
+                    vy = 5;
+                    break;
+                default:
+                    break;
+                }
+
             }
         }
-        switch (input) {
-            case 'w':
-                for(int i=0; i<2; i++)
-                    F[i] =F[i] + FORCE_MODULE * wf[i];
-                break;
-            case 's':
-                for(int i=0; i<2; i++)
-                    F[i] =F[i] + FORCE_MODULE * sf[i];
-                break;
-            case 'd':
-                // goes on by inertia
-                F[0] = 0;
-                F[1] = 0;
-                break;
-            case 'b':
-                // brake
-                
-                F[0] = 0;
-                F[1] = 0;
-                if ((int)vx>5){
-                    F[0] += -FORCE_MODULE;
-                    brake = true;
-                }
-                else if ((int)vx<5){
-                    F[0] += FORCE_MODULE;
-                    brake = true;
-                }
-                else
-                    F[0] = 0;
-                    brake = false;
-
-                if ((int)vy>5){
-                    F[1] += -FORCE_MODULE;
-                    brake = true;
-                }
-                else if ((int)vy<5){
-                    F[1] += +FORCE_MODULE;
-                    brake = true;
-                }
-                else
-                    F[1] = 0;
-                    brake = false;
-                break;
-            case 'f':
-                for(int i=0; i<2; i++)
-                    F[i] += FORCE_MODULE * ff[i];
-                break;
-            case 'e':
-                for(int i=0; i<2; i++)
-                    F[i] += FORCE_MODULE * ef[i];
-                break;
-            case 'r':
-                for(int i=0; i<2; i++)
-                    F[i] = F[i] + FORCE_MODULE * rf[i];
-                break;
-            case 'x':
-                for(int i=0; i<2; i++)
-                    F[i] = F[i] + FORCE_MODULE * xf[i];
-                break;
-            case 'c':
-                for(int i=0; i<2; i++)
-                    F[i] = F[i] + FORCE_MODULE * cf[i];
-                break;
-            case 'v':
-                for(int i=0; i<2;i++)
-                    F[i] = F[i] + FORCE_MODULE * vf[i];
-                break;
-            case 'q':
-                exit(EXIT_SUCCESS);  // Exit the program
-            case 'u':
-                //reset
-                
-                x = x0;
-                y = y0;
-                F[0] = 0;
-                F[1] = 0;
-                vx = 5;
-                vy = 5;
-                break;
-            default:
-                break;
-        }
+        
+        /*
         // compute repulsive force of obstacles
         for (int i = 0; i < nobstacles; i++){
-            /*frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
+            frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
             fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
-            */
-            //calculateRepulsiveForceF(obstacles[i], drone, &frx, &fry);
-            printf("DRONE: obstacle %d: x = %d, y = %d, frx = %d, fry = %d\n", i, obstacles[i]->x, obstacles[i]->y, frx, fry);
         }
         /*
         // compute repulsive force of edges
         for(int i = 0; i < nedges; i++){
             frx += calculateRepulsiveForcex(x, y, edges[i]->x, edges[i]->y);
             fry += calculateRepulsiveForcey(x, y, edges[i]->x, edges[i]->y);
-        
-            calculateRepulsiveForceF(obsta, Drone *dr, int *forceX, int *forceY)
-        
-        }*/
+        }
         F[0]+=frx;
         F[1]+=fry;
         printf("%d %d\n", frx, fry);
+        */
         updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
         drone->x = x;
         drone->y = y;
@@ -467,7 +450,5 @@ int main(int argc, char* argv[]){
     munmap(drone, SIZE);
     fclose(debug);
     fclose(errors);
-    free(drone);
-
     return 0;
 }

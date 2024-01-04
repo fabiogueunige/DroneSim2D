@@ -150,6 +150,8 @@ int main(int argc, char* argv[]){
     FD_ZERO(&read_fds);
     FD_ZERO(&write_fds);
 
+    
+
     sscanf(argv[1], "%d", &pipeDrfd[0]);
     sscanf(argv[2], "%d", &pipeDrfd[1]);
     sscanf(argv[3], "%d", &pipeObfd[1]);
@@ -158,6 +160,47 @@ int main(int argc, char* argv[]){
     sscanf(argv[6], "%d", &pipeTafd[0]);
     writeToLog(debug, "SERVER: pipes opened");
 
+    // SENDING ROWS AND COLUMNS TO WINDOW
+    if((write(pipeWdfd[1], &rows, sizeof(int))) == -1){
+        perror("error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe");
+        exit(EXIT_FAILURE);
+    }
+    if((write(pipeWdfd[1], &cols, sizeof(int))) == -1){
+        perror("error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe");
+        exit(EXIT_FAILURE);
+    }
+    if((write(pipeDrfd[1], &rows, sizeof(int))) == -1){
+        perror("error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe");
+        exit(EXIT_FAILURE);
+    }
+    if((write(pipeDrfd[1], &cols, sizeof(int))) == -1){
+        perror("error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe");
+        exit(EXIT_FAILURE);
+    }
+    if((write(pipeObfd[1], &rows, sizeof(int))) == -1){
+        perror("error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe");
+        exit(EXIT_FAILURE);
+    }
+    if((write(pipeObfd[1], &cols, sizeof(int))) == -1){
+        perror("error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe");
+        exit(EXIT_FAILURE);
+    }
+    if((write(pipeTafd[1], &rows, sizeof(int))) == -1){
+        perror("error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe");
+        exit(EXIT_FAILURE);
+    }
+    if((write(pipeTafd[1], &cols, sizeof(int))) == -1){
+        perror("error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe");
+        exit(EXIT_FAILURE);
+    }
     char *obs = "obs";
 
 // SHARED MEMORY INITIALIZATION AND MAPPING
@@ -230,25 +273,26 @@ int main(int argc, char* argv[]){
         exit(EXIT_FAILURE);
     }
 
-    
     for (int i = 0; i< rows; i++){
         edges[i] = malloc(sizeof(struct obstacle));
         edges[i]->x = 0;
         edges[i]->y = i;
+        /*
         if ((write(pipeWdfd[1], edges[i], sizeof(struct obstacle))) == -1){
             perror("error in writing to pipe");
             writeToLog(errors, "SERVER: error in writing to pipe the obstacle");
             exit(EXIT_FAILURE);
-        }
+        }*/
         //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
         edges[i+rows+cols] = malloc(sizeof(struct obstacle));
         edges[i+rows+cols]->x = cols-1;
         edges[i+rows+cols]->y = i;
+        /*
         if ((write(pipeWdfd[1], edges[i+rows+cols], sizeof(struct obstacle))) == -1){
             perror("error in writing to pipe");
             writeToLog(errors, "SERVER: error in writing to pipe the obstacle");
             exit(EXIT_FAILURE);
-        }
+        }*/
         //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
         printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
         printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
@@ -259,30 +303,26 @@ int main(int argc, char* argv[]){
         edges[i] = malloc(sizeof(struct obstacle));
         edges[i]->x = i;
         edges[i]->y = 0;
+        /*
         if ((write(pipeWdfd[1], edges[i], sizeof(struct obstacle))) == -1){
             perror("error in writing to pipe");
             writeToLog(errors, "SERVER: error in writing to pipe the obstacle");
             exit(EXIT_FAILURE);
-        }
-        if ((write(pipeDrfd[1], edges[i], sizeof(struct obstacle))) == -1){
-            perror("error in writing to pipe");
-            writeToLog(errors, "SERVER: error in writing to pipe the obstacle");
-            exit(EXIT_FAILURE);
-        }
+        }*/
         //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
         edges[i+rows+cols] = malloc(sizeof(struct obstacle));
         edges[i+rows+cols]->x = i;
         edges[i+rows+cols]->y = cols-1;
+        /*
         if ((write(pipeWdfd[1], edges[i+rows+cols], sizeof(struct obstacle))) == -1){
             perror("error in writing to pipe");
             writeToLog(errors, "SERVER: error in writing to pipe the obstacle");
             exit(EXIT_FAILURE);
-        }
+        }*/
         //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
         printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
         printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
     }
-    
     // sends edges to window
     
     /*
