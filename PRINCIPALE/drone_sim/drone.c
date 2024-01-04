@@ -247,6 +247,37 @@ int main(int argc, char* argv[]){
     printf("DRONE: rows = %d, cols = %d\n", rows, cols);
     int nedges = 2*(rows+cols); // number of edges
     struct obstacle *edges[nedges]; //edges
+
+    for (int i = 0; i< rows; i++){
+        edges[i] = malloc(sizeof(struct obstacle));
+        edges[i]->x = 0;
+        edges[i]->y = i;
+        
+        //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
+        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
+        edges[i+rows+cols]->x = cols-1;
+        edges[i+rows+cols]->y = i;
+        
+        //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
+        printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+        // write to server with pipe ...
+    }
+    
+    for (int i = rows; i< rows+cols; i++){
+        edges[i] = malloc(sizeof(struct obstacle));
+        edges[i]->x = i;
+        edges[i]->y = 0;
+        
+        //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
+        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
+        edges[i+rows+cols]->x = i;
+        edges[i+rows+cols]->y = cols-1;
+        
+        //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
+        printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+    }
     // reads edges
     /*
     for(int i = 0; i<nedges; i++){
