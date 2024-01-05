@@ -21,8 +21,6 @@
 #define FRICTION_COEFFICIENT 0.1    // N*s*m
 #define FORCE_MODULE 1 //N
 #define T 0.1 //s   time instants' duration
-#define NROWS 100
-#define NCOLS 100
 
 typedef struct {
     int x;
@@ -72,7 +70,7 @@ int calculateRepulsiveForcex(int x, int y, int xo, int yo){
     float rho = sqrt(pow(x-xo, 2) + pow(y-yo, 2));
     float theta = atan2(y-yo, x-xo);
     if (rho < rho0){
-        return eta* (1/rho - 1/rho0) * (1/pow(rho, 2)) * sin(theta);
+        return eta* (1/rho - 1/rho0) * (1/pow(rho, 2)) * cos(theta);
     }
     else
         return 0;
@@ -83,7 +81,7 @@ int calculateRepulsiveForcey(int x, int y, int xo, int yo){
     float rho = sqrt(pow(x-xo, 2) + pow(y-yo, 2));
     float theta = atan2(y-yo, x-xo);
     if (rho < rho0)
-        return (eta * (1/rho - 1/rho0) * (1/pow(rho, 2)) * cos(theta));
+        return (eta * (1/rho - 1/rho0) * (1/pow(rho, 2)) * sin(theta));
     else
         return 0;
 }
@@ -129,9 +127,6 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
 int main(int argc, char* argv[]){
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
-    writeToLog(debug, "DRONE: process started");
-    printf("DRONE: process started\n");
-
     fd_set read_fds;
     fd_set write_fds;
     FD_ZERO(&read_fds);
@@ -141,18 +136,23 @@ int main(int argc, char* argv[]){
     sscanf(argv[1], "%d", &keyfd);
     char input;
     int nobstacles; // initializes nobstacles
-
     Drone * drone;    // drone object
-
+    int pipeSefd[2];
+    
+    // FILE Opening
+    if (debug == NULL || errors == NULL){
+        perror("error in opening log files");
+        exit(EXIT_FAILURE);
+    }
+    writeToLog(debug, "DRONE: process started");
+    printf("DRONE: process started\n");
+    
     // Pipe reading from arguments
-    int pipeSefd[2]; // pipe server and drone: 0 for reading from and 1 for writing to
+    // pipe server and drone: 0 for reading from and 1 for writing to
     sscanf(argv[2], "%d", &pipeSefd[1]);
     sscanf(argv[3], "%d", &pipeSefd[0]);
     writeToLog(debug, "DRONE: pipes opened");
-
-
-
-
+    
 // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -190,6 +190,7 @@ int main(int argc, char* argv[]){
     }
 
     int F[2]={0, 0};    // drone initially stopped
+    int frx = 0, fry = 0;   // repulsive force in x and y direction
 
     // initialization of the command forces vectors
     int wf[] = {-1,-1};
@@ -226,11 +227,67 @@ int main(int argc, char* argv[]){
     //initializes the drone's coordinates
     int x = x0;
     int y = y0;
-    int re; //return of the read function
-
+    
+    
     // reads obstacle position from server
-    struct obstacle edges[2*(NROWS+NCOLS)]; //edges
+    struct obstacle *obstacles[20]; //obstacles
+    // READS WINDOW DIMENSIONS
+    int rows, cols;
+    
+    if ((read(pipeSefd[0], &rows, sizeof(int))) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "DRONE: error in reading from pipe rows");
+        exit(EXIT_FAILURE);
+    }
+    if ((read(pipeSefd[0], &cols, sizeof(int))) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "DRONE: error in reading from pipe cols");
+        exit(EXIT_FAILURE);
+    }
+    printf("DRONE: rows = %d, cols = %d\n", rows, cols);
+    int nedges = 2*(rows+cols); // number of edges
+    struct obstacle *edges[nedges]; //edges
 
+    for (int i = 0; i< rows; i++){
+        edges[i] = malloc(sizeof(struct obstacle));
+        edges[i]->x = 0;
+        edges[i]->y = i;
+        
+        //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
+        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
+        edges[i+rows+cols]->x = cols-1;
+        edges[i+rows+cols]->y = i;
+        
+        //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
+        printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+        // write to server with pipe ...
+    }
+    
+    for (int i = rows; i< rows+cols; i++){
+        edges[i] = malloc(sizeof(struct obstacle));
+        edges[i]->x = i;
+        edges[i]->y = 0;
+        
+        //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
+        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
+        edges[i+rows+cols]->x = i;
+        edges[i+rows+cols]->y = cols-1;
+        
+        //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
+        printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+    }
+    // reads edges
+    /*
+    for(int i = 0; i<nedges; i++){
+            edges[i] = malloc(sizeof(struct obstacle));
+            read(pipeSefd[0], edges[i], sizeof(struct obstacle));
+            //printf("WINDOW: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
+            printf("DRONE: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
+    }*/
+
+    // 
     while(!sigint_rec){
         bool brake = false;
         // t->t+1
@@ -258,117 +315,133 @@ int main(int argc, char* argv[]){
         else{
             if(FD_ISSET(pipeSefd[0], &read_fds)){
                 // reading obstacles and target
-                read(pipeSefd[0], &nobstacles, sizeof(int));
+                if ((read(pipeSefd[0], &nobstacles, sizeof(int))) == -1){
+                    perror("error in reading from pipe");
+                    writeToLog(errors, "DRONE: error in reading from pipe number of obstacles");
+                    exit(EXIT_FAILURE);
+                }
                 printf("DRONE: number of obstacles: %d\n", nobstacles);
-                struct obstacle *obstacles[nobstacles];
+                //struct obstacle *obstacles[nobstacles];
                 for(int i=0; i<nobstacles; i++){
                     obstacles[i] = malloc(sizeof(struct obstacle));
-                    read(pipeSefd[0], obstacles[i], sizeof(struct obstacle));
+                    if ((read(pipeSefd[0], obstacles[i], sizeof(struct obstacle))) == -1){
+                        perror("error in reading from pipe");
+                        writeToLog(errors, "DRONE: error in reading from pipe obstacles");
+                        exit(EXIT_FAILURE);
+                    }
                     printf("DRONE: obstacle %d created at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
                 }
-                /*
-                read(pipeSefd[0], obstacles, sizeof(obstacles));
-                printf("DRONE: obstacle 1 created at (%d, %d)\n", obstacles[0]->x, obstacles[0]->y);
-                for (int i = 0; i < nobstacles; i++){
-                    printf("DRONE: obstacle %d created at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
-                }*/
-
 
             }
             if(FD_ISSET(keyfd, &read_fds)){
                 // reading key pressed
-                re = read(keyfd, &input, sizeof(char)); //reads input
-                if (re== -1){
-                    perror("read");
-                    writeToLog(errors, "DRONE: error in read");
-                }
-                switch (input) {
-                    case 'w':
-                        for(int i=0; i<2; i++)
-                            F[i] =F[i] + FORCE_MODULE * wf[i];
-                        break;
-                    case 's':
-                        for(int i=0; i<2; i++)
-                            F[i] =F[i] + FORCE_MODULE * sf[i];
-                        break;
-                    case 'd':
-                        // goes on by inertia
-                        F[0] = 0;
-                        F[1] = 0;
-                        break;
-                    case 'b':
-                        // brake
-                        
-                        F[0] = 0;
-                        F[1] = 0;
-                        if ((int)vx>5){
-                            F[0] += -FORCE_MODULE;
-                            brake = true;
-                        }
-                        else if ((int)vx<5){
-                            F[0] += FORCE_MODULE;
-                            brake = true;
-                        }
-                        else
-                            F[0] = 0;
-                            brake = false;
+                if ((read(keyfd, &input, sizeof(char))) == -1){
+                    perror("error in reading from pipe");
+                    writeToLog(errors, "DRONE: error in reading from pipe the input");
+                    exit(EXIT_FAILURE);
 
-                        if ((int)vy>5){
-                            F[1] += -FORCE_MODULE;
-                            brake = true;
-                        }
-                        else if ((int)vy<5){
-                            F[1] += +FORCE_MODULE;
-                            brake = true;
-                        }
-                        else
-                            F[1] = 0;
-                            brake = false;
-                        break;
-                    case 'f':
-                        for(int i=0; i<2; i++)
-                            F[i] += FORCE_MODULE * ff[i];
-                        break;
-                    case 'e':
-                        for(int i=0; i<2; i++)
-                            F[i] += FORCE_MODULE * ef[i];
-                        break;
-                    case 'r':
-                        for(int i=0; i<2; i++)
-                            F[i] = F[i] + FORCE_MODULE * rf[i];
-                        break;
-                    case 'x':
-                        for(int i=0; i<2; i++)
-                            F[i] = F[i] + FORCE_MODULE * xf[i];
-                        break;
-                    case 'c':
-                        for(int i=0; i<2; i++)
-                            F[i] = F[i] + FORCE_MODULE * cf[i];
-                        break;
-                    case 'v':
-                        for(int i=0; i<2;i++)
-                            F[i] = F[i] + FORCE_MODULE * vf[i];
-                        break;
-                    case 'q':
-                        exit(EXIT_SUCCESS);  // Exit the program
-                    case 'u':
-                        //reset
-                        
-                        x = x0;
-                        y = y0;
+                } 
+                    switch (input) {
+                case 'w':
+                    for(int i=0; i<2; i++)
+                        F[i] =F[i] + FORCE_MODULE * wf[i];
+                    break;
+                case 's':
+                    for(int i=0; i<2; i++)
+                        F[i] =F[i] + FORCE_MODULE * sf[i];
+                    break;
+                case 'd':
+                    // goes on by inertia
+                    F[0] = 0;
+                    F[1] = 0;
+                    break;
+                case 'b':
+                    // brake
+                    
+                    F[0] = 0;
+                    F[1] = 0;
+                    if ((int)vx>5){
+                        F[0] += -FORCE_MODULE;
+                        brake = true;
+                    }
+                    else if ((int)vx<5){
+                        F[0] += FORCE_MODULE;
+                        brake = true;
+                    }
+                    else
                         F[0] = 0;
+                        brake = false;
+
+                    if ((int)vy>5){
+                        F[1] += -FORCE_MODULE;
+                        brake = true;
+                    }
+                    else if ((int)vy<5){
+                        F[1] += +FORCE_MODULE;
+                        brake = true;
+                    }
+                    else
                         F[1] = 0;
-                        vx = 5;
-                        vy = 5;
-                        break;
-                    default:
-                        break;
+                        brake = false;
+                    break;
+                case 'f':
+                    for(int i=0; i<2; i++)
+                        F[i] += FORCE_MODULE * ff[i];
+                    break;
+                case 'e':
+                    for(int i=0; i<2; i++)
+                        F[i] += FORCE_MODULE * ef[i];
+                    break;
+                case 'r':
+                    for(int i=0; i<2; i++)
+                        F[i] = F[i] + FORCE_MODULE * rf[i];
+                    break;
+                case 'x':
+                    for(int i=0; i<2; i++)
+                        F[i] = F[i] + FORCE_MODULE * xf[i];
+                    break;
+                case 'c':
+                    for(int i=0; i<2; i++)
+                        F[i] = F[i] + FORCE_MODULE * cf[i];
+                    break;
+                case 'v':
+                    for(int i=0; i<2;i++)
+                        F[i] = F[i] + FORCE_MODULE * vf[i];
+                    break;
+                case 'q':
+                    exit(EXIT_SUCCESS);  // Exit the program
+                case 'u':
+                    //reset drone
+                    x = x0;
+                    y = y0;
+                    F[0] = 0;
+                    F[1] = 0;
+                    vx = 5;
+                    vy = 5;
+                    break;
+                default:
+                    break;
                 }
-            }
-            else if(FD_ISSET(pipeSefd[0], &read_fds)){
-                // reading obstacles and target
+
             }
         }
+        
+        /*
+        // compute repulsive force of obstacles
+        for (int i = 0; i < nobstacles; i++){
+            frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
+            fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
+        }
+        /*
+        // compute repulsive force of edges
+        for(int i = 0; i < nedges; i++){
+            frx += calculateRepulsiveForcex(x, y, edges[i]->x, edges[i]->y);
+            fry += calculateRepulsiveForcey(x, y, edges[i]->x, edges[i]->y);
+        }
+        F[0]+=frx;
+        F[1]+=fry;
+        printf("%d %d\n", frx, fry);
+        */
         updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
         drone->x = x;
         drone->y = y;
@@ -376,18 +449,12 @@ int main(int argc, char* argv[]){
         drone->vy = vy;
         drone->fx = F[0];
         drone->fy = F[1];
-        //write(pipeSefd[1], &drone, sizeof(Drone *));
-        //printf("%d\n", x);
-
-        write(pipeSefd[1], &x, sizeof(int));
-        write(pipeSefd[1], &y, sizeof(int));
-        /*
-        write(pipeSefd[1], &drone->vx, sizeof(float));
-        write(pipeSefd[1], &drone->vy, sizeof(float));
-        write(pipeSefd[1], &drone->fx, sizeof(int));
-        write(pipeSefd[1], &drone->fy, sizeof(int));
-        */
-
+        
+        if ((write(pipeSefd[1], drone, sizeof(Drone))) == -1){
+            perror("error in writing to pipe");
+            writeToLog(errors, "DRONE: error in writing to pipe x");
+            exit(EXIT_FAILURE);
+        }
         if(brake){
             F[0] = 0;
             F[1] = 0;

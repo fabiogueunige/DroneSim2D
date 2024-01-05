@@ -16,7 +16,7 @@
 #define MAX_OBSTACLES 20
 
 pid_t wd_pid = -1;
-bool exit_flag = false;
+bool sigint_rec = false;
 
 struct obstacle {
     int x;
@@ -46,6 +46,14 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
         fclose(debug);
         exit(EXIT_FAILURE);
     }
+    if (signo == SIGINT){
+        //pressed q or CTRL+C
+        printf("OBSTACLE: Terminating with return value 0...");
+        FILE *debug = fopen("logfiles/debug.log", "a");
+        fprintf(debug, "%s\n", "OBSTACLE: terminating with return value 0...");
+        fclose(debug);
+        sigint_rec = true;
+    }
     
 }
 
@@ -59,6 +67,14 @@ int main (int argc, char *argv[])
 {
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
+    // these var are used because there aren't pipes, but these values are imported by server
+    int rows = 50;
+    int cols = 100;
+    if (debug == NULL || errors == NULL){
+        perror("error in opening log files");
+        exit(EXIT_FAILURE);
+    }
+
     writeToLog(debug, "OBSTACLES: process started");
     printf("OBSTACLES: process started\n");
     struct window *window;
@@ -68,24 +84,6 @@ int main (int argc, char *argv[])
     sscanf(argv[1], "%d", &pipeSefd[0]);
     sscanf(argv[2], "%d", &pipeSefd[1]);
     writeToLog(debug, "OBSTACLES: pipes opened");
-    
-    // these var are used because there aren't pipes, but these values are imported by server
-    int rows = 100;
-    int cols = 100;
-    
-
-    /* for 3d assignment :
-    if (nobstacles>20){
-        printf("OBSTACLES: too many obstacles, max 20\n");
-    }
-    */
-    
-    char pos_edges[2*(rows+cols)][10];
-    int nobstacles_edge = 2 * (rows + cols);
-
-
-    
-    struct obstacle *edges[nobstacles_edge];
 
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -104,37 +102,8 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-
-    
-
-    // create edges
-    for (int i = 0; i< rows; i++){
-        edges[i] = malloc(sizeof(struct obstacle));
-        edges[i]->x = 0;
-        edges[i]->y = i;
-        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
-        edges[i+rows+cols]->x = cols-1;
-        edges[i+rows+cols]->y = i;
-        // printf("OBSTACLES: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        // printf("OBSTACLES: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
-        sprintf(pos_edges[i], "%d,%d", edges[i]->x, edges[i]->y);
-        sprintf(pos_edges[i+rows+cols], "%d,%d", edges[i+rows+cols]->x, edges[i+rows+cols]->y);
-        // write to server with pipe ...
-    }
-    
-    for (int i = rows; i< rows+cols; i++){
-        edges[i] = malloc(sizeof(struct obstacle));
-        edges[i]->x = i;
-        edges[i]->y = 0;
-        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
-        edges[i+rows+cols]->x = i;
-        edges[i+rows+cols]->y = cols-1;
-        printf("OBSTACLES: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        printf("OBSTACLES: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
-        sprintf(pos_edges[i], "%d,%d", edges[i]->x, edges[i]->y);
-        // write to server with pipe ...
-    }
-    for(int i=0; i<3; i++){
+    // obstacle generation cycle
+    while(!sigint_rec){
         srand(time(NULL));
         int nobstacles = rand() % MAX_OBSTACLES;
         char pos_obstacles[nobstacles][10];
@@ -154,7 +123,7 @@ int main (int argc, char *argv[])
             int y = obstacles[i]->y;
             printf("OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
             fprintf(debug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
-            sprintf(pos_obstacles[i], "%d,%d", x, y);
+            //sprintf(pos_obstacles[i], "%d,%d", x, y);
             // write to server with pipe ...
             if (write(pipeSefd[1], obstacles[i], sizeof(struct obstacle)) == -1){
                 perror("error in writing to pipe");
@@ -162,7 +131,7 @@ int main (int argc, char *argv[])
                 exit(EXIT_FAILURE);
             }
         }
-        sleep(10);
+        sleep(50);
     }
     // closing pipes
     
@@ -173,5 +142,7 @@ int main (int argc, char *argv[])
         }
     }
 
+    fclose(debug);
+    fclose(errors);
     return 0;
 }
