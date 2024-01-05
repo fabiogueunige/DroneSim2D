@@ -10,21 +10,17 @@
 #include <termios.h>
 #include <sys/mman.h>
 #include <stdbool.h>
+#include <time.h>
+
+#define MAX_TARGETS 10
 
 pid_t wd_pid = -1;
-bool exit_flag = false;
+bool sigint_rec = false;
 
 typedef struct {
     int x;
     int y;
 } targets;
-
-typedef struct {
-    int rows;
-    int cols;
-    int nobstacles;
-    int ntargets;
-} window;
 
 
 
@@ -76,13 +72,10 @@ int main (int argc, char *argv[])
     
     
     // rows and cols and ntargets value is passed from server using pipes, now they will be initialized here
-    rows = 100;
-    cols = 100;
-    ntargets = 10;
-    targets targets[ntargets];
-    char pos_targets[ntargets][10];
+    
+    //char pos_targets[ntargets][10];
 
-
+    // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
     sa.sa_sigaction = sig_handler;
@@ -99,16 +92,32 @@ int main (int argc, char *argv[])
         writeToLog(errors, "INPUT: error in sigaction()");
         exit(EXIT_FAILURE);
     }
+
+    if (sigaction(SIGINT, &sa, NULL) == -1) {
+        perror("Error setting up SIGINT handler");
+        writeToLog(errors, "SERVER: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+    // READS ROWS AND COLS FROM SERVER
+    if(read(pipeSefd[0], &rows, sizeof(int)) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "TARGETS: error in reading from pipe");
+        exit(EXIT_FAILURE);
+    }
+    if(read(pipeSefd[0], &cols, sizeof(int)) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "TARGETS: error in reading from pipe");
+        exit(EXIT_FAILURE);
+    }
+    printf("TARGETS: rows = %d, cols = %d\n", rows, cols);
+
     /* Not in server: Put:
     if ((read(pipeSefd[0], &ntargets, sizeof(int))) == -1){
         perror("error in reading from pipe");
         writeToLog(errors, "TARGETS: error in reading from pipe");
     }
     */
-    if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
-        perror("error in writing to pipe");
-        writeToLog(errors, "TARGETS: error in writing to pipe");
-    }
+    
     /* Not in server: Put:
     int ntargets;
     if ((read(pipeTafd[0], &ntargets, sizeof(int))) == -1){
@@ -116,24 +125,33 @@ int main (int argc, char *argv[])
         writeToLog(errors, "SERVER: error in reading from pipe ntargets");
     }
     */
-
-    for(int i = 0; i<ntargets; i++){
-        targets[i].x = rand() % rows;
-        targets[i].y = rand() % cols;
-        printf("TARGETS: target %d: x = %d, y = %d\n", i, targets[i].x, targets[i].y);
-        sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
-        
-        if ((write(pipeSefd[1], pos_targets[i],sizeof(pos_targets[i]))) == -1){
+    while(!sigint_rec){
+        srand(time(NULL)); // for change every time the seed of rand()
+        ntargets = rand() % MAX_TARGETS;
+        targets targets[ntargets];
+        if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
             perror("error in writing to pipe");
             writeToLog(errors, "TARGETS: error in writing to pipe");
         }
-        // write to server with pipe (NOT IMPLEMENTED IN SERVER
-        /* Metti:
-        if ((read(pipeTafd[0]. pos_targets[i], sizeof(pos_targets[i]))) == -1){
-            perror("error in reading from pipe of targets");
-            writeToLog(errors, "TARGETS: error in reading from pipe");
+
+        for(int i = 0; i<ntargets; i++){
+            targets[i].x = rand() % rows;
+            targets[i].y = rand() % cols;
+            printf("TARGETS: target %d: x = %d, y = %d\n", i, targets[i].x, targets[i].y);
+            //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
+            if ((write(pipeSefd[1], &targets[i],sizeof(targets[i]))) == -1){
+                perror("error in writing to pipe");
+                writeToLog(errors, "TARGETS: error in writing to pipe");
+            }
+            // write to server with pipe (NOT IMPLEMENTED IN SERVER
+            /* Metti:
+            if ((read(pipeTafd[0]. pos_targets[i], sizeof(pos_targets[i]))) == -1){
+                perror("error in reading from pipe of targets");
+                writeToLog(errors, "TARGETS: error in reading from pipe");
+            }
+            */
         }
-        */
+        sleep(60);
     }
 
     // closing pipes

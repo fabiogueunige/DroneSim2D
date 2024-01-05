@@ -108,7 +108,7 @@ int main(int argc, char* argv[]){
     }
 
     char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
-    
+
 // OPENING SEMAPHORES
     sem_t *sem_drone;   // semaphore for writing and reading drone
     sem_drone = sem_open(SEM_PATH_1, O_CREAT | O_RDWR, 0666, 1);    // Initial value: 1
@@ -314,7 +314,7 @@ int main(int argc, char* argv[]){
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
         FD_SET(pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
-
+        FD_SET(pipeTafd[0], &read_fds);
         FD_SET(pipeWdfd[1], &write_fds);
         //FD_SET(pipeDrfd[1], &write_fds);
         int max_fd = (pipeDrfd[0] > pipeObfd[0]) ? pipeDrfd[0] : pipeObfd[0];
@@ -374,7 +374,33 @@ int main(int argc, char* argv[]){
                 }
                 printf("SERVER: drone position: (%d, %d)\n", drone->x, drone->y);
             }
-            //if(FD_ISSET(pipeWdfd[1], &write_fds)){
+            if(FD_ISSET(pipeTafd[0], &read_fds)){
+                printf("SERVER: reading from targets\n");
+                int ntargets;
+                if ((read(pipeTafd[0], &ntargets, sizeof(int))) == -1) { // reads from drone ntargets
+                    perror("error in reading from pipe");
+                    writeToLog(errors, "SERVER: error in reading from pipe targets");
+                    exit(EXIT_FAILURE);
+                }
+                printf("SERVER: number of targets: %d\n", ntargets);
+                if ((write(pipeDrfd[1], &ntargets, sizeof(int))) == -1){  // writes to drone ntargets
+                    perror("error in writing to pipe");
+                    writeToLog(errors, "SERVER: error in writing to pipe number of targets");
+                    exit(EXIT_FAILURE);
+                }
+                if ((write(pipeWdfd[1], &ntargets, sizeof(int))) == -1){  // writes to window ntargets
+                    perror("error in writing to pipe");
+                    writeToLog(errors, "SERVER: error in writing to pipe number of targets");
+                    exit(EXIT_FAILURE);
+                }
+                for(int i = 0; i<ntargets; i++){
+                    Drone target;
+                    read(pipeTafd[0], &target, sizeof(Drone));
+                    printf("SERVER: target %d position: (%d, %d)\n", i, target.x, target.y);
+                    write(pipeDrfd[1], &target, sizeof(Drone));
+                    write(pipeWdfd[1], &target, sizeof(Drone));
+                }
+            }
             printf("SERVER: writing to window\n");
             // NON HO TROVATO LETTURA SU WINDOW (AGGIUNTA)
             if ((write(pipeWdfd[1], drone, sizeof(Drone))) == -1){  // writes to window drone
@@ -382,17 +408,8 @@ int main(int argc, char* argv[]){
                 writeToLog(errors, "SERVER: error in writing to pipe drone");
                 exit(EXIT_FAILURE);
             }
-            //}
             
-            
-                /*
-                read(pipeDrfd[0], &drone->vx, sizeof(float));
-                read(pipeDrfd[0], &drone->vy, sizeof(float));
-                read(pipeDrfd[0], &drone->fx, sizeof(int));
-                read(pipeDrfd[0], &drone->fy, sizeof(int));*/
 
-                //printf("%d \n", drone->x);
-            
         }
         
     }

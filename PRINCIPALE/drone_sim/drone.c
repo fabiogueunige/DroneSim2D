@@ -37,7 +37,7 @@ struct obstacle {
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
-float rho0 = 6; //m
+float rho0 = 8; //m
 float eta = 10; 
 
 void writeToLog(FILE *logFile, const char *message) {
@@ -65,7 +65,7 @@ float calculateFrictionForce(float velocity) {
     return -FRICTION_COEFFICIENT * (velocity-5);
 }
 
-int calculateRepulsiveForcex(int x, int y, int xo, int yo){
+float calculateRepulsiveForcex(int x, int y, int xo, int yo){
     // calculate repulsive force in x direction
     float rho = sqrt(pow(x-xo, 2) + pow(y-yo, 2));
     float theta = atan2(y-yo, x-xo);
@@ -76,7 +76,7 @@ int calculateRepulsiveForcex(int x, int y, int xo, int yo){
         return 0;
 }
 
-int calculateRepulsiveForcey(int x, int y, int xo, int yo){
+float calculateRepulsiveForcey(int x, int y, int xo, int yo){
     // calclate repulsive force in y direction
     float rho = sqrt(pow(x-xo, 2) + pow(y-yo, 2));
     float theta = atan2(y-yo, x-xo);
@@ -264,15 +264,15 @@ int main(int argc, char* argv[]){
         // write to server with pipe ...
     }
 
-    for (int i = rows; i< rows+cols; i++){
-        edges[i] = malloc(sizeof(struct obstacle));
-        edges[i]->x = i;
-        edges[i]->y = 0;
+    for (int i = 0; i< cols; i++){
+        edges[i+rows] = malloc(sizeof(struct obstacle));
+        edges[i+rows]->x = i;
+        edges[i+rows]->y = rows-1;
         
         //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
-        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
-        edges[i+rows+cols]->x = i;
-        edges[i+rows+cols]->y = cols-1;
+        edges[i+2*rows+cols] = malloc(sizeof(struct obstacle));
+        edges[i+2*rows+cols]->x = i;
+        edges[i+2*rows+cols]->y = 0;
         
         //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
         printf("DRONE: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
@@ -364,7 +364,7 @@ int main(int argc, char* argv[]){
                         F[0] += -FORCE_MODULE;
                         brake = true;
                     }
-                    else if ((int)vx<5){
+                    else if ((int)vx<0){
                         F[0] += FORCE_MODULE;
                         brake = true;
                     }
@@ -376,7 +376,7 @@ int main(int argc, char* argv[]){
                         F[1] += -FORCE_MODULE;
                         brake = true;
                     }
-                    else if ((int)vy<5){
+                    else if ((int)vy<0){
                         F[1] += +FORCE_MODULE;
                         brake = true;
                     }
@@ -426,12 +426,12 @@ int main(int argc, char* argv[]){
             }
         }
         
-        /*
+        
         // compute repulsive force of obstacles
         for (int i = 0; i < nobstacles; i++){
             frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
             fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
-        }*/
+        }
         
         // compute repulsive force of edges
         for(int i = 0; i < nedges; i++){

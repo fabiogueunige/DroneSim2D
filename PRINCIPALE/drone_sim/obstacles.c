@@ -68,8 +68,8 @@ int main (int argc, char *argv[])
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
     // these var are used because there aren't pipes, but these values are imported by server
-    int rows = 50;
-    int cols = 100;
+    
+    int rows, cols;
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
         exit(EXIT_FAILURE);
@@ -102,6 +102,24 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
+    if (sigaction(SIGINT, &sa, NULL) == -1) {
+        perror("Error setting up SIGINT handler");
+        writeToLog(errors, "SERVER: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+
+    if(read(pipeSefd[0], &rows, sizeof(int)) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "OBSTACLES: error in reading from pipe");
+        exit(EXIT_FAILURE);
+    }
+    if(read(pipeSefd[0], &cols, sizeof(int)) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "OBSTACLES: error in reading from pipe");
+        exit(EXIT_FAILURE);
+    }
+    printf("OBSTACLES: rows = %d, cols = %d\n", rows, cols);
+    
     // obstacle generation cycle
     while(!sigint_rec){
         srand(time(NULL));
@@ -131,7 +149,7 @@ int main (int argc, char *argv[])
                 exit(EXIT_FAILURE);
             }
         }
-        sleep(50);
+        sleep(60);
     }
     // closing pipes
     
