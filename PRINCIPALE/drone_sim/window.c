@@ -9,8 +9,6 @@
 #include <signal.h>
 #include <termios.h>
 #include <ncurses.h>
-#include <sys/shm.h>
-#include <sys/mman.h>
 #include <stdbool.h>
 #include <time.h>
 #include <sys/file.h>

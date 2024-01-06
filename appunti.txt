@@ -1,19 +1,20 @@
-da fare:ù
-- crasha quando si schiacciano i tasti e arrivano target
-- mettere memoria per drone
+da fare:
 - forza attrattiva
 - brake quando non si ferma rimane forza opposta
 - far saturare la forza dei tasti
 - far saturare la forza degli obstacles
+- check posizione drone appena arrivano gli obstacle con flag
+- edges lo mandano storto
 - fare test sui parametri per i punti prima
-- sistemare repulsive force
+- sistemare repulsive force (probabilmente proporzionale alla velocità)
 
 - cambiare sleep su ???
+- crasha quando si schiacciano i tasti e arrivano target (a volte funziona)
 
-- check posizione drone appena arrivano gli obstacle con flag
-- togliere shared memory
 - passare struttura drone anziche int tra drone e server (ok) e passarla anche a window, dopodiché sarà possibile togliere le shared memory
 - una volta fatti i target, mettere il check del watch dog a target
+
+- LA WINDOW E', METAFORICAMENTE PARLANDO, L'AREA IN CUI IL DRONE PUÒ, EVENTUALMENTE, MUOVERSI... QUINDI ESSO STESSO PARTE DAL CENTRO, COME IL SOLE NEL SISTEMA SOLARE... MODIFICANDO LE DIMENSIONI DELLA WINDOW, SI PUÒ IMPOSTARE LO SPAZIO DI MOVIMENTO DEL DRONE
 
 
 

@@ -42,9 +42,9 @@ typedef struct {
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
-float rho0 = 8; //m
-float eta = 10; 
-float csi = 0.1; 
+float rho0 = 13; //m
+float eta = 40; 
+float csi = 0.05; 
 
 void writeToLog(FILE *logFile, const char *message) {
     time_t crtime;
@@ -158,6 +158,8 @@ int main(int argc, char* argv[]){
     int nobstacles = 0; // initializes nobstacles
     int ntargets = 0;
     Drone * drone;    // drone object
+    Drone dr;
+    drone = &dr;
     int pipeSefd[2];
     
     // FILE Opening
@@ -191,7 +193,7 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "DRONE: error in sigaction()");
         exit(EXIT_FAILURE);
     }
-
+/*
 // SHARED MEMORY OPENING AND MAPPING
     const char * shm_name = "/dronemem";
     const int SIZE = 4096;
@@ -209,6 +211,7 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "Map Failed");
         return 1;
     }
+    */
 
     int F[2]={0, 0};    // drone initially stopped
     int frx = 0, fry = 0;   // repulsive force in x and y direction
@@ -226,8 +229,7 @@ int main(int argc, char* argv[]){
     //import drone initial position from the server
     sleep(2); // gives the time to the server to initialize starting values
 
-    int x0 = drone->x;  //starting x
-    int y0 = drone->y;  //starting y
+    
 
     float vx = 5, vy = 5;
     drone->vx = vx;
@@ -241,14 +243,9 @@ int main(int argc, char* argv[]){
      stopped (v = (5,5)), and then when we reset the drone we put the velocity in its point of 
      equilibrium.*/
 
-    printf("DRONE:\n\n     Starting Position: \nx = %d; y = %d",x0, y0);
-    printf("\n--------------------------------------\n");
-    printf("     Parameters:\nM=%fkg; |F|= %dN, K=%fN*s*m", MASS, FORCE_MODULE, FRICTION_COEFFICIENT);
-    printf("\n--------------------------------------\n\n");
-    //initializes the drone's coordinates
-    int x = x0;
-    int y = y0;
-    int fax = 0, fay = 0;
+    
+
+    
     
     // reads obstacle position from server
     struct obstacle *obstacles[20]; //obstacles
@@ -266,6 +263,17 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "DRONE: error in reading from pipe cols");
         exit(EXIT_FAILURE);
     }
+
+    int x0 = cols/2;  //starting x
+    int y0 = rows/2;  //starting y
+    printf("DRONE:\n\n     Starting Position: \nx = %d; y = %d",x0, y0);
+    printf("\n--------------------------------------\n");
+    printf("     Parameters:\nM=%fkg; |F|= %dN, K=%fN*s*m", MASS, FORCE_MODULE, FRICTION_COEFFICIENT);
+    printf("\n--------------------------------------\n\n");
+    //initializes the drone's coordinates
+    int x = x0;
+    int y = y0;
+    int fax = 0, fay = 0;
     printf("DRONE: rows = %d, cols = %d\n", rows, cols);
     int nedges = 2*(rows+cols); // number of edges
     struct obstacle *edges[nedges]; //edges
@@ -309,6 +317,7 @@ int main(int argc, char* argv[]){
             printf("DRONE: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
     }*/
 
+    
     while(!sigint_rec){
         
         bool brake = false;
@@ -473,8 +482,15 @@ int main(int argc, char* argv[]){
                 }
 
             }
+        }        
+        for(int i= 0; i<2; i++){ // setting drone max input force
+            if(F[i]<-6){
+                F[i] = -6;
+            }
+            if(F[i]>6){
+                F[i] = 6;
+            }
         }
-        
         
         // compute repulsive force of obstacles
         for (int i = 0; i < nobstacles; i++){
@@ -482,12 +498,14 @@ int main(int argc, char* argv[]){
             fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
         }
         
+        /*
         // compute attractive force of targets
         for(int i = 0; i<ntargets; i++){
             fax += calculateAttractiveForcex(x, y, target[i]->x, target[i]->y);
             fay += calculateAttractiveForcey(x, y, target[i]->x, target[i]->y);
         }
-        
+        */
+
         // compute repulsive force of edges
         for(int i = 0; i < nedges; i++){
             frx += calculateRepulsiveForcex(x, y, edges[i]->x, edges[i]->y);
@@ -495,9 +513,15 @@ int main(int argc, char* argv[]){
         }
         F[0]+=frx;
         F[1]+=fry;
-        printf("%d %d\n", frx, fry);
+        F[0]-=fax;
+        F[1]-=fay;
+
+        printf("frx: %d fry: %d\n", frx, fry);
+        printf("fra: %d fay: %d\n", fax, fay);
         frx = 0;
         fry = 0;
+        fax = 0;
+        fay = 0;
         updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
         drone->x = x;
         drone->y = y;
@@ -516,7 +540,7 @@ int main(int argc, char* argv[]){
             F[1] = 0;
         }
     }
-
+/*
     if (shm_unlink(shm_name) == 1) { // Remove shared memory segment.
         printf("Error removing %s\n", shm_name);
         exit(1);
@@ -525,7 +549,7 @@ int main(int argc, char* argv[]){
         perror("close");
         exit(EXIT_FAILURE);
     }
-
+*/
     // closing pipes
     for (int i = 0; i < 2; i++){
         if (close(pipeSefd[i]) == -1){
@@ -534,7 +558,8 @@ int main(int argc, char* argv[]){
         }
     }
 
-    munmap(drone, SIZE);
+    //munmap(drone, SIZE);
+    
     fclose(debug);
     fclose(errors);
     return 0;

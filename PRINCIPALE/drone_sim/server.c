@@ -7,15 +7,11 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <signal.h>
-#include <sys/shm.h>
-#include <sys/mman.h>
-#include <semaphore.h>
 #include<stdbool.h>
 #include <time.h>
 #include <sys/file.h>
 #include <sys/select.h>
 #include <errno.h>
-#define SEM_PATH_1 "/sem_drone1"
 
 pid_t wd_pid = -1;
 pid_t window_pid;
@@ -101,6 +97,8 @@ int main(int argc, char* argv[]){
     writeToLog(debug, "SERVER: process started");
     printf("SERVER : process started\n");
     Drone * drone;
+    Drone dr;
+    drone = &dr;
     int nobstacles;
     int rows = 50;
     int cols = 100;
@@ -113,11 +111,11 @@ int main(int argc, char* argv[]){
     }
 
     char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
-
+/*
 // OPENING SEMAPHORES
     sem_t *sem_drone;   // semaphore for writing and reading drone
     sem_drone = sem_open(SEM_PATH_1, O_CREAT | O_RDWR, 0666, 1);    // Initial value: 1
-
+*/
     // OPENING WINDOW
     // Join the elements of the array into a single command string
     char command[100];
@@ -209,7 +207,7 @@ int main(int argc, char* argv[]){
     char *obs = "obs";
     char *tar = "tar";
     char *coo = "coo";
-
+/*
 // SHARED MEMORY INITIALIZATION AND MAPPING
     const char * shm_name = "/dronemem"; //name of the shm
     const int SIZE = 4096; //size of the shared memory
@@ -247,7 +245,7 @@ int main(int argc, char* argv[]){
     drone->x =2;
     drone->y =20;
     sem_post(sem_drone);
-
+*/
 
    // SIGNALS
     struct sigaction sa; //initialize sigaction
@@ -402,7 +400,7 @@ int main(int argc, char* argv[]){
             }
             if ((write(pipeWdfd[1], drone, sizeof(Drone))) == -1){  // writes to window drone
                 perror("error in writing to pipe");
-                writeToLog(errors, "SERVER: error in writing to pipe drone");
+                writeToLog(errors, "SERVER: error in writing to pipe window the drone");
                 exit(EXIT_FAILURE);
             }
             
@@ -416,7 +414,7 @@ int main(int argc, char* argv[]){
         perror("wait");
         writeToLog(errors, "SERVER: error in wait");
     };
-
+/*
 // CLOSE AND UNLINK SHARED MEMORY
     if (close(shm_fd) == -1) {
         perror("close");
@@ -433,7 +431,7 @@ int main(int argc, char* argv[]){
     printf("FAILED FLAG: %d\n", failed);
     fprintf(debug, "%d\n", failed);
     fflush(debug);
-
+*/
     // closing pipes
     for (int i = 0; i < 2; i++){
         if (close(pipeDrfd[i]) == -1){
