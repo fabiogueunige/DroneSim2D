@@ -40,26 +40,6 @@ typedef struct {
     int height, width;
     Border border;
 } Win;
-/*
-void writeToLog(FILE *logFile, const char *message) {
-    time_t crtime;
-    time(&crtime);
-    int lockResult = flock(fileno(logFile), LOCK_EX);
-    if (lockResult == -1) {
-        perror("Failed to lock the log file");
-        // Handle the error as needed (e.g., exit or return)
-        return;
-    }
-    fprintf(logFile,"%s => ", ctime(&crtime));
-    fprintf(logFile, "%s\n", message);
-    fflush(logFile);
-
-    int unlockResult = flock(fileno(logFile), LOCK_UN);
-    if (unlockResult == -1) {
-        perror("Failed to unlock the log file");
-        // Handle the error as needed (e.g., exit or return)
-    }
-}*/
 
 void writeToLog(FILE *logFile, const char *message) {
     time_t crtime;
