@@ -12,7 +12,7 @@
 #include <stdbool.h>
 #include <time.h>
 
-#define MAX_TARGETS 10
+#define MAX_TARGETS 20
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
@@ -40,6 +40,14 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
         fprintf(debug, "%s\n", "TARGETS: terminating by WATCH DOG");
         fclose(debug);
         exit(EXIT_FAILURE);
+    }
+    if(signo == SIGINT){
+        //pressed q or CTRL+C
+        printf("TARGETS: Terminating with return value 0...");
+        FILE *debug = fopen("logfiles/debug.log", "a");
+        fprintf(debug, "%s\n", "TARGETS: terminating with return value 0...");
+        fclose(debug);
+        sigint_rec = true;
     }
     
 }
@@ -110,48 +118,31 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
     printf("TARGETS: rows = %d, cols = %d\n", rows, cols);
-
-    /* Not in server: Put:
-    if ((read(pipeSefd[0], &ntargets, sizeof(int))) == -1){
-        perror("error in reading from pipe");
-        writeToLog(errors, "TARGETS: error in reading from pipe");
-    }
-    */
-    
-    /* Not in server: Put:
-    int ntargets;
-    if ((read(pipeTafd[0], &ntargets, sizeof(int))) == -1){
-        perror("error in reading from pipe");
-        writeToLog(errors, "SERVER: error in reading from pipe ntargets");
-    }
-    */
+    sleep(2);
     while(!sigint_rec){
+        time_t t = time(NULL);
         srand(time(NULL)); // for change every time the seed of rand()
         ntargets = rand() % MAX_TARGETS;
-        targets targets[ntargets];
         if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
             perror("error in writing to pipe");
             writeToLog(errors, "TARGETS: error in writing to pipe");
         }
-
+        targets *target[ntargets];
         for(int i = 0; i<ntargets; i++){
-            targets[i].x = rand() % rows;
-            targets[i].y = rand() % cols;
-            printf("TARGETS: target %d: x = %d, y = %d\n", i, targets[i].x, targets[i].y);
+            target[i] = malloc(sizeof(targets));
+            target[i]->x = rand() % rows;
+            target[i]->y = rand() % cols;
+            printf("TARGETS: target %d: x = %d, y = %d\n", i, target[i]->x, target[i]->y);
             //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
-            if ((write(pipeSefd[1], &targets[i],sizeof(targets[i]))) == -1){
+            if ((write(pipeSefd[1], target[i],sizeof(targets))) == -1){
                 perror("error in writing to pipe");
                 writeToLog(errors, "TARGETS: error in writing to pipe");
             }
-            // write to server with pipe (NOT IMPLEMENTED IN SERVER
-            /* Metti:
-            if ((read(pipeTafd[0]. pos_targets[i], sizeof(pos_targets[i]))) == -1){
-                perror("error in reading from pipe of targets");
-                writeToLog(errors, "TARGETS: error in reading from pipe");
-            }
-            */
         }
-        sleep(60);
+        time_t t2 = time(NULL);
+        while(t2-t < 10){
+            t2 = time(NULL);
+        }
     }
 
     // closing pipes

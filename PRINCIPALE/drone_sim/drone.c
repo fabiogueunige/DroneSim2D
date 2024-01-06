@@ -35,10 +35,16 @@ struct obstacle {
     int y;
 };
 
+typedef struct {
+    int x;
+    int y;
+} targets;
+
 pid_t wd_pid = -1;
 bool sigint_rec = false;
 float rho0 = 8; //m
 float eta = 10; 
+float csi = 0.1; 
 
 void writeToLog(FILE *logFile, const char *message) {
     time_t crtime;
@@ -63,6 +69,20 @@ void writeToLog(FILE *logFile, const char *message) {
 // Function to calculate viscous friction force
 float calculateFrictionForce(float velocity) {
     return -FRICTION_COEFFICIENT * (velocity-5);
+}
+
+float calculateAttractiveForcex(int x, int y, int xt, int yt){
+    // calculate attractive force in x direction
+    float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2));
+    float theta = atan2(y-yt, x-xt);
+    return csi * rho * cos(theta);
+}
+
+float calculateAttractiveForcey(int x, int y, int xt, int yt){
+    // calculate attractive force in y direction
+    float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2));
+    float theta = atan2(y-yt, x-xt);
+    return csi * rho * sin(theta);
 }
 
 float calculateRepulsiveForcex(int x, int y, int xo, int yo){
@@ -135,7 +155,8 @@ int main(int argc, char* argv[]){
     int keyfd; //readable file descriptor for key pressed in input 
     sscanf(argv[1], "%d", &keyfd);
     char input;
-    int nobstacles; // initializes nobstacles
+    int nobstacles = 0; // initializes nobstacles
+    int ntargets = 0;
     Drone * drone;    // drone object
     int pipeSefd[2];
     
@@ -227,10 +248,11 @@ int main(int argc, char* argv[]){
     //initializes the drone's coordinates
     int x = x0;
     int y = y0;
-    
+    int fax = 0, fay = 0;
     
     // reads obstacle position from server
     struct obstacle *obstacles[20]; //obstacles
+    targets *target[20]; //targets
     // READS WINDOW DIMENSIONS
     int rows, cols;
     
@@ -259,8 +281,8 @@ int main(int argc, char* argv[]){
         edges[i+rows+cols]->y = i;
         
         //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
-        printf("DRONE: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        printf("DRONE: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+        //printf("DRONE: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        //printf("DRONE: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
         // write to server with pipe ...
     }
 
@@ -275,8 +297,8 @@ int main(int argc, char* argv[]){
         edges[i+2*rows+cols]->y = 0;
         
         //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
-        printf("DRONE: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        printf("DRONE: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
+        //printf("DRONE: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
+        //printf("DRONE: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
     }
     // reads edges
     /*
@@ -287,11 +309,10 @@ int main(int argc, char* argv[]){
             printf("DRONE: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
     }*/
 
-    // 
     while(!sigint_rec){
+        
         bool brake = false;
         // t->t+1
-
         // select for skipping the switch if no key is pressed
         struct timeval timeout;
         timeout.tv_sec = 0;  
@@ -315,23 +336,51 @@ int main(int argc, char* argv[]){
         else{
             if(FD_ISSET(pipeSefd[0], &read_fds)){
                 // reading obstacles and target
-                if ((read(pipeSefd[0], &nobstacles, sizeof(int))) == -1){
-                    perror("error in reading from pipe");
-                    writeToLog(errors, "DRONE: error in reading from pipe number of obstacles");
-                    exit(EXIT_FAILURE);
+                char buffer[4];
+                ssize_t numRead = read(pipeSefd[0], buffer, sizeof(buffer)-1);
+                if (numRead == -1) {
+                    perror("read");
+                    return 1;
                 }
-                printf("DRONE: number of obstacles: %d\n", nobstacles);
-                //struct obstacle *obstacles[nobstacles];
-                for(int i=0; i<nobstacles; i++){
-                    obstacles[i] = malloc(sizeof(struct obstacle));
-                    if ((read(pipeSefd[0], obstacles[i], sizeof(struct obstacle))) == -1){
+                writeToLog(debug, buffer);
+            //buffer[numRead] = '\0';
+                if(strcmp(buffer, "obs") == 0){
+                    if ((read(pipeSefd[0], &nobstacles, sizeof(int))) == -1){
                         perror("error in reading from pipe");
-                        writeToLog(errors, "DRONE: error in reading from pipe obstacles");
+                        writeToLog(errors, "DRONE: error in reading from pipe number of obstacles");
                         exit(EXIT_FAILURE);
                     }
-                    printf("DRONE: obstacle %d created at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
+                    printf("DRONE: number of obstacles: %d\n", nobstacles);
+                    //struct obstacle *obstacles[nobstacles];
+                    for(int i=0; i<nobstacles; i++){
+                        obstacles[i] = malloc(sizeof(struct obstacle));
+                        if ((read(pipeSefd[0], obstacles[i], sizeof(struct obstacle))) == -1){
+                            perror("error in reading from pipe");
+                            writeToLog(errors, "DRONE: error in reading from pipe server for reading obstacles");
+                            exit(EXIT_FAILURE);
+                        }
+                        printf("DRONE: obstacle %d at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
+                    }
                 }
+                else if(strcmp(buffer, "tar") == 0){
+                    writeToLog(debug, "DRONE: reading targets");
+                    if ((read(pipeSefd[0], &ntargets, sizeof(int))) == -1){
+                        perror("error in reading from pipe");
+                        writeToLog(errors, "DRONE: error in reading from pipe number of targets");
+                        exit(EXIT_FAILURE);
+                    }
+                    printf("DRONE: number of targets: %d\n", ntargets);
+                    for(int i=0; i<ntargets; i++){
 
+                        target[i] = malloc(sizeof(targets));
+                        if ((read(pipeSefd[0], target[i], sizeof(targets))) == -1){
+                            perror("error in reading from pipe");
+                            writeToLog(errors, "DRONE: error in reading from pipe server for reading targets");
+                            exit(EXIT_FAILURE);
+                        }
+                        printf("DRONE: target %d at (%d, %d)\n", i, target[i]->x, target[i]->y);
+                    }
+                }
             }
             if(FD_ISSET(keyfd, &read_fds)){
                 // reading key pressed
@@ -431,6 +480,12 @@ int main(int argc, char* argv[]){
         for (int i = 0; i < nobstacles; i++){
             frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
             fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
+        }
+        
+        // compute attractive force of targets
+        for(int i = 0; i<ntargets; i++){
+            fax += calculateAttractiveForcex(x, y, target[i]->x, target[i]->y);
+            fay += calculateAttractiveForcey(x, y, target[i]->x, target[i]->y);
         }
         
         // compute repulsive force of edges

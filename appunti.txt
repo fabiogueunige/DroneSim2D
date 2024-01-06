@@ -1,8 +1,29 @@
-da fare:
-- Mettere nel server la lettura dei target (codice in target) nel punto giusto. Guarda anche commenti server
-
+da fare:ù
+- crasha quando si schiacciano i tasti e arrivano target
+- mettere memoria per drone
+- forza attrattiva
+- brake quando non si ferma rimane forza opposta
+- far saturare la forza dei tasti
+- far saturare la forza degli obstacles
+- fare test sui parametri per i punti prima
 - sistemare repulsive force
+
+- cambiare sleep su ???
+
 - check posizione drone appena arrivano gli obstacle con flag
-- passare i target a tutti i processi utili e elaborare cosa fanno fare al drone
+- togliere shared memory
 - passare struttura drone anziche int tra drone e server (ok) e passarla anche a window, dopodiché sarà possibile togliere le shared memory
 - una volta fatti i target, mettere il check del watch dog a target
+
+
+
+
+
+
+
+
+
+
+
+
+- far funzionare description e input

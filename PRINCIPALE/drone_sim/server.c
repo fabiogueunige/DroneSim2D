@@ -33,6 +33,11 @@ struct obstacle {
     int y;
 };
 
+typedef struct {
+    int x;
+    int y;
+} targets;
+
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
     if (signo == SIGUSR1) {
@@ -202,6 +207,8 @@ int main(int argc, char* argv[]){
         exit(EXIT_FAILURE);
     }
     char *obs = "obs";
+    char *tar = "tar";
+    char *coo = "coo";
 
 // SHARED MEMORY INITIALIZATION AND MAPPING
     const char * shm_name = "/dronemem"; //name of the shm
@@ -266,49 +273,6 @@ int main(int argc, char* argv[]){
         exit(EXIT_FAILURE);
     }
 
-    // EDGES GENERATION
-    if ((write(pipeWdfd[1], &nobstacles_edge, sizeof(int))) == -1){
-        perror("error in writing to pipe");
-        writeToLog(errors, "SERVER: error in writing to pipe");
-        exit(EXIT_FAILURE);
-    }
-
-    for (int i = 0; i< rows; i++){
-        edges[i] = malloc(sizeof(struct obstacle));
-        edges[i]->x = 0;
-        edges[i]->y = i;
-        
-        //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
-        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
-        edges[i+rows+cols]->x = cols-1;
-        edges[i+rows+cols]->y = i;
-        
-        //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
-        printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
-        // write to server with pipe ...
-    }
-    
-    for (int i = rows; i< rows+cols; i++){
-        edges[i] = malloc(sizeof(struct obstacle));
-        edges[i]->x = i;
-        edges[i]->y = 0;
-        
-        //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
-        edges[i+rows+cols] = malloc(sizeof(struct obstacle));
-        edges[i+rows+cols]->x = i;
-        edges[i+rows+cols]->y = cols-1;
-        
-        //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
-        printf("SERVER: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        printf("SERVER: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
-    }
-    // sends edges to window
-    
-    /*
-    for(int i = 0; i<nobstacles_edge; i++){
-        write(pipeWdfd[1], edges[i], sizeof(struct obstacle));
-    }*/
 
     while(!sigint_rec){
         // select wich pipe to read from between drone and obstacles
@@ -316,13 +280,22 @@ int main(int argc, char* argv[]){
         FD_SET(pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
         FD_SET(pipeTafd[0], &read_fds);
         FD_SET(pipeWdfd[1], &write_fds);
-        //FD_SET(pipeDrfd[1], &write_fds);
-        int max_fd = (pipeDrfd[0] > pipeObfd[0]) ? pipeDrfd[0] : pipeObfd[0];
+
+        int max_fd = -1;
+        if (pipeTafd[0] > max_fd) {
+            max_fd = pipeTafd[0];
+        }
+        if(pipeObfd[0] > max_fd) {
+            max_fd = pipeObfd[0];
+        }
+        if(pipeDrfd[0] > max_fd) {
+            max_fd = pipeDrfd[0];
+        }
         int sel;
         // ciclo do while per evitare errori dovuuti a segnali
         
         do{
-            sel = select(max_fd +1, &read_fds, &write_fds, NULL, NULL);
+            sel = select(max_fd + 1, &read_fds, &write_fds, NULL, NULL);
         }while(sel == -1 && errno == EINTR);
         
         if(sel ==-1){
@@ -331,6 +304,46 @@ int main(int argc, char* argv[]){
             exit(EXIT_FAILURE);
         }
         else if(sel>0){
+            if(FD_ISSET(pipeTafd[0], &read_fds)){
+                printf("SERVER: reading from targets\n");
+                int ntargets;
+                if ((read(pipeTafd[0], &ntargets, sizeof(int))) == -1) { // reads from drone ntargets
+                    perror("error in reading from pipe");
+                    writeToLog(errors, "SERVER: error in reading from pipe targets");
+                    exit(EXIT_FAILURE);
+                }
+                printf("SERVER: number of targets: %d\n", ntargets);
+                if((write(pipeDrfd[1], tar, strlen(tar))) == -1){
+                    perror("error in writing to pipe");
+                    writeToLog(errors, "SERVER: error in writing to pipe drone that it will sends targets");
+                    exit(EXIT_FAILURE);
+                }
+                if ((write(pipeDrfd[1], &ntargets, sizeof(int))) == -1){  // writes to drone ntargets
+                    perror("error in writing to pipe");
+                    writeToLog(errors, "SERVER: error in writing to pipe number of targets");
+                    exit(EXIT_FAILURE);
+                }
+                if((write(pipeWdfd[1], tar, strlen(tar))) == -1){
+                    perror("error in writing to pipe");
+                    writeToLog(errors, "SERVER: error in writing to pipe window that it will sends targets");
+                    exit(EXIT_FAILURE);
+                }
+
+                if ((write(pipeWdfd[1], &ntargets, sizeof(int))) == -1){  // writes to window ntargets
+                    perror("error in writing to pipe");
+                    writeToLog(errors, "SERVER: error in writing to pipe number of targets");
+                    exit(EXIT_FAILURE);
+                }
+                targets *target[ntargets];
+                for(int i = 0; i<ntargets; i++){
+                    target[i] = malloc(sizeof(targets));
+                    read(pipeTafd[0], target[i], sizeof(targets));
+                    printf("SERVER: target %d position: (%d, %d)\n", i, target[i]->x, target[i]->y);
+                    write(pipeDrfd[1], target[i], sizeof(targets));
+                    write(pipeWdfd[1], target[i], sizeof(targets));
+                }
+            }
+
             if(FD_ISSET(pipeObfd[0], &read_fds)){
                 printf("SERVER: reading from obstacles\n");
                 if ((read(pipeObfd[0], &nobstacles, sizeof(int))) == -1) { // reads from drone nobstacles
@@ -339,6 +352,11 @@ int main(int argc, char* argv[]){
                     exit(EXIT_FAILURE);
                 } 
                 printf("SERVER: number of obstacles: %d\n", nobstacles);
+                if((write(pipeDrfd[1], obs, strlen(obs))) == -1){
+                    perror("error in writing to pipe");
+                    writeToLog(errors, "SERVER: error in writing to pipe drone that it will sends obstacles");
+                    exit(EXIT_FAILURE);
+                }
                 if ((write(pipeDrfd[1], &nobstacles, sizeof(int))) == -1){  // writes to drone nobstacles
                     perror("error in writing to pipe");
                     writeToLog(errors, "SERVER: error in writing to pipe number of obstacles");
@@ -355,6 +373,7 @@ int main(int argc, char* argv[]){
                     writeToLog(errors, "SERVER: error in writing to pipe number of obstacles");
                     exit(EXIT_FAILURE);
                 }
+
                 struct obstacle *obstacles[nobstacles];
                 for(int i = 0; i<nobstacles; i++){
                     obstacles[i] = malloc(sizeof(struct obstacle));
@@ -374,35 +393,13 @@ int main(int argc, char* argv[]){
                 }
                 printf("SERVER: drone position: (%d, %d)\n", drone->x, drone->y);
             }
-            if(FD_ISSET(pipeTafd[0], &read_fds)){
-                printf("SERVER: reading from targets\n");
-                int ntargets;
-                if ((read(pipeTafd[0], &ntargets, sizeof(int))) == -1) { // reads from drone ntargets
-                    perror("error in reading from pipe");
-                    writeToLog(errors, "SERVER: error in reading from pipe targets");
-                    exit(EXIT_FAILURE);
-                }
-                printf("SERVER: number of targets: %d\n", ntargets);
-                if ((write(pipeDrfd[1], &ntargets, sizeof(int))) == -1){  // writes to drone ntargets
-                    perror("error in writing to pipe");
-                    writeToLog(errors, "SERVER: error in writing to pipe number of targets");
-                    exit(EXIT_FAILURE);
-                }
-                if ((write(pipeWdfd[1], &ntargets, sizeof(int))) == -1){  // writes to window ntargets
-                    perror("error in writing to pipe");
-                    writeToLog(errors, "SERVER: error in writing to pipe number of targets");
-                    exit(EXIT_FAILURE);
-                }
-                for(int i = 0; i<ntargets; i++){
-                    Drone target;
-                    read(pipeTafd[0], &target, sizeof(Drone));
-                    printf("SERVER: target %d position: (%d, %d)\n", i, target.x, target.y);
-                    write(pipeDrfd[1], &target, sizeof(Drone));
-                    write(pipeWdfd[1], &target, sizeof(Drone));
-                }
-            }
             printf("SERVER: writing to window\n");
             // NON HO TROVATO LETTURA SU WINDOW (AGGIUNTA)
+            if((write(pipeWdfd[1], coo, strlen(coo))) == -1){
+                perror("error in writing to pipe");
+                writeToLog(errors, "SERVER: error in writing to pipe window that it will sends coordinates");
+                exit(EXIT_FAILURE);
+            }
             if ((write(pipeWdfd[1], drone, sizeof(Drone))) == -1){  // writes to window drone
                 perror("error in writing to pipe");
                 writeToLog(errors, "SERVER: error in writing to pipe drone");

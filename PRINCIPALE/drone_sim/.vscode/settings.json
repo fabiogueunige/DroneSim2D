@@ -2,6 +2,7 @@
     "files.associations": {
         "termios.h": "c",
         "file.h": "c",
-        "signal.h": "c"
+        "signal.h": "c",
+        "functional": "c"
     }
 }

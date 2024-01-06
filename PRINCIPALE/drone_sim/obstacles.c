@@ -23,11 +23,7 @@ struct obstacle {
     int y;
 };
 
-typedef struct {
-    int rows;
-    int cols;
-    int nobstacles;
-} window;
+
 
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
@@ -77,7 +73,6 @@ int main (int argc, char *argv[])
 
     writeToLog(debug, "OBSTACLES: process started");
     printf("OBSTACLES: process started\n");
-    struct window *window;
 
     // opening pipes
     int pipeSefd[2];
@@ -122,6 +117,7 @@ int main (int argc, char *argv[])
     
     // obstacle generation cycle
     while(!sigint_rec){
+        time_t t = time(NULL);
         srand(time(NULL));
         int nobstacles = rand() % MAX_OBSTACLES;
         char pos_obstacles[nobstacles][10];
@@ -140,6 +136,7 @@ int main (int argc, char *argv[])
             int x = obstacles[i]->x;
             int y = obstacles[i]->y;
             printf("OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
+            writeToLog(debug, "OBSTACLES: obstacle created");
             fprintf(debug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
             //sprintf(pos_obstacles[i], "%d,%d", x, y);
             // write to server with pipe ...
@@ -149,7 +146,11 @@ int main (int argc, char *argv[])
                 exit(EXIT_FAILURE);
             }
         }
-        sleep(60);
+        //sleep(60);
+        time_t t2 = time(NULL); 
+        while(t2 - t < 60){
+            t2 = time(NULL);
+        }
     }
     // closing pipes
     

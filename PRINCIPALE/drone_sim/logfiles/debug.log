@@ -1,627 +1,161 @@
-Fri Jan  5 14:39:40 2024
+Sat Jan  6 18:26:56 2024
  => SERVER: process started
-Fri Jan  5 14:39:40 2024
+Sat Jan  6 18:26:56 2024
  => SERVER: pipes opened
-Fri Jan  5 14:39:40 2024
+Sat Jan  6 18:26:56 2024
  => SERVER: generated shared memory
-Fri Jan  5 14:39:40 2024
+Sat Jan  6 18:26:56 2024
  => SERVER: initialized starting values
-Fri Jan  5 14:39:40 2024
+Sat Jan  6 18:26:56 2024
  => WINDOW: process started
-Fri Jan  5 14:39:40 2024
+Sat Jan  6 18:26:56 2024
  => WINDOW: pipe opened
-Fri Jan  5 14:39:41 2024
+Sat Jan  6 18:26:56 2024
  => DRONE: process started
-Fri Jan  5 14:39:41 2024
+Sat Jan  6 18:26:56 2024
  => DRONE: pipes opened
 INPUT: process started
 OBSTACLES: process started
 OBSTACLES: pipes opened
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 0 created at (64, 25)
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 1 created at (17, 39)
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 2 created at (20, 14)
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 3 created at (8, 6)
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 4 created at (67, 42)
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 5 created at (96, 47)
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 6 created at (74, 15)
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 7 created at (50, 42)
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 8 created at (78, 47)
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 9 created at (87, 21)
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 10 created at (48, 42)
+OBSTACLES: obstacle created
+OBSTACLES: obstacle 11 created at (52, 23)
+OBSTACLES: obstacle created
 TARGETS: process started
 TARGETS: pipes opened
-Fri Jan  5 14:39:43 2024
+Sat Jan  6 18:26:58 2024
+ => obs
+Sat Jan  6 18:26:59 2024
  => WATCH DOG: process started
-Fri Jan  5 14:39:43 2024
+Sat Jan  6 18:26:59 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:39:43 2024
+Sat Jan  6 18:26:59 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:39:43 2024
+Sat Jan  6 18:26:59 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:39:43 2024
+Sat Jan  6 18:26:59 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:39:43 2024
+Sat Jan  6 18:26:59 2024
  => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:39:53 2024
+TARGETS: signal SIGUSR1 received from WATCH DOG
+Sat Jan  6 18:26:59 2024
+ => WATCH DOG: TARGETS received signal
+Sat Jan  6 18:26:59 2024
+ => tar
+Sat Jan  6 18:26:59 2024
+ => DRONE: reading targets
+Sat Jan  6 18:27:09 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:39:53 2024
+Sat Jan  6 18:27:09 2024
+ => tar
+Sat Jan  6 18:27:09 2024
+ => DRONE: reading targets
+Sat Jan  6 18:27:09 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:39:53 2024
+Sat Jan  6 18:27:09 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:39:53 2024
+Sat Jan  6 18:27:09 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:39:53 2024
+Sat Jan  6 18:27:10 2024
  => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:40:03 2024
+TARGETS: signal SIGUSR1 received from WATCH DOG
+Sat Jan  6 18:27:10 2024
+ => WATCH DOG: TARGETS received signal
+Sat Jan  6 18:27:19 2024
  => WATCH DOG: sending signals to processes
+Sat Jan  6 18:27:19 2024
+ => tar
+Sat Jan  6 18:27:19 2024
+ => DRONE: reading targets
 SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:03 2024
+Sat Jan  6 18:27:19 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:03 2024
+Sat Jan  6 18:27:19 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:03 2024
+Sat Jan  6 18:27:19 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:03 2024
+Sat Jan  6 18:27:19 2024
  => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:40:13 2024
+TARGETS: signal SIGUSR1 received from WATCH DOG
+Sat Jan  6 18:27:19 2024
+ => WATCH DOG: TARGETS received signal
+Sat Jan  6 18:27:29 2024
  => WATCH DOG: sending signals to processes
+Sat Jan  6 18:27:29 2024
+ => tar
+Sat Jan  6 18:27:29 2024
+ => DRONE: reading targets
 SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:13 2024
+Sat Jan  6 18:27:29 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:13 2024
+Sat Jan  6 18:27:29 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:13 2024
+Sat Jan  6 18:27:29 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:13 2024
+Sat Jan  6 18:27:29 2024
  => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:40:23 2024
+TARGETS: signal SIGUSR1 received from WATCH DOG
+Sat Jan  6 18:27:29 2024
+ => WATCH DOG: TARGETS received signal
+Sat Jan  6 18:27:39 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:23 2024
+Sat Jan  6 18:27:39 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:23 2024
+Sat Jan  6 18:27:39 2024
+ => tar
+Sat Jan  6 18:27:39 2024
+ => DRONE: reading targets
+Sat Jan  6 18:27:39 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:23 2024
+Sat Jan  6 18:27:39 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:23 2024
+Sat Jan  6 18:27:39 2024
  => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:40:33 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:33 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:33 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:33 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:33 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:40:43 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:43 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:43 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:43 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:43 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:40:53 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:53 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:53 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:53 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:40:53 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:41:03 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:03 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:03 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:03 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:03 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:41:13 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:13 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:13 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:13 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:13 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:41:23 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:23 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:23 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:23 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:23 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:41:33 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:33 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:33 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:33 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:33 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:41:43 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:43 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:43 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:43 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-OBSTACLES: obstacle 0 created at (75, 16)
-OBSTACLES: obstacle 0 created at (23, 18)
-OBSTACLES: obstacle 1 created at (52, 7)
-OBSTACLES: obstacle 2 created at (18, 2)
-OBSTACLES: obstacle 3 created at (18, 26)
-OBSTACLES: obstacle 4 created at (74, 26)
-OBSTACLES: obstacle 5 created at (46, 15)
-OBSTACLES: obstacle 6 created at (98, 46)
-OBSTACLES: obstacle 7 created at (72, 44)
-OBSTACLES: obstacle 8 created at (79, 34)
-OBSTACLES: obstacle 9 created at (88, 14)
-OBSTACLES: obstacle 10 created at (55, 11)
-OBSTACLES: obstacle 11 created at (2, 0)
-OBSTACLES: obstacle 12 created at (42, 11)
-OBSTACLES: obstacle 13 created at (3, 48)
-OBSTACLES: obstacle 14 created at (97, 20)
-OBSTACLES: obstacle 0 created at (90, 3)
-OBSTACLES: obstacle 1 created at (42, 18)
-OBSTACLES: obstacle 2 created at (84, 15)
-OBSTACLES: obstacle 3 created at (47, 31)
-OBSTACLES: obstacle 0 created at (14, 39)
-OBSTACLES: obstacle 1 created at (18, 20)
-OBSTACLES: obstacle 2 created at (77, 30)
-OBSTACLES: obstacle 3 created at (67, 35)
-OBSTACLES: obstacle 4 created at (47, 27)
-OBSTACLES: obstacle 5 created at (35, 25)
-OBSTACLES: obstacle 6 created at (92, 37)
-OBSTACLES: obstacle 7 created at (55, 2)
-OBSTACLES: obstacle 8 created at (22, 39)
-OBSTACLES: obstacle 9 created at (98, 44)
-OBSTACLES: obstacle 10 created at (28, 5)
-OBSTACLES: obstacle 11 created at (95, 19)
-OBSTACLES: obstacle 12 created at (36, 23)
-OBSTACLES: obstacle 13 created at (91, 8)
-OBSTACLES: obstacle 14 created at (84, 28)
-OBSTACLES: obstacle 0 created at (95, 2)
-OBSTACLES: obstacle 1 created at (33, 11)
-OBSTACLES: obstacle 2 created at (21, 23)
-OBSTACLES: obstacle 3 created at (90, 40)
-OBSTACLES: obstacle 4 created at (68, 33)
-OBSTACLES: obstacle 0 created at (36, 24)
-OBSTACLES: obstacle 1 created at (33, 35)
-OBSTACLES: obstacle 2 created at (94, 16)
-OBSTACLES: obstacle 3 created at (98, 48)
-OBSTACLES: obstacle 4 created at (63, 2)
-OBSTACLES: obstacle 5 created at (42, 26)
-OBSTACLES: obstacle 0 created at (37, 22)
-OBSTACLES: obstacle 0 created at (52, 8)
-OBSTACLES: obstacle 1 created at (88, 32)
-OBSTACLES: obstacle 2 created at (11, 10)
-OBSTACLES: obstacle 3 created at (88, 46)
-OBSTACLES: obstacle 4 created at (22, 10)
-OBSTACLES: obstacle 5 created at (85, 49)
-OBSTACLES: obstacle 6 created at (12, 28)
-OBSTACLES: obstacle 7 created at (40, 14)
-OBSTACLES: obstacle 8 created at (40, 45)
-OBSTACLES: obstacle 9 created at (6, 3)
-OBSTACLES: obstacle 10 created at (91, 25)
-OBSTACLES: obstacle 11 created at (34, 32)
-OBSTACLES: obstacle 12 created at (94, 13)
-OBSTACLES: obstacle 0 created at (70, 18)
-OBSTACLES: obstacle 1 created at (53, 22)
-OBSTACLES: obstacle 2 created at (74, 41)
-OBSTACLES: obstacle 3 created at (70, 23)
-OBSTACLES: obstacle 4 created at (99, 49)
-OBSTACLES: obstacle 0 created at (56, 14)
-OBSTACLES: obstacle 1 created at (47, 21)
-OBSTACLES: obstacle 2 created at (21, 0)
-OBSTACLES: obstacle 3 created at (39, 24)
-OBSTACLES: obstacle 4 created at (18, 46)
-OBSTACLES: obstacle 5 created at (55, 27)
-OBSTACLES: obstacle 0 created at (97, 20)
-OBSTACLES: obstacle 1 created at (68, 35)
-OBSTACLES: obstacle 2 created at (98, 3)
-OBSTACLES: obstacle 3 created at (38, 1)
-OBSTACLES: obstacle 4 created at (65, 24)
-OBSTACLES: obstacle 5 created at (59, 44)
-OBSTACLES: obstacle 6 created at (73, 5)
-OBSTACLES: obstacle 7 created at (8, 29)
-OBSTACLES: obstacle 8 created at (8, 25)
-OBSTACLES: obstacle 9 created at (96, 31)
-OBSTACLES: obstacle 10 created at (88, 25)
-OBSTACLES: obstacle 11 created at (50, 23)
-OBSTACLES: obstacle 0 created at (84, 21)
-OBSTACLES: obstacle 1 created at (33, 10)
-OBSTACLES: obstacle 2 created at (95, 11)
-OBSTACLES: obstacle 3 created at (87, 16)
-OBSTACLES: obstacle 4 created at (60, 14)
-OBSTACLES: obstacle 5 created at (52, 48)
-OBSTACLES: obstacle 6 created at (62, 9)
-OBSTACLES: obstacle 7 created at (79, 19)
-OBSTACLES: obstacle 8 created at (99, 31)
-OBSTACLES: obstacle 9 created at (7, 43)
-OBSTACLES: obstacle 10 created at (50, 40)
-OBSTACLES: obstacle 11 created at (31, 14)
-OBSTACLES: obstacle 12 created at (23, 34)
-OBSTACLES: obstacle 0 created at (61, 44)
-OBSTACLES: obstacle 1 creaFri Jan  5 14:41:43 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:41:53 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:53 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:53 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:53 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:41:53 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:42:03 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:03 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:03 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:03 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:03 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:42:13 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:13 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:13 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:13 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:13 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:42:23 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:23 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:23 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:23 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:23 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:42:33 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:33 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:33 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:33 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:33 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:42:43 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:43 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:43 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:43 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:43 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:42:53 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:53 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:53 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:53 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:42:53 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:43:03 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:03 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:03 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:03 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:03 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:43:13 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:13 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:13 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:13 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:13 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:43:23 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:23 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:23 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:23 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:23 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:43:33 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:33 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:33 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:33 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:33 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:43:43 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:43 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:43 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:43 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:43 2024
- => WATCH DOG: OBSTACLE received signal
-ted at (81, 3)
-OBSTACLES: obstacle 2 created at (69, 25)
-OBSTACLES: obstacle 0 created at (64, 27)
-OBSTACLES: obstacle 1 created at (58, 34)
-OBSTACLES: obstacle 2 created at (29, 5)
-OBSTACLES: obstacle 3 created at (51, 49)
-OBSTACLES: obstacle 4 created at (85, 27)
-OBSTACLES: obstacle 5 created at (0, 22)
-OBSTACLES: obstacle 6 created at (82, 6)
-OBSTACLES: obstacle 7 created at (43, 13)
-OBSTACLES: obstacle 8 created at (21, 8)
-OBSTACLES: obstacle 9 created at (20, 20)
-OBSTACLES: obstacle 0 created at (70, 37)
-OBSTACLES: obstacle 1 created at (10, 27)
-OBSTACLES: obstacle 0 created at (83, 42)
-OBSTACLES: obstacle 1 created at (95, 18)
-OBSTACLES: obstacle 2 created at (4, 28)
-OBSTACLES: obstacle 3 created at (33, 11)
-OBSTACLES: obstacle 4 created at (81, 1)
-OBSTACLES: obstacle 0 created at (53, 15)
-OBSTACLES: obstacle 1 created at (0, 31)
-OBSTACLES: obstacle 2 created at (68, 21)
-OBSTACLES: obstacle 3 created at (52, 33)
-OBSTACLES: obstacle 4 created at (63, 6)
-OBSTACLES: obstacle 5 created at (55, 14)
-OBSTACLES: obstacle 6 created at (50, 38)
-OBSTACLES: obstacle 7 created at (26, 43)
-OBSTACLES: obstacle 0 created at (97, 8)
-OBSTACLES: obstacle 1 created at (5, 33)
-OBSTACLES: obstacle 2 created at (75, 38)
-OBSTACLES: obstacle 3 created at (37, 22)
-OBSTACLES: obstacle 4 created at (75, 13)
-OBSTACLES: obstacle 5 created at (58, 15)
-OBSTACLES: obstacle 6 created at (55, 7)
-OBSTACLES: obstacle 7 created at (11, 12)
-OBSTACLES: obstacle 8 created at (27, 39)
-OBSTACLES: obstacle 9 created at (84, 42)
-OBSTACLES: obstacle 10 created at (88, 34)
-OBSTACLES: obstacle 11 created at (60, 36)
-OBSTACLES: obstacle 12 created at (54, 35)
-OBSTACLES: obstacle 13 created at (65, 21)
-OBSTACLES: obstacle 14 created at (43, 48)
-OBSTACLES: obstacle 15 created at (28, 42)
-OBSTACLES: obstacle 0 created at (82, 37)
-OBSTACLES: obstacle 1 created at (55, 47)
-OBSTACLES: obstacle 2 created at (82, 0)
-OBSTACLES: obstacle 3 created at (43, 12)
-OBSTACLES: obstacle 4 created at (15, 27)
-OBSTACLES: obstacle 5 created at (71, 13)
-OBSTACLES: obstacle 6 created at (28, 42)
-OBSTACLES: obstacle 7 created at (2, 3)
-OBSTACLES: obstacle 8 created at (66, 44)
-OBSTACLES: obstacle 9 created at (60, 17)
-OBSTACLES: obstacle 10 created at (85, 15)
-OBSTACLES: obstacle 11 created at (7, 44)
-OBSTACLES: obstacle 12 created at (4, 21)
-OBSTACLES: obstacle 0 created at (41, 5)
-OBSTACLES: obstacle 0 created at (4, 1)
-OBSTACLES: obstacle 1 created at (75, 36)
-OBSTACLES: obstacle 2 created at (19, 40)
-OBSTACLES: obstacle 3 created at (83, 38)
-OBSTACLES: obstacle 4 created at (71, 39)
-OBSTACLES: obstacle 5 created at (49, 37)
-OBSTACLES: obstacle 6 created at (76, 12)
-OBSTACLES: obstacle 7 created at (8, 4)
-OBSTACLES: obstacle 8 created at (10, 33)
-OBSTACLES: obstacle 9 created at (61, 41)
-OBSTACLES: obstacle 10 created at (26, 26)
-OBSTACLES: obstacle 11 created at (61, 14)
-OBSTACLES: obstacle 12 created at (75, 42)
-OBSTACLES: obstacle 13 created at (7, 2)
-OBSTACLES: obstacle 0 created at (96, 39)
-OBSTACLES: obstacle 1 created at (56, 24)
-OBSTACLES: obstacle 2 created at (51, 24)
-OBSTACLES: obstacle 3 created at (64, 15)
-OBSTACLES: obstacle 0 created at (83, 32)
-OBSTACLES: obstacle 1 created at (65, 8)
-OBSTACLES: obstacle 2 created at (8, 9)
-OBSTACLES: obstacle 3 created at (66, 19)
-OBSTACLES: obstacle 4 created at (69, 8)
-OBSTACLES: obstacle 5 created at (39, 44)
-OBSTACLES: obstacle 6 created at (47, 1)
-OBSTACLES: obstacle 7 created at (17, 41)
-OBSTACLES: obstacle 8 created at (84, 7)
-OBSTACLES: obstacle 9 created at (58, 28)
-OBSTACLES: obstacle 10 created at (37, 47)
-OBSTACLES: obstacle 11 created at (28, 37)
-OBSTACLES: obstacle 12 created at (12, 0)
-OBSTACLES: obstacle 13 created at (84, 29)
-OBSTACLES: obstacle 14 created at (14, 39)
-OBSTACLES: obstacle 15 created at (98, 47)
-OBSTACLES: obstacle 16 created at (73, 16)
-OBSTACLES: obstacle 0 created at (2, 9)
-OBSTACLES: obstacle 1 created at (58, 8)
-OBSTACLES: obstacle 2 created at (47, 45)
-OBSTACLES: obstacle 0 created at (97, 40)
-OBSTACLES: obstacle 1 created at (97, 23)
-OBSTACLES: obstacle 2 created at (27, 2)
-OBSTACLES: obstacle 3Fri Jan  5 14:43:53 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:53 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:53 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:53 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:43:53 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:44:03 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:44:03 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:44:03 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:44:03 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:44:03 2024
- => WATCH DOG: OBSTACLE received signal
-Fri Jan  5 14:44:13 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:44:13 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Fri Jan  5 14:44:13 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
+Sat Jan  6 18:27:39 2024
+ => tar
+Sat Jan  6 18:27:39 2024
+ => DRONE: reading targets
+TARGETS: signal SIGUSR1 received from WATCH DOG
+Sat Jan  6 18:27:39 2024
+ => WATCH DOG: TARGETS received signal
 SERVER: terminating with return value 0...
-OBSTACLE: terminating with return value 0...
- created at (60, 16)
-OBSTACLES: obstacle 4 created at (15, 13)
-OBSTACLES: obstacle 5 created at (47, 33)
-OBSTACLES: obstacle 6 created at (3, 44)
-OBSTACLES: obstacle 0 created at (13, 0)
-OBSTACLES: obstacle 1 created at (17, 2)
-OBSTACLES: obstacle 2 created at (14, 27)
-OBSTACLES: obstacle 3 created at (83, 19)
-OBSTACLES: obstacle 4 created at (70, 14)
-OBSTACLES: obstacle 5 created at (40, 15)
-OBSTACLES: obstacle 6 created at (12, 23)
-OBSTACLES: obstacle 7 created at (50, 26)
-OBSTACLES: obstacle 8 created at (17, 12)
-OBSTACLES: obstacle 9 created at (2, 33)
-OBSTACLES: obstacle 10 created at (48, 1)
-OBSTACLES: obstacle 11 created at (14, 34)
-OBSTACLES: obstacle 12 created at (70, 7)
-OBSTACLES: obstacle 0 created at (99, 2)
-OBSTACLES: obstacle 1 created at (54, 33)
-OBSTACLES: obstacle 2 created at (99, 24)
+TARGETS: terminating with return value 0...
