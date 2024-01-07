@@ -31,6 +31,7 @@ struct obstacle {
 typedef struct {
     int x;
     int y;
+    bool taken;
 } targets;
 
 typedef struct {
@@ -327,9 +328,11 @@ int main(char argc, char*argv[]){
             wattroff(win, COLOR_PAIR(3) | A_BOLD);
         }
         for (int i = 0; i<ntargets; i++){
-            wattron(win, COLOR_PAIR(4) | A_BOLD);
-            mvwprintw(win, tar[i]->y, tar[i]->x, "%c", tar_symbol);
-            wattroff(win, COLOR_PAIR(4) | A_BOLD);
+            if(tar[i]->taken == false){
+                wattron(win, COLOR_PAIR(4) | A_BOLD);
+                mvwprintw(win, tar[i]->y, tar[i]->x, "%c", tar_symbol);
+                wattroff(win, COLOR_PAIR(4) | A_BOLD);
+            }
         }
         /*
         for(int i = 0; i<nedges; i++){

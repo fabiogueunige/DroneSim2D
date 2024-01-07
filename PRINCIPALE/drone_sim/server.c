@@ -32,6 +32,7 @@ struct obstacle {
 typedef struct {
     int x;
     int y;
+    bool taken;
 } targets;
 
 void sig_handler(int signo, siginfo_t *info, void *context) {

@@ -38,13 +38,16 @@ struct obstacle {
 typedef struct {
     int x;
     int y;
+    bool taken;
 } targets;
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
-float rho0 = 13; //m
-float eta = 40; 
-float csi = 0.05; 
+float rho0 = 5; //m repulsive force ray of action
+float rho1 = 8; //m attractive force ray of action
+float rho2 = 2; //m target min dist to take it
+float eta = 20; 
+float csi = 1; 
 
 void writeToLog(FILE *logFile, const char *message) {
     time_t crtime;
@@ -75,14 +78,28 @@ float calculateAttractiveForcex(int x, int y, int xt, int yt){
     // calculate attractive force in x direction
     float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2));
     float theta = atan2(y-yt, x-xt);
-    return csi * rho * cos(theta);
+    
+    if(x<rho1)
+        return csi * rho * cos(theta);
+    else
+        return 0;
+}
+
+bool isTargetTaken(int x, int y, int xt, int yt){
+    float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2));
+    if(rho < rho2)
+        return true;
 }
 
 float calculateAttractiveForcey(int x, int y, int xt, int yt){
     // calculate attractive force in y direction
     float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2));
     float theta = atan2(y-yt, x-xt);
-    return csi * rho * sin(theta);
+    if (rho < rho1)
+        return csi * rho * sin(theta);
+    else
+        return 0;
+    
 }
 
 float calculateRepulsiveForcex(int x, int y, int xo, int yo){
@@ -498,13 +515,18 @@ int main(int argc, char* argv[]){
             fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
         }
         
-        /*
         // compute attractive force of targets
         for(int i = 0; i<ntargets; i++){
             fax += calculateAttractiveForcex(x, y, target[i]->x, target[i]->y);
             fay += calculateAttractiveForcey(x, y, target[i]->x, target[i]->y);
+            if(isTargetTaken(x, y, target[i]->x, target[i]->y)){
+                target[i]->taken = true;
+                printf("DRONE: target %d taken\n", i);
+                writeToLog(debug, "DRONE: target taken");
+            }
+            else
+                target[i]->taken = false;
         }
-        */
 
         // compute repulsive force of edges
         for(int i = 0; i < nedges; i++){
@@ -517,12 +539,13 @@ int main(int argc, char* argv[]){
         F[1]-=fay;
 
         printf("frx: %d fry: %d\n", frx, fry);
-        printf("fra: %d fay: %d\n", fax, fay);
+        printf("fax: %d fay: %d\n", fax, fay);
+        updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
+        //updatePosition(&x, &y, &vx, &vy, T, F[0]+frx+fax, F[1]+ fry + fay);
         frx = 0;
         fry = 0;
         fax = 0;
         fay = 0;
-        updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
         drone->x = x;
         drone->y = y;
         drone->vx = vx;

@@ -20,6 +20,7 @@ bool sigint_rec = false;
 typedef struct {
     int x;
     int y;
+    bool taken;
 } targets;
 
 
@@ -132,6 +133,7 @@ int main (int argc, char *argv[])
             target[i] = malloc(sizeof(targets));
             target[i]->x = rand() % rows;
             target[i]->y = rand() % cols;
+            target[i]->taken = false;
             printf("TARGETS: target %d: x = %d, y = %d\n", i, target[i]->x, target[i]->y);
             //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
             if ((write(pipeSefd[1], target[i],sizeof(targets))) == -1){
@@ -140,7 +142,7 @@ int main (int argc, char *argv[])
             }
         }
         time_t t2 = time(NULL);
-        while(t2-t < 10){
+        while(t2-t < 60){
             t2 = time(NULL);
         }
     }
