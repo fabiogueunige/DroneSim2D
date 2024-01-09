@@ -13,7 +13,10 @@
 #include <time.h>
 #include <sys/file.h>
 #include <sys/select.h>
+#include <math.h>
 #define T 0.1 //s   time instants' duration
+
+float rho2 = 2;
 
 
 typedef struct {
@@ -101,6 +104,12 @@ void destroy_win(WINDOW *local_win) {
     werase(local_win); // Clear window content
     wrefresh(local_win); // Refresh to show changes
     delwin(local_win); // Delete the window
+}
+
+bool isTargetTaken(int x, int y, int xt, int yt){
+    float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2));
+    if(rho < rho2)
+        return true;
 }
 
 int main(char argc, char*argv[]){
@@ -328,7 +337,10 @@ int main(char argc, char*argv[]){
             wattroff(win, COLOR_PAIR(3) | A_BOLD);
         }
         for (int i = 0; i<ntargets; i++){
-            if(tar[i]->taken == false){
+            if(isTargetTaken(x,y,tar[i]->x, tar[i]->y))
+                tar[i]->taken = true;
+            
+           if(tar[i]->taken == false){
                 wattron(win, COLOR_PAIR(4) | A_BOLD);
                 mvwprintw(win, tar[i]->y, tar[i]->x, "%c", tar_symbol);
                 wattroff(win, COLOR_PAIR(4) | A_BOLD);

@@ -21,6 +21,7 @@
 #define FRICTION_COEFFICIENT 0.1    // N*s*m
 #define FORCE_MODULE 1 //N
 #define T 0.1 //s   time instants' duration
+#define MAXFREP 12 //N
 
 typedef struct {
     int x;
@@ -43,10 +44,10 @@ typedef struct {
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
-float rho0 = 5; //m repulsive force ray of action
-float rho1 = 8; //m attractive force ray of action
+float rho0 = 15; //m repulsive force ray of action
+float rho1 = 0.5; //m attractive force ray of action
 float rho2 = 2; //m target min dist to take it
-float eta = 20; 
+float eta = 70; 
 float csi = 1; 
 
 void writeToLog(FILE *logFile, const char *message) {
@@ -73,8 +74,7 @@ void writeToLog(FILE *logFile, const char *message) {
 float calculateFrictionForce(float velocity) {
     return -FRICTION_COEFFICIENT * (velocity-5);
 }
-
-float calculateAttractiveForcex(int x, int y, int xt, int yt){
+/*float calculateAttractiveForcex(int x, int y, int xt, int yt){
     // calculate attractive force in x direction
     float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2));
     float theta = atan2(y-yt, x-xt);
@@ -83,24 +83,31 @@ float calculateAttractiveForcex(int x, int y, int xt, int yt){
         return csi * rho * cos(theta);
     else
         return 0;
+}*/
+
+float calculateAttractiveForcex(int x, int xt){
+    if (abs(x-xt) < rho1)
+        return -csi * (x-xt);
+    else
+        return 0;
 }
 
-bool isTargetTaken(int x, int y, int xt, int yt){
-    float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2));
-    if(rho < rho2)
-        return true;
-}
-
-float calculateAttractiveForcey(int x, int y, int xt, int yt){
+float calculateAttractiveForcey(int y, int yt){
     // calculate attractive force in y direction
-    float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2));
-    float theta = atan2(y-yt, x-xt);
-    if (rho < rho1)
-        return csi * rho * sin(theta);
+    if (abs(y-yt) < rho1)
+        return -csi * (y-yt);
     else
         return 0;
     
 }
+
+bool isTargetTaken(int x, int y, int xt, int yt){
+    float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2)); //distance between target and drone
+    if(rho < rho2) //if it is in the "take area"
+        return true;
+}
+
+
 
 float calculateRepulsiveForcex(int x, int y, int xo, int yo){
     // calculate repulsive force in x direction
@@ -210,25 +217,6 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "DRONE: error in sigaction()");
         exit(EXIT_FAILURE);
     }
-/*
-// SHARED MEMORY OPENING AND MAPPING
-    const char * shm_name = "/dronemem";
-    const int SIZE = 4096;
-    int i, shm_fd;
-    shm_fd = shm_open(shm_name, O_RDWR, 0666); // open shared memory segment for read and write
-    if (shm_fd == 1) {
-        perror("shared memory segment failed\n");
-        writeToLog(errors, "DRONE:shared memory segment failed");
-        exit(EXIT_FAILURE);
-    }
-
-    drone = (Drone *)mmap(0, SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0); // protocol write
-    if (drone == MAP_FAILED) {
-        perror("Map failed");
-        writeToLog(errors, "Map Failed");
-        return 1;
-    }
-    */
 
     int F[2]={0, 0};    // drone initially stopped
     int frx = 0, fry = 0;   // repulsive force in x and y direction
@@ -259,10 +247,6 @@ int main(int argc, char* argv[]){
      and so because of this we threated it like that: in breaking it stops breaking when it is 
      stopped (v = (5,5)), and then when we reset the drone we put the velocity in its point of 
      equilibrium.*/
-
-    
-
-    
     
     // reads obstacle position from server
     struct obstacle *obstacles[20]; //obstacles
@@ -513,19 +497,26 @@ int main(int argc, char* argv[]){
         for (int i = 0; i < nobstacles; i++){
             frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
             fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
+            // total f rep limited
+            if(frx>MAXFREP)
+                frx = MAXFREP;
+            if(fry>MAXFREP)
+                fry = MAXFREP;
         }
         
         // compute attractive force of targets
         for(int i = 0; i<ntargets; i++){
-            fax += calculateAttractiveForcex(x, y, target[i]->x, target[i]->y);
-            fay += calculateAttractiveForcey(x, y, target[i]->x, target[i]->y);
+            printf("target at %d %d", target[i]->x, target[i]-> y);
+            
             if(isTargetTaken(x, y, target[i]->x, target[i]->y)){
                 target[i]->taken = true;
                 printf("DRONE: target %d taken\n", i);
                 writeToLog(debug, "DRONE: target taken");
             }
             else
-                target[i]->taken = false;
+                //target[i]->taken = false;
+                fax += calculateAttractiveForcex(x, target[i]->x);
+                fay += calculateAttractiveForcey(y, target[i]->y);
         }
 
         // compute repulsive force of edges
@@ -533,15 +524,15 @@ int main(int argc, char* argv[]){
             frx += calculateRepulsiveForcex(x, y, edges[i]->x, edges[i]->y);
             fry += calculateRepulsiveForcey(x, y, edges[i]->x, edges[i]->y);
         }
-        F[0]+=frx;
-        F[1]+=fry;
-        F[0]-=fax;
-        F[1]-=fay;
+        //F[0]+=frx;
+        //F[1]+=fry;
+        //F[0]-=fax;
+        //F[1]-=fay;
 
         printf("frx: %d fry: %d\n", frx, fry);
         printf("fax: %d fay: %d\n", fax, fay);
-        updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
-        //updatePosition(&x, &y, &vx, &vy, T, F[0]+frx+fax, F[1]+ fry + fay);
+        //updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
+        updatePosition(&x, &y, &vx, &vy, T, F[0]+frx, F[1]+ fry);
         frx = 0;
         fry = 0;
         fax = 0;

@@ -45,7 +45,7 @@ if [ $? -eq 0 ]; then
         echo "Errore durante la compilazione di input.c"
     fi
 
-cc -o "window" "window.c" "-lncurses"
+cc -o "window" "window.c" "-lncurses" -lm
 if [ $? -eq 0 ]; then
         echo "Compilazione di window.c completata con successo"
     else

@@ -13,6 +13,7 @@
 #include <sys/select.h>
 #include <errno.h>
 
+
 pid_t wd_pid = -1;
 pid_t window_pid;
 bool sigint_rec = false;
