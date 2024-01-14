@@ -65,3 +65,6 @@ if [ $? -eq 0 ]; then
     else
         echo "Errore durante la compilazione di targets.c"
     fi
+
+export QT_QPA_PLATFORM=wayland
+./master

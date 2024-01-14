@@ -119,23 +119,31 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
     printf("TARGETS: rows = %d, cols = %d\n", rows, cols);
+    char pos_targets[ntargets][10];
     sleep(2);
     while(!sigint_rec){
         time_t t = time(NULL);
         srand(time(NULL)); // for change every time the seed of rand()
         ntargets = rand() % MAX_TARGETS;
-        if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
-            perror("error in writing to pipe");
-            writeToLog(errors, "TARGETS: error in writing to pipe");
-        }
+        printf("\n\n\n\n\n\n\n %d \n\n\n\n\n\n\n", ntargets);
+        
         targets *target[ntargets];
         for(int i = 0; i<ntargets; i++){
             target[i] = malloc(sizeof(targets));
             target[i]->x = rand() % rows;
             target[i]->y = rand() % cols;
             target[i]->taken = false;
+            sprintf(pos_targets[i], "%d,%d", target[i]->x, target[i]->y);
+            writeToLog(debug, pos_targets[i]);
             printf("TARGETS: target %d: x = %d, y = %d\n", i, target[i]->x, target[i]->y);
             //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
+            
+        }
+        if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
+            perror("error in writing to pipe");
+            writeToLog(errors, "TARGETS: error in writing to pipe");
+        }
+        for(int i = 0; i<ntargets; i++){
             if ((write(pipeSefd[1], target[i],sizeof(targets))) == -1){
                 perror("error in writing to pipe");
                 writeToLog(errors, "TARGETS: error in writing to pipe");

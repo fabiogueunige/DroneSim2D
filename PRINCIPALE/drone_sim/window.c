@@ -14,6 +14,7 @@
 #include <sys/file.h>
 #include <sys/select.h>
 #include <math.h>
+#include <errno.h>
 #define T 0.1 //s   time instants' duration
 
 float rho2 = 2;
@@ -113,7 +114,11 @@ bool isTargetTaken(int x, int y, int xt, int yt){
 }
 
 int main(char argc, char*argv[]){
-	
+    // resizing the window
+    //sleep(1);
+    //char *get_wid = "xdotool search --onlyvisible --name window";
+
+
     FILE * debug = fopen("logfiles/debug.log", "a");
 	FILE * winfile = fopen("logfiles/window.log", "w");    // debug log file
 	FILE * errors = fopen("logfiles/errors.log", "a");  // errors log file
@@ -219,39 +224,13 @@ int main(char argc, char*argv[]){
     targets * tar[20];
 	
     while(1){
-        // Checking the changing of the dimension of the konsole
-        /*getmaxyx(win, newrows, newcols);
-        if (wrefresh(win) == ERR){
-            perror("error in refreshing window");
-            writeToLog(errors, "WINDOW: error in refreshing window");
-            exit(EXIT_FAILURE);
-        }
-        if ((newrows != ERR && newcols != ERR) && (newrows != srows || newcols != scols)) {
-            srows = newrows;
-            scols = newcols;
-            writeToLog(winfile, "WINDOW: window resized");
-            delwin(win);
-            win = newwin(srows, scols, 0, 0);
-            if (win == NULL){
-                perror("error in creating window");
-                writeToLog(errors, "WINDOW: error in creating window");
-                exit(EXIT_FAILURE);
-            }
-            
-            writeToLog(winfile, "WINDOW: window end resized");
-            init_win(&winpar, srows, scols, 0, 0);
-            writeToLog(winfile, "WINDOW: win initialized");
-            
-        }
-        if (wrefresh(win) == ERR){
-            perror("error in refreshing window");
-            writeToLog(errors, "WINDOW: error in refreshing window");
-            exit(EXIT_FAILURE);
-        }*/
         
         char buffer[4];
         FD_SET(pipeSefd, &readfds);
-        int sel = select(pipeSefd + 1, &readfds, NULL, NULL, NULL);
+        int sel;
+        do{
+            sel = select(pipeSefd + 1, &readfds, NULL, NULL, NULL);
+        }while(sel == -1 && errno == EINTR);
         if (sel == -1){
             perror("select");
             writeToLog(errors, "WINDOW: error in select()");
@@ -293,6 +272,7 @@ int main(char argc, char*argv[]){
                     writeToLog(errors, "WINDOW: error in read ntargets");
                     exit(EXIT_FAILURE);
                 }
+                char pos_targets[ntargets][10];
                 sprintf(a, "WINDOW: number of targets %d", ntargets);
                 writeToLog(winfile, a);
                 for (int i = 0; i<ntargets; i++){
@@ -302,6 +282,8 @@ int main(char argc, char*argv[]){
                         writeToLog(errors, "WINDOW: error in read targets");
                         exit(EXIT_FAILURE);
                     }
+                    sprintf(pos_targets[i], "%d,%d", tar[i]->x, tar[i]->y);
+                    writeToLog(winfile, pos_targets[i]);
                 }
             }
             else if(strcmp(buffer, "coo") == 0){
@@ -330,29 +312,31 @@ int main(char argc, char*argv[]){
         wattron(win, COLOR_PAIR(2) | A_BOLD);
         mvwprintw(win, 1, cols - 80, "X: %d, Y: %d, Vx: %f m/s, Vy: %f m/s, Fx: %d N, Fy: %d N", x, y, vx, vy, fx, fy);
         wattroff(win, COLOR_PAIR(2) | A_BOLD);
-        
+        // printing obstacles
         for (int i = 0; i<nobstacles; i++){
             wattron(win, COLOR_PAIR(3) | A_BOLD);
             mvwprintw(win, obs[i]->y, obs[i]->x, "%c", obs_symbol);
             wattroff(win, COLOR_PAIR(3) | A_BOLD);
         }
+        // printing targets
+        char a[50], b[50]; // for debug
         for (int i = 0; i<ntargets; i++){
-            if(isTargetTaken(x,y,tar[i]->x, tar[i]->y))
-                tar[i]->taken = true;
+            if((tar[i]->taken== false) && (isTargetTaken(x,y,tar[i]->x, tar[i]->y))){ // if coordinates of drone and target are the same
+                tar[i]->taken = true; // target is taken
+                sprintf(b, "WINDOW: target %d taken", i);
+                writeToLog(winfile, b);
+            }
+                
             
-           if(tar[i]->taken == false){
+            if(tar[i]->taken == false){
+                sprintf(a, "WINDOW:I see a target %d: x = %d, y = %d", i, tar[i]->x, tar[i]->y);
+                writeToLog(winfile, a);
                 wattron(win, COLOR_PAIR(4) | A_BOLD);
                 mvwprintw(win, tar[i]->y, tar[i]->x, "%c", tar_symbol);
                 wattroff(win, COLOR_PAIR(4) | A_BOLD);
             }
+            //tar[i]->taken = false;
         }
-        /*
-        for(int i = 0; i<nedges; i++){
-            // it is too slow and it is not necessary
-            writeToLog(windebug, "WINDOW: printing edges");
-            mvprintw(edges[i]->y, edges[i]->x, "%c", edge_symbol);
-        }*/
-
         wrefresh(win);  // Print changes to the screen
     }
     destroy_win(win);
