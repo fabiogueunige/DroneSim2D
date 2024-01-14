@@ -63,8 +63,10 @@ int main (int argc, char *argv[])
 {
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
+    FILE * obsdebug = fopen("logfiles/obstacles.log", "w");
     // these var are used because there aren't pipes, but these values are imported by server
-    
+    char msg[100]; // message to write on debug file
+
     int rows, cols;
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
@@ -113,13 +115,17 @@ int main (int argc, char *argv[])
         writeToLog(errors, "OBSTACLES: error in reading from pipe");
         exit(EXIT_FAILURE);
     }
-    printf("OBSTACLES: rows = %d, cols = %d\n", rows, cols);
+    sprintf(msg, "OBSTACLES: rows = %d, cols = %d", rows, cols);
+    writeToLog(obsdebug, msg);
+    // printf("OBSTACLES: rows = %d, cols = %d\n", rows, cols);
     
     // obstacle generation cycle
     while(!sigint_rec){
         time_t t = time(NULL);
         srand(time(NULL));
         int nobstacles = rand() % MAX_OBSTACLES;
+        sprintf(msg, "OBSTACLES: number of obstacles = %d", nobstacles);
+        writeToLog(obsdebug, msg);
         char pos_obstacles[nobstacles][10];
         struct obstacle *obstacles[nobstacles];
 
@@ -136,8 +142,7 @@ int main (int argc, char *argv[])
             int x = obstacles[i]->x;
             int y = obstacles[i]->y;
             printf("OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
-            writeToLog(debug, "OBSTACLES: obstacle created");
-            fprintf(debug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
+            fprintf(obsdebug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
             //sprintf(pos_obstacles[i], "%d,%d", x, y);
             // write to server with pipe ...
             if (write(pipeSefd[1], obstacles[i], sizeof(struct obstacle)) == -1){
@@ -163,5 +168,6 @@ int main (int argc, char *argv[])
 
     fclose(debug);
     fclose(errors);
+    fclose(obsdebug);
     return 0;
 }

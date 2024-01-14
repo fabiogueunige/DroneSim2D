@@ -171,6 +171,7 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
 int main(int argc, char* argv[]){
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
+    FILE * drdebug = fopen("logfiles/drone.log", "w");
     fd_set read_fds;
     fd_set write_fds;
     FD_ZERO(&read_fds);
@@ -185,6 +186,8 @@ int main(int argc, char* argv[]){
     Drone dr;
     drone = &dr;
     int pipeSefd[2];
+
+    char msg[100]; // message to write on debug file
     
     // FILE Opening
     if (debug == NULL || errors == NULL){
@@ -264,6 +267,8 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "DRONE: error in reading from pipe cols");
         exit(EXIT_FAILURE);
     }
+    sprintf(msg, "DRONE: rows = %d, cols = %d", rows, cols);
+    writeToLog(drdebug, msg);
 
     int x0 = cols/2;  //starting x
     int y0 = rows/2;  //starting y
@@ -346,6 +351,7 @@ int main(int argc, char* argv[]){
         else{
             if(FD_ISSET(pipeSefd[0], &read_fds)){
                 // reading obstacles and target
+                writeToLog(drdebug, "DRONE: reading obstacles and targets");
                 char buffer[4];
                 ssize_t numRead = read(pipeSefd[0], buffer, sizeof(buffer)-1);
                 if (numRead == -1) {
@@ -355,12 +361,14 @@ int main(int argc, char* argv[]){
                 writeToLog(debug, buffer);
             //buffer[numRead] = '\0';
                 if(strcmp(buffer, "obs") == 0){
+                    writeToLog(drdebug, "DRONE: reading obstacles");
                     if ((read(pipeSefd[0], &nobstacles, sizeof(int))) == -1){
                         perror("error in reading from pipe");
                         writeToLog(errors, "DRONE: error in reading from pipe number of obstacles");
                         exit(EXIT_FAILURE);
                     }
-                    printf("DRONE: number of obstacles: %d\n", nobstacles);
+                    sprintf(msg,"DRONE: number of obstacles: %d\n", nobstacles);
+                    writeToLog(drdebug, msg);
                     //struct obstacle *obstacles[nobstacles];
                     for(int i=0; i<nobstacles; i++){
                         obstacles[i] = malloc(sizeof(struct obstacle));
@@ -369,17 +377,19 @@ int main(int argc, char* argv[]){
                             writeToLog(errors, "DRONE: error in reading from pipe server for reading obstacles");
                             exit(EXIT_FAILURE);
                         }
-                        printf("DRONE: obstacle %d at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
+                        sprintf(msg,"DRONE: obstacle %d at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
+                        writeToLog(drdebug, msg);
                     }
                 }
                 else if(strcmp(buffer, "tar") == 0){
-                    writeToLog(debug, "DRONE: reading targets");
+                    writeToLog(drdebug, "DRONE: reading targets");
                     if ((read(pipeSefd[0], &ntargets, sizeof(int))) == -1){
                         perror("error in reading from pipe");
                         writeToLog(errors, "DRONE: error in reading from pipe number of targets");
                         exit(EXIT_FAILURE);
                     }
-                    printf("DRONE: number of targets: %d\n", ntargets);
+                    sprintf(msg,"DRONE: number of targets: %d\n", ntargets);
+                    writeToLog(drdebug, msg);
                     for(int i=0; i<ntargets; i++){
 
                         target[i] = malloc(sizeof(targets));
@@ -388,11 +398,13 @@ int main(int argc, char* argv[]){
                             writeToLog(errors, "DRONE: error in reading from pipe server for reading targets");
                             exit(EXIT_FAILURE);
                         }
-                        printf("DRONE: target %d at (%d, %d)\n", i, target[i]->x, target[i]->y);
+                        sprintf(msg,"DRONE: target %d at (%d, %d)\n", i, target[i]->x, target[i]->y);
+                        writeToLog(drdebug, msg);
                     }
                 }
             }
             if(FD_ISSET(keyfd, &read_fds)){
+                writeToLog(drdebug, "DRONE: reading key pressed");
                 // reading key pressed
                 if ((read(keyfd, &input, sizeof(char))) == -1){
                     perror("error in reading from pipe");
@@ -506,12 +518,12 @@ int main(int argc, char* argv[]){
         
         // compute attractive force of targets
         for(int i = 0; i<ntargets; i++){
-            printf("target at %d %d", target[i]->x, target[i]-> y);
-            
             if(isTargetTaken(x, y, target[i]->x, target[i]->y)){
                 target[i]->taken = true;
+                sprintf(msg,"target at %d %d", target[i]->x, target[i]-> y);
+                writeToLog(drdebug, msg);
                 printf("DRONE: target %d taken\n", i);
-                writeToLog(debug, "DRONE: target taken");
+                writeToLog(drdebug, "DRONE: target taken");
             }
             else
                 //target[i]->taken = false;
@@ -576,5 +588,6 @@ int main(int argc, char* argv[]){
     
     fclose(debug);
     fclose(errors);
+    fclose(drdebug);
     return 0;
 }

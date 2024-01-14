@@ -63,6 +63,9 @@ int main (int argc, char *argv[])
 {
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
+    FILE * tardebug = fopen("logfiles/targets.log", "w");
+
+    char msg[100]; // for writing to log files
     
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
@@ -107,7 +110,7 @@ int main (int argc, char *argv[])
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
     }
-    // READS ROWS AND COLS FROM SERVER
+    // Reads rows and cols from server
     if(read(pipeSefd[0], &rows, sizeof(int)) == -1){
         perror("error in reading from pipe");
         writeToLog(errors, "TARGETS: error in reading from pipe");
@@ -118,14 +121,17 @@ int main (int argc, char *argv[])
         writeToLog(errors, "TARGETS: error in reading from pipe");
         exit(EXIT_FAILURE);
     }
-    printf("TARGETS: rows = %d, cols = %d\n", rows, cols);
+    sprintf(msg, "TARGETS: rows = %d, cols = %d", rows, cols);
+    writeToLog(tardebug, msg);
+
     char pos_targets[ntargets][10];
-    sleep(2);
+    sleep(3);
     while(!sigint_rec){
         time_t t = time(NULL);
         srand(time(NULL)); // for change every time the seed of rand()
         ntargets = rand() % MAX_TARGETS;
-        printf("\n\n\n\n\n\n\n %d \n\n\n\n\n\n\n", ntargets);
+        sprintf(msg, "TARGETS: ntargets = %d", ntargets);
+        writeToLog(tardebug, msg);
         
         targets *target[ntargets];
         for(int i = 0; i<ntargets; i++){
@@ -134,7 +140,7 @@ int main (int argc, char *argv[])
             target[i]->y = rand() % cols;
             target[i]->taken = false;
             sprintf(pos_targets[i], "%d,%d", target[i]->x, target[i]->y);
-            writeToLog(debug, pos_targets[i]);
+            writeToLog(tardebug, pos_targets[i]);
             printf("TARGETS: target %d: x = %d, y = %d\n", i, target[i]->x, target[i]->y);
             //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
             
@@ -165,5 +171,7 @@ int main (int argc, char *argv[])
 
     fclose(debug);
     fclose(errors);
+    fclose(tardebug);
+
     return 0;
 }

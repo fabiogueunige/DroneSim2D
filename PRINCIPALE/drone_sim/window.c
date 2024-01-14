@@ -146,6 +146,8 @@ int main(char argc, char*argv[]){
     float vx, vy;
     int fx, fy;
 
+    char msg[100]; // for writing to log files
+
     initscr(); // start curses mode
     
     raw();
@@ -207,9 +209,9 @@ int main(char argc, char*argv[]){
         exit(EXIT_FAILURE);
     }
     // Checking pipe functionality
-    char a[50];
-    sprintf(a, "WINDOW: rows = %d, cols = %d", rows, cols);
-    writeToLog(winfile, a);
+  
+    sprintf(msg, "WINDOW: rows = %d, cols = %d", rows, cols);
+    writeToLog(winfile, msg);
     
     // generating window after server send rows and cols
     // Creo la window al centro della console con le dimensioni date dal server
@@ -253,9 +255,9 @@ int main(char argc, char*argv[]){
                     writeToLog(errors, "WINDOW: error in read nobstacles");
                     exit(EXIT_FAILURE);
                 }
-                sprintf(a, "WINDOW: number of obstacles %d", nobstacles);
-                writeToLog(winfile, a);
-                //struct obstacle * obs[nobstacles];
+                sprintf(msg, "WINDOW: number of obstacles %d", nobstacles);
+                writeToLog(winfile, msg);
+                // struct obstacle * obs[nobstacles];
                 for (int i = 0; i<nobstacles; i++){
                     obs[i] = malloc(sizeof(struct obstacle));
                     if ((read(pipeSefd, obs[i], sizeof(struct obstacle))) == -1){
@@ -263,6 +265,8 @@ int main(char argc, char*argv[]){
                         writeToLog(errors, "WINDOW: error in read obstacles");
                         exit(EXIT_FAILURE);
                     }
+                    sprintf(msg, "WINDOW: obstacle %d: x = %d, y = %d", i, obs[i]->x, obs[i]->y);
+                    writeToLog(winfile, msg);
                 }
             }
             else if(strcmp(buffer, "tar") == 0){
@@ -273,8 +277,8 @@ int main(char argc, char*argv[]){
                     exit(EXIT_FAILURE);
                 }
                 char pos_targets[ntargets][10];
-                sprintf(a, "WINDOW: number of targets %d", ntargets);
-                writeToLog(winfile, a);
+                sprintf(msg, "WINDOW: number of targets %d", ntargets);
+                writeToLog(winfile, msg);
                 for (int i = 0; i<ntargets; i++){
                     tar[i] = malloc(sizeof(targets));
                     if ((read(pipeSefd, tar[i], sizeof(targets))) == -1){
@@ -319,18 +323,17 @@ int main(char argc, char*argv[]){
             wattroff(win, COLOR_PAIR(3) | A_BOLD);
         }
         // printing targets
-        char a[50], b[50]; // for debug
         for (int i = 0; i<ntargets; i++){
             if((tar[i]->taken== false) && (isTargetTaken(x,y,tar[i]->x, tar[i]->y))){ // if coordinates of drone and target are the same
                 tar[i]->taken = true; // target is taken
-                sprintf(b, "WINDOW: target %d taken", i);
-                writeToLog(winfile, b);
+                sprintf(msg, "WINDOW: target %d taken and not in window anymore", i);
+                writeToLog(winfile, msg);
             }
                 
             
             if(tar[i]->taken == false){
-                sprintf(a, "WINDOW:I see a target %d: x = %d, y = %d", i, tar[i]->x, tar[i]->y);
-                writeToLog(winfile, a);
+                sprintf(msg, "WINDOW:I see a target %d: x = %d, y = %d", i, tar[i]->x, tar[i]->y);
+                writeToLog(winfile, msg);
                 wattron(win, COLOR_PAIR(4) | A_BOLD);
                 mvwprintw(win, tar[i]->y, tar[i]->x, "%c", tar_symbol);
                 wattroff(win, COLOR_PAIR(4) | A_BOLD);

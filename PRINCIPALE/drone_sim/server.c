@@ -95,6 +95,8 @@ void writeToLog(FILE *logFile, const char *message) {
 int main(int argc, char* argv[]){
     FILE * debug = fopen("logfiles/debug.log", "a");    // debug log file
     FILE * errors = fopen("logfiles/errors.log", "a");  // errors log file
+    FILE * serdebug = fopen("logfiles/server.log", "w");    // server log file
+
     writeToLog(debug, "SERVER: process started");
     printf("SERVER : process started\n");
     Drone * drone;
@@ -116,6 +118,8 @@ int main(int argc, char* argv[]){
     // OPENING WINDOW
     // Join the elements of the array into a single command string
     char command[100];
+
+
     
     // pipe to window
     int pipeWdfd[2];
@@ -161,7 +165,7 @@ int main(int argc, char* argv[]){
     sscanf(argv[6], "%d", &pipeTafd[0]);
     writeToLog(debug, "SERVER: pipes opened");
 
-    // SENDING ROWS AND COLUMNS TO WINDOW
+    // Sending rows and cols to window and drone
     if((write(pipeWdfd[1], &rows, sizeof(int))) == -1){
         perror("error in writing to pipe");
         writeToLog(errors, "SERVER: error in writing to pipe");
@@ -231,10 +235,6 @@ int main(int argc, char* argv[]){
         exit(EXIT_FAILURE);
     }
 
-    //targets *target[20];
-    //targets ta[20];
-    //targets *target = ta;
-
     while(!sigint_rec){
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
@@ -267,14 +267,16 @@ int main(int argc, char* argv[]){
         else if(sel>0){
             
             if(FD_ISSET(pipeTafd[0], &read_fds)){
-                printf("SERVER: reading from targets\n");
+                writeToLog(serdebug, "SERVER: TARGETS WIN");
+                writeToLog(serdebug,"SERVER: reading from targets\n");
                 int ntargets;
                 if ((read(pipeTafd[0], &ntargets, sizeof(int))) == -1) { // reads from drone ntargets
                     perror("error in reading from pipe");
                     writeToLog(errors, "SERVER: error in reading from pipe targets");
                     exit(EXIT_FAILURE);
                 }
-                printf("SERVER: number of targets: %d\n", ntargets);
+                sprintf(command, "SERVER: number of targets: %d", ntargets);
+                writeToLog(serdebug, command);
                 if((write(pipeDrfd[1], tar, strlen(tar))) == -1){
                     perror("error in writing to pipe");
                     writeToLog(errors, "SERVER: error in writing to pipe drone that it will sends targets");
@@ -299,21 +301,36 @@ int main(int argc, char* argv[]){
                 targets *target[ntargets];
                 for(int i = 0; i<ntargets; i++){
                     target[i] = malloc(sizeof(targets));
-                    read(pipeTafd[0], target[i], sizeof(targets));
-                    printf("SERVER: target %d position: (%d, %d)\n", i, target[i]->x, target[i]->y);
-                    write(pipeDrfd[1], target[i], sizeof(targets));
-                    write(pipeWdfd[1], target[i], sizeof(targets));
+                    if ((read(pipeTafd[0], target[i], sizeof(targets))) == -1) { // reads from drone ntargets
+                        perror("error in reading from pipe");
+                        writeToLog(errors, "SERVER: error in reading from pipe targets");
+                        exit(EXIT_FAILURE);
+                    }
+                    sprintf(command,"SERVER: target %d position: (%d, %d)\n", i, target[i]->x, target[i]->y);
+                    writeToLog(serdebug, command);
+                    if ((write(pipeDrfd[1], target[i], sizeof(targets))) == -1){  // writes to drone ntargets
+                        perror("error in writing to pipe");
+                        writeToLog(errors, "SERVER: error in writing to pipe drone the targets");
+                        exit(EXIT_FAILURE);
+                    }
+                    if ((write(pipeWdfd[1], target[i], sizeof(targets))) == -1){  // writes to window ntargets
+                        perror("error in writing to pipe");
+                        writeToLog(errors, "SERVER: error in writing to pipe window the targets");
+                        exit(EXIT_FAILURE);
+                    }
                 }
             }
 
             if(FD_ISSET(pipeObfd[0], &read_fds)){
-                printf("SERVER: reading from obstacles\n");
+                writeToLog(serdebug, "SERVER: OBSTACLE WIN ");
+                writeToLog(serdebug,"SERVER: reading from obstacles\n");
                 if ((read(pipeObfd[0], &nobstacles, sizeof(int))) == -1) { // reads from drone nobstacles
                     perror("error in reading from pipe");
                     writeToLog(errors, "SERVER: error in reading from pipe obstacles");
                     exit(EXIT_FAILURE);
                 } 
-                printf("SERVER: number of obstacles: %d\n", nobstacles);
+                sprintf(command,"SERVER: number of obstacles: %d\n", nobstacles);
+                writeToLog(serdebug, command);
                 if((write(pipeDrfd[1], obs, strlen(obs))) == -1){
                     perror("error in writing to pipe");
                     writeToLog(errors, "SERVER: error in writing to pipe drone that it will sends obstacles");
@@ -339,15 +356,29 @@ int main(int argc, char* argv[]){
                 struct obstacle *obstacles[nobstacles];
                 for(int i = 0; i<nobstacles; i++){
                     obstacles[i] = malloc(sizeof(struct obstacle));
-                    read(pipeObfd[0], obstacles[i], sizeof(struct obstacle));
-                    printf("SERVER: obstacle %d position: (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
-                    write(pipeDrfd[1], obstacles[i], sizeof(struct obstacle));
-                    write(pipeWdfd[1], obstacles[i], sizeof(struct obstacle));
+                    if ((read(pipeObfd[0], obstacles[i], sizeof(struct obstacle))) == -1) { // reads from drone obstacles
+                        perror("error in reading from pipe");
+                        writeToLog(errors, "SERVER: error in reading from pipe obstacles");
+                        exit(EXIT_FAILURE);
+                    }
+                    sprintf(command,"SERVER: obstacle %d position: (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
+                    writeToLog(serdebug, command);
+                    if ((write(pipeDrfd[1], obstacles[i], sizeof(struct obstacle))) == -1){  // writes to drone obstacles
+                        perror("error in writing to pipe");
+                        writeToLog(errors, "SERVER: error in writing to pipe drone the obstacles");
+                        exit(EXIT_FAILURE);
+                    }
+                    if ((write(pipeWdfd[1], obstacles[i], sizeof(struct obstacle))) == -1){  // writes to window obstacles
+                        perror("error in writing to pipe");
+                        writeToLog(errors, "SERVER: error in writing to pipe window the obstacles");
+                        exit(EXIT_FAILURE);
+                    }
                 }
                 //write(pipeDrfd[1], obstacles, sizeof(obstacles));
             }
 
             if(FD_ISSET(pipeDrfd[0], &read_fds)){
+                writeToLog(serdebug, "SERVER: DRONE WIN");
                 if ((read(pipeDrfd[0], drone, sizeof(Drone))) == -1) { // reads from drone
                     perror("error in reading from pipe");
                     writeToLog(errors, "SERVER: error in reading from pipe drone");
@@ -355,8 +386,7 @@ int main(int argc, char* argv[]){
                 }
                 printf("SERVER: drone position: (%d, %d)\n", drone->x, drone->y);
             }
-            printf("SERVER: writing to window\n");
-            // NON HO TROVATO LETTURA SU WINDOW (AGGIUNTA)
+            // writeToLog(serdebug,"SERVER: writing to window\n");
             if((write(pipeWdfd[1], coo, strlen(coo))) == -1){
                 perror("error in writing to pipe");
                 writeToLog(errors, "SERVER: error in writing to pipe window that it will sends coordinates");
@@ -397,5 +427,6 @@ int main(int argc, char* argv[]){
     close(pipeWdfd[1]);
     fclose(debug);
     fclose(errors);
+    fclose(serdebug);
     return 0;
 }
