@@ -114,7 +114,6 @@ There are several areas in which this project can be better. The most of them wi
 - data exchange: change the data sharing from the shared memory to pipes that reads and writes on file descriptors. Useful because the shared memory is more easy to implement , but it is not good for the data safety and privacy
 - Socket: to implement an open acess to the drone simulator from different point and machines
 - Targets and obstacles: implement two processes that generate target and obstacle that the drone has to reach and avoid. It can be implemented also a scoreBoard.
-- The drone gives problems when moving in coordinates that contains x = 0 or y = 0 (it stops if the velocity is too low).
 
 ## Licence
 
