@@ -80,7 +80,7 @@ int main (int argc, char *argv[])
     sscanf(argv[2], "%d", &pipeSefd[1]);
     writeToLog(debug, "TARGETS: pipes opened");
 
-    int rows, cols, ntargets;
+    int rows, cols;
     
     
     // rows and cols and ntargets value is passed from server using pipes, now they will be initialized here
@@ -124,20 +124,20 @@ int main (int argc, char *argv[])
     sprintf(msg, "TARGETS: rows = %d, cols = %d", rows, cols);
     writeToLog(tardebug, msg);
 
-    char pos_targets[ntargets][10];
-    sleep(3);
+    
+    sleep(2);
     while(!sigint_rec){
         time_t t = time(NULL);
         srand(time(NULL)); // for change every time the seed of rand()
-        ntargets = rand() % MAX_TARGETS;
+        int ntargets = rand() % MAX_TARGETS;
         sprintf(msg, "TARGETS: ntargets = %d", ntargets);
         writeToLog(tardebug, msg);
-        
+        char pos_targets[ntargets][10];
         targets *target[ntargets];
         for(int i = 0; i<ntargets; i++){
             target[i] = malloc(sizeof(targets));
-            target[i]->x = rand() % rows;
-            target[i]->y = rand() % cols;
+            target[i]->x = rand() % cols;
+            target[i]->y = rand() % rows;
             target[i]->taken = false;
             sprintf(pos_targets[i], "%d,%d", target[i]->x, target[i]->y);
             writeToLog(tardebug, pos_targets[i]);

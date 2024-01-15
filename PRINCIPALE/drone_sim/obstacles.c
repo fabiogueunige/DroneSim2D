@@ -124,6 +124,7 @@ int main (int argc, char *argv[])
         time_t t = time(NULL);
         srand(time(NULL));
         int nobstacles = rand() % MAX_OBSTACLES;
+        printf("OBSTACLES: number of obstacles = %d\n", nobstacles);
         sprintf(msg, "OBSTACLES: number of obstacles = %d", nobstacles);
         writeToLog(obsdebug, msg);
         char pos_obstacles[nobstacles][10];
@@ -134,6 +135,7 @@ int main (int argc, char *argv[])
             writeToLog(errors, "OBSTACLES: error in writing to pipe number of obstacles");
             exit(EXIT_FAILURE);
         }
+        
         // create obstacles
         for (int i = 0; i < nobstacles; i++){
             obstacles[i] = malloc(sizeof(struct obstacle)); //allocate memory for each obstacle
@@ -142,7 +144,8 @@ int main (int argc, char *argv[])
             int x = obstacles[i]->x;
             int y = obstacles[i]->y;
             printf("OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
-            fprintf(obsdebug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
+            sprintf(msg, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
+            writeToLog(obsdebug, msg);
             //sprintf(pos_obstacles[i], "%d,%d", x, y);
             // write to server with pipe ...
             if (write(pipeSefd[1], obstacles[i], sizeof(struct obstacle)) == -1){
@@ -151,7 +154,7 @@ int main (int argc, char *argv[])
                 exit(EXIT_FAILURE);
             }
         }
-        //sleep(60);
+        // wait 60 seconds before generating new obstacles
         time_t t2 = time(NULL); 
         while(t2 - t < 60){
             t2 = time(NULL);

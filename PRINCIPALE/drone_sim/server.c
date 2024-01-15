@@ -240,7 +240,7 @@ int main(int argc, char* argv[]){
         FD_SET(pipeDrfd[0], &read_fds);
         FD_SET(pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
         FD_SET(pipeTafd[0], &read_fds);
-        FD_SET(pipeWdfd[1], &write_fds);
+        //FD_SET(pipeWdfd[1], &write_fds);
 
         int max_fd = -1;
         if (pipeTafd[0] > max_fd) {
@@ -378,7 +378,6 @@ int main(int argc, char* argv[]){
             }
 
             if(FD_ISSET(pipeDrfd[0], &read_fds)){
-                writeToLog(serdebug, "SERVER: DRONE WIN");
                 if ((read(pipeDrfd[0], drone, sizeof(Drone))) == -1) { // reads from drone
                     perror("error in reading from pipe");
                     writeToLog(errors, "SERVER: error in reading from pipe drone");
