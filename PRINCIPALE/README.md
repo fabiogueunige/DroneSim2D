@@ -16,6 +16,8 @@ This simulation environment implents several different processes to manage all t
 All the processes exchange data through shared memeory or pipes between them and all of them are chldren of the master process.   
 
 
+![Video](https://github.com/leleviola/arp/blob/resources/resources/Video%20del%2015-01-2024%2023%3A29%3A18.webm)
+
 ## Repository Architecture
 
 This github package contains **drone_sim** folder that is the main folder. Insided that there are:  
