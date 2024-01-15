@@ -1,483 +1,110 @@
-Mon Jan 15 18:05:32 2024
+Mon Jan 15 22:47:43 2024
  => SERVER: process started
-Mon Jan 15 18:05:32 2024
+Mon Jan 15 22:47:43 2024
  => SERVER: pipes opened
-Mon Jan 15 18:05:32 2024
+Mon Jan 15 22:47:43 2024
  => WINDOW: process started
-Mon Jan 15 18:05:32 2024
+Mon Jan 15 22:47:43 2024
  => WINDOW: pipe opened
-Mon Jan 15 18:05:32 2024
+Mon Jan 15 22:47:43 2024
  => DRONE: process started
-Mon Jan 15 18:05:32 2024
+Mon Jan 15 22:47:43 2024
  => DRONE: pipes opened
 INPUT: process started
 OBSTACLES: process started
 OBSTACLES: pipes opened
 TARGETS: process started
 TARGETS: pipes opened
-Mon Jan 15 18:05:34 2024
+Mon Jan 15 22:47:45 2024
  => obs
-Mon Jan 15 18:05:35 2024
+Mon Jan 15 22:47:46 2024
  => WATCH DOG: process started
-Mon Jan 15 18:05:35 2024
+Mon Jan 15 22:47:46 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:35 2024
+Mon Jan 15 22:47:46 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:35 2024
+Mon Jan 15 22:47:46 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:35 2024
+Mon Jan 15 22:47:46 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:35 2024
+Mon Jan 15 22:47:46 2024
  => WATCH DOG: OBSTACLE received signal
 TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:35 2024
+Mon Jan 15 22:47:46 2024
  => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:05:35 2024
+Mon Jan 15 22:47:46 2024
  => tar
-Mon Jan 15 18:05:45 2024
+Mon Jan 15 22:47:56 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:45 2024
+Mon Jan 15 22:47:56 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:45 2024
+Mon Jan 15 22:47:56 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:45 2024
+Mon Jan 15 22:47:56 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:45 2024
+Mon Jan 15 22:47:56 2024
  => WATCH DOG: OBSTACLE received signal
 TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:45 2024
+Mon Jan 15 22:47:56 2024
  => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:05:55 2024
+Mon Jan 15 22:48:06 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:55 2024
+Mon Jan 15 22:48:06 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:55 2024
+Mon Jan 15 22:48:06 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:55 2024
+Mon Jan 15 22:48:06 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:55 2024
+Mon Jan 15 22:48:06 2024
  => WATCH DOG: OBSTACLE received signal
 TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:05:55 2024
+Mon Jan 15 22:48:06 2024
  => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:06:05 2024
+Mon Jan 15 22:48:16 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:05 2024
+Mon Jan 15 22:48:16 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:05 2024
+Mon Jan 15 22:48:16 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:05 2024
+Mon Jan 15 22:48:16 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:05 2024
+Mon Jan 15 22:48:16 2024
  => WATCH DOG: OBSTACLE received signal
 TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:05 2024
+Mon Jan 15 22:48:16 2024
  => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:06:15 2024
+Mon Jan 15 22:48:26 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:15 2024
+Mon Jan 15 22:48:26 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:15 2024
+Mon Jan 15 22:48:26 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:15 2024
+Mon Jan 15 22:48:26 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:15 2024
+Mon Jan 15 22:48:26 2024
  => WATCH DOG: OBSTACLE received signal
 TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:15 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:06:25 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:25 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:25 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:25 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:25 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:25 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:06:33 2024
- => obs
-Mon Jan 15 18:06:35 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:35 2024
- => tar
-Mon Jan 15 18:06:35 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:35 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:35 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:35 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:35 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:06:45 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:45 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:45 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:45 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:45 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:45 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:06:55 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:55 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:55 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:55 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:55 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:06:55 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:07:05 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:05 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:05 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:05 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:05 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:05 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:07:15 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:15 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:15 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:15 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:15 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:15 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:07:25 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:25 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:25 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:25 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:25 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:25 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:07:33 2024
- => obs
-Mon Jan 15 18:07:35 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:35 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:35 2024
- => WATCH DOG: DRONE received signal
-Mon Jan 15 18:07:35 2024
- => tar
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:35 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:35 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:35 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:07:45 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:45 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:45 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:45 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:45 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:45 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:07:55 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:55 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:55 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:55 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:55 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:07:55 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:08:05 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:05 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:05 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:05 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:05 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:05 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:08:15 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:15 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:15 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:15 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:15 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:15 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:08:25 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:25 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:25 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:25 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:25 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:25 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:08:33 2024
- => obs
-Mon Jan 15 18:08:35 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:35 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:35 2024
- => WATCH DOG: DRONE received signal
-Mon Jan 15 18:08:35 2024
- => tar
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:35 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:35 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:35 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:08:45 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:45 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:45 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:45 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:45 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:45 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:08:55 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:55 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:56 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:56 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:56 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:08:56 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:09:05 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:05 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:05 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:05 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:05 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:05 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:09:15 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:15 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:15 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:15 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:15 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:15 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:09:25 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:25 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:25 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:25 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:25 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:25 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:09:33 2024
- => obs
-Mon Jan 15 18:09:35 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:35 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:35 2024
- => tar
-Mon Jan 15 18:09:35 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:35 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:35 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:35 2024
- => WATCH DOG: TARGETS received signal
-Mon Jan 15 18:09:45 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:45 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:45 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:45 2024
- => WATCH DOG: INPUT received signal
-OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:45 2024
- => WATCH DOG: OBSTACLE received signal
-TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Jan 15 18:09:45 2024
+Mon Jan 15 22:48:26 2024
  => WATCH DOG: TARGETS received signal
 SERVER: terminating with return value 0...
 OBSTACLE: terminating with return value 0...

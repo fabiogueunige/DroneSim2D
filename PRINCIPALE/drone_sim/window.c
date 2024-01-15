@@ -136,7 +136,7 @@ int main(char argc, char*argv[]){
     drone = &dr;
     Win  winpar;
     char symbol = '%';	// '%' is the symbol of the drone
-    int nedges, nobstacles, ntargets;
+    int nedges, nobstacles = 0, ntargets = 0;
     // char edge_symbol = '#';
     char obs_symbol = 'o';
     char tar_symbol = 'T';
@@ -226,23 +226,19 @@ int main(char argc, char*argv[]){
     sprintf(msg, "WINDOW: rows = %d, cols = %d", rows, cols);
     writeToLog(winfile, msg);
     delwin(stdscr);
-    stdscr = newwin(rows, cols, 0, 0);
+    stdscr = newwin(rows +5, cols +5, 0, 0);
     refresh();
     // generating window after server send rows and cols
     // Creo la window al centro della console con le dimensioni date dal server
     win = newwin(rows, cols, 0, 0);
-    box(win, 1, 0);
+    box(win, 0, 0);
     init_win(&winpar, rows, cols, 0, 0);
     
-    //  Commented but it doesn't seem the prblem
-    /*
     if (srows >= rows && scols >= cols){
         mvwin(win, (((srows - rows)/2) + rows), (((scols - cols)/2) + cols));
         writeToLog(winfile, "WINDOW: window moved after resizing");
     }
-    */
-    
-    
+
     writeToLog(winfile, "WINDOW: window created");
     struct obstacle * obs[20];
     targets * tar[20];
@@ -333,7 +329,6 @@ int main(char argc, char*argv[]){
 
         wclear(win);
         borderCreation(&winpar, win);
-        // box(win, 0, 0);
         writeToLog(winfile, "WINDOW: border created");
         wattron(win, COLOR_PAIR(5) | A_BOLD);
 		mvwprintw(win, y, x, "%c", symbol);
@@ -341,31 +336,36 @@ int main(char argc, char*argv[]){
         writeToLog(winfile, "WINDOW: drone printed");
 
         // printing obstacles
-        for (int i = 0; i<nobstacles; i++){
-            wattron(win, COLOR_PAIR(3) | A_BOLD);
-            mvwprintw(win, obs[i]->y, obs[i]->x, "%c", obs_symbol);
-            wattroff(win, COLOR_PAIR(3) | A_BOLD);
+        if (nobstacles != 0) {
+            for (int i = 0; i<nobstacles; i++){
+                wattron(win, COLOR_PAIR(3) | A_BOLD);
+                mvwprintw(win, obs[i]->y, obs[i]->x, "%c", obs_symbol);
+                wattroff(win, COLOR_PAIR(3) | A_BOLD);
+            }
+            writeToLog(winfile, "WINDOW: obstacles printed");
         }
-        writeToLog(winfile, "WINDOW: obstacles printed");
+        
         // printing targets
-        for (int i = 0; i<ntargets; i++){
-            if((tar[i]->taken == false) && (isTargetTaken(x,y,tar[i]->x, tar[i]->y))){ // if coordinates of drone and target are the same
-                tar[i]->taken = true; // target is taken
-                counter++;
-                sprintf(msg, "WINDOW: target %d taken and not in window anymore", i);
-                writeToLog(winfile, msg);
-            }
+        if (ntargets != 0) {
+            for (int i = 0; i<ntargets; i++){
+                if((tar[i]->taken == false) && (isTargetTaken(x,y,tar[i]->x, tar[i]->y))){ // if coordinates of drone and target are the same
+                    tar[i]->taken = true; // target is taken
+                    counter++;
+                    sprintf(msg, "WINDOW: target %d taken and not in window anymore", i);
+                    writeToLog(winfile, msg);
+                }
+                    
                 
-            
-            if(tar[i]->taken == false){
-                sprintf(msg, "WINDOW:I see a target %d: x = %d, y = %d", i, tar[i]->x, tar[i]->y);
-                writeToLog(winfile, msg);
-                wattron(win, COLOR_PAIR(4) | A_BOLD);
-                mvwprintw(win, tar[i]->y, tar[i]->x, "%c", tar_symbol);
-                wattroff(win, COLOR_PAIR(4) | A_BOLD);
+                if(tar[i]->taken == false){
+                    sprintf(msg, "WINDOW:I see a target %d: x = %d, y = %d", i, tar[i]->x, tar[i]->y);
+                    writeToLog(winfile, msg);
+                    wattron(win, COLOR_PAIR(4) | A_BOLD);
+                    mvwprintw(win, tar[i]->y, tar[i]->x, "%c", tar_symbol);
+                    wattroff(win, COLOR_PAIR(4) | A_BOLD);
+                }
+                //tar[i]->taken = false;
+                writeToLog(winfile, "WINDOW: targets printed");
             }
-            //tar[i]->taken = false;
-            writeToLog(winfile, "WINDOW: targets printed");
         }
         wattron(win, COLOR_PAIR(2) | A_BOLD);
         mvwprintw(win, 0, 5, "X: %d, Y: %d, Vx: %f m/s, Vy: %f m/s, Fx: %d N, Fy: %d N, Score: %d / %d", x, y, vx, vy, fx, fy, counter, countertot);

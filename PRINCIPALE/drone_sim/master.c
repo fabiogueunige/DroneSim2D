@@ -58,6 +58,7 @@ int main(int argc, char* argv[]){
     FILE * debug = fopen("logfiles/debug.log", "w");
     FILE * errors = fopen("logfiles/errors.log", "w");
 
+    pid_t pidDes;
     pid_t proIds[NUMPROCESS];
     char pidStr[NUMPROCESS - 1][50];
     char piperd[NUMPIPE][10];    // string that contains the readable fd of pipe_fd
@@ -100,6 +101,10 @@ int main(int argc, char* argv[]){
     // INTRO
     char keyy;
     bool right_key= false;
+    char * argdes_path[] = {"konsole", "-e","./description", NULL};
+    pidDes = spawn("konsole", argdes_path);
+    usleep(500000);
+
     printf("\t\t  ____________________________________\n");
     printf("\t\t |                                    |\n");
     printf("\t\t |   Advanced and Robot Programming   |\n");
@@ -125,23 +130,11 @@ int main(int argc, char* argv[]){
     printf("\t\t\t | U: RESET THE DRONE   |\n");
     printf("\t\t\t | Q: QUIT THE GAME     |\n");
     printf("\t\t\t |______________________|\n\n\n");
-    printf("Press s to start or q to quit, then press ENTER...\n");
-    scanf("%c", &keyy);
-    do{
-        if (keyy == 's'){
-            right_key = true;
-            printf("\n\n\n\n\t\t\t\tLET'S GO!\n\n\n\n");
-        }
-        else if(keyy == 'q'){
-            right_key = true;
-            exit(EXIT_SUCCESS);
-        }
-        else{
-            right_key = false;
-            printf("\nPress s to start or q to quit, then press ENTER...\n");
-            scanf("%c", &keyy);
-        }
-    }while(!right_key);
+    
+    if ((waitpid(pidDes, NULL, 0)) == -1){
+        perror("waitpid");
+        writeToLog(errors, "MASTER: error in waitpid for description");
+    }
 
     // EXECUTING PROCESSES
     proIds[SERVER] = spawn("./server", server_path);
