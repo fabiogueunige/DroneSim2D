@@ -1,16 +1,10 @@
 da fare:
+- window salta--> provare a togliere sia obstacles che targets e vedere
+- mettere controllo uscita
 - forza attrattiva da sistemare (facoltativa)
 - brake quando non si ferma rimane forza opposta
-- far saturare la forza degli obstacles (mettere if)
 - check posizione drone appena arrivano gli obstacle con flag (con un if)
-- edges lo mandano storto(? non è più successo)
 - fare test sui parametri per i punti prima
-- sistemare repulsive force (probabilmente proporzionale alla velocità TONY DICE DI NO, metto saturazione rep force e gioco coi parametri per farlo)
-- window mostra meno target di quelli che ci sono realmente E NON DIPENDE DA TARGET TAKEN perche se lo tolgo c è ancora il problema
-- cambiare sleep su ???
-- crasha quando si schiacciano i tasti e arrivano target (a volte funziona)
-- non si apre konsole
-- IL PROBLEMA POTREBBE ESSERE DOVUTO AL PLOT SBAGLIATO DEGLI EDGE?? CHE MAGARI ALCUNI OSTACOLI NON LI VEDIAMO? QUESTO SPIEGHEREBBE ANCHE PERCHE A VOLTE NON SI APRE LA WINDOW: SE DEVE PLOTTARE UNA ROBA FUORI NON RIESCE E DA ERRORE... se y>50 non si vedono
 
 - LA WINDOW E', METAFORICAMENTE PARLANDO, L'AREA IN CUI IL DRONE PUÒ, EVENTUALMENTE, MUOVERSI... QUINDI ESSO STESSO PARTE DAL CENTRO, COME IL SOLE NEL SISTEMA SOLARE... MODIFICANDO LE DIMENSIONI DELLA WINDOW, SI PUÒ IMPOSTARE LO SPAZIO DI MOVIMENTO DEL DRONE
 

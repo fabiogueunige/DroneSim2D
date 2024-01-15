@@ -123,21 +123,24 @@ int main (int argc, char *argv[])
     }
     sprintf(msg, "TARGETS: rows = %d, cols = %d", rows, cols);
     writeToLog(tardebug, msg);
-
-    
+    targets *target[MAX_TARGETS];
+    int ntargets;
     sleep(2);
     while(!sigint_rec){
         time_t t = time(NULL);
         srand(time(NULL)); // for change every time the seed of rand()
-        int ntargets = rand() % MAX_TARGETS;
+        ntargets = rand() % MAX_TARGETS;
         sprintf(msg, "TARGETS: ntargets = %d", ntargets);
         writeToLog(tardebug, msg);
         char pos_targets[ntargets][10];
-        targets *target[ntargets];
+        //targets *target[ntargets];
+        
         for(int i = 0; i<ntargets; i++){
             target[i] = malloc(sizeof(targets));
-            target[i]->x = rand() % cols;
-            target[i]->y = rand() % rows;
+            // generates random coordinates for targets
+            // i put targets away from edges because if they are too close to it coulb be a problem to take them due to repulsive force
+            target[i]->x = rand() % (cols-4) + 2;
+            target[i]->y = rand() % (rows-4) + 2;
             target[i]->taken = false;
             sprintf(pos_targets[i], "%d,%d", target[i]->x, target[i]->y);
             writeToLog(tardebug, pos_targets[i]);
@@ -168,7 +171,10 @@ int main (int argc, char *argv[])
             writeToLog(errors, "TARGETS: error in closing pipe");
         }
     }
-
+    // freeing memory
+    for(int i = 0; i<20; i++){
+        free(target[i]);
+    }
     fclose(debug);
     fclose(errors);
     fclose(tardebug);

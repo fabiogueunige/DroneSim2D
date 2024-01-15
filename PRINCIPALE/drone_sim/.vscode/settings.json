@@ -3,6 +3,7 @@
         "termios.h": "c",
         "file.h": "c",
         "signal.h": "c",
-        "functional": "c"
+        "functional": "c",
+        "stdio.h": "c"
     }
 }

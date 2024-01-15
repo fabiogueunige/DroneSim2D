@@ -1,91 +1,118 @@
-Mon Jan 15 12:21:36 2024
+Mon Jan 15 22:26:06 2024
  => DRONE: rows = 50, cols = 100
-Mon Jan 15 12:21:36 2024
+Mon Jan 15 22:26:06 2024
  => DRONE: reading obstacles and targets
-Mon Jan 15 12:21:36 2024
+Mon Jan 15 22:26:06 2024
  => DRONE: reading obstacles
-Mon Jan 15 12:21:36 2024
- => DRONE: number of obstacles: 9
+Mon Jan 15 22:26:06 2024
+ => DRONE: number of obstacles: 12
 
-Mon Jan 15 12:21:36 2024
- => DRONE: obstacle 0 at (25, 2)
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 0 at (87, 34)
 
-Mon Jan 15 12:21:36 2024
- => DRONE: obstacle 1 at (50, 0)
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 1 at (37, 20)
 
-Mon Jan 15 12:21:36 2024
- => DRONE: obstacle 2 at (67, 12)
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 2 at (42, 10)
 
-Mon Jan 15 12:21:36 2024
- => DRONE: obstacle 3 at (35, 23)
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 3 at (21, 12)
 
-Mon Jan 15 12:21:36 2024
- => DRONE: obstacle 4 at (33, 35)
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 4 at (1, 36)
 
-Mon Jan 15 12:21:36 2024
- => DRONE: obstacle 5 at (7, 27)
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 5 at (97, 39)
 
-Mon Jan 15 12:21:36 2024
- => DRONE: obstacle 6 at (82, 29)
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 6 at (36, 8)
 
-Mon Jan 15 12:21:36 2024
- => DRONE: obstacle 7 at (54, 5)
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 7 at (69, 16)
 
-Mon Jan 15 12:21:36 2024
- => DRONE: obstacle 8 at (99, 22)
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 8 at (84, 37)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: reading key pressed
-Mon Jan 15 12:21:37 2024
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 9 at (40, 10)
+
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 10 at (40, 3)
+
+Mon Jan 15 22:26:06 2024
+ => DRONE: obstacle 11 at (24, 23)
+
+Mon Jan 15 22:26:06 2024
  => DRONE: reading obstacles and targets
-Mon Jan 15 12:21:37 2024
+Mon Jan 15 22:26:06 2024
  => DRONE: reading targets
-Mon Jan 15 12:21:37 2024
- => DRONE: number of targets: 14
+Mon Jan 15 22:26:06 2024
+ => DRONE: number of targets: 12
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 0 at (2, 1)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 0 at (30, 9)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 1 at (66, 21)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 1 at (62, 43)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 2 at (13, 24)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 2 at (11, 27)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 3 at (99, 35)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 3 at (24, 13)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 4 at (15, 30)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 4 at (32, 39)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 5 at (43, 10)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 5 at (72, 10)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 6 at (76, 34)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 6 at (83, 33)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 7 at (3, 11)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 7 at (96, 37)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 8 at (79, 5)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 8 at (55, 12)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 9 at (79, 46)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 9 at (15, 5)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 10 at (23, 5)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 10 at (35, 40)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 11 at (91, 45)
+Mon Jan 15 22:26:06 2024
+ => DRONE: target 11 at (55, 6)
 
-Mon Jan 15 12:21:37 2024
- => DRONE: target 12 at (38, 49)
-
-Mon Jan 15 12:21:37 2024
- => DRONE: target 13 at (10, 44)
-
-Mon Jan 15 12:21:47 2024
- => DRONE: reading key pressed
-Mon Jan 15 12:21:51 2024
- => DRONE: reading key pressed
+Mon Jan 15 22:26:13 2024
+ => target at 55 12
+Mon Jan 15 22:26:13 2024
+ => DRONE: target taken
+Mon Jan 15 22:26:13 2024
+ => target at 55 12
+Mon Jan 15 22:26:13 2024
+ => DRONE: target taken
+Mon Jan 15 22:26:13 2024
+ => target at 55 12
+Mon Jan 15 22:26:13 2024
+ => DRONE: target taken
+Mon Jan 15 22:26:17 2024
+ => target at 55 6
+Mon Jan 15 22:26:17 2024
+ => DRONE: target taken
+Mon Jan 15 22:26:18 2024
+ => DRONE: out of bounds
+Mon Jan 15 22:26:35 2024
+ => target at 11 27
+Mon Jan 15 22:26:35 2024
+ => DRONE: target taken
+Mon Jan 15 22:26:35 2024
+ => target at 11 27
+Mon Jan 15 22:26:35 2024
+ => DRONE: target taken
+Mon Jan 15 22:26:35 2024
+ => target at 11 27
+Mon Jan 15 22:26:35 2024
+ => DRONE: target taken

@@ -422,6 +422,14 @@ int main(int argc, char* argv[]){
             writeToLog(errors, "SERVER: error in closing pipe Targets");
         }
     }
+    
+    for(int i = 0; i<nobstacles; i++){
+        free(edges[i]);
+    }
+    for(int i = 0; i<nobstacles; i++){
+        free(edges[i]);
+    }
+
     close(pipeWdfd[0]);
     close(pipeWdfd[1]);
     fclose(debug);

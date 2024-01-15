@@ -114,10 +114,6 @@ bool isTargetTaken(int x, int y, int xt, int yt){
 }
 
 int main(char argc, char*argv[]){
-    // resizing the window
-    //sleep(1);
-    //char *get_wid = "xdotool search --onlyvisible --name window";
-
 
     FILE * debug = fopen("logfiles/debug.log", "a");
 	FILE * winfile = fopen("logfiles/window.log", "w");    // debug log file
@@ -129,13 +125,12 @@ int main(char argc, char*argv[]){
 
     writeToLog(debug, "WINDOW: process started");
     WINDOW * win;
-    Drone * drone;
-    Drone dr;
+    Drone * drone; // pointer to drone's data
+    Drone dr; // to save drone's data
     drone = &dr;
     Win  winpar;
     char symbol = '%';	// '%' is the symbol of the drone
-    int nedges, nobstacles, ntargets;
-    char edge_symbol = '#';
+    int nobstacles, ntargets;
     char obs_symbol = 'o';
     char tar_symbol = 'T';
     int pipeSefd;
@@ -165,20 +160,6 @@ int main(char argc, char*argv[]){
         fprintf(errors, "WINDOW: Errore durante l'inizializzazione di ncurses\n");
         return 1; // Esce con un codice di errore
     }
-    getmaxyx(stdscr, srows, scols);
-    if (srows == ERR || scols == ERR) {
-        // Gestisci l'errore di inizializzazione di ncurses
-        fprintf(errors, "WINDOW: Errore durante l'inizializzazione di ncurses\n");
-        return 1; // Esce con un codice di errore
-    }
-    if (refresh() == ERR) {
-        // Gestisci l'errore di inizializzazione di ncurses
-        fprintf(errors, "WINDOW: Errore durante l'inizializzazione di ncurses\n");
-        return 1; // Esce con un codice di errore
-    }
-
-	// 
-
 // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -217,9 +198,11 @@ int main(char argc, char*argv[]){
     // Creo la window al centro della console con le dimensioni date dal server
     win = newwin(rows, cols, 0, 0);
     init_win(&winpar, rows, cols, 0, 0);
+    /*
     if (srows >= rows && scols >= cols){
         mvwin(win, (((srows - rows)/2) + rows), (((scols - cols)/2) + cols));
     }
+    */
     
     writeToLog(winfile, "WINDOW: window created");
     struct obstacle * obs[20];
@@ -291,8 +274,6 @@ int main(char argc, char*argv[]){
                 }
             }
             else if(strcmp(buffer, "coo") == 0){
-                // read the coordinates
-                //drone =malloc(sizeof(Drone));
                 if ((read(pipeSefd, drone, sizeof(Drone))) == -1){
                     perror("read");
                     writeToLog(errors, "WINDOW: error in read drone from Server");
@@ -329,7 +310,6 @@ int main(char argc, char*argv[]){
                 sprintf(msg, "WINDOW: target %d taken and not in window anymore", i);
                 writeToLog(winfile, msg);
             }
-                
             
             if(tar[i]->taken == false){
                 sprintf(msg, "WINDOW:I see a target %d: x = %d, y = %d", i, tar[i]->x, tar[i]->y);

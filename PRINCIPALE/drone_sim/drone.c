@@ -21,9 +21,9 @@
 #define FRICTION_COEFFICIENT 0.1    // N*s*m
 #define FORCE_MODULE 1 //N
 #define T 0.1 //s   time instants' duration
-#define MAXFREP 12 //N
+#define MAXFREP 15 //N
 
-typedef struct {
+typedef struct { 
     int x;
     int y;
     float vx;
@@ -40,20 +40,26 @@ typedef struct {
     int x;
     int y;
     bool taken;
-} targets;
+} targets; // targets object
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
-float rho0 = 15; //m repulsive force ray of action
+float rho0 = 8; //m repulsive force ray of action
 float rho1 = 0.5; //m attractive force ray of action
 float rho2 = 2; //m target min dist to take it
-float eta = 70; 
-float csi = 1; 
+float eta = 40; 
+float csi = 5; 
 
 void writeToLog(FILE *logFile, const char *message) {
+    /*
+    Function for write a message to a logfile
+    input: logFile: pointer to the logfile
+           message: message to write
+    output: none
+    */
     time_t crtime;
     time(&crtime);
-    int lockResult = flock(fileno(logFile), LOCK_EX);
+    int lockResult = flock(fileno(logFile), LOCK_EX); // lock the fil eto prevent other processes from using it
     if (lockResult == -1) {
         perror("Failed to lock the log file");
         // Handle the error as needed (e.g., exit or return)
@@ -72,27 +78,36 @@ void writeToLog(FILE *logFile, const char *message) {
 
 // Function to calculate viscous friction force
 float calculateFrictionForce(float velocity) {
+    /*
+    Function to calculate viscous friction force
+    input: velocity: drone velocity
+    output: viscous friction force
+    */
     return -FRICTION_COEFFICIENT * (velocity-5);
 }
-/*float calculateAttractiveForcex(int x, int y, int xt, int yt){
-    // calculate attractive force in x direction
-    float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2));
-    float theta = atan2(y-yt, x-xt);
-    
-    if(x<rho1)
-        return csi * rho * cos(theta);
-    else
-        return 0;
-}*/
+
 
 float calculateAttractiveForcex(int x, int xt){
+    /*
+    Function to calculate Attractive force in x direction
+    input: x: drone x coordinate
+           xt: target x coordinate
+    output: attractive force in x direction
+    */
     if (abs(x-xt) < rho1)
         return -csi * (x-xt);
     else
         return 0;
+        
 }
 
 float calculateAttractiveForcey(int y, int yt){
+    /*
+    Function to calculate Attractive force in y direction
+    input: y: drone y coordinate
+           yt: target y coordinate
+    output: attractive force in y direction
+    */
     // calculate attractive force in y direction
     if (abs(y-yt) < rho1)
         return -csi * (y-yt);
@@ -102,6 +117,12 @@ float calculateAttractiveForcey(int y, int yt){
 }
 
 bool isTargetTaken(int x, int y, int xt, int yt){
+    /*
+    Function to determine if th target is taken
+    input: x, y: drone coordinates
+           xt, yt: target coordinates
+    output: true if the target is taken, false otherwise
+    */
     float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2)); //distance between target and drone
     if(rho < rho2) //if it is in the "take area"
         return true;
@@ -109,29 +130,60 @@ bool isTargetTaken(int x, int y, int xt, int yt){
 
 
 
-float calculateRepulsiveForcex(int x, int y, int xo, int yo){
-    // calculate repulsive force in x direction
+float calculateRepulsiveForcex(int x, int y, int xo, int yo, float vx){
+    /*
+    Function to calculate repulsive force in x direction
+    input: x, y: drone coordinates
+           xo, yo: obstacle coordinates
+           vx: drone velocity in x direction
+    output: repulsive force in x direction
+    */
     float rho = sqrt(pow(x-xo, 2) + pow(y-yo, 2));
     float theta = atan2(y-yo, x-xo);
+    float fx;
     if (rho < rho0){
-        return eta* (1/rho - 1/rho0) * (1/pow(rho, 2)) * cos(theta);
+        fx = eta* (1/rho - 1/rho0) * (1/pow(rho, 2)) * cos(theta)*abs(vx);
     }
     else
-        return 0;
+        fx = 0;
+    /*
+    setting a threshold to repulsive force is important to avoid cases in which the drone is too close to the obstacle and it generates a too big repulsive force
+    */
+    if(fx > MAXFREP)
+        fx = MAXFREP;
+    return fx;
 }
 
-float calculateRepulsiveForcey(int x, int y, int xo, int yo){
-    // calclate repulsive force in y direction
+float calculateRepulsiveForcey(int x, int y, int xo, int yo, float vy){
+    /*
+    Function to calculate repulsive force in y direction
+    input: x, y: drone coordinates
+           xo, yo: obstacle coordinates
+           vy: drone velocity in y direction
+    output: repulsive force in y direction
+    */
     float rho = sqrt(pow(x-xo, 2) + pow(y-yo, 2));
     float theta = atan2(y-yo, x-xo);
+    float fy;
     if (rho < rho0)
-        return (eta * (1/rho - 1/rho0) * (1/pow(rho, 2)) * sin(theta));
+        fy = (eta * (1/rho - 1/rho0) * (1/pow(rho, 2)) * sin(theta) * abs(vy)); 
     else
-        return 0;
+        fy = 0;
+    if(fy>MAXFREP)
+        fy = MAXFREP;
+    return fy;
 }
 
 // Function to update position and velocity based on applied force
 void updatePosition(int *x, int *y, float *vx, float *vy, float dt, float forceX, float forceY) {
+    /*
+    Function to update position and velocity based on applied force
+    input: x, y: drone coordinates
+           vx, vy: drone velocity
+           dt: time instant duration
+           forceX, forceY: force applied to the drone
+    output: updated x, y, vx, vy
+    */
     // Calculate viscous friction forces
     float frictionForceX = calculateFrictionForce(*vx);
     float frictionForceY = calculateFrictionForce(*vy);
@@ -148,6 +200,9 @@ void updatePosition(int *x, int *y, float *vx, float *vy, float dt, float forceX
 }
 
 void sig_handler(int signo, siginfo_t *info, void *context) {
+    /*
+    Signal handler for SIGUSR1 and SIGUSR2
+    */
 
     if (signo == SIGUSR1) {
         FILE *debug = fopen("logfiles/debug.log", "a");
@@ -186,7 +241,7 @@ int main(int argc, char* argv[]){
     Drone dr;
     drone = &dr;
     int pipeSefd[2];
-
+    bool is_on_drone[20] = {false}; // vector to check if the i-th obstacle is on the drone when generated
     char msg[100]; // message to write on debug file
     
     // FILE Opening
@@ -197,7 +252,6 @@ int main(int argc, char* argv[]){
     writeToLog(debug, "DRONE: process started");
     printf("DRONE: process started\n");
     
-    // Pipe reading from arguments
     // pipe server and drone: 0 for reading from and 1 for writing to
     sscanf(argv[2], "%d", &pipeSefd[1]);
     sscanf(argv[3], "%d", &pipeSefd[0]);
@@ -237,8 +291,6 @@ int main(int argc, char* argv[]){
     //import drone initial position from the server
     sleep(2); // gives the time to the server to initialize starting values
 
-    
-
     float vx = 5, vy = 5;
     drone->vx = vx;
     drone->vy = vy;   
@@ -254,9 +306,9 @@ int main(int argc, char* argv[]){
     // reads obstacle position from server
     struct obstacle *obstacles[20]; //obstacles
     targets *target[20]; //targets
+
     // READS WINDOW DIMENSIONS
     int rows, cols;
-    
     if ((read(pipeSefd[0], &rows, sizeof(int))) == -1){
         perror("error in reading from pipe");
         writeToLog(errors, "DRONE: error in reading from pipe rows");
@@ -267,66 +319,52 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "DRONE: error in reading from pipe cols");
         exit(EXIT_FAILURE);
     }
+
     sprintf(msg, "DRONE: rows = %d, cols = %d", rows, cols);
     writeToLog(drdebug, msg);
 
+    // INITIALIZATION OF DRONE PARAMETERS
     int x0 = cols/2;  //starting x
     int y0 = rows/2;  //starting y
     printf("DRONE:\n\n     Starting Position: \nx = %d; y = %d",x0, y0);
     printf("\n--------------------------------------\n");
     printf("     Parameters:\nM=%fkg; |F|= %dN, K=%fN*s*m", MASS, FORCE_MODULE, FRICTION_COEFFICIENT);
     printf("\n--------------------------------------\n\n");
-    //initializes the drone's coordinates
     int x = x0;
     int y = y0;
     int fax = 0, fay = 0;
+    bool brakex = false;
+    bool brakey = false;
+
+    // EDGES GENERATION
     printf("DRONE: rows = %d, cols = %d\n", rows, cols);
     int nedges = 2*(rows+cols); // number of edges
     struct obstacle *edges[nedges]; //edges
-
     for (int i = 0; i< rows; i++){
         edges[i] = malloc(sizeof(struct obstacle));
         edges[i]->x = 0;
         edges[i]->y = i;
-        
-        //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
         edges[i+rows+cols] = malloc(sizeof(struct obstacle));
         edges[i+rows+cols]->x = cols-1;
         edges[i+rows+cols]->y = i;
-        
-        //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
-        //printf("DRONE: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        //printf("DRONE: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
-        // write to server with pipe ...
     }
 
     for (int i = 0; i< cols; i++){
         edges[i+rows] = malloc(sizeof(struct obstacle));
         edges[i+rows]->x = i;
         edges[i+rows]->y = rows-1;
-        
-        //write(pipeDrfd[1], edges[i], sizeof(struct obstacle));
         edges[i+2*rows+cols] = malloc(sizeof(struct obstacle));
         edges[i+2*rows+cols]->x = i;
         edges[i+2*rows+cols]->y = 0;
-        
-        //write(pipeDrfd[1], edges[i+rows+cols], sizeof(struct obstacle));
-        //printf("DRONE: edge %d created at (%d, %d)\n", i, edges[i]->x, edges[i]->y);
-        //printf("DRONE: edge %d created at (%d, %d)\n", i+rows+cols, edges[i+rows+cols]->x, edges[i+rows+cols]->y);
     }
-    // reads edges
-    /*
-    for(int i = 0; i<nedges; i++){
-            edges[i] = malloc(sizeof(struct obstacle));
-            read(pipeSefd[0], edges[i], sizeof(struct obstacle));
-            //printf("WINDOW: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
-            printf("DRONE: edge %d: x = %d, y = %d \n", i, edges[i]->x, edges[i]->y);
-    }*/
-
     
+    // MAIN LOOP
     while(!sigint_rec){
-        
-        bool brake = false;
+        if (vx!=0 && vy != 0) // if the drone is not moving, it not update to false the true flag is_on_drone[i]
+            for (int i = 0; i < 20; i++) // put to false the vector of obstacles on drone
+                is_on_drone[i] = false;
+        brakex = false;
+        brakey = false;
         // t->t+1
         // select for skipping the switch if no key is pressed
         struct timeval timeout;
@@ -362,6 +400,7 @@ int main(int argc, char* argv[]){
             //buffer[numRead] = '\0';
                 if(strcmp(buffer, "obs") == 0){
                     writeToLog(drdebug, "DRONE: reading obstacles");
+                    
                     if ((read(pipeSefd[0], &nobstacles, sizeof(int))) == -1){
                         perror("error in reading from pipe");
                         writeToLog(errors, "DRONE: error in reading from pipe number of obstacles");
@@ -376,6 +415,10 @@ int main(int argc, char* argv[]){
                             perror("error in reading from pipe");
                             writeToLog(errors, "DRONE: error in reading from pipe server for reading obstacles");
                             exit(EXIT_FAILURE);
+                        }
+                        // if the i-th element is on the drone, it sets the corresponding element of the vector to true
+                        if(obstacles[i]->x == x && obstacles[i]->y == y){
+                            is_on_drone[i] = true;
                         }
                         sprintf(msg,"DRONE: obstacle %d at (%d, %d)\n", i, obstacles[i]->x, obstacles[i]->y);
                         writeToLog(drdebug, msg);
@@ -404,7 +447,6 @@ int main(int argc, char* argv[]){
                 }
             }
             if(FD_ISSET(keyfd, &read_fds)){
-                writeToLog(drdebug, "DRONE: reading key pressed");
                 // reading key pressed
                 if ((read(keyfd, &input, sizeof(char))) == -1){
                     perror("error in reading from pipe");
@@ -431,29 +473,32 @@ int main(int argc, char* argv[]){
                     
                     F[0] = 0;
                     F[1] = 0;
+                    
                     if ((int)vx>5){
                         F[0] += -FORCE_MODULE;
-                        brake = true;
+                        brakex = true;
                     }
-                    else if ((int)vx<0){
+                    else if ((int)vx<-5){
                         F[0] += FORCE_MODULE;
-                        brake = true;
+                        brakex = true;
                     }
-                    else
+                    else{
                         F[0] = 0;
-                        brake = false;
+                        brakex = false;
+                    }
 
                     if ((int)vy>5){
                         F[1] += -FORCE_MODULE;
-                        brake = true;
+                        brakey = true;
                     }
-                    else if ((int)vy<0){
+                    else if ((int)vy<-5){
                         F[1] += +FORCE_MODULE;
-                        brake = true;
+                        brakey = true;
                     }
-                    else
+                    else {
                         F[1] = 0;
-                        brake = false;
+                        brakey = false;
+                    }
                     break;
                 case 'f':
                     for(int i=0; i<2; i++)
@@ -493,32 +538,27 @@ int main(int argc, char* argv[]){
                 default:
                     break;
                 }
-
-            }
-        }        
-        for(int i= 0; i<2; i++){ // setting drone max input force
-            if(F[i]<-6){
-                F[i] = -6;
-            }
-            if(F[i]>6){
-                F[i] = 6;
             }
         }
-        
+        for(int i= 0; i<2; i++){ // setting drone max input force to avoid the drone to take too much velocity
+            if(F[i]<-5){
+                F[i] = -5;
+            }
+            if(F[i]>5){
+                F[i] = 5;
+            }
+        }
         // compute repulsive force of obstacles
         for (int i = 0; i < nobstacles; i++){
-            frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y);
-            fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y);
-            // total f rep limited
-            if(frx>MAXFREP)
-                frx = MAXFREP;
-            if(fry>MAXFREP)
-                fry = MAXFREP;
+            if(is_on_drone[i] == false){
+                frx += calculateRepulsiveForcex(x, y, obstacles[i]->x, obstacles[i]->y, vx-5);
+                fry += calculateRepulsiveForcey(x, y, obstacles[i]->x, obstacles[i]->y, vy-5);
+            }
+            
         }
-        
         // compute attractive force of targets
         for(int i = 0; i<ntargets; i++){
-            if(isTargetTaken(x, y, target[i]->x, target[i]->y)){
+            if(target[i]->taken && (x, y, target[i]->x, target[i]->y)){
                 target[i]->taken = true;
                 sprintf(msg,"target at %d %d", target[i]->x, target[i]-> y);
                 writeToLog(drdebug, msg);
@@ -533,18 +573,35 @@ int main(int argc, char* argv[]){
 
         // compute repulsive force of edges
         for(int i = 0; i < nedges; i++){
-            frx += calculateRepulsiveForcex(x, y, edges[i]->x, edges[i]->y);
-            fry += calculateRepulsiveForcey(x, y, edges[i]->x, edges[i]->y);
+            frx += calculateRepulsiveForcex(x, y, edges[i]->x, edges[i]->y, vx-5);
+            fry += calculateRepulsiveForcey(x, y, edges[i]->x, edges[i]->y, vy-5);
         }
         //F[0]+=frx;
         //F[1]+=fry;
         //F[0]-=fax;
         //F[1]-=fay;
-
         printf("frx: %d fry: %d\n", frx, fry);
         printf("fax: %d fay: %d\n", fax, fay);
         //updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
-        updatePosition(&x, &y, &vx, &vy, T, F[0]+frx, F[1]+ fry);
+        updatePosition(&x, &y, &vx, &vy, T, F[0]+frx+fax, F[1]+ fry+fay);
+
+        if (x<0 || x>cols || y<0 || y>rows){ // if the drone is out of bounds
+            printf("DRONE: out of bounds\n");
+            writeToLog(drdebug, "DRONE: out of bounds");
+            //reset drone
+            x = x0;
+            y = y0;
+            F[0] = 0;
+            F[1] = 0;
+            vx = 5;
+            vy = 5;
+        }
+
+        if(brakex==true)
+            F[0] = 0;
+        if(brakey==true)
+            F[1] = 0;
+        
         frx = 0;
         fry = 0;
         fax = 0;
@@ -561,21 +618,8 @@ int main(int argc, char* argv[]){
             writeToLog(errors, "DRONE: error in writing to pipe x");
             exit(EXIT_FAILURE);
         }
-        if(brake){
-            F[0] = 0;
-            F[1] = 0;
-        }
+        
     }
-/*
-    if (shm_unlink(shm_name) == 1) { // Remove shared memory segment.
-        printf("Error removing %s\n", shm_name);
-        exit(1);
-    }
-    if (close(shm_fd) == -1) {
-        perror("close");
-        exit(EXIT_FAILURE);
-    }
-*/
     // closing pipes
     for (int i = 0; i < 2; i++){
         if (close(pipeSefd[i]) == -1){
@@ -584,7 +628,12 @@ int main(int argc, char* argv[]){
         }
     }
 
-    //munmap(drone, SIZE);
+    for(int i = 0; i < nobstacles; i++){
+        free(obstacles[i]);
+    }
+    for(int i = 0; i < ntargets; i++){
+        free(target[i]);
+    }
     
     fclose(debug);
     fclose(errors);
