@@ -1,0 +1,111 @@
+Mon Jan 15 22:55:49 2024
+ => SERVER: OBSTACLE WIN 
+Mon Jan 15 22:55:49 2024
+ => SERVER: reading from obstacles
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: number of obstacles: 16
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 0 position: (59, 48)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 1 position: (87, 3)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 2 position: (21, 24)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 3 position: (24, 48)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 4 position: (15, 28)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 5 position: (67, 46)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 6 position: (80, 26)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 7 position: (48, 47)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 8 position: (6, 36)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 9 position: (78, 23)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 10 position: (45, 33)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 11 position: (14, 7)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 12 position: (15, 26)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 13 position: (78, 7)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 14 position: (28, 14)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: obstacle 15 position: (12, 12)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: TARGETS WIN
+Mon Jan 15 22:55:49 2024
+ => SERVER: reading from targets
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: number of targets: 16
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 0 position: (90, 27)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 1 position: (44, 44)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 2 position: (10, 3)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 3 position: (47, 21)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 4 position: (32, 3)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 5 position: (30, 5)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 6 position: (3, 9)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 7 position: (93, 36)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 8 position: (79, 13)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 9 position: (65, 16)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 10 position: (6, 2)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 11 position: (81, 34)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 12 position: (88, 41)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 13 position: (29, 18)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 14 position: (21, 35)
+
+Mon Jan 15 22:55:49 2024
+ => SERVER: target 15 position: (65, 35)
+

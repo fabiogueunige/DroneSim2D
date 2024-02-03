@@ -9,13 +9,15 @@
 #include <signal.h>
 #include <termios.h>
 #include <ncurses.h>
-#include <sys/shm.h>
-#include <sys/mman.h>
 #include <stdbool.h>
 #include <time.h>
 #include <sys/file.h>
 #include <sys/select.h>
+#include <math.h>
+#include <errno.h>
 #define T 0.1 //s   time instants' duration
+
+float rho2 = 2;
 
 
 typedef struct {
@@ -29,6 +31,12 @@ struct obstacle {
     int x;
     int y;
 };
+
+typedef struct {
+    int x;
+    int y;
+    bool taken;
+} targets;
 
 typedef struct {
     char c;
@@ -73,7 +81,7 @@ void init_win (Win *p_win, int height, int width, int starty, int startx)
 void borderCreation (Win *p_win, WINDOW *w)
 {
     start_color();
-    init_pair(1,COLOR_RED,COLOR_BLACK);
+    init_pair(1,COLOR_WHITE,COLOR_BLACK);
     for (int j = 0; j < p_win->width; j++)
     {
         wattron(w, COLOR_PAIR(1) | A_BOLD);
@@ -90,8 +98,9 @@ void borderCreation (Win *p_win, WINDOW *w)
         wattroff(w, COLOR_PAIR(1) | A_BOLD);
         
     }  
-    wrefresh(w);
+    
 }
+
 
 void destroy_win(WINDOW *local_win) {
     werase(local_win); // Clear window content
@@ -99,11 +108,22 @@ void destroy_win(WINDOW *local_win) {
     delwin(local_win); // Delete the window
 }
 
+bool isTargetTaken(int x, int y, int xt, int yt){
+    float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2));
+    if(rho < rho2)
+        return true;
+}
+
 int main(char argc, char*argv[]){
-	
+    // resizing the window
+    //sleep(1);
+    //char *get_wid = "xdotool search --onlyvisible --name window";
+
+
     FILE * debug = fopen("logfiles/debug.log", "a");
 	FILE * winfile = fopen("logfiles/window.log", "w");    // debug log file
 	FILE * errors = fopen("logfiles/errors.log", "a");  // errors log file
+    
     if (winfile == NULL || debug == NULL || errors == NULL){
         perror("error in opening log files");
         exit(EXIT_FAILURE);
@@ -112,11 +132,14 @@ int main(char argc, char*argv[]){
     writeToLog(debug, "WINDOW: process started");
     WINDOW * win;
     Drone * drone;
+    Drone dr;
+    drone = &dr;
     Win  winpar;
     char symbol = '%';	// '%' is the symbol of the drone
-    int nedges, nobstacles;
-    char edge_symbol = '#';
+    int nedges, nobstacles = 0, ntargets = 0;
+    // char edge_symbol = '#';
     char obs_symbol = 'o';
+    char tar_symbol = 'T';
     int pipeSefd;
     int rows, cols;
     int srows, scols, newrows, newcols;
@@ -124,6 +147,9 @@ int main(char argc, char*argv[]){
 	int y;
     float vx, vy;
     int fx, fy;
+    int counter = 0, countertot = 0;
+
+    char msg[100]; // for writing to log files
 
     initscr(); // start curses mode
     
@@ -131,18 +157,28 @@ int main(char argc, char*argv[]){
     noecho();
     start_color();
     curs_set(0);
+    writeToLog(winfile, "WINDOW: curses mode started");
 
     init_pair(2, COLOR_YELLOW, COLOR_BLACK); // for info
     init_pair(3, COLOR_RED, COLOR_BLACK); // for obstacles
     init_pair(4, COLOR_GREEN, COLOR_BLACK); // for targets
     init_pair(5, COLOR_CYAN, COLOR_BLACK); // for drones
+    writeToLog(winfile, "WINDOW: colors initialized");
+
 
     if (stdscr == NULL) {
         // Gestisci l'errore di inizializzazione di ncurses
         fprintf(errors, "WINDOW: Errore durante l'inizializzazione di ncurses\n");
         return 1; // Esce con un codice di errore
     }
-    getmaxyx(stdscr, srows, scols);
+    
+    
+    if((getmaxyx(stdscr, srows, scols) == ERR)){
+        // Gestisci l'errore di inizializzazione di ncurses
+        fprintf(errors, "WINDOW: Errore durante l'inizializzazione di ncurses\n");
+        return 1; // Esce con un codice di errore
+    }
+    writeToLog(winfile, "WINDOW: max rows and cols taken");
     if (srows == ERR || scols == ERR) {
         // Gestisci l'errore di inizializzazione di ncurses
         fprintf(errors, "WINDOW: Errore durante l'inizializzazione di ncurses\n");
@@ -153,8 +189,7 @@ int main(char argc, char*argv[]){
         fprintf(errors, "WINDOW: Errore durante l'inizializzazione di ncurses\n");
         return 1; // Esce con un codice di errore
     }
-
-	// 
+    
 
 // SIGNALS
     struct sigaction sa; //initialize sigaction
@@ -166,27 +201,6 @@ int main(char argc, char*argv[]){
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
     }
-
-// SHARED MEMORY OPENING AND MAPPING
-	const char * shm_name = "/dronemem";
-    const char * shm_name_flags = "/flagsmem";
-    const int SIZE = 4096;
-
-    int shm_fd_flags, shm_fd;
-    shm_fd = shm_open(shm_name, O_RDONLY, 0666); // open shared memory segment
-    if (shm_fd == 1) {
-        perror("shared memory segment failed\n");
-        writeToLog(errors, "DRONE:shared memory segment failed");
-        exit(EXIT_FAILURE);
-    }
-    
-    drone = (Drone *)mmap(0, SIZE, PROT_READ, MAP_SHARED, shm_fd, 0); // protocol write
-    if (drone == MAP_FAILED) {
-        perror("Map failed\n");
-        writeToLog(errors, "WINDOW: map failed for drone");
-        return 1;
-    }
-
     // OPENING PIPE
     
     fd_set readfds;
@@ -194,7 +208,8 @@ int main(char argc, char*argv[]){
     writeToLog(debug, "WINDOW: pipe opened");
     FD_ZERO(&readfds);
     FD_SET(pipeSefd, &readfds);
-    // EDGE IMPORT FROM SERVER
+    writeToLog(winfile, "WINDOW: pipe set");
+
     // Read Raws and Cols
     if((read(pipeSefd, &rows, sizeof(int))) == -1){
         perror("read");
@@ -207,88 +222,60 @@ int main(char argc, char*argv[]){
         exit(EXIT_FAILURE);
     }
     // Checking pipe functionality
-    char a[50];
-    sprintf(a, "WINDOW: rows = %d, cols = %d", rows, cols);
-    writeToLog(winfile, a);
-    
+  
+    sprintf(msg, "WINDOW: rows = %d, cols = %d", rows, cols);
+    writeToLog(winfile, msg);
+    delwin(stdscr);
+    stdscr = newwin(rows +5, cols +5, 0, 0);
+    refresh();
     // generating window after server send rows and cols
     // Creo la window al centro della console con le dimensioni date dal server
     win = newwin(rows, cols, 0, 0);
+    box(win, 0, 0);
     init_win(&winpar, rows, cols, 0, 0);
+    
     if (srows >= rows && scols >= cols){
         mvwin(win, (((srows - rows)/2) + rows), (((scols - cols)/2) + cols));
+        writeToLog(winfile, "WINDOW: window moved after resizing");
     }
-    
+
     writeToLog(winfile, "WINDOW: window created");
     struct obstacle * obs[20];
+    targets * tar[20];
 	
     while(1){
-        // Checking the changing of the dimension of the konsole
-        /*getmaxyx(win, newrows, newcols);
-        if (wrefresh(win) == ERR){
-            perror("error in refreshing window");
-            writeToLog(errors, "WINDOW: error in refreshing window");
-            exit(EXIT_FAILURE);
-        }
-        if ((newrows != ERR && newcols != ERR) && (newrows != srows || newcols != scols)) {
-            srows = newrows;
-            scols = newcols;
-            writeToLog(winfile, "WINDOW: window resized");
-            delwin(win);
-            win = newwin(srows, scols, 0, 0);
-            if (win == NULL){
-                perror("error in creating window");
-                writeToLog(errors, "WINDOW: error in creating window");
-                exit(EXIT_FAILURE);
-            }
-            
-            writeToLog(winfile, "WINDOW: window end resized");
-            init_win(&winpar, srows, scols, 0, 0);
-            writeToLog(winfile, "WINDOW: win initialized");
-            
-        }
-        if (wrefresh(win) == ERR){
-            perror("error in refreshing window");
-            writeToLog(errors, "WINDOW: error in refreshing window");
-            exit(EXIT_FAILURE);
-        }*/
         
         char buffer[4];
-        writeToLog(winfile, "WINDOW: cycle");
         FD_SET(pipeSefd, &readfds);
-        int sel = select(pipeSefd + 1, &readfds, NULL, NULL, NULL);
+        int sel;
+        do{
+            sel = select(pipeSefd + 1, &readfds, NULL, NULL, NULL);
+        }while(sel == -1 && errno == EINTR);
         if (sel == -1){
             perror("select");
             writeToLog(errors, "WINDOW: error in select()");
             exit(EXIT_FAILURE);
         }
         else if(sel>0){
-            /* Qui fa saltare il programma
-            if ((read(pipeSefd, drone, sizeof(Drone))) == -1){
+            if((read(pipeSefd, buffer, sizeof(buffer)-1)) == -1){
                 perror("read");
-                writeToLog(errors, "WINDOW: error in read drone from Server");
+                writeToLog(errors, "WINDOW: error in read buffer");
                 exit(EXIT_FAILURE);
-            }*/
-            //read(pipeSefd, buffer, sizeof(buffer)-1);
-            ssize_t numRead = read(pipeSefd, buffer, sizeof(buffer)-1);
-            if (numRead == -1) {
-                perror("read");
-                return 1;
             }
             writeToLog(winfile, buffer);
             //buffer[numRead] = '\0';
             if(strcmp(buffer, "obs") == 0){
                 // datas for obstacles
-                writeToLog(winfile, "WINDOW: reading obstacles");
+                //writeToLog(winfile, "WINDOW: reading obstacles");
                 
                 if ((read(pipeSefd, &nobstacles, sizeof(int))) == -1){
                     perror("read");
                     writeToLog(errors, "WINDOW: error in read nobstacles");
                     exit(EXIT_FAILURE);
                 }
-                sprintf(a, "WINDOW: number of obstacles %d", nobstacles);
-                writeToLog(winfile, a);
-                //struct obstacle * obs[nobstacles];
+                sprintf(msg, "WINDOW: number of obstacles %d", nobstacles);
+                writeToLog(winfile, msg);
+                // struct obstacle * obs[nobstacles];
                 for (int i = 0; i<nobstacles; i++){
                     obs[i] = malloc(sizeof(struct obstacle));
                     if ((read(pipeSefd, obs[i], sizeof(struct obstacle))) == -1){
@@ -296,16 +283,40 @@ int main(char argc, char*argv[]){
                         writeToLog(errors, "WINDOW: error in read obstacles");
                         exit(EXIT_FAILURE);
                     }
+                    sprintf(msg, "WINDOW: obstacle %d: x = %d, y = %d", i, obs[i]->x, obs[i]->y);
+                    writeToLog(winfile, msg);
+                }
+            }
+            else if(strcmp(buffer, "tar") == 0){
+                // reading targets from server
+                if((read(pipeSefd, &ntargets, sizeof(int))) == -1){
+                    perror("read");
+                    writeToLog(errors, "WINDOW: error in read ntargets");
+                    exit(EXIT_FAILURE);
+                }
+                countertot += ntargets;
+                char pos_targets[ntargets][10];
+                sprintf(msg, "WINDOW: number of targets %d", ntargets);
+                writeToLog(winfile, msg);
+                for (int i = 0; i<ntargets; i++){
+                    tar[i] = malloc(sizeof(targets));
+                    if ((read(pipeSefd, tar[i], sizeof(targets))) == -1){
+                        perror("read");
+                        writeToLog(errors, "WINDOW: error in read targets");
+                        exit(EXIT_FAILURE);
+                    }
+                    sprintf(pos_targets[i], "%d,%d", tar[i]->x, tar[i]->y);
+                    writeToLog(winfile, pos_targets[i]);
                 }
             }
             else if(strcmp(buffer, "coo") == 0){
                 // read the coordinates
-                /* Qui fa saltare il programma
+                //drone =malloc(sizeof(Drone));
                 if ((read(pipeSefd, drone, sizeof(Drone))) == -1){
                     perror("read");
                     writeToLog(errors, "WINDOW: error in read drone from Server");
                     exit(EXIT_FAILURE);
-                }*/
+                }
                 writeToLog(winfile, "WINDOW: reading drone");
             }  
         }
@@ -318,46 +329,59 @@ int main(char argc, char*argv[]){
 
         wclear(win);
         borderCreation(&winpar, win);
+        writeToLog(winfile, "WINDOW: border created");
         wattron(win, COLOR_PAIR(5) | A_BOLD);
 		mvwprintw(win, y, x, "%c", symbol);
         wattroff(win, COLOR_PAIR(5) | A_BOLD);
-        
-        wattron(win, COLOR_PAIR(2) | A_BOLD);
-        mvwprintw(win, 1, cols - 80, "X: %d, Y: %d, Vx: %f m/s, Vy: %f m/s, Fx: %d N, Fy: %d N", x, y, vx, vy, fx, fy);
-        wattroff(win, COLOR_PAIR(2) | A_BOLD);
-        
-        for (int i = 0; i<nobstacles; i++){
-            wattron(win, COLOR_PAIR(3) | A_BOLD);
-            mvwprintw(win, obs[i]->y, obs[i]->x, "%c", obs_symbol);
-            wattroff(win, COLOR_PAIR(3) | A_BOLD);
+        writeToLog(winfile, "WINDOW: drone printed");
+
+        // printing obstacles
+        if (nobstacles != 0) {
+            for (int i = 0; i<nobstacles; i++){
+                wattron(win, COLOR_PAIR(3) | A_BOLD);
+                mvwprintw(win, obs[i]->y, obs[i]->x, "%c", obs_symbol);
+                wattroff(win, COLOR_PAIR(3) | A_BOLD);
+            }
+            writeToLog(winfile, "WINDOW: obstacles printed");
         }
-        /*
-        for(int i = 0; i<nedges; i++){
-            // it is too slow and it is not necessary
-            writeToLog(windebug, "WINDOW: printing edges");
-            mvprintw(edges[i]->y, edges[i]->x, "%c", edge_symbol);
-        }*/
-
+        
+        // printing targets
+        if (ntargets != 0) {
+            for (int i = 0; i<ntargets; i++){
+                if((tar[i]->taken == false) && (isTargetTaken(x,y,tar[i]->x, tar[i]->y))){ // if coordinates of drone and target are the same
+                    tar[i]->taken = true; // target is taken
+                    counter++;
+                    sprintf(msg, "WINDOW: target %d taken and not in window anymore", i);
+                    writeToLog(winfile, msg);
+                }
+                    
+                
+                if(tar[i]->taken == false){
+                    sprintf(msg, "WINDOW:I see a target %d: x = %d, y = %d", i, tar[i]->x, tar[i]->y);
+                    writeToLog(winfile, msg);
+                    wattron(win, COLOR_PAIR(4) | A_BOLD);
+                    mvwprintw(win, tar[i]->y, tar[i]->x, "%c", tar_symbol);
+                    wattroff(win, COLOR_PAIR(4) | A_BOLD);
+                }
+                //tar[i]->taken = false;
+                writeToLog(winfile, "WINDOW: targets printed");
+            }
+        }
+        wattron(win, COLOR_PAIR(2) | A_BOLD);
+        mvwprintw(win, 0, 5, "X: %d, Y: %d, Vx: %f m/s, Vy: %f m/s, Fx: %d N, Fy: %d N, Score: %d / %d", x, y, vx, vy, fx, fy, counter, countertot);
+        wattroff(win, COLOR_PAIR(2) | A_BOLD);
+        writeToLog(winfile, "WINDOW: info printed");
         wrefresh(win);  // Print changes to the screen
-        writeToLog(winfile, "WINDOW: window refreshed");
     }
-	// CLOSE AND UNLINK SHARED MEMORY
-    if (close(shm_fd) == -1) {
-		perror("close");
-        exit(EXIT_FAILURE);
-    }
-    if (shm_unlink(shm_name) == -1) {
-        perror("shm_unlink");
-        exit(EXIT_FAILURE);
-    }
-    munmap(drone, SIZE);
-
 
     destroy_win(win);
 	endwin();	// end curses mode
+    free(obs);
+    free(tar);
     close(pipeSefd);
     fclose(debug);
     fclose(winfile);
     fclose(errors);
+
     return 0;
 }

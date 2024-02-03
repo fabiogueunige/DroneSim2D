@@ -4,7 +4,7 @@ gcc -c win.c
 # gcc -shared -o  libwindow.so window.o
 cd ..
 # Compile the main files
-#gcc -c description.c 
+gcc -c description.c 
 
 cc  -o "master" "master.c"
 if [ $? -eq 0 ]; then
@@ -35,7 +35,7 @@ if [ $? -eq 0 ]; then
     fi
 
 
-#gcc -o description description.o library/win.o -lncurses
+gcc -o description description.o library/win.o -lncurses
 
 cc -o "input" "input.c" "-lncurses"
 
@@ -45,7 +45,7 @@ if [ $? -eq 0 ]; then
         echo "Errore durante la compilazione di input.c"
     fi
 
-cc -o "window" "window.c" "-lncurses"
+cc -o "window" "window.c" "-lncurses" -lm
 if [ $? -eq 0 ]; then
         echo "Compilazione di window.c completata con successo"
     else
@@ -65,3 +65,6 @@ if [ $? -eq 0 ]; then
     else
         echo "Errore durante la compilazione di targets.c"
     fi
+
+export QT_QPA_PLATFORM=wayland
+./master

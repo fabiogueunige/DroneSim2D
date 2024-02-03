@@ -23,12 +23,6 @@ struct obstacle {
     int y;
 };
 
-typedef struct {
-    int rows;
-    int cols;
-    int nobstacles;
-} window;
-
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
     if (signo == SIGUSR1) {
@@ -67,9 +61,11 @@ int main (int argc, char *argv[])
 {
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
+    FILE * obsdebug = fopen("logfiles/obstacles.log", "w");
     // these var are used because there aren't pipes, but these values are imported by server
-    int rows = 50;
-    int cols = 100;
+    char msg[100]; // message to write on debug file
+
+    int rows, cols;
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
         exit(EXIT_FAILURE);
@@ -77,7 +73,6 @@ int main (int argc, char *argv[])
 
     writeToLog(debug, "OBSTACLES: process started");
     printf("OBSTACLES: process started\n");
-    struct window *window;
 
     // opening pipes
     int pipeSefd[2];
@@ -102,47 +97,83 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
+    if (sigaction(SIGINT, &sa, NULL) == -1) {
+        perror("Error setting up SIGINT handler");
+        writeToLog(errors, "SERVER: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+
+    if(read(pipeSefd[0], &rows, sizeof(int)) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "OBSTACLES: error in reading from pipe");
+        exit(EXIT_FAILURE);
+    }
+    if(read(pipeSefd[0], &cols, sizeof(int)) == -1){
+        perror("error in reading from pipe");
+        writeToLog(errors, "OBSTACLES: error in reading from pipe");
+        exit(EXIT_FAILURE);
+    }
+    sprintf(msg, "OBSTACLES: rows = %d, cols = %d", rows, cols);
+    writeToLog(obsdebug, msg);
+    struct obstacle *obstacles[MAX_OBSTACLES];
+    sleep(1); // wait for server to read rows and cols
     // obstacle generation cycle
     while(!sigint_rec){
+        time_t t = time(NULL);
         srand(time(NULL));
         int nobstacles = rand() % MAX_OBSTACLES;
+        printf("OBSTACLES: number of obstacles = %d\n", nobstacles);
+        sprintf(msg, "OBSTACLES: number of obstacles = %d", nobstacles);
+        writeToLog(obsdebug, msg);
         char pos_obstacles[nobstacles][10];
-        struct obstacle *obstacles[nobstacles];
+        //struct obstacle *obstacles[nobstacles];
 
         if ((write(pipeSefd[1], &nobstacles, sizeof(int))) == -1){ // implementare lettura su server
             perror("error in writing to pipe");
             writeToLog(errors, "OBSTACLES: error in writing to pipe number of obstacles");
             exit(EXIT_FAILURE);
         }
+        
         // create obstacles
         for (int i = 0; i < nobstacles; i++){
             obstacles[i] = malloc(sizeof(struct obstacle)); //allocate memory for each obstacle
-            obstacles[i]->x = rand() % cols;
-            obstacles[i]->y = rand() % rows;
+            // generates random coordinates
+            obstacles[i]->x = rand() % (cols-2) + 1; 
+            obstacles[i]->y = rand() % (rows-2) + 1;
             int x = obstacles[i]->x;
             int y = obstacles[i]->y;
             printf("OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
-            fprintf(debug, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
+            sprintf(msg, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
+            writeToLog(obsdebug, msg);
             //sprintf(pos_obstacles[i], "%d,%d", x, y);
-            // write to server with pipe ...
+            // write to server with pipe
             if (write(pipeSefd[1], obstacles[i], sizeof(struct obstacle)) == -1){
                 perror("error in writing to pipe");
                 writeToLog(errors, "OBSTACLES: error in writing to pipe obstacles");
                 exit(EXIT_FAILURE);
             }
         }
-        sleep(50);
+        // wait 60 seconds before generating new obstacles
+        time_t t2 = time(NULL); 
+        while(t2 - t < 60){
+            t2 = time(NULL);
+        }
     }
+
     // closing pipes
-    
     for (int i = 0; i < 2; i++){
         if (close(pipeSefd[i]) == -1){
             perror("error in closing pipe");
             writeToLog(errors, "OBSTACLES: error in closing pipe");
         }
     }
-
+    // free the memory allocated for obstacles
+    for(int i = 0; i<20; i++){
+        free(obstacles[i]);
+    }
+    // close log files
     fclose(debug);
     fclose(errors);
+    fclose(obsdebug);
     return 0;
 }
