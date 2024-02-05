@@ -1,14 +1,14 @@
-Mon Feb  5 11:08:28 2024
+Mon Feb  5 11:19:01 2024
  => WINDOW: curses mode started
-Mon Feb  5 11:08:28 2024
+Mon Feb  5 11:19:01 2024
  => WINDOW: colors initialized
-Mon Feb  5 11:08:28 2024
+Mon Feb  5 11:19:01 2024
  => WINDOW: max rows and cols taken
-Mon Feb  5 11:08:28 2024
+Mon Feb  5 11:19:01 2024
  => WINDOW: pipe set
-Mon Feb  5 11:08:28 2024
+Mon Feb  5 11:19:01 2024
  => WINDOW: rows = 50, cols = 100
-Mon Feb  5 11:08:28 2024
+Mon Feb  5 11:19:01 2024
  => WINDOW: window moved after resizing
-Mon Feb  5 11:08:28 2024
+Mon Feb  5 11:19:01 2024
  => WINDOW: window created

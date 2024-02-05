@@ -19,7 +19,6 @@
 
 float rho2 = 2;
 
-
 typedef struct {
     int x;
     int y;
@@ -115,10 +114,6 @@ bool isTargetTaken(int x, int y, int xt, int yt){
 }
 
 int main(char argc, char*argv[]){
-    // resizing the window
-    //sleep(1);
-    //char *get_wid = "xdotool search --onlyvisible --name window";
-
 
     FILE * debug = fopen("logfiles/debug.log", "a");
 	FILE * winfile = fopen("logfiles/window.log", "w");    // debug log file
@@ -164,7 +159,6 @@ int main(char argc, char*argv[]){
     init_pair(4, COLOR_GREEN, COLOR_BLACK); // for targets
     init_pair(5, COLOR_CYAN, COLOR_BLACK); // for drones
     writeToLog(winfile, "WINDOW: colors initialized");
-
 
     if (stdscr == NULL) {
         // Gestisci l'errore di inizializzazione di ncurses

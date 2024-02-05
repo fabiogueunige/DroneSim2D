@@ -1,39 +1,35 @@
-Mon Feb  5 11:08:28 2024
+Mon Feb  5 13:58:00 2024
  => SERVER: process started
-Mon Feb  5 11:08:28 2024
- => SERVER: pipes opened
-Mon Feb  5 11:08:28 2024
- => WINDOW: process started
-Mon Feb  5 11:08:28 2024
- => WINDOW: pipe opened
-Mon Feb  5 11:08:29 2024
+Mon Feb  5 13:58:00 2024
  => DRONE: process started
-Mon Feb  5 11:08:29 2024
+Mon Feb  5 13:58:00 2024
  => DRONE: pipes opened
 INPUT: process started
 OBSTACLES: process started
 OBSTACLES: pipes opened
 TARGETS: process started
 TARGETS: pipes opened
-Mon Feb  5 11:08:31 2024
+Mon Feb  5 13:58:03 2024
  => WATCH DOG: process started
-Mon Feb  5 11:08:31 2024
+Mon Feb  5 13:58:03 2024
  => WATCH DOG: sending signals to processes
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Feb  5 11:08:32 2024
+Mon Feb  5 13:58:04 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Feb  5 11:08:32 2024
+Mon Feb  5 13:58:04 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Feb  5 11:08:32 2024
+Mon Feb  5 13:58:04 2024
  => WATCH DOG: OBSTACLE received signal
 TARGETS: signal SIGUSR1 received from WATCH DOG
-Mon Feb  5 11:08:32 2024
+Mon Feb  5 13:58:04 2024
  => WATCH DOG: TARGETS received signal
-Mon Feb  5 11:08:41 2024
- => WATCH DOG: SERVER is not responding, terminating the program...
+Mon Feb  5 13:58:13 2024
+ => WATCH DOG: sending signals to processes
+INPUT: signal SIGUSR1 received from WATCH DOG
+Mon Feb  5 13:58:14 2024
+ => WATCH DOG: INPUT received signal
+Mon Feb  5 13:58:23 2024
+ => WATCH DOG: DRONE is not responding, terminating the program...
 INPUT: terminating by WATCH DOG
-OBSTACLES: terminating by WATCH DOG
-TARGETS: terminating by WATCH DOG
-DRONE: terminating by WATCH DOG with return value 1

@@ -88,7 +88,7 @@ int main (int argc, char *argv[])
     struct sockaddr_in server_address;
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(8080);  // Replace with your port number
-    
+    //char server_ip[100] = "130.251.107.87";
     inet_pton(AF_INET, "130.251.107.87", &server_address.sin_addr);  // Replace with your server's IP address
     
     // Connect to the server
@@ -103,6 +103,7 @@ int main (int argc, char *argv[])
         return 1;
     }
 
+
     // opening pipes
     int pipeSefd[2];
     sscanf(argv[1], "%d", &pipeSefd[0]);
@@ -111,11 +112,6 @@ int main (int argc, char *argv[])
 
     int rows, cols;
     
-    
-    // rows and cols and ntargets value is passed from server using pipes, now they will be initialized here
-    
-    //char pos_targets[ntargets][10];
-
     // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -139,6 +135,7 @@ int main (int argc, char *argv[])
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
     }
+    
     // Reads rows and cols from server
     if(read(pipeSefd[0], &rows, sizeof(int)) == -1){
         perror("error in reading from pipe");
@@ -150,8 +147,9 @@ int main (int argc, char *argv[])
         writeToLog(errors, "TARGETS: error in reading from pipe");
         exit(EXIT_FAILURE);
     }
-    sprintf(msg, "TARGETS: rows = %d, cols = %d", rows, cols);
-    writeToLog(tardebug, msg);
+
+    //sprintf(msg, "TARGETS: rows = %d, cols = %d", rows, cols);
+    //writeToLog(tardebug, msg);
     targets *target[MAX_TARGETS];
     int ntargets;
     sleep(2);
