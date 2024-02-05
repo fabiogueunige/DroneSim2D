@@ -11,6 +11,10 @@
 #include <sys/mman.h>
 #include <stdbool.h>
 #include <time.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h> 
+#include <arpa/inet.h>
 
 #define MAX_TARGETS 20
 
@@ -66,6 +70,11 @@ int main (int argc, char *argv[])
     FILE * tardebug = fopen("logfiles/targets.log", "w");
 
     char msg[100]; // for writing to log files
+
+    // socket variables
+    char ipAddress[20] = "130.251.254.70";
+    int port = 8080;
+    int sock;
     
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
@@ -74,19 +83,51 @@ int main (int argc, char *argv[])
     writeToLog(debug, "TARGETS: process started");
     printf("TARGETS: process started\n");
 
-    // opening pipes
+    // Create a socket
+    sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock == -1) {
+        perror("socket");
+        writeToLog(errors, "TARGETS: error in creating socket");
+        return 1;
+    }
+
+    struct sockaddr_in server_address;
+    server_address.sin_family = AF_INET;
+    server_address.sin_port = htons(port);  
+
+    inet_pton(AF_INET, ipAddress, &server_address.sin_addr); 
+    
+    // Connect to the server
+    if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
+        perror("connect");
+        writeToLog(errors, "TARGETS: error in connecting to server");
+        return 1;
+    }
+    writeToLog(debug, "TARGETS: connected to server");
+
+    char * message = "TI";
+    if (send(sock, message, strlen(message), 0) == -1) {
+        perror("send");
+        return 1;
+    }
+    writeToLog(tardebug, "TARGETS: message TI sent to server");
+
+    if ((close(sock)) == -1){
+        perror("error in closing socket");
+        writeToLog(errors, "TARGETS: error in closing socket");
+        return 2;
+    }
+    writeToLog(tardebug, "TARGETS: socket closed"); // temporary
+
+
+    // opening pipes will be eliminated this part
     int pipeSefd[2];
     sscanf(argv[1], "%d", &pipeSefd[0]);
     sscanf(argv[2], "%d", &pipeSefd[1]);
     writeToLog(debug, "TARGETS: pipes opened");
 
-    int rows, cols;
+    int rows = 50, cols = 100;
     
-    
-    // rows and cols and ntargets value is passed from server using pipes, now they will be initialized here
-    
-    //char pos_targets[ntargets][10];
-
     // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -110,6 +151,7 @@ int main (int argc, char *argv[])
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
     }
+    
     // Reads rows and cols from server
     if(read(pipeSefd[0], &rows, sizeof(int)) == -1){
         perror("error in reading from pipe");
@@ -121,8 +163,9 @@ int main (int argc, char *argv[])
         writeToLog(errors, "TARGETS: error in reading from pipe");
         exit(EXIT_FAILURE);
     }
-    sprintf(msg, "TARGETS: rows = %d, cols = %d", rows, cols);
-    writeToLog(tardebug, msg);
+
+    //sprintf(msg, "TARGETS: rows = %d, cols = %d", rows, cols);
+    //writeToLog(tardebug, msg);
     targets *target[MAX_TARGETS];
     int ntargets;
     sleep(2);

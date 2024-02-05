@@ -11,6 +11,10 @@
 #include <sys/mman.h>
 #include <stdbool.h>
 #include <time.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h> 
+#include <arpa/inet.h>
 
 
 #define MAX_OBSTACLES 20
@@ -65,7 +69,12 @@ int main (int argc, char *argv[])
     // these var are used because there aren't pipes, but these values are imported by server
     char msg[100]; // message to write on debug file
 
-    int rows, cols;
+    // socket variables
+    char ipAddress[20] = "130.251.254.70";
+    int port = 8080;
+    int sock;
+
+    int rows = 50, cols = 100;
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
         exit(EXIT_FAILURE);
@@ -73,6 +82,42 @@ int main (int argc, char *argv[])
 
     writeToLog(debug, "OBSTACLES: process started");
     printf("OBSTACLES: process started\n");
+/*
+    sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock == -1) {
+        perror("socket");
+        writeToLog(errors, "OBSTACLES: error in creating socket");
+        return 1;
+    }
+
+    struct sockaddr_in server_address;
+    server_address.sin_family = AF_INET;
+    server_address.sin_port = htons(port);  
+
+    inet_pton(AF_INET, ipAddress, &server_address.sin_addr); 
+    writeToLog(debug, "OBSTACLES: socket created");
+
+    if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
+        perror("connect");
+        writeToLog(errors, "OBSTACLES: error in connecting to server");
+        return 1;
+    }
+    writeToLog(debug, "OBSTACLES: connected to server");
+
+    char * message = "OI";
+    if (send(sock, message, strlen(message), 0) == -1) {
+        perror("send");
+        return 1;
+    }
+    writeToLog(obsdebug, "OBSTACLES: message OB sent to server");
+
+    if ((close(sock)) == -1){
+        perror("error in closing socket");
+        writeToLog(errors, "OBSTACLES: error in closing socket");
+        return 2;
+    }
+    writeToLog(obsdebug, "OBSTACLES: socket closed"); // temporary
+*/
 
     // opening pipes
     int pipeSefd[2];
@@ -103,6 +148,8 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
+    // Pipes reading
+    /*
     if(read(pipeSefd[0], &rows, sizeof(int)) == -1){
         perror("error in reading from pipe");
         writeToLog(errors, "OBSTACLES: error in reading from pipe");
@@ -115,6 +162,7 @@ int main (int argc, char *argv[])
     }
     sprintf(msg, "OBSTACLES: rows = %d, cols = %d", rows, cols);
     writeToLog(obsdebug, msg);
+    */
     struct obstacle *obstacles[MAX_OBSTACLES];
     sleep(1); // wait for server to read rows and cols
     // obstacle generation cycle

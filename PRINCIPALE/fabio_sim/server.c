@@ -12,7 +12,11 @@
 #include <sys/file.h>
 #include <sys/select.h>
 #include <errno.h>
-
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#define MAX_MSG_LEN = 1024;
 
 pid_t wd_pid = -1;
 pid_t window_pid;
@@ -105,6 +109,16 @@ int main(int argc, char* argv[]){
     int nobstacles;
     int rows = 50;
     int cols = 100;
+
+    // socket variables
+    int port = 8000;
+    int sock;
+    int client_sock[2];
+
+    char *rowsandcols;
+    sprintf(rowsandcols, "%d, %d", rows, cols);
+    writeToLog(serdebug, rowsandcols);
+
     int nobstacles_edge = 2 * (rows + cols);
     struct obstacle *edges[nobstacles_edge];
 
@@ -112,14 +126,89 @@ int main(int argc, char* argv[]){
         perror("error in opening log files");
         exit(EXIT_FAILURE);
     }
+    // SOCKET
+    // generating socket
+    sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock == -1) {
+        perror("socket");
+        return 1;
+    }
+    // Bind the socket
+    struct sockaddr_in server_address;
+    server_address.sin_family = AF_INET;
+    server_address.sin_port = htons(port);  // Replace with your port number
+    server_address.sin_addr.s_addr = INADDR_ANY;
+    
+    // binding the socket
+    writeToLog(serdebug, "SERVER: binding...");
+    if (bind(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
+        perror("bind");
+        return 1;
+    }
 
+    // Listen for connections
+    writeToLog(serdebug, "SERVER: listening...");
+    if (listen(sock, 5) == -1) {  // 5 is the maximum length of the queue of pending connections
+        perror("listen");
+        return 1;
+    }
+
+    //for (int i = 0; i<2; i++){ // for make sure that obstacles and targets are ready to send data
+        int i = 0;
+        client_sock[i] = accept(sock, NULL, NULL); // accept the connection
+        if (client_sock[i] == -1) {
+            perror("accept");
+            writeToLog(errors, "SERVER: error in accept() while accepting connection");
+            return 1;
+        }
+
+        // Fork a new process
+        pid_t pid = fork();
+        if (pid == -1) {
+            perror("fork");
+            writeToLog(errors, "SERVER: error in fork() while accepting connection");
+            return 1;
+        }
+
+        if (pid == 0) {
+            // Child process: handle the connection
+            char buffer[1024];
+            if (recv(client_sock[i], buffer, sizeof(buffer), 0) == -1) {
+                perror("recv");
+                writeToLog(errors, "SERVER: error in recv() while accepting connection in child");
+                return 1;
+            }
+
+            // TODO: Handle the received data
+            if(strcmp(buffer, "TI") == 0){
+                writeToLog(serdebug, "SERVER: received TI from targets");
+                writeToLog(serdebug, "SERVER: sending rows and cols to targets");
+                /*
+                if (send(sock, rowsandcols, strlen(rowsandcols), 0) == -1) {
+                    perror("send");
+                    return 1;
+                }*/
+            }
+
+            if(strcmp(buffer, "OI") == 0){
+                writeToLog(serdebug, "SERVER: received OI from obstacles");
+                writeToLog(serdebug, "SERVER: sending rows and cols to obstacles");
+            }
+
+            // Close the client socket and exit
+            close(client_sock[i]);
+            exit(EXIT_SUCCESS);
+        } 
+        else {
+            // Parent process: close the client socket and go back to accept the next connection
+            close(client_sock[i]);
+        }
+    // }
+    
     char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
-    //"--nofork", "--geometry ", "50", "x", "100", I tryed to resize window but not working
     // OPENING WINDOW
     // Join the elements of the array into a single command string
     char command[100];
-
-
     
     // pipe to window
     int pipeWdfd[2];
@@ -145,8 +234,10 @@ int main(int argc, char* argv[]){
             exit(EXIT_FAILURE);
         }
     }
+    writeToLog(serdebug, "SERVER: Window opened and socket created");
+    
 
-    // PIPES
+    // PIPES OPENING
     int pipeDrfd[2];    // pipe for drone: 0 for reading, 1 for writing
     int pipeObfd[2];    // pipe for obstacles: 0 for reading, 1 for writing
     int pipeTafd[2];    // pipe for targets: 0 for reading, 1 for writing
@@ -154,8 +245,6 @@ int main(int argc, char* argv[]){
     fd_set write_fds;
     FD_ZERO(&read_fds);
     FD_ZERO(&write_fds);
-
-    
 
     sscanf(argv[1], "%d", &pipeDrfd[0]);
     sscanf(argv[2], "%d", &pipeDrfd[1]);
@@ -166,26 +255,29 @@ int main(int argc, char* argv[]){
     writeToLog(debug, "SERVER: pipes opened");
 
     // Sending rows and cols to window and drone
+    /*
     if((write(pipeWdfd[1], &rows, sizeof(int))) == -1){
         perror("error in writing to pipe");
-        writeToLog(errors, "SERVER: error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe Window");
         exit(EXIT_FAILURE);
     }
     if((write(pipeWdfd[1], &cols, sizeof(int))) == -1){
         perror("error in writing to pipe");
-        writeToLog(errors, "SERVER: error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe Window");
         exit(EXIT_FAILURE);
     }
     if((write(pipeDrfd[1], &rows, sizeof(int))) == -1){
         perror("error in writing to pipe");
-        writeToLog(errors, "SERVER: error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe Drone");
         exit(EXIT_FAILURE);
     }
     if((write(pipeDrfd[1], &cols, sizeof(int))) == -1){
         perror("error in writing to pipe");
-        writeToLog(errors, "SERVER: error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe Drone");
         exit(EXIT_FAILURE);
     }
+    */
+    /*
     if((write(pipeObfd[1], &rows, sizeof(int))) == -1){
         perror("error in writing to pipe");
         writeToLog(errors, "SERVER: error in writing to pipe");
@@ -196,6 +288,8 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "SERVER: error in writing to pipe");
         exit(EXIT_FAILURE);
     }
+    */
+    /*
     if((write(pipeTafd[1], &rows, sizeof(int))) == -1){
         perror("error in writing to pipe");
         writeToLog(errors, "SERVER: error in writing to pipe");
@@ -205,7 +299,14 @@ int main(int argc, char* argv[]){
         perror("error in writing to pipe");
         writeToLog(errors, "SERVER: error in writing to pipe");
         exit(EXIT_FAILURE);
-    }
+    }*/
+
+
+    
+
+    
+    
+    
     // these strings are for make the window knowing which type of data it will receive
     char *obs = "obs";
     char *tar = "tar";
@@ -234,8 +335,9 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
     }
-
     while(!sigint_rec){
+
+
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
         FD_SET(pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
@@ -328,7 +430,7 @@ int main(int argc, char* argv[]){
                     perror("error in reading from pipe");
                     writeToLog(errors, "SERVER: error in reading from pipe obstacles");
                     exit(EXIT_FAILURE);
-                } 
+                }
                 sprintf(command,"SERVER: number of obstacles: %d\n", nobstacles);
                 writeToLog(serdebug, command);
                 if((write(pipeDrfd[1], obs, strlen(obs))) == -1){
@@ -352,7 +454,6 @@ int main(int argc, char* argv[]){
                     writeToLog(errors, "SERVER: error in writing to pipe number of obstacles");
                     exit(EXIT_FAILURE);
                 }
-
                 struct obstacle *obstacles[nobstacles];
                 for(int i = 0; i<nobstacles; i++){
                     obstacles[i] = malloc(sizeof(struct obstacle));

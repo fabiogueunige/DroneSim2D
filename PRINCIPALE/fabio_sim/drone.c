@@ -308,7 +308,8 @@ int main(int argc, char* argv[]){
     targets *target[20]; //targets
 
     // READS WINDOW DIMENSIONS
-    int rows, cols;
+    int rows = 50, cols = 100;
+    /*
     if ((read(pipeSefd[0], &rows, sizeof(int))) == -1){
         perror("error in reading from pipe");
         writeToLog(errors, "DRONE: error in reading from pipe rows");
@@ -319,6 +320,7 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "DRONE: error in reading from pipe cols");
         exit(EXIT_FAILURE);
     }
+    */
 
     sprintf(msg, "DRONE: rows = %d, cols = %d", rows, cols);
     writeToLog(drdebug, msg);
