@@ -11,6 +11,10 @@
 #include <sys/mman.h>
 #include <stdbool.h>
 #include <time.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h> 
+#include <arpa/inet.h>
 
 #define MAX_TARGETS 20
 
@@ -73,6 +77,31 @@ int main (int argc, char *argv[])
     }
     writeToLog(debug, "TARGETS: process started");
     printf("TARGETS: process started\n");
+
+    // Create a socket
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock == -1) {
+        perror("socket");
+        return 1;
+    }
+
+    struct sockaddr_in server_address;
+    server_address.sin_family = AF_INET;
+    server_address.sin_port = htons(8080);  // Replace with your port number
+    
+    inet_pton(AF_INET, "130.251.107.87", &server_address.sin_addr);  // Replace with your server's IP address
+    
+    // Connect to the server
+    if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
+        perror("connect");
+        return 1;
+    }
+
+    char * message = "TI";
+    if (send(sock, message, strlen(message), 0) == -1) {
+        perror("send");
+        return 1;
+    }
 
     // opening pipes
     int pipeSefd[2];

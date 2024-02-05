@@ -4,6 +4,7 @@
         "file.h": "c",
         "signal.h": "c",
         "functional": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "system_error": "c"
     }
 }
