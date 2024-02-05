@@ -109,15 +109,20 @@ int main(int argc, char* argv[]){
     int nobstacles;
     int rows = 50;
     int cols = 100;
+    char msg[100];
 
     // socket variables
-    int port = 8000;
-    int sock;
-    int client_sock[2];
+    // Port has to be given by the master
+    int port = 40000;
+    int clilen;
+    int sockfd;
+    int client_sock[2]; // new socket fd
+    struct sockaddr_in server_address, client_address; 
 
-    char *rowsandcols;
+    /*char *rowsandcols;
     sprintf(rowsandcols, "%d, %d", rows, cols);
     writeToLog(serdebug, rowsandcols);
+    */
 
     int nobstacles_edge = 2 * (rows + cols);
     struct obstacle *edges[nobstacles_edge];
@@ -128,37 +133,41 @@ int main(int argc, char* argv[]){
     }
     // SOCKET
     // generating socket
-    sock = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock == -1) {
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd == -1) {
         perror("socket");
         return 1;
     }
+    // setting to zero the area of memory
+    bzero((char *) &server_address, sizeof(server_address));
     // Bind the socket
-    struct sockaddr_in server_address;
     server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(port);  // Replace with your port number
     server_address.sin_addr.s_addr = INADDR_ANY;
+    server_address.sin_port = htons(port);
+    
     
     // binding the socket
     writeToLog(serdebug, "SERVER: binding...");
-    if (bind(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
+    if (bind(sockfd, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
         perror("bind");
         return 1;
     }
 
     // Listen for connections
     writeToLog(serdebug, "SERVER: listening...");
-    if (listen(sock, 5) == -1) {  // 5 is the maximum length of the queue of pending connections
+    if (listen(sockfd, 5) == -1) {  // 5 is the maximum length of the queue of pending connections
         perror("listen");
         return 1;
     }
+    clilen = sizeof(client_address);
 
-    //for (int i = 0; i<2; i++){ // for make sure that obstacles and targets are ready to send data
-        int i = 0;
-        client_sock[i] = accept(sock, NULL, NULL); // accept the connection
+    for (int i = 0; i<2; i++){ 
+        // int i = 0;
+        client_sock[i] = accept(sockfd, (struct sockaddr *) &client_address, &clilen); // accept the connection
         if (client_sock[i] == -1) {
             perror("accept");
-            writeToLog(errors, "SERVER: error in accept() while accepting connection");
+            sprintf(msg,"SERVER: error in accept() while accepting connection of %d",i);
+            writeToLog(errors, msg);
             return 1;
         }
 
@@ -172,7 +181,10 @@ int main(int argc, char* argv[]){
 
         if (pid == 0) {
             // Child process: handle the connection
+            close(sockfd); 
             char buffer[1024];
+            // Transfer it to a function!
+            bzero(buffer, sizeof(buffer));
             if (recv(client_sock[i], buffer, sizeof(buffer), 0) == -1) {
                 perror("recv");
                 writeToLog(errors, "SERVER: error in recv() while accepting connection in child");
@@ -189,10 +201,13 @@ int main(int argc, char* argv[]){
                     return 1;
                 }*/
             }
-
-            if(strcmp(buffer, "OI") == 0){
+            else if(strcmp(buffer, "OI") == 0){
                 writeToLog(serdebug, "SERVER: received OI from obstacles");
                 writeToLog(serdebug, "SERVER: sending rows and cols to obstacles");
+            }
+            else{
+                writeToLog(serdebug, "SERVER: received something else unexpected");
+                writeToLog(serdebug, buffer);
             }
 
             // Close the client socket and exit
@@ -203,7 +218,7 @@ int main(int argc, char* argv[]){
             // Parent process: close the client socket and go back to accept the next connection
             close(client_sock[i]);
         }
-    // }
+    }
     
     char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
     // OPENING WINDOW

@@ -1,28 +1,55 @@
-Mon Feb  5 15:04:28 2024
+Mon Feb  5 16:53:31 2024
  => SERVER: process started
-Mon Feb  5 15:04:28 2024
+Mon Feb  5 16:53:31 2024
  => DRONE: process started
-Mon Feb  5 15:04:28 2024
+Mon Feb  5 16:53:31 2024
  => DRONE: pipes opened
 INPUT: process started
 OBSTACLES: process started
+OBSTACLES: socket created
+OBSTACLES: connected to server
 OBSTACLES: pipes opened
 TARGETS: process started
-Mon Feb  5 15:04:31 2024
+TARGETS: connected to server
+TARGETS: pipes opened
+Mon Feb  5 16:53:33 2024
+ => SERVER: pipes opened
+Mon Feb  5 16:53:33 2024
+ => WINDOW: process started
+Mon Feb  5 16:53:33 2024
+ => WINDOW: pipe opened
+Mon Feb  5 16:53:33 2024
+ => obs
+Mon Feb  5 16:53:34 2024
  => WATCH DOG: process started
-Mon Feb  5 15:04:31 2024
+Mon Feb  5 16:53:34 2024
  => WATCH DOG: sending signals to processes
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Feb  5 15:04:32 2024
+Mon Feb  5 16:53:35 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Feb  5 15:04:32 2024
+Mon Feb  5 16:53:35 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Mon Feb  5 15:04:32 2024
+Mon Feb  5 16:53:35 2024
  => WATCH DOG: OBSTACLE received signal
-Mon Feb  5 15:04:41 2024
+TARGETS: signal SIGUSR1 received from WATCH DOG
+Mon Feb  5 16:53:35 2024
+ => WATCH DOG: TARGETS received signal
+Mon Feb  5 16:53:44 2024
+ => WATCH DOG: sending signals to processes
+DRONE: signal SIGUSR1 received from WATCH DOG
+Mon Feb  5 16:53:45 2024
+ => WATCH DOG: DRONE received signal
+INPUT: signal SIGUSR1 received from WATCH DOG
+Mon Feb  5 16:53:45 2024
+ => WATCH DOG: INPUT received signal
+OBSTACLES: signal SIGUSR1 received from WATCH DOG
+Mon Feb  5 16:53:45 2024
+ => WATCH DOG: OBSTACLE received signal
+Mon Feb  5 16:53:54 2024
  => WATCH DOG: TARGETS is not responding, terminating the program...
-INPUT: terminating by WATCH DOG
-OBSTACLES: terminating by WATCH DOG
 DRONE: terminating by WATCH DOG with return value 1
+OBSTACLES: terminating by WATCH DOG
+INPUT: terminating by WATCH DOG
+SERVER: terminating by WATCH DOG with return value 0...

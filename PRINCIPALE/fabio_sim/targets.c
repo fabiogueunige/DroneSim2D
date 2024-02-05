@@ -70,10 +70,13 @@ int main (int argc, char *argv[])
     FILE * tardebug = fopen("logfiles/targets.log", "w");
 
     char msg[100]; // for writing to log files
+    struct sockaddr_in server_address;
+    //struct hostent *server; put for ip address
 
     // socket variables
+    struct hostent *server;
     char ipAddress[20] = "130.251.254.70";
-    int port = 8080;
+    int port = 40000;
     int sock;
     
     if (debug == NULL || errors == NULL){
@@ -90,15 +93,27 @@ int main (int argc, char *argv[])
         writeToLog(errors, "TARGETS: error in creating socket");
         return 1;
     }
+    
+    /* give from the master and change the argv index
+    if ((server = gethostbyname(argv[1])) == NULL) {
+        perror("gethostbyname");
+        writeToLog(errors, "TARGETS: error in gethostbyname()");
+        return 1;
 
-    struct sockaddr_in server_address;
+        Or just put the argv from the master
+    }
+
+    Take the port from the master
+    */
+    bzero((char *) &server_address, sizeof(server_address));
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(port);  
 
+    // convert the string in ip address
     inet_pton(AF_INET, ipAddress, &server_address.sin_addr); 
     
     // Connect to the server
-    if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
+    if ((connect(sock, (struct sockaddr*)&server_address, sizeof(server_address))) == -1) {
         perror("connect");
         writeToLog(errors, "TARGETS: error in connecting to server");
         return 1;
@@ -153,6 +168,7 @@ int main (int argc, char *argv[])
     }
     
     // Reads rows and cols from server
+    /*
     if(read(pipeSefd[0], &rows, sizeof(int)) == -1){
         perror("error in reading from pipe");
         writeToLog(errors, "TARGETS: error in reading from pipe");
@@ -163,6 +179,7 @@ int main (int argc, char *argv[])
         writeToLog(errors, "TARGETS: error in reading from pipe");
         exit(EXIT_FAILURE);
     }
+    */
 
     //sprintf(msg, "TARGETS: rows = %d, cols = %d", rows, cols);
     //writeToLog(tardebug, msg);

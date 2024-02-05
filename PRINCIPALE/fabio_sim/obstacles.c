@@ -71,8 +71,11 @@ int main (int argc, char *argv[])
 
     // socket variables
     char ipAddress[20] = "130.251.254.70";
-    int port = 8080;
+    int port = 40000;
     int sock;
+    struct sockaddr_in server_address;
+    struct hostent *server;
+    
 
     int rows = 50, cols = 100;
     if (debug == NULL || errors == NULL){
@@ -82,19 +85,19 @@ int main (int argc, char *argv[])
 
     writeToLog(debug, "OBSTACLES: process started");
     printf("OBSTACLES: process started\n");
-/*
+
     sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1) {
         perror("socket");
         writeToLog(errors, "OBSTACLES: error in creating socket");
         return 1;
     }
-
-    struct sockaddr_in server_address;
+    bzero((char *) &server_address, sizeof(server_address));
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(port);  
 
     inet_pton(AF_INET, ipAddress, &server_address.sin_addr); 
+
     writeToLog(debug, "OBSTACLES: socket created");
 
     if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
@@ -117,7 +120,7 @@ int main (int argc, char *argv[])
         return 2;
     }
     writeToLog(obsdebug, "OBSTACLES: socket closed"); // temporary
-*/
+
 
     // opening pipes
     int pipeSefd[2];
