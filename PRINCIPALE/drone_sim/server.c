@@ -110,9 +110,9 @@ int main(int argc, char* argv[]){
     int rows = 50;
     int cols = 100;
 
-    char *rowsandcols;
-    sprintf(rowsandcols, "%d, %d", rows, cols);
-    writeToLog(serdebug, rowsandcols);
+    //char *rowsandcols;
+    //sprintf(rowsandcols, "%d, %d", rows, cols);
+    //writeToLog(serdebug, rowsandcols);
 
     int nobstacles_edge = 2 * (rows + cols);
     struct obstacle *edges[nobstacles_edge];
@@ -134,8 +134,10 @@ int main(int argc, char* argv[]){
     server_address.sin_port = htons(8080);  // Replace with your port number
     server_address.sin_addr.s_addr = INADDR_ANY;
     writeToLog(serdebug, "SERVER: binding...");
+
     if (bind(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
         perror("bind");
+        writeToLog(errors, "SERVER: error in bind()");
         return 1;
     }
 
@@ -163,33 +165,58 @@ int main(int argc, char* argv[]){
         if (pid == 0) {
             // Child process: handle the connection
             char buffer[1024];
-            if (recv(client_sock, buffer, sizeof(buffer), 0) == -1) {
+            ssize_t bytesRead = recv(client_sock, buffer, sizeof(buffer), 0);
+            if (bytesRead == -1) {
                 perror("recv");
                 writeToLog(errors, "SERVER: error in recv() while accepting connection");
                 return 1;
             }
-
-            // TODO: Handle the received data
+            //buffer[bytesRead] = '\0';
             if(strcmp(buffer, "TI") == 0){
                 writeToLog(serdebug, "SERVER: received TI from targets");
                 writeToLog(serdebug, "SERVER: sending rows and cols to targets");
-                /*
-                if (send(sock, rowsandcols, strlen(rowsandcols), 0) == -1) {
+                // echo message received
+                if(send(client_sock, buffer, strlen(buffer), 0) == -1){
                     perror("send");
+                    writeToLog(errors, "SERVER: error in send() while sending TI to targets");
                     return 1;
-                }*/
+                }
+                usleep(100);
+                char rowsandcols[100];
+                sprintf(rowsandcols, "%d, %d", rows, cols);
+                // send to target number of rows and cols
+                if(send(client_sock, rowsandcols, strlen(rowsandcols), 0) == -1){
+                    perror("send");
+                    writeToLog(errors, "SERVER: error in send() while sending rows and cols to targets");
+                    return 1;
+                }
             }
-
             if(strcmp(buffer, "OI") == 0){
                 writeToLog(serdebug, "SERVER: received OI from obstacles");
                 writeToLog(serdebug, "SERVER: sending rows and cols to obstacles");
+                // echo message received
+                if(send(client_sock, buffer, strlen(buffer), 0) == -1){
+                    perror("send");
+                    writeToLog(errors, "SERVER: error in send() while sending TI to targets");
+                    return 1;
+                }
+                usleep(100);
+                char rowsandcols[100];
+                sprintf(rowsandcols, "%d, %d", rows, cols);
+                // send to obstacles number of rows and cols
+                if(send(client_sock, rowsandcols, strlen(rowsandcols), 0) == -1){
+                    perror("send");
+                    writeToLog(errors, "SERVER: error in send() while sending rows and cols to targets");
+                    return 1;
+                }
             }
 
             // Close the client socket and exit
             close(client_sock);
-            exit(0);
+            exit(EXIT_SUCCESS);
         } else {
             // Parent process: close the client socket and go back to accept the next connection
+            writeToLog(serdebug, "SERVER: closing client socket");
             close(client_sock);
         }
     }
@@ -223,9 +250,7 @@ int main(int argc, char* argv[]){
             exit(EXIT_FAILURE);
         }
     }
-    writeToLog(serdebug, "SERVER: nvsnvn");
     
-
     // PIPES OPENING
     int pipeDrfd[2];    // pipe for drone: 0 for reading, 1 for writing
     int pipeObfd[2];    // pipe for obstacles: 0 for reading, 1 for writing
@@ -264,34 +289,8 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "SERVER: error in writing to pipe");
         exit(EXIT_FAILURE);
     }
-    if((write(pipeObfd[1], &rows, sizeof(int))) == -1){
-        perror("error in writing to pipe");
-        writeToLog(errors, "SERVER: error in writing to pipe");
-        exit(EXIT_FAILURE);
-    }
-    if((write(pipeObfd[1], &cols, sizeof(int))) == -1){
-        perror("error in writing to pipe");
-        writeToLog(errors, "SERVER: error in writing to pipe");
-        exit(EXIT_FAILURE);
-    }
-    /*
-    if((write(pipeTafd[1], &rows, sizeof(int))) == -1){
-        perror("error in writing to pipe");
-        writeToLog(errors, "SERVER: error in writing to pipe");
-        exit(EXIT_FAILURE);
-    }
-    if((write(pipeTafd[1], &cols, sizeof(int))) == -1){
-        perror("error in writing to pipe");
-        writeToLog(errors, "SERVER: error in writing to pipe");
-        exit(EXIT_FAILURE);
-    }*/
-
-
     
 
-    
-    
-    
     // these strings are for make the window knowing which type of data it will receive
     char *obs = "obs";
     char *tar = "tar";
@@ -321,7 +320,6 @@ int main(int argc, char* argv[]){
         exit(EXIT_FAILURE);
     }
     while(!sigint_rec){
-
 
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
@@ -482,8 +480,7 @@ int main(int argc, char* argv[]){
                 writeToLog(errors, "SERVER: error in writing to pipe window the drone");
                 exit(EXIT_FAILURE);
             }
-            
-
+        
         }
         
     }

@@ -11,7 +11,10 @@
 #include <sys/mman.h>
 #include <stdbool.h>
 #include <time.h>
-
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h> 
+#include <arpa/inet.h>
 
 #define MAX_OBSTACLES 20
 
@@ -64,8 +67,6 @@ int main (int argc, char *argv[])
     FILE * obsdebug = fopen("logfiles/obstacles.log", "w");
     // these var are used because there aren't pipes, but these values are imported by server
     char msg[100]; // message to write on debug file
-
-    int rows, cols;
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
         exit(EXIT_FAILURE);
@@ -73,13 +74,64 @@ int main (int argc, char *argv[])
 
     writeToLog(debug, "OBSTACLES: process started");
     printf("OBSTACLES: process started\n");
+    sleep(1);
+    // SOCKETS
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock == -1) {
+        perror("socket");
+        return 1;
+    }
 
-    // opening pipes
-    int pipeSefd[2];
-    sscanf(argv[1], "%d", &pipeSefd[0]);
-    sscanf(argv[2], "%d", &pipeSefd[1]);
-    writeToLog(debug, "OBSTACLES: pipes opened");
+    struct sockaddr_in server_address;
+    server_address.sin_family = AF_INET;
+    server_address.sin_port = htons(8080);  // Replace with your port number
+    //char server_ip[100] = "130.251.107.87"; unige wifi
+    // hotspot cell 192.168.39.210
+    inet_pton(AF_INET, "192.168.39.210", &server_address.sin_addr);  // Replace with your server's IP address
+    
+    // Connect to the server
+    if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
+        perror("connect");
+        writeToLog(errors, "OBSTACLES: error in connect()");
+        return 1;
+    }
 
+    char * message = "OI";
+    if (send(sock, message, strlen(message), 0) == -1) {
+        perror("send");
+        return 1;
+    }
+    // Receive echo from server
+    char buffer[50];
+    ssize_t bytesRead = recv(sock, buffer, sizeof(buffer) - 1, 0);
+    if (bytesRead == -1) {
+        perror("recv");
+        writeToLog(errors, "OBSTACLES: error in recv()");
+        exit(EXIT_FAILURE);
+    }
+    buffer[bytesRead] = '\0';
+    printf("OBSTACLES: Server sent: %s\n", buffer);
+    writeToLog(obsdebug, buffer);
+
+    // Null-terminate the string
+    if (strcmp(buffer, "OI") != 0) {
+        writeToLog(errors, "OBSTACLES: server did not respond with OI");
+        exit(EXIT_FAILURE);
+    }
+    bytesRead = recv(sock, buffer, sizeof(buffer) - 1, 0);
+    if (bytesRead == -1) {
+        perror("recv");
+        writeToLog(errors, "OBSTACLES: error in recv()");
+        exit(EXIT_FAILURE);
+    }
+    buffer[bytesRead] = '\0'; // null terminate the strings
+    printf("TARGETS: Server sent: %s\n", buffer);
+    writeToLog(obsdebug, buffer);
+    // save rows and cols
+    char format_string[80]="%d,%d";
+    int rows, cols;
+    sscanf(buffer, format_string, &rows, &cols);
+    // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
     sa.sa_sigaction = sig_handler;
@@ -103,20 +155,15 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    if(read(pipeSefd[0], &rows, sizeof(int)) == -1){
-        perror("error in reading from pipe");
-        writeToLog(errors, "OBSTACLES: error in reading from pipe");
-        exit(EXIT_FAILURE);
-    }
-    if(read(pipeSefd[0], &cols, sizeof(int)) == -1){
-        perror("error in reading from pipe");
-        writeToLog(errors, "OBSTACLES: error in reading from pipe");
-        exit(EXIT_FAILURE);
-    }
+    // opening pipes
+    int pipeSefd[2];
+    sscanf(argv[1], "%d", &pipeSefd[0]);
+    sscanf(argv[2], "%d", &pipeSefd[1]);
+    writeToLog(debug, "OBSTACLES: pipes opened");
+    
     sprintf(msg, "OBSTACLES: rows = %d, cols = %d", rows, cols);
     writeToLog(obsdebug, msg);
     struct obstacle *obstacles[MAX_OBSTACLES];
-    sleep(1); // wait for server to read rows and cols
     // obstacle generation cycle
     while(!sigint_rec){
         time_t t = time(NULL);

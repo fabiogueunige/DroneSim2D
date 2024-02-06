@@ -135,10 +135,10 @@ int main(int argc, char* argv[]){
         obstacle_check = FALSE;
         targets_check = FALSE;
 
-        /*if (kill(server_pid, SIGUSR1) == -1) {  // send SIGUSR1 to server
+        if (kill(server_pid, SIGUSR1) == -1) {  // send SIGUSR1 to server
             perror("kill server");
             writeToLog(errors, "WATCH DOG: error in kill server");
-        }*/
+        }
         
         sleep(1);
         if (kill(drone_pid, SIGUSR1) == -1) {   // send SIGUSR1 to drone
@@ -174,7 +174,7 @@ int main(int argc, char* argv[]){
         in the 2nd assignment, the watch dog to close and reopen only the process that stopped working, then if after a certain 
         number of times it doesn't respond, we will terminate it. In firt assignment we only make it terminate the whole program.*/
 
-        /*if(server_check==FALSE) //checks if server responded
+        if(server_check==FALSE) //checks if server responded
         {
             writeToLog(debug, "WATCH DOG: SERVER is not responding, terminating the program...");
             if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
@@ -201,7 +201,7 @@ int main(int argc, char* argv[]){
         }
         else
             printf("WATCH DOG: SERVER received signal\n");
-        */
+        
 
         if(drone_check==FALSE) //checks if server responded
         {

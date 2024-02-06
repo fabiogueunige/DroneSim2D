@@ -1,16 +1,22 @@
-Mon Feb  5 13:58:04 2024
+Tue Feb  6 12:04:05 2024
+ => SERVER: error in bind()
+TARGETS: error in connect()
+OBSTACLES: error in connect()
+Tue Feb  6 12:04:08 2024
+ => WATCH DOG: error in kill server
+Tue Feb  6 12:04:09 2024
  => DRONE: error in reading from pipe rows
-OBSTACLES: error in reading from pipe
-TARGETS: error in reading from pipe
-Mon Feb  5 13:58:14 2024
- => WATCH DOG: error in kill drone
-Mon Feb  5 13:58:14 2024
+Tue Feb  6 12:04:09 2024
  => WATCH DOG: error in kill obstacle
-Mon Feb  5 13:58:16 2024
+Tue Feb  6 12:04:10 2024
  => WATCH DOG: error in kill target
-Mon Feb  5 13:58:23 2024
+Tue Feb  6 12:04:18 2024
+ => WATCH DOG: error in kill server
+Tue Feb  6 12:04:18 2024
  => WATCH DOG: error in kill drone
-Mon Feb  5 13:58:23 2024
+Tue Feb  6 12:04:18 2024
+ => WATCH DOG: error in kill input
+Tue Feb  6 12:04:18 2024
  => WATCH DOG: error in kill obstacle
-Mon Feb  5 13:58:23 2024
+Tue Feb  6 12:04:18 2024
  => WATCH DOG: error in kill target

@@ -204,7 +204,7 @@ int main(char argc, char*argv[]){
     FD_SET(pipeSefd, &readfds);
     writeToLog(winfile, "WINDOW: pipe set");
 
-    // Read Raws and Cols
+    // Read Rows and Cols
     if((read(pipeSefd, &rows, sizeof(int))) == -1){
         perror("read");
         writeToLog(errors, "WINDOW: error in read rows");

@@ -78,7 +78,7 @@ int main (int argc, char *argv[])
     writeToLog(debug, "TARGETS: process started");
     printf("TARGETS: process started\n");
 
-    // Create a socket
+    // SOCKETS
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1) {
         perror("socket");
@@ -89,11 +89,13 @@ int main (int argc, char *argv[])
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(8080);  // Replace with your port number
     //char server_ip[100] = "130.251.107.87";
-    inet_pton(AF_INET, "130.251.107.87", &server_address.sin_addr);  // Replace with your server's IP address
+    // router mio tel: 192.168.39.210
+    inet_pton(AF_INET, "192.168.39.210", &server_address.sin_addr);  // Replace with your server's IP address
     
     // Connect to the server
     if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
         perror("connect");
+        writeToLog(errors, "TARGETS: error in connect()");
         return 1;
     }
 
@@ -102,15 +104,42 @@ int main (int argc, char *argv[])
         perror("send");
         return 1;
     }
+    // Receive echo from server
+    char buffer[50];
+    ssize_t bytesRead = recv(sock, buffer, sizeof(buffer) - 1, 0);
+    if (bytesRead == -1) {
+        perror("recv");
+        writeToLog(errors, "TARGETS: error in recv()");
+        exit(EXIT_FAILURE);
+    }
+    buffer[bytesRead] = '\0';
+    printf("TARGETS: Server sent: %s\n", buffer);
+    writeToLog(tardebug, buffer);
 
-
+    // Null-terminate the string
+    if (strcmp(buffer, "TI") != 0) {
+        writeToLog(errors, "TARGETS: server did not respond with TI");
+        exit(EXIT_FAILURE);
+    }
+    bytesRead = recv(sock, buffer, sizeof(buffer) - 1, 0);
+    if (bytesRead == -1) {
+        perror("recv");
+        writeToLog(errors, "TARGETS: error in recv()");
+        exit(EXIT_FAILURE);
+    }
+    buffer[bytesRead] = '\0'; // null terminate the strings
+    printf("TARGETS: Server sent: %s\n", buffer);
+    writeToLog(tardebug, buffer);
+    // save rows and cols
+    char format_string[80]="%d,%d";
+    int rows, cols;
+    sscanf(buffer, format_string, &rows, &cols);
     // opening pipes
     int pipeSefd[2];
     sscanf(argv[1], "%d", &pipeSefd[0]);
     sscanf(argv[2], "%d", &pipeSefd[1]);
     writeToLog(debug, "TARGETS: pipes opened");
-
-    int rows, cols;
+    
     
     // SIGNALS
     struct sigaction sa; //initialize sigaction
@@ -133,18 +162,6 @@ int main (int argc, char *argv[])
     if (sigaction(SIGINT, &sa, NULL) == -1) {
         perror("Error setting up SIGINT handler");
         writeToLog(errors, "SERVER: error in sigaction()");
-        exit(EXIT_FAILURE);
-    }
-    
-    // Reads rows and cols from server
-    if(read(pipeSefd[0], &rows, sizeof(int)) == -1){
-        perror("error in reading from pipe");
-        writeToLog(errors, "TARGETS: error in reading from pipe");
-        exit(EXIT_FAILURE);
-    }
-    if(read(pipeSefd[0], &cols, sizeof(int)) == -1){
-        perror("error in reading from pipe");
-        writeToLog(errors, "TARGETS: error in reading from pipe");
         exit(EXIT_FAILURE);
     }
 
