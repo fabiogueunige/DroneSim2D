@@ -309,7 +309,6 @@ int main(int argc, char* argv[]){
 
     // READS WINDOW DIMENSIONS
     int rows, cols;
-    
     if ((read(pipeSefd[0], &rows, sizeof(int))) == -1){
         perror("error in reading from pipe");
         writeToLog(errors, "DRONE: error in reading from pipe rows");

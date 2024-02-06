@@ -15,7 +15,7 @@
 #include <netinet/in.h>
 #include <netdb.h> 
 #include <arpa/inet.h>
-
+#define MAX_MSG_LEN 1024
 #define MAX_OBSTACLES 20
 
 pid_t wd_pid = -1;
@@ -84,10 +84,10 @@ int main (int argc, char *argv[])
 
     struct sockaddr_in server_address;
     server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(8080);  // Replace with your port number
+    server_address.sin_port = htons(8082);
     //char server_ip[100] = "130.251.107.87"; unige wifi
     // hotspot cell 192.168.39.210
-    inet_pton(AF_INET, "192.168.39.210", &server_address.sin_addr);  // Replace with your server's IP address
+    inet_pton(AF_INET, "192.168.39.210", &server_address.sin_addr);
     
     // Connect to the server
     if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
@@ -102,7 +102,7 @@ int main (int argc, char *argv[])
         return 1;
     }
     // Receive echo from server
-    char buffer[50];
+    char buffer[MAX_MSG_LEN];
     ssize_t bytesRead = recv(sock, buffer, sizeof(buffer) - 1, 0);
     if (bytesRead == -1) {
         perror("recv");
@@ -128,9 +128,17 @@ int main (int argc, char *argv[])
     printf("TARGETS: Server sent: %s\n", buffer);
     writeToLog(obsdebug, buffer);
     // save rows and cols
-    char format_string[80]="%d,%d";
+    char format_string[MAX_MSG_LEN]="%d,%d";
     int rows, cols;
     sscanf(buffer, format_string, &rows, &cols);
+
+    // echo of rows and cols
+    if (send(sock, buffer, strlen(buffer), 0) == -1) {
+        perror("send");
+        return 1;
+    }
+    writeToLog(debug, "OBSTACLES: rows and cols sent to server");
+    
     // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler

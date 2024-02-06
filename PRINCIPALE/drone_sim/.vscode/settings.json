@@ -5,6 +5,7 @@
         "signal.h": "c",
         "functional": "c",
         "stdio.h": "c",
-        "system_error": "c"
+        "system_error": "c",
+        "inet.h": "c"
     }
 }
