@@ -16,7 +16,8 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#define MAX_MSG_LEN = 1024;
+
+#define MAX_MSG_LEN 1024
 
 pid_t wd_pid = -1;
 pid_t window_pid;
@@ -118,11 +119,8 @@ int main(int argc, char* argv[]){
     int sockfd;
     int client_sock[2]; // new socket fd
     struct sockaddr_in server_address, client_address; 
-
-    /*char *rowsandcols;
-    sprintf(rowsandcols, "%d, %d", rows, cols);
-    writeToLog(serdebug, rowsandcols);
-    */
+    char sockmsg[MAX_MSG_LEN];
+    // char ptsockmsg = &sockmsg;
 
     int nobstacles_edge = 2 * (rows + cols);
     struct obstacle *edges[nobstacles_edge];
@@ -182,32 +180,38 @@ int main(int argc, char* argv[]){
         if (pid == 0) {
             // Child process: handle the connection
             close(sockfd); 
-            char buffer[1024];
             // Transfer it to a function!
-            bzero(buffer, sizeof(buffer));
-            if (recv(client_sock[i], buffer, sizeof(buffer), 0) == -1) {
+            bzero(sockmsg, sizeof(sockmsg));
+            if (recv(client_sock[i], sockmsg, sizeof(sockmsg), 0) == -1) {
                 perror("recv");
                 writeToLog(errors, "SERVER: error in recv() while accepting connection in child");
                 return 1;
             }
 
             // TODO: Handle the received data
-            if(strcmp(buffer, "TI") == 0){
+            if(strcmp(sockmsg, "TI") == 0){
                 writeToLog(serdebug, "SERVER: received TI from targets");
                 writeToLog(serdebug, "SERVER: sending rows and cols to targets");
-                /*
-                if (send(sock, rowsandcols, strlen(rowsandcols), 0) == -1) {
+                /*bzero(sockmsg, sizeof(sockmsg));
+                if (send(client_sock[i], sockmsg , strlen(sockmsg), 0) == -1) {
                     perror("send");
                     return 1;
-                }*/
+                }
+                */
             }
-            else if(strcmp(buffer, "OI") == 0){
+            else if(strcmp(sockmsg, "OI") == 0){
                 writeToLog(serdebug, "SERVER: received OI from obstacles");
                 writeToLog(serdebug, "SERVER: sending rows and cols to obstacles");
+                /*bzero(sockmsg, sizeof(sockmsg));
+                if (send(client_sock[i], sockmsg , strlen(sockmsg), 0) == -1) {
+                    perror("send");
+                    return 1;
+                }
+                */
             }
             else{
                 writeToLog(serdebug, "SERVER: received something else unexpected");
-                writeToLog(serdebug, buffer);
+                writeToLog(serdebug, sockmsg);
             }
 
             // Close the client socket and exit

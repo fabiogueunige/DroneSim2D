@@ -18,6 +18,7 @@
 
 
 #define MAX_OBSTACLES 20
+#define MAX_MSG_LEN 1024
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
@@ -70,11 +71,12 @@ int main (int argc, char *argv[])
     char msg[100]; // message to write on debug file
 
     // socket variables
-    char ipAddress[20] = "130.251.254.70";
+    char ipAddress[20] = "192.168.1.54";
     int port = 40000;
     int sock;
     struct sockaddr_in server_address;
     struct hostent *server;
+    char sockmsg[MAX_MSG_LEN];
     
 
     int rows = 50, cols = 100;
@@ -96,7 +98,11 @@ int main (int argc, char *argv[])
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(port);  
 
-    inet_pton(AF_INET, ipAddress, &server_address.sin_addr); 
+    if ((inet_pton(AF_INET, ipAddress, &server_address.sin_addr)) <= 0) {
+        perror("inet_pton");
+        writeToLog(errors, "OBSTACLES: error in converting IP address");
+        return 1;
+    } 
 
     writeToLog(debug, "OBSTACLES: socket created");
 
@@ -107,18 +113,14 @@ int main (int argc, char *argv[])
     }
     writeToLog(debug, "OBSTACLES: connected to server");
 
-    char * message = "OI";
+    char * message = "O|";
     if (send(sock, message, strlen(message), 0) == -1) {
         perror("send");
         return 1;
     }
     writeToLog(obsdebug, "OBSTACLES: message OB sent to server");
 
-    if ((close(sock)) == -1){
-        perror("error in closing socket");
-        writeToLog(errors, "OBSTACLES: error in closing socket");
-        return 2;
-    }
+    
     writeToLog(obsdebug, "OBSTACLES: socket closed"); // temporary
 
 
@@ -151,6 +153,15 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
+    // receiving rows and cols from server
+    if ((recv(sock, sockmsg, strlen(sockmsg), 0)) == -1){
+        perror("error in receiving from server");
+        writeToLog(errors, "OBSTACLES: error in receiving from server");
+        return 1;
+    }
+    writeToLog(obsdebug, "OBSTACLES: received rows and cols from server");
+    writeToLog(obsdebug, sockmsg);
+    
     // Pipes reading
     /*
     if(read(pipeSefd[0], &rows, sizeof(int)) == -1){
@@ -166,6 +177,12 @@ int main (int argc, char *argv[])
     sprintf(msg, "OBSTACLES: rows = %d, cols = %d", rows, cols);
     writeToLog(obsdebug, msg);
     */
+   if ((close(sock)) == -1){
+        perror("error in closing socket");
+        writeToLog(errors, "OBSTACLES: error in closing socket");
+        return 2;
+    }
+
     struct obstacle *obstacles[MAX_OBSTACLES];
     sleep(1); // wait for server to read rows and cols
     // obstacle generation cycle

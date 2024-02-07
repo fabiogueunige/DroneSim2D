@@ -1,2 +1,19 @@
 TARGETS: message TI sent to server
 TARGETS: socket closed
+TARGETS: ntargets = 16
+16,4
+74,35
+41,6
+56,26
+38,5
+61,8
+9,42
+9,9
+70,4
+81,46
+69,44
+49,5
+50,6
+81,25
+62,5
+8,40

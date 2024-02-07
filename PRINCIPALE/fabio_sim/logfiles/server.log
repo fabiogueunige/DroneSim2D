@@ -1,61 +1,86 @@
-Mon Feb  5 16:53:31 2024
+Wed Feb  7 12:17:53 2024
  => SERVER: binding...
-Mon Feb  5 16:53:31 2024
+Wed Feb  7 12:17:53 2024
  => SERVER: listening...
-Mon Feb  5 16:53:32 2024
- => SERVER: received OI from obstacles
-Mon Feb  5 16:53:32 2024
- => SERVER: sending rows and cols to obstacles
-Mon Feb  5 16:53:33 2024
+Wed Feb  7 12:17:55 2024
+ => SERVER: received something else unexpected
+Wed Feb  7 12:17:55 2024
+ => O|
+Wed Feb  7 12:17:55 2024
+ => SERVER: received something else unexpected
+Wed Feb  7 12:17:55 2024
  => SERVER: Window opened and socket created
-Mon Feb  5 16:53:33 2024
- => SERVER: received TI from targets
-Mon Feb  5 16:53:33 2024
- => SERVER: sending rows and cols to targets
-Mon Feb  5 16:53:33 2024
+Wed Feb  7 12:17:55 2024
+ => T|
+Wed Feb  7 12:17:56 2024
  => SERVER: OBSTACLE WIN 
-Mon Feb  5 16:53:33 2024
+Wed Feb  7 12:17:56 2024
  => SERVER: reading from obstacles
 
-Mon Feb  5 16:53:33 2024
- => SERVER: number of obstacles: 13
+Wed Feb  7 12:17:56 2024
+ => SERVER: number of obstacles: 3
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 0 position: (50, 47)
+Wed Feb  7 12:17:56 2024
+ => SERVER: obstacle 0 position: (33, 23)
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 1 position: (84, 37)
+Wed Feb  7 12:17:56 2024
+ => SERVER: obstacle 1 position: (7, 46)
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 2 position: (14, 10)
+Wed Feb  7 12:17:56 2024
+ => SERVER: obstacle 2 position: (95, 43)
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 3 position: (52, 29)
+Wed Feb  7 12:17:57 2024
+ => SERVER: TARGETS WIN
+Wed Feb  7 12:17:57 2024
+ => SERVER: reading from targets
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 4 position: (21, 29)
+Wed Feb  7 12:17:57 2024
+ => SERVER: number of targets: 16
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 0 position: (16, 4)
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 5 position: (93, 3)
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 1 position: (74, 35)
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 6 position: (73, 25)
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 2 position: (41, 6)
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 7 position: (82, 3)
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 3 position: (56, 26)
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 8 position: (44, 8)
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 4 position: (38, 5)
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 9 position: (71, 34)
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 5 position: (61, 8)
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 10 position: (18, 26)
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 6 position: (9, 42)
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 11 position: (58, 34)
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 7 position: (9, 9)
 
-Mon Feb  5 16:53:33 2024
- => SERVER: obstacle 12 position: (60, 42)
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 8 position: (70, 4)
+
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 9 position: (81, 46)
+
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 10 position: (69, 44)
+
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 11 position: (49, 5)
+
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 12 position: (50, 6)
+
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 13 position: (81, 25)
+
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 14 position: (62, 5)
+
+Wed Feb  7 12:17:57 2024
+ => SERVER: target 15 position: (8, 40)
 

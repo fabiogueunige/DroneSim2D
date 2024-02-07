@@ -1,29 +1,11 @@
 OBSTACLES: message OB sent to server
 OBSTACLES: socket closed
-OBSTACLES: number of obstacles = 13
-OBSTACLES: obstacle 0 created at (50, 47)
+OBSTACLES: received rows and cols from server
 
-OBSTACLES: obstacle 1 created at (84, 37)
+OBSTACLES: number of obstacles = 3
+OBSTACLES: obstacle 0 created at (33, 23)
 
-OBSTACLES: obstacle 2 created at (14, 10)
+OBSTACLES: obstacle 1 created at (7, 46)
 
-OBSTACLES: obstacle 3 created at (52, 29)
-
-OBSTACLES: obstacle 4 created at (21, 29)
-
-OBSTACLES: obstacle 5 created at (93, 3)
-
-OBSTACLES: obstacle 6 created at (73, 25)
-
-OBSTACLES: obstacle 7 created at (82, 3)
-
-OBSTACLES: obstacle 8 created at (44, 8)
-
-OBSTACLES: obstacle 9 created at (71, 34)
-
-OBSTACLES: obstacle 10 created at (18, 26)
-
-OBSTACLES: obstacle 11 created at (58, 34)
-
-OBSTACLES: obstacle 12 created at (60, 42)
+OBSTACLES: obstacle 2 created at (95, 43)
 

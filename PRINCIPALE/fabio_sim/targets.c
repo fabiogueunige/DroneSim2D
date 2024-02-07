@@ -75,7 +75,7 @@ int main (int argc, char *argv[])
 
     // socket variables
     struct hostent *server;
-    char ipAddress[20] = "130.251.254.70";
+    char ipAddress[20] = "192.168.1.54";
     int port = 40000;
     int sock;
     
@@ -110,7 +110,11 @@ int main (int argc, char *argv[])
     server_address.sin_port = htons(port);  
 
     // convert the string in ip address
-    inet_pton(AF_INET, ipAddress, &server_address.sin_addr); 
+    if ((inet_pton(AF_INET, ipAddress, &server_address.sin_addr)) <0) {
+        perror("inet_pton");
+        writeToLog(errors, "TARGETS: error in inet_pton() in converting IP address");
+        return 1;
+    }
     
     // Connect to the server
     if ((connect(sock, (struct sockaddr*)&server_address, sizeof(server_address))) == -1) {
@@ -120,7 +124,7 @@ int main (int argc, char *argv[])
     }
     writeToLog(debug, "TARGETS: connected to server");
 
-    char * message = "TI";
+    char * message = "T|";
     if (send(sock, message, strlen(message), 0) == -1) {
         perror("send");
         return 1;
