@@ -1,2844 +1,944 @@
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:21 2024
  => WINDOW: curses mode started
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:21 2024
  => WINDOW: colors initialized
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:21 2024
  => WINDOW: max rows and cols taken
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:21 2024
  => WINDOW: pipe set
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:21 2024
  => WINDOW: rows = 50, cols = 100
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:21 2024
  => WINDOW: window moved after resizing
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:21 2024
  => WINDOW: window created
-Tue Feb  6 18:01:22 2024
- => obs
-Tue Feb  6 18:01:22 2024
- => WINDOW: number of obstacles 8
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacle 0: x = 71, y = 43
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacle 1: x = 30, y = 29
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacle 2: x = 24, y = 15
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacle 3: x = 69, y = 30
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacle 4: x = 83, y = 17
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacle 5: x = 70, y = 24
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacle 6: x = 9, y = 19
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacle 7: x = 10, y = 46
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:21 2024
+ => coo
+Wed Feb 14 16:37:21 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:21 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:21 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:21 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:21 2024
+ => coo
+Wed Feb 14 16:37:21 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:21 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:21 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:21 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:21 2024
+ => coo
+Wed Feb 14 16:37:21 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:21 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:21 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:21 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:21 2024
+ => coo
+Wed Feb 14 16:37:21 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:21 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:21 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:21 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:21 2024
+ => coo
+Wed Feb 14 16:37:21 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:21 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:21 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:21 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:21 2024
+ => coo
+Wed Feb 14 16:37:21 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:21 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:21 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:21 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:21 2024
+ => coo
+Wed Feb 14 16:37:21 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:21 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:21 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:21 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:21 2024
+ => coo
+Wed Feb 14 16:37:21 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:21 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:21 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:21 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:22 2024
+ => coo
+Wed Feb 14 16:37:22 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:22 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:22 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:22 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:22 2024
+ => coo
+Wed Feb 14 16:37:22 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:22 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:22 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:22 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:22 2024
+ => coo
+Wed Feb 14 16:37:22 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:22 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:22 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:22 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:22 2024
+ => coo
+Wed Feb 14 16:37:22 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:22 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:22 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:22 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:22 2024
+ => coo
+Wed Feb 14 16:37:22 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:22 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:22 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:22 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:22 2024
+ => coo
+Wed Feb 14 16:37:22 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:22 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:22 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:22 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:22 2024
+ => coo
+Wed Feb 14 16:37:22 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:22 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:22 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:22 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:22 2024
+ => coo
+Wed Feb 14 16:37:22 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:22 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:22 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:22 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:22 2024
+ => coo
+Wed Feb 14 16:37:22 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:22 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:22 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:22 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:22 2024
+ => coo
+Wed Feb 14 16:37:22 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:22 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:22 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:22 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:23 2024
+ => coo
+Wed Feb 14 16:37:23 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:23 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:23 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:23 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:23 2024
+ => coo
+Wed Feb 14 16:37:23 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:23 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:23 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:23 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:23 2024
+ => coo
+Wed Feb 14 16:37:23 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:23 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:23 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:23 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:23 2024
+ => coo
+Wed Feb 14 16:37:23 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:23 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:23 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:23 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:23 2024
+ => coo
+Wed Feb 14 16:37:23 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:23 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:23 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:23 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:23 2024
+ => coo
+Wed Feb 14 16:37:23 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:23 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:23 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:23 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:23 2024
+ => coo
+Wed Feb 14 16:37:23 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:23 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:23 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:23 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:23 2024
+ => coo
+Wed Feb 14 16:37:23 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:23 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:23 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:23 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:23 2024
+ => coo
+Wed Feb 14 16:37:23 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:23 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:23 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:23 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:23 2024
+ => coo
+Wed Feb 14 16:37:23 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:23 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:23 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:23 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:24 2024
+ => coo
+Wed Feb 14 16:37:24 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:24 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:24 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:24 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:24 2024
+ => coo
+Wed Feb 14 16:37:24 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:24 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:24 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:24 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:24 2024
+ => coo
+Wed Feb 14 16:37:24 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:24 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:24 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:24 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:24 2024
+ => coo
+Wed Feb 14 16:37:24 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:24 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:24 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:24 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:24 2024
+ => coo
+Wed Feb 14 16:37:24 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:24 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:24 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:24 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:24 2024
+ => coo
+Wed Feb 14 16:37:24 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:24 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:24 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:24 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:24 2024
+ => coo
+Wed Feb 14 16:37:24 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:24 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:24 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:24 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:24 2024
+ => coo
+Wed Feb 14 16:37:24 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:24 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:24 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:24 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:24 2024
+ => coo
+Wed Feb 14 16:37:24 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:24 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:24 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:24 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:24 2024
+ => coo
+Wed Feb 14 16:37:24 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:24 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:24 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:24 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:25 2024
+ => coo
+Wed Feb 14 16:37:25 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:25 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:25 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:25 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:25 2024
+ => coo
+Wed Feb 14 16:37:25 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:25 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:25 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:25 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:25 2024
+ => coo
+Wed Feb 14 16:37:25 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:25 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:25 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:25 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:25 2024
+ => coo
+Wed Feb 14 16:37:25 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:25 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:25 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:25 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:25 2024
+ => coo
+Wed Feb 14 16:37:25 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:25 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:25 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:25 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:25 2024
+ => coo
+Wed Feb 14 16:37:25 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:25 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:25 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:25 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:25 2024
+ => coo
+Wed Feb 14 16:37:25 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:25 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:25 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:25 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:25 2024
+ => coo
+Wed Feb 14 16:37:25 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:25 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:25 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:25 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:25 2024
+ => coo
+Wed Feb 14 16:37:25 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:25 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:25 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:25 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:25 2024
+ => coo
+Wed Feb 14 16:37:25 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:25 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:25 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:25 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:26 2024
+ => coo
+Wed Feb 14 16:37:26 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:26 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:26 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:26 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:26 2024
+ => coo
+Wed Feb 14 16:37:26 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:26 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:26 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:26 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:26 2024
+ => coo
+Wed Feb 14 16:37:26 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:26 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:26 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:26 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:26 2024
+ => coo
+Wed Feb 14 16:37:26 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:26 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:26 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:26 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:26 2024
+ => coo
+Wed Feb 14 16:37:26 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:26 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:26 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:26 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:26 2024
+ => coo
+Wed Feb 14 16:37:26 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:26 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:26 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:26 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:26 2024
+ => coo
+Wed Feb 14 16:37:26 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:26 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:26 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:26 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:26 2024
+ => coo
+Wed Feb 14 16:37:26 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:26 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:26 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:26 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:26 2024
+ => coo
+Wed Feb 14 16:37:26 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:26 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:26 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:26 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:26 2024
+ => coo
+Wed Feb 14 16:37:26 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:26 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:26 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:26 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:27 2024
+ => coo
+Wed Feb 14 16:37:27 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:27 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:27 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:27 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:27 2024
+ => coo
+Wed Feb 14 16:37:27 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:27 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:27 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:27 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:27 2024
+ => coo
+Wed Feb 14 16:37:27 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:27 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:27 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:27 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:27 2024
+ => coo
+Wed Feb 14 16:37:27 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:27 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:27 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:27 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:27 2024
+ => coo
+Wed Feb 14 16:37:27 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:27 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:27 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:27 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:27 2024
+ => coo
+Wed Feb 14 16:37:27 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:27 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:27 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:27 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:27 2024
+ => coo
+Wed Feb 14 16:37:27 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:27 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:27 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:27 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:27 2024
+ => coo
+Wed Feb 14 16:37:27 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:27 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:27 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:27 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:27 2024
+ => coo
+Wed Feb 14 16:37:27 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:27 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:27 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:27 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:27 2024
+ => coo
+Wed Feb 14 16:37:27 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:27 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:27 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:27 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:28 2024
+ => coo
+Wed Feb 14 16:37:28 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:28 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:28 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:28 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:28 2024
+ => coo
+Wed Feb 14 16:37:28 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:28 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:28 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:28 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:28 2024
+ => coo
+Wed Feb 14 16:37:28 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:28 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:28 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:28 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:28 2024
+ => coo
+Wed Feb 14 16:37:28 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:28 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:28 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:28 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:28 2024
+ => coo
+Wed Feb 14 16:37:28 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:28 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:28 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:28 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:28 2024
+ => coo
+Wed Feb 14 16:37:28 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:28 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:28 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:28 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:28 2024
+ => coo
+Wed Feb 14 16:37:28 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:28 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:28 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:28 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:28 2024
+ => coo
+Wed Feb 14 16:37:28 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:28 2024
  => WINDOW: border created
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => WINDOW: drone printed
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => WINDOW: info printed
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => coo
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => WINDOW: reading drone
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => WINDOW: border created
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => WINDOW: drone printed
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => WINDOW: info printed
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => coo
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => WINDOW: reading drone
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => WINDOW: border created
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => WINDOW: drone printed
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:28 2024
  => WINDOW: info printed
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => coo
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: reading drone
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: border created
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: drone printed
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: info printed
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => coo
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: reading drone
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: border created
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: drone printed
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: info printed
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => coo
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: reading drone
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: border created
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: drone printed
-Tue Feb  6 18:01:22 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:29 2024
  => coo
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: border created
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:29 2024
  => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => coo
-Tue Feb  6 18:01:23 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => tar
-Tue Feb  6 18:01:23 2024
- => WINDOW: number of targets 3
-Tue Feb  6 18:01:23 2024
- => 14,34
-Tue Feb  6 18:01:23 2024
- => 61,39
-Tue Feb  6 18:01:23 2024
- => 73,9
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => coo
-Tue Feb  6 18:01:23 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => coo
-Tue Feb  6 18:01:23 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => coo
-Tue Feb  6 18:01:23 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => coo
-Tue Feb  6 18:01:23 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => coo
-Tue Feb  6 18:01:23 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => coo
-Tue Feb  6 18:01:23 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => coo
-Tue Feb  6 18:01:23 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => coo
-Tue Feb  6 18:01:23 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => coo
-Tue Feb  6 18:01:23 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:23 2024
- => coo
-Tue Feb  6 18:01:23 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:23 2024
- => WINDOW: border created
-Tue Feb  6 18:01:23 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:23 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:23 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:24 2024
- => coo
-Tue Feb  6 18:01:24 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:24 2024
- => WINDOW: border created
-Tue Feb  6 18:01:24 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:24 2024
- => coo
-Tue Feb  6 18:01:24 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:24 2024
- => WINDOW: border created
-Tue Feb  6 18:01:24 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:24 2024
- => coo
-Tue Feb  6 18:01:24 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:24 2024
- => WINDOW: border created
-Tue Feb  6 18:01:24 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:24 2024
- => coo
-Tue Feb  6 18:01:24 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:24 2024
- => WINDOW: border created
-Tue Feb  6 18:01:24 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:24 2024
- => coo
-Tue Feb  6 18:01:24 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:24 2024
- => WINDOW: border created
-Tue Feb  6 18:01:24 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:24 2024
- => coo
-Tue Feb  6 18:01:24 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:24 2024
- => WINDOW: border created
-Tue Feb  6 18:01:24 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:24 2024
- => coo
-Tue Feb  6 18:01:24 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:24 2024
- => WINDOW: border created
-Tue Feb  6 18:01:24 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:24 2024
- => coo
-Tue Feb  6 18:01:24 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:24 2024
- => WINDOW: border created
-Tue Feb  6 18:01:24 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:24 2024
- => coo
-Tue Feb  6 18:01:24 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:24 2024
- => WINDOW: border created
-Tue Feb  6 18:01:24 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:24 2024
- => coo
-Tue Feb  6 18:01:24 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:24 2024
- => WINDOW: border created
-Tue Feb  6 18:01:24 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:24 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:24 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:25 2024
- => coo
-Tue Feb  6 18:01:25 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:25 2024
- => WINDOW: border created
-Tue Feb  6 18:01:25 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:25 2024
- => coo
-Tue Feb  6 18:01:25 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:25 2024
- => WINDOW: border created
-Tue Feb  6 18:01:25 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:25 2024
- => coo
-Tue Feb  6 18:01:25 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:25 2024
- => WINDOW: border created
-Tue Feb  6 18:01:25 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:25 2024
- => coo
-Tue Feb  6 18:01:25 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:25 2024
- => WINDOW: border created
-Tue Feb  6 18:01:25 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:25 2024
- => coo
-Tue Feb  6 18:01:25 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:25 2024
- => WINDOW: border created
-Tue Feb  6 18:01:25 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:25 2024
- => coo
-Tue Feb  6 18:01:25 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:25 2024
- => WINDOW: border created
-Tue Feb  6 18:01:25 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:25 2024
- => coo
-Tue Feb  6 18:01:25 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:25 2024
- => WINDOW: border created
-Tue Feb  6 18:01:25 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:25 2024
- => coo
-Tue Feb  6 18:01:25 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:25 2024
- => WINDOW: border created
-Tue Feb  6 18:01:25 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:25 2024
- => coo
-Tue Feb  6 18:01:25 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:25 2024
- => WINDOW: border created
-Tue Feb  6 18:01:25 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:25 2024
- => coo
-Tue Feb  6 18:01:25 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:25 2024
- => WINDOW: border created
-Tue Feb  6 18:01:25 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:25 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:25 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:26 2024
- => coo
-Tue Feb  6 18:01:26 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:26 2024
- => WINDOW: border created
-Tue Feb  6 18:01:26 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:26 2024
- => coo
-Tue Feb  6 18:01:26 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:26 2024
- => WINDOW: border created
-Tue Feb  6 18:01:26 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:26 2024
- => coo
-Tue Feb  6 18:01:26 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:26 2024
- => WINDOW: border created
-Tue Feb  6 18:01:26 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:26 2024
- => coo
-Tue Feb  6 18:01:26 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:26 2024
- => WINDOW: border created
-Tue Feb  6 18:01:26 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:26 2024
- => coo
-Tue Feb  6 18:01:26 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:26 2024
- => WINDOW: border created
-Tue Feb  6 18:01:26 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:26 2024
- => coo
-Tue Feb  6 18:01:26 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:26 2024
- => WINDOW: border created
-Tue Feb  6 18:01:26 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:26 2024
- => coo
-Tue Feb  6 18:01:26 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:26 2024
- => WINDOW: border created
-Tue Feb  6 18:01:26 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:26 2024
- => coo
-Tue Feb  6 18:01:26 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:26 2024
- => WINDOW: border created
-Tue Feb  6 18:01:26 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:26 2024
- => coo
-Tue Feb  6 18:01:26 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:26 2024
- => WINDOW: border created
-Tue Feb  6 18:01:26 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:26 2024
- => coo
-Tue Feb  6 18:01:26 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:26 2024
- => WINDOW: border created
-Tue Feb  6 18:01:26 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:26 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:26 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:27 2024
- => coo
-Tue Feb  6 18:01:27 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:27 2024
- => WINDOW: border created
-Tue Feb  6 18:01:27 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:27 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:27 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:28 2024
- => coo
-Tue Feb  6 18:01:28 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:28 2024
- => WINDOW: border created
-Tue Feb  6 18:01:28 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:28 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:28 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:29 2024
- => coo
-Tue Feb  6 18:01:29 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:29 2024
- => WINDOW: border created
-Tue Feb  6 18:01:29 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:29 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:29 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:30 2024
- => coo
-Tue Feb  6 18:01:30 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:30 2024
- => WINDOW: border created
-Tue Feb  6 18:01:30 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:30 2024
- => coo
-Tue Feb  6 18:01:30 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:30 2024
- => WINDOW: border created
-Tue Feb  6 18:01:30 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:30 2024
- => coo
-Tue Feb  6 18:01:30 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:30 2024
- => WINDOW: border created
-Tue Feb  6 18:01:30 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:30 2024
- => coo
-Tue Feb  6 18:01:30 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:30 2024
- => WINDOW: border created
-Tue Feb  6 18:01:30 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:30 2024
- => coo
-Tue Feb  6 18:01:30 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:30 2024
- => WINDOW: border created
-Tue Feb  6 18:01:30 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:30 2024
- => coo
-Tue Feb  6 18:01:30 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:30 2024
- => WINDOW: border created
-Tue Feb  6 18:01:30 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:30 2024
- => coo
-Tue Feb  6 18:01:30 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:30 2024
- => WINDOW: border created
-Tue Feb  6 18:01:30 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:30 2024
- => coo
-Tue Feb  6 18:01:30 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:30 2024
- => WINDOW: border created
-Tue Feb  6 18:01:30 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:30 2024
- => coo
-Tue Feb  6 18:01:30 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:30 2024
- => WINDOW: border created
-Tue Feb  6 18:01:30 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:30 2024
- => coo
-Tue Feb  6 18:01:30 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:30 2024
- => WINDOW: border created
-Tue Feb  6 18:01:30 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:30 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:30 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:31 2024
- => coo
-Tue Feb  6 18:01:31 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:31 2024
- => WINDOW: border created
-Tue Feb  6 18:01:31 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:31 2024
- => coo
-Tue Feb  6 18:01:31 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:31 2024
- => WINDOW: border created
-Tue Feb  6 18:01:31 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:31 2024
- => coo
-Tue Feb  6 18:01:31 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:31 2024
- => WINDOW: border created
-Tue Feb  6 18:01:31 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:31 2024
- => coo
-Tue Feb  6 18:01:31 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:31 2024
- => WINDOW: border created
-Tue Feb  6 18:01:31 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:31 2024
- => coo
-Tue Feb  6 18:01:31 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:31 2024
- => WINDOW: border created
-Tue Feb  6 18:01:31 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:31 2024
- => coo
-Tue Feb  6 18:01:31 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:31 2024
- => WINDOW: border created
-Tue Feb  6 18:01:31 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:31 2024
- => coo
-Tue Feb  6 18:01:31 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:31 2024
- => WINDOW: border created
-Tue Feb  6 18:01:31 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:31 2024
- => coo
-Tue Feb  6 18:01:31 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:31 2024
- => WINDOW: border created
-Tue Feb  6 18:01:31 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:31 2024
- => coo
-Tue Feb  6 18:01:31 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:31 2024
- => WINDOW: border created
-Tue Feb  6 18:01:31 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: info printed
-Tue Feb  6 18:01:31 2024
- => coo
-Tue Feb  6 18:01:31 2024
- => WINDOW: reading drone
-Tue Feb  6 18:01:31 2024
- => WINDOW: border created
-Tue Feb  6 18:01:31 2024
- => WINDOW: drone printed
-Tue Feb  6 18:01:31 2024
- => WINDOW: obstacles printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 0: x = 14, y = 34
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 1: x = 61, y = 39
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
- => WINDOW:I see a target 2: x = 73, y = 9
-Tue Feb  6 18:01:31 2024
- => WINDOW: targets printed
-Tue Feb  6 18:01:31 2024
+Wed Feb 14 16:37:29 2024
+ => coo
+Wed Feb 14 16:37:29 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:29 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:29 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:29 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:29 2024
+ => coo
+Wed Feb 14 16:37:29 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:29 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:29 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:29 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:29 2024
+ => coo
+Wed Feb 14 16:37:29 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:29 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:29 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:29 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:29 2024
+ => coo
+Wed Feb 14 16:37:29 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:29 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:29 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:29 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:29 2024
+ => coo
+Wed Feb 14 16:37:29 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:29 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:29 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:29 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:29 2024
+ => coo
+Wed Feb 14 16:37:29 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:29 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:29 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:29 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:30 2024
+ => coo
+Wed Feb 14 16:37:30 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:30 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:30 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:30 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:30 2024
+ => coo
+Wed Feb 14 16:37:30 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:30 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:30 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:30 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:30 2024
+ => coo
+Wed Feb 14 16:37:30 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:30 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:30 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:30 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:30 2024
+ => coo
+Wed Feb 14 16:37:30 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:30 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:30 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:30 2024
+ => WINDOW: info printed
+Wed Feb 14 16:37:30 2024
+ => coo
+Wed Feb 14 16:37:30 2024
+ => WINDOW: reading drone
+Wed Feb 14 16:37:30 2024
+ => WINDOW: border created
+Wed Feb 14 16:37:30 2024
+ => WINDOW: drone printed
+Wed Feb 14 16:37:30 2024
  => WINDOW: info printed

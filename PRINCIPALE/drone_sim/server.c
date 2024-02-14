@@ -130,8 +130,9 @@ int main(int argc, char* argv[]){
     }
     // Bind the socket
     struct sockaddr_in server_address;
+    memset(&server_address, 0, sizeof(server_address));
     server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(8082);
+    server_address.sin_port = htons(50000);
     server_address.sin_addr.s_addr = INADDR_ANY;
     writeToLog(serdebug, "SERVER: binding...");
     if (bind(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
@@ -279,8 +280,10 @@ int main(int argc, char* argv[]){
     int pipeTafd[2];    // pipe for targets: 0 for reading, 1 for writing
     fd_set read_fds;
     fd_set write_fds;
+    fd_set master; // fd to monitor
     FD_ZERO(&read_fds);
     FD_ZERO(&write_fds);
+    FD_ZERO(&master);
 
     sscanf(argv[1], "%d", &pipeDrfd[0]);
     sscanf(argv[2], "%d", &pipeDrfd[1]);
@@ -340,7 +343,9 @@ int main(int argc, char* argv[]){
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
     }
+    FD_SET(sock, &master);
     while(!sigint_rec){
+        read_fds = master;
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
         FD_SET(pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds

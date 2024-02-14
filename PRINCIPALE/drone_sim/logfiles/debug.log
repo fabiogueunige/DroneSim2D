@@ -1,45 +1,42 @@
-Tue Feb  6 18:01:20 2024
+Wed Feb 14 16:37:18 2024
  => SERVER: process started
-Tue Feb  6 18:01:20 2024
+Wed Feb 14 16:37:19 2024
  => DRONE: process started
-Tue Feb  6 18:01:20 2024
+Wed Feb 14 16:37:19 2024
  => DRONE: pipes opened
 INPUT: process started
 OBSTACLES: process started
 TARGETS: process started
 TARGETS: rows and cols received and echoed
 TARGETS: pipes opened
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:21 2024
  => SERVER: pipes opened
 OBSTACLES: rows and cols sent to server
 OBSTACLES: pipes opened
-Tue Feb  6 18:01:22 2024
- => obs
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:21 2024
  => WINDOW: process started
-Tue Feb  6 18:01:22 2024
+Wed Feb 14 16:37:21 2024
  => WINDOW: pipe opened
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:21 2024
  => WATCH DOG: process started
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:21 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:21 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:21 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:21 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:21 2024
  => WATCH DOG: OBSTACLE received signal
 TARGETS: signal SIGUSR1 received from WATCH DOG
-Tue Feb  6 18:01:23 2024
+Wed Feb 14 16:37:21 2024
  => WATCH DOG: TARGETS received signal
-Tue Feb  6 18:01:23 2024
- => tar
-SERVER: terminating with return value 0...
-OBSTACLE: terminating with return value 0...
+TARGETS: targets sent to server
 TARGETS: terminating with return value 0...
+OBSTACLE: terminating with return value 0...
+SERVER: terminating with return value 0...

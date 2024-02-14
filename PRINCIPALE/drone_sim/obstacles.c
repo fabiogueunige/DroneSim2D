@@ -84,10 +84,10 @@ int main (int argc, char *argv[])
 
     struct sockaddr_in server_address;
     server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(8082);
+    server_address.sin_port = htons(50000);
     //char server_ip[100] = "130.251.107.87"; unige wifi
     // hotspot cell 192.168.39.210
-    inet_pton(AF_INET, "192.168.39.210", &server_address.sin_addr);
+    inet_pton(AF_INET, "130.251.107.87", &server_address.sin_addr);
     
     // Connect to the server
     if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
@@ -175,6 +175,9 @@ int main (int argc, char *argv[])
     // obstacle generation cycle
     while(!sigint_rec){
         time_t t = time(NULL);
+
+        
+
         srand(time(NULL));
         int nobstacles = rand() % MAX_OBSTACLES;
         printf("OBSTACLES: number of obstacles = %d\n", nobstacles);
@@ -183,11 +186,17 @@ int main (int argc, char *argv[])
         char pos_obstacles[nobstacles][10];
         //struct obstacle *obstacles[nobstacles];
 
+        char obstacleStr[1024] = "";
+        char temp[50];
+        // Add number of targets to the string
+        sprintf(temp, "O[%d]", nobstacles);
+        strcat(obstacleStr, temp);
+/*
         if ((write(pipeSefd[1], &nobstacles, sizeof(int))) == -1){ // implementare lettura su server
             perror("error in writing to pipe");
             writeToLog(errors, "OBSTACLES: error in writing to pipe number of obstacles");
             exit(EXIT_FAILURE);
-        }
+        }*/
         
         // create obstacles
         for (int i = 0; i < nobstacles; i++){
@@ -202,12 +211,19 @@ int main (int argc, char *argv[])
             writeToLog(obsdebug, msg);
             //sprintf(pos_obstacles[i], "%d,%d", x, y);
             // write to server with pipe
+            /*
             if (write(pipeSefd[1], obstacles[i], sizeof(struct obstacle)) == -1){
                 perror("error in writing to pipe");
                 writeToLog(errors, "OBSTACLES: error in writing to pipe obstacles");
                 exit(EXIT_FAILURE);
-            }
+            }*/
+            sprintf(temp, "%d,%d|", obstacles[i]->x, obstacles[i]->y);
+            strcat(obstacleStr, temp);
         }
+        // Remove the last '|' character
+        obstacleStr[strlen(obstacleStr) - 1] = '\0';
+        writeToLog(obsdebug, obstacleStr);
+        
         // wait 60 seconds before generating new obstacles
         time_t t2 = time(NULL); 
         while(t2 - t < 60){

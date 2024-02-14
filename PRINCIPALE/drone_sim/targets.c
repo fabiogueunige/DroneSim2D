@@ -87,10 +87,10 @@ int main (int argc, char *argv[])
 
     struct sockaddr_in server_address;
     server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(8082);  
+    server_address.sin_port = htons(50000);  
     //char server_ip[100] = "130.251.107.87";
     // router mio tel: 192.168.39.210
-    inet_pton(AF_INET, "192.168.39.210", &server_address.sin_addr); 
+    inet_pton(AF_INET, "130.251.107.87", &server_address.sin_addr); 
     
     // Connect to the server
     if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
@@ -183,6 +183,12 @@ int main (int argc, char *argv[])
         sprintf(msg, "TARGETS: ntargets = %d", ntargets);
         writeToLog(tardebug, msg);
         char pos_targets[ntargets][10];
+        char targetStr[1024] = "";
+        char temp[50];
+
+        // Add number of targets to the string
+        sprintf(temp, "T[%d]", ntargets);
+        strcat(targetStr, temp);
         //targets *target[ntargets];
         
         for(int i = 0; i<ntargets; i++){
@@ -195,9 +201,21 @@ int main (int argc, char *argv[])
             sprintf(pos_targets[i], "%d,%d", target[i]->x, target[i]->y);
             writeToLog(tardebug, pos_targets[i]);
             printf("TARGETS: target %d: x = %d, y = %d\n", i, target[i]->x, target[i]->y);
+            sprintf(temp, "%d,%d|", target[i]->x, target[i]->y);
+            strcat(targetStr, temp);
             //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
             
         }
+        // Remove the last '|' character
+        targetStr[strlen(targetStr) - 1] = '\0';
+        writeToLog(tardebug, targetStr);
+        if(send(sock, targetStr, strlen(targetStr), 0) == -1){
+            perror("send");
+            writeToLog(errors, "TARGETS: error in send()");
+            exit(EXIT_FAILURE);
+        }
+        writeToLog(debug, "TARGETS: targets sent to server");
+        /*
         if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
             perror("error in writing to pipe");
             writeToLog(errors, "TARGETS: error in writing to pipe");
@@ -207,7 +225,7 @@ int main (int argc, char *argv[])
                 perror("error in writing to pipe");
                 writeToLog(errors, "TARGETS: error in writing to pipe");
             }
-        }
+        }*/
         time_t t2 = time(NULL);
         while(t2-t < 60){
             t2 = time(NULL);
