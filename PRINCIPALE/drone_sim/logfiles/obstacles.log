@@ -1,5 +1,37 @@
 OI
 50, 100
 OBSTACLES: rows = 50, cols = 100
-OBSTACLES: number of obstacles = 0
-O[0
+OBSTACLES: number of obstacles = 16
+OBSTACLES: obstacle 0 created at (79, 23)
+
+OBSTACLES: obstacle 1 created at (12, 33)
+
+OBSTACLES: obstacle 2 created at (83, 42)
+
+OBSTACLES: obstacle 3 created at (45, 18)
+
+OBSTACLES: obstacle 4 created at (88, 28)
+
+OBSTACLES: obstacle 5 created at (57, 31)
+
+OBSTACLES: obstacle 6 created at (64, 3)
+
+OBSTACLES: obstacle 7 created at (71, 23)
+
+OBSTACLES: obstacle 8 created at (20, 11)
+
+OBSTACLES: obstacle 9 created at (21, 1)
+
+OBSTACLES: obstacle 10 created at (18, 17)
+
+OBSTACLES: obstacle 11 created at (63, 30)
+
+OBSTACLES: obstacle 12 created at (83, 37)
+
+OBSTACLES: obstacle 13 created at (5, 29)
+
+OBSTACLES: obstacle 14 created at (24, 24)
+
+OBSTACLES: obstacle 15 created at (13, 45)
+
+O[16]79,23|12,33|83,42|45,18|88,28|57,31|64,3|71,23|20,11|21,1|18,17|63,30|83,37|5,29|24,24|13,45

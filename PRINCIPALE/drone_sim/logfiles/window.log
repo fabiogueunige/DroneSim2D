@@ -1,944 +1,6104 @@
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: curses mode started
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: colors initialized
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: max rows and cols taken
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: pipe set
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: rows = 50, cols = 100
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: window moved after resizing
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: window created
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => coo
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: border created
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => coo
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: border created
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => coo
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: border created
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => coo
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: border created
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => coo
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: border created
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => coo
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: border created
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => coo
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: border created
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:53 2024
  => coo
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: border created
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => coo
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: border created
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => coo
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: border created
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => coo
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: border created
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => coo
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: border created
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => coo
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: border created
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => coo
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: border created
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => coo
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: border created
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => coo
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: border created
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => coo
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: border created
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:53 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:54 2024
  => coo
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: border created
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:22 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => coo
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: border created
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => coo
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: border created
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => coo
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: border created
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => coo
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: border created
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => coo
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: border created
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => coo
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: border created
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => coo
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: border created
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => coo
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: border created
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => coo
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: border created
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:54 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:55 2024
  => coo
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: border created
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:23 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => coo
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: border created
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => coo
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: border created
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => coo
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: border created
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => coo
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: border created
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => coo
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: border created
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => coo
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: border created
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => coo
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: border created
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => coo
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: border created
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => coo
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: border created
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:55 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:56 2024
  => coo
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: border created
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:24 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => coo
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: border created
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => coo
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: border created
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => coo
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: border created
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => coo
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: border created
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => coo
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: border created
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => coo
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: border created
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => coo
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: border created
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => coo
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: border created
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => coo
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: border created
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:56 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:57 2024
  => coo
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: border created
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:25 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => coo
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: border created
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => coo
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: border created
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => coo
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: border created
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => coo
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: border created
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => coo
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: border created
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => coo
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: border created
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => coo
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: border created
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => coo
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: border created
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => coo
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: border created
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:57 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:58 2024
  => coo
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: border created
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:26 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => coo
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: border created
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => coo
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: border created
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => coo
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: border created
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => coo
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: border created
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => coo
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: border created
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => coo
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: border created
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => coo
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: border created
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => coo
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: border created
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => coo
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: border created
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => coo
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: border created
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:27 2024
+Thu Feb 15 16:07:58 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:28 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:29 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: info printed
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => coo
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: reading drone
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: border created
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
  => WINDOW: drone printed
-Wed Feb 14 16:37:30 2024
+Thu Feb 15 16:07:59 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:00 2024
+ => coo
+Thu Feb 15 16:08:00 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:00 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:00 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:00 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:01 2024
+ => coo
+Thu Feb 15 16:08:01 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:01 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:01 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:01 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:02 2024
+ => coo
+Thu Feb 15 16:08:02 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:02 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:02 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:02 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:03 2024
+ => coo
+Thu Feb 15 16:08:03 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:03 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:03 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:03 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:04 2024
+ => coo
+Thu Feb 15 16:08:04 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:04 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:04 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:04 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:05 2024
+ => coo
+Thu Feb 15 16:08:05 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:05 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:05 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:05 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:06 2024
+ => coo
+Thu Feb 15 16:08:06 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:06 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:06 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:06 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:07 2024
+ => coo
+Thu Feb 15 16:08:07 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:07 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:07 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:07 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:08 2024
+ => coo
+Thu Feb 15 16:08:08 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:08 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:08 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:08 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:09 2024
+ => coo
+Thu Feb 15 16:08:09 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:09 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:09 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:09 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:10 2024
+ => coo
+Thu Feb 15 16:08:10 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:10 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:10 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:10 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:11 2024
+ => coo
+Thu Feb 15 16:08:11 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:11 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:11 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:11 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:12 2024
+ => coo
+Thu Feb 15 16:08:12 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:12 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:12 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:12 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:12 2024
+ => coo
+Thu Feb 15 16:08:12 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:12 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:12 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:12 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:12 2024
+ => coo
+Thu Feb 15 16:08:12 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:12 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:12 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:12 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:12 2024
+ => coo
+Thu Feb 15 16:08:12 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:12 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:12 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:12 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:12 2024
+ => coo
+Thu Feb 15 16:08:12 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:12 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:12 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:12 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:12 2024
+ => coo
+Thu Feb 15 16:08:12 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:12 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:12 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:12 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:12 2024
+ => coo
+Thu Feb 15 16:08:12 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:12 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:12 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:12 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:12 2024
+ => coo
+Thu Feb 15 16:08:12 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:12 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:12 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:12 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:12 2024
+ => coo
+Thu Feb 15 16:08:12 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:12 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:12 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:12 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:12 2024
+ => coo
+Thu Feb 15 16:08:12 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:12 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:12 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:12 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:13 2024
+ => coo
+Thu Feb 15 16:08:13 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:13 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:13 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:13 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:13 2024
+ => coo
+Thu Feb 15 16:08:13 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:13 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:13 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:13 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:13 2024
+ => coo
+Thu Feb 15 16:08:13 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:13 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:13 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:13 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:13 2024
+ => coo
+Thu Feb 15 16:08:13 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:13 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:13 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:13 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:13 2024
+ => coo
+Thu Feb 15 16:08:13 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:13 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:13 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:13 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:13 2024
+ => coo
+Thu Feb 15 16:08:13 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:13 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:13 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:13 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:13 2024
+ => coo
+Thu Feb 15 16:08:13 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:13 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:13 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:13 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:13 2024
+ => coo
+Thu Feb 15 16:08:13 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:13 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:13 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:13 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:13 2024
+ => coo
+Thu Feb 15 16:08:13 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:13 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:13 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:13 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:13 2024
+ => coo
+Thu Feb 15 16:08:13 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:13 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:13 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:13 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:14 2024
+ => coo
+Thu Feb 15 16:08:14 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:14 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:14 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:14 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:14 2024
+ => coo
+Thu Feb 15 16:08:14 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:14 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:14 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:14 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:14 2024
+ => coo
+Thu Feb 15 16:08:14 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:14 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:14 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:14 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:14 2024
+ => coo
+Thu Feb 15 16:08:14 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:14 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:14 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:14 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:14 2024
+ => coo
+Thu Feb 15 16:08:14 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:14 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:14 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:14 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:14 2024
+ => coo
+Thu Feb 15 16:08:14 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:14 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:14 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:14 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:14 2024
+ => coo
+Thu Feb 15 16:08:14 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:14 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:14 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:14 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:14 2024
+ => coo
+Thu Feb 15 16:08:14 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:14 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:14 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:14 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:14 2024
+ => coo
+Thu Feb 15 16:08:14 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:14 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:14 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:14 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:14 2024
+ => coo
+Thu Feb 15 16:08:14 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:14 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:14 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:14 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:15 2024
+ => coo
+Thu Feb 15 16:08:15 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:15 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:15 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:15 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:15 2024
+ => coo
+Thu Feb 15 16:08:15 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:15 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:15 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:15 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:15 2024
+ => coo
+Thu Feb 15 16:08:15 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:15 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:15 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:15 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:15 2024
+ => coo
+Thu Feb 15 16:08:15 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:15 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:15 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:15 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:15 2024
+ => coo
+Thu Feb 15 16:08:15 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:15 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:15 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:15 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:15 2024
+ => coo
+Thu Feb 15 16:08:15 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:15 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:15 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:15 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:15 2024
+ => coo
+Thu Feb 15 16:08:15 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:15 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:15 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:15 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:15 2024
+ => coo
+Thu Feb 15 16:08:15 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:15 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:15 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:15 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:15 2024
+ => coo
+Thu Feb 15 16:08:15 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:15 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:15 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:15 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:15 2024
+ => coo
+Thu Feb 15 16:08:15 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:15 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:15 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:15 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:15 2024
+ => coo
+Thu Feb 15 16:08:15 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:15 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:15 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:15 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:16 2024
+ => coo
+Thu Feb 15 16:08:16 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:16 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:16 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:16 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:17 2024
+ => coo
+Thu Feb 15 16:08:17 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:17 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:17 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:17 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:17 2024
+ => coo
+Thu Feb 15 16:08:17 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:17 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:17 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:17 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:17 2024
+ => coo
+Thu Feb 15 16:08:17 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:17 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:17 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:17 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:17 2024
+ => coo
+Thu Feb 15 16:08:17 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:17 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:17 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:17 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:17 2024
+ => coo
+Thu Feb 15 16:08:17 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:17 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:17 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:17 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:17 2024
+ => coo
+Thu Feb 15 16:08:17 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:17 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:17 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:17 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:17 2024
+ => coo
+Thu Feb 15 16:08:17 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:17 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:17 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:17 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:17 2024
+ => coo
+Thu Feb 15 16:08:17 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:17 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:17 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:17 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:17 2024
+ => coo
+Thu Feb 15 16:08:17 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:17 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:17 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:17 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:17 2024
+ => coo
+Thu Feb 15 16:08:17 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:17 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:17 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:17 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:18 2024
+ => coo
+Thu Feb 15 16:08:18 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:18 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:18 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:18 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:18 2024
+ => coo
+Thu Feb 15 16:08:18 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:18 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:18 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:18 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:18 2024
+ => coo
+Thu Feb 15 16:08:18 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:18 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:18 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:18 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:18 2024
+ => coo
+Thu Feb 15 16:08:18 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:18 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:18 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:18 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:18 2024
+ => coo
+Thu Feb 15 16:08:18 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:18 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:18 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:18 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:18 2024
+ => coo
+Thu Feb 15 16:08:18 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:18 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:18 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:18 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:18 2024
+ => coo
+Thu Feb 15 16:08:18 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:18 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:18 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:18 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:18 2024
+ => coo
+Thu Feb 15 16:08:18 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:18 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:18 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:18 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:18 2024
+ => coo
+Thu Feb 15 16:08:18 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:18 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:18 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:18 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:18 2024
+ => coo
+Thu Feb 15 16:08:18 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:18 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:18 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:18 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:19 2024
+ => coo
+Thu Feb 15 16:08:19 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:19 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:19 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:19 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:19 2024
+ => coo
+Thu Feb 15 16:08:19 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:19 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:19 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:19 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:19 2024
+ => coo
+Thu Feb 15 16:08:19 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:19 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:19 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:19 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:19 2024
+ => coo
+Thu Feb 15 16:08:19 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:19 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:19 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:19 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:19 2024
+ => coo
+Thu Feb 15 16:08:19 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:19 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:19 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:19 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:19 2024
+ => coo
+Thu Feb 15 16:08:19 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:19 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:19 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:19 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:19 2024
+ => coo
+Thu Feb 15 16:08:19 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:19 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:19 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:19 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:19 2024
+ => coo
+Thu Feb 15 16:08:19 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:19 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:19 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:19 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:19 2024
+ => coo
+Thu Feb 15 16:08:19 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:19 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:19 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:19 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:19 2024
+ => coo
+Thu Feb 15 16:08:19 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:19 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:19 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:19 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:20 2024
+ => coo
+Thu Feb 15 16:08:20 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:20 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:20 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:20 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:20 2024
+ => coo
+Thu Feb 15 16:08:20 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:20 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:20 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:20 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:20 2024
+ => coo
+Thu Feb 15 16:08:20 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:20 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:20 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:20 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:20 2024
+ => coo
+Thu Feb 15 16:08:20 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:20 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:20 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:20 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:20 2024
+ => coo
+Thu Feb 15 16:08:20 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:20 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:20 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:20 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:20 2024
+ => coo
+Thu Feb 15 16:08:20 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:20 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:20 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:20 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:20 2024
+ => coo
+Thu Feb 15 16:08:20 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:20 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:20 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:20 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:20 2024
+ => coo
+Thu Feb 15 16:08:20 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:20 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:20 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:20 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:20 2024
+ => coo
+Thu Feb 15 16:08:20 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:20 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:20 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:20 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:20 2024
+ => coo
+Thu Feb 15 16:08:20 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:20 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:20 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:20 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:21 2024
+ => coo
+Thu Feb 15 16:08:21 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:21 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:21 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:21 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:21 2024
+ => coo
+Thu Feb 15 16:08:21 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:21 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:21 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:21 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:21 2024
+ => coo
+Thu Feb 15 16:08:21 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:21 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:21 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:21 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:21 2024
+ => coo
+Thu Feb 15 16:08:21 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:21 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:21 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:21 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:21 2024
+ => coo
+Thu Feb 15 16:08:21 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:21 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:21 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:21 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:21 2024
+ => coo
+Thu Feb 15 16:08:21 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:21 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:21 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:21 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:21 2024
+ => coo
+Thu Feb 15 16:08:21 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:21 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:21 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:21 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:21 2024
+ => coo
+Thu Feb 15 16:08:21 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:21 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:21 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:21 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:21 2024
+ => coo
+Thu Feb 15 16:08:21 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:21 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:21 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:21 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:21 2024
+ => coo
+Thu Feb 15 16:08:21 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:21 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:21 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:21 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:22 2024
+ => coo
+Thu Feb 15 16:08:22 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:22 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:22 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:22 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:22 2024
+ => coo
+Thu Feb 15 16:08:22 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:22 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:22 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:22 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:22 2024
+ => coo
+Thu Feb 15 16:08:22 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:22 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:22 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:22 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:22 2024
+ => coo
+Thu Feb 15 16:08:22 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:22 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:22 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:22 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:22 2024
+ => coo
+Thu Feb 15 16:08:22 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:22 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:22 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:22 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:22 2024
+ => coo
+Thu Feb 15 16:08:22 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:22 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:22 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:22 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:22 2024
+ => coo
+Thu Feb 15 16:08:22 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:22 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:22 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:22 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:22 2024
+ => coo
+Thu Feb 15 16:08:22 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:22 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:22 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:22 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:22 2024
+ => coo
+Thu Feb 15 16:08:22 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:22 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:22 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:22 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:22 2024
+ => coo
+Thu Feb 15 16:08:22 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:22 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:22 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:22 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:23 2024
+ => coo
+Thu Feb 15 16:08:23 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:23 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:23 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:23 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:23 2024
+ => coo
+Thu Feb 15 16:08:23 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:23 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:23 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:23 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:23 2024
+ => coo
+Thu Feb 15 16:08:23 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:23 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:23 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:23 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:23 2024
+ => coo
+Thu Feb 15 16:08:23 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:23 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:23 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:23 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:23 2024
+ => coo
+Thu Feb 15 16:08:23 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:23 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:23 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:23 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:23 2024
+ => coo
+Thu Feb 15 16:08:23 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:23 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:23 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:23 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:23 2024
+ => coo
+Thu Feb 15 16:08:23 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:23 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:23 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:23 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:23 2024
+ => coo
+Thu Feb 15 16:08:23 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:23 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:23 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:23 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:23 2024
+ => coo
+Thu Feb 15 16:08:23 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:23 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:23 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:23 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:23 2024
+ => coo
+Thu Feb 15 16:08:23 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:23 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:23 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:23 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:24 2024
+ => coo
+Thu Feb 15 16:08:24 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:24 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:24 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:24 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:24 2024
+ => coo
+Thu Feb 15 16:08:24 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:24 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:24 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:24 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:24 2024
+ => coo
+Thu Feb 15 16:08:24 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:24 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:24 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:24 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:24 2024
+ => coo
+Thu Feb 15 16:08:24 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:24 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:24 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:24 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:24 2024
+ => coo
+Thu Feb 15 16:08:24 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:24 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:24 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:24 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:24 2024
+ => coo
+Thu Feb 15 16:08:24 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:24 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:24 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:24 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:24 2024
+ => coo
+Thu Feb 15 16:08:24 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:24 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:24 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:24 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:24 2024
+ => coo
+Thu Feb 15 16:08:24 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:24 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:24 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:24 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:24 2024
+ => coo
+Thu Feb 15 16:08:24 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:24 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:24 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:24 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:24 2024
+ => coo
+Thu Feb 15 16:08:24 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:24 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:24 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:24 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:25 2024
+ => coo
+Thu Feb 15 16:08:25 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:25 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:25 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:25 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:26 2024
+ => coo
+Thu Feb 15 16:08:26 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:26 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:26 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:26 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:26 2024
+ => coo
+Thu Feb 15 16:08:26 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:26 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:26 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:26 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:26 2024
+ => coo
+Thu Feb 15 16:08:26 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:26 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:26 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:26 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:26 2024
+ => coo
+Thu Feb 15 16:08:26 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:26 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:26 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:26 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:26 2024
+ => coo
+Thu Feb 15 16:08:26 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:26 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:26 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:26 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:26 2024
+ => coo
+Thu Feb 15 16:08:26 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:26 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:26 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:26 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:26 2024
+ => coo
+Thu Feb 15 16:08:26 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:26 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:26 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:26 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:26 2024
+ => coo
+Thu Feb 15 16:08:26 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:26 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:26 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:26 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:26 2024
+ => coo
+Thu Feb 15 16:08:26 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:26 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:26 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:26 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:26 2024
+ => coo
+Thu Feb 15 16:08:26 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:26 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:26 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:26 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:26 2024
+ => coo
+Thu Feb 15 16:08:26 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:26 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:26 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:26 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:27 2024
+ => coo
+Thu Feb 15 16:08:27 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:27 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:27 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:27 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:27 2024
+ => coo
+Thu Feb 15 16:08:27 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:27 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:27 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:27 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:27 2024
+ => coo
+Thu Feb 15 16:08:27 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:27 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:27 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:27 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:27 2024
+ => coo
+Thu Feb 15 16:08:27 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:27 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:27 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:27 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:27 2024
+ => coo
+Thu Feb 15 16:08:27 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:27 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:27 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:27 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:27 2024
+ => coo
+Thu Feb 15 16:08:27 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:27 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:27 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:27 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:27 2024
+ => coo
+Thu Feb 15 16:08:27 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:27 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:27 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:27 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:27 2024
+ => coo
+Thu Feb 15 16:08:27 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:27 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:27 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:27 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:27 2024
+ => coo
+Thu Feb 15 16:08:27 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:27 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:27 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:27 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:27 2024
+ => coo
+Thu Feb 15 16:08:27 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:27 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:27 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:27 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:28 2024
+ => coo
+Thu Feb 15 16:08:28 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:28 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:28 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:28 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:28 2024
+ => coo
+Thu Feb 15 16:08:28 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:28 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:28 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:28 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:28 2024
+ => coo
+Thu Feb 15 16:08:28 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:28 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:28 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:28 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:28 2024
+ => coo
+Thu Feb 15 16:08:28 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:28 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:28 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:28 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:28 2024
+ => coo
+Thu Feb 15 16:08:28 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:28 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:28 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:28 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:28 2024
+ => coo
+Thu Feb 15 16:08:28 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:28 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:28 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:28 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:28 2024
+ => coo
+Thu Feb 15 16:08:28 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:28 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:28 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:28 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:28 2024
+ => coo
+Thu Feb 15 16:08:28 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:28 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:28 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:28 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:28 2024
+ => coo
+Thu Feb 15 16:08:28 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:28 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:28 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:28 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:28 2024
+ => coo
+Thu Feb 15 16:08:28 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:28 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:28 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:28 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:29 2024
+ => coo
+Thu Feb 15 16:08:29 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:29 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:29 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:29 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:29 2024
+ => coo
+Thu Feb 15 16:08:29 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:29 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:29 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:29 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:29 2024
+ => coo
+Thu Feb 15 16:08:29 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:29 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:29 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:29 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:29 2024
+ => coo
+Thu Feb 15 16:08:29 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:29 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:29 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:29 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:29 2024
+ => coo
+Thu Feb 15 16:08:29 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:29 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:29 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:29 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:29 2024
+ => coo
+Thu Feb 15 16:08:29 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:29 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:29 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:29 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:29 2024
+ => coo
+Thu Feb 15 16:08:29 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:29 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:29 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:29 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:29 2024
+ => coo
+Thu Feb 15 16:08:29 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:29 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:29 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:29 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:29 2024
+ => coo
+Thu Feb 15 16:08:29 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:29 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:29 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:29 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:29 2024
+ => coo
+Thu Feb 15 16:08:29 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:29 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:29 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:29 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:30 2024
+ => coo
+Thu Feb 15 16:08:30 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:30 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:30 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:30 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:30 2024
+ => coo
+Thu Feb 15 16:08:30 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:30 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:30 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:30 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:30 2024
+ => coo
+Thu Feb 15 16:08:30 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:30 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:30 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:30 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:30 2024
+ => coo
+Thu Feb 15 16:08:30 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:30 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:30 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:30 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:30 2024
+ => coo
+Thu Feb 15 16:08:30 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:30 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:30 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:30 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:30 2024
+ => coo
+Thu Feb 15 16:08:30 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:30 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:30 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:30 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:30 2024
+ => coo
+Thu Feb 15 16:08:30 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:30 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:30 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:30 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:30 2024
+ => coo
+Thu Feb 15 16:08:30 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:30 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:30 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:30 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:30 2024
+ => coo
+Thu Feb 15 16:08:30 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:30 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:30 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:30 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:30 2024
+ => coo
+Thu Feb 15 16:08:30 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:30 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:30 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:30 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:30 2024
+ => coo
+Thu Feb 15 16:08:30 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:30 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:30 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:30 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:31 2024
+ => coo
+Thu Feb 15 16:08:31 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:31 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:31 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:31 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:31 2024
+ => coo
+Thu Feb 15 16:08:31 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:31 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:31 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:31 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:31 2024
+ => coo
+Thu Feb 15 16:08:31 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:31 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:31 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:31 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:31 2024
+ => coo
+Thu Feb 15 16:08:31 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:31 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:31 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:31 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:31 2024
+ => coo
+Thu Feb 15 16:08:31 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:31 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:31 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:31 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:31 2024
+ => coo
+Thu Feb 15 16:08:31 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:31 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:31 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:31 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:31 2024
+ => coo
+Thu Feb 15 16:08:31 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:31 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:31 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:31 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:31 2024
+ => coo
+Thu Feb 15 16:08:31 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:31 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:31 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:31 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:31 2024
+ => coo
+Thu Feb 15 16:08:31 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:31 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:31 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:31 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:31 2024
+ => coo
+Thu Feb 15 16:08:31 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:31 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:31 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:31 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:32 2024
+ => coo
+Thu Feb 15 16:08:32 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:32 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:32 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:32 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:32 2024
+ => coo
+Thu Feb 15 16:08:32 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:32 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:32 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:32 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:32 2024
+ => coo
+Thu Feb 15 16:08:32 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:32 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:32 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:32 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:32 2024
+ => coo
+Thu Feb 15 16:08:32 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:32 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:32 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:32 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:32 2024
+ => coo
+Thu Feb 15 16:08:32 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:32 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:32 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:32 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:32 2024
+ => coo
+Thu Feb 15 16:08:32 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:32 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:32 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:32 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:32 2024
+ => coo
+Thu Feb 15 16:08:32 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:32 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:32 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:32 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:32 2024
+ => coo
+Thu Feb 15 16:08:32 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:32 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:32 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:32 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:32 2024
+ => coo
+Thu Feb 15 16:08:32 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:32 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:32 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:32 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:32 2024
+ => coo
+Thu Feb 15 16:08:32 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:32 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:32 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:32 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:33 2024
+ => coo
+Thu Feb 15 16:08:33 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:33 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:33 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:33 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:33 2024
+ => coo
+Thu Feb 15 16:08:33 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:33 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:33 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:33 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:33 2024
+ => coo
+Thu Feb 15 16:08:33 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:33 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:33 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:33 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:33 2024
+ => coo
+Thu Feb 15 16:08:33 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:33 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:33 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:33 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:33 2024
+ => coo
+Thu Feb 15 16:08:33 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:33 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:33 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:33 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:33 2024
+ => coo
+Thu Feb 15 16:08:33 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:33 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:33 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:33 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:33 2024
+ => coo
+Thu Feb 15 16:08:33 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:33 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:33 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:33 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:33 2024
+ => coo
+Thu Feb 15 16:08:33 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:33 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:33 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:33 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:33 2024
+ => coo
+Thu Feb 15 16:08:33 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:33 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:33 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:33 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:33 2024
+ => coo
+Thu Feb 15 16:08:33 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:33 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:33 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:33 2024
+ => WINDOW: info printed
+Thu Feb 15 16:08:34 2024
+ => coo
+Thu Feb 15 16:08:34 2024
+ => WINDOW: reading drone
+Thu Feb 15 16:08:34 2024
+ => WINDOW: border created
+Thu Feb 15 16:08:34 2024
+ => WINDOW: drone printed
+Thu Feb 15 16:08:34 2024
  => WINDOW: info printed

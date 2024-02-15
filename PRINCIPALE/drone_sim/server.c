@@ -114,9 +114,6 @@ int main(int argc, char* argv[]){
     //sprintf(rowsandcols, "%d, %d", rows, cols);
     //writeToLog(serdebug, rowsandcols);
 
-    int nobstacles_edge = 2 * (rows + cols);
-    struct obstacle *edges[nobstacles_edge];
-
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
         exit(EXIT_FAILURE);
@@ -276,8 +273,8 @@ int main(int argc, char* argv[]){
 
     // PIPES OPENING
     int pipeDrfd[2];    // pipe for drone: 0 for reading, 1 for writing
-    int pipeObfd[2];    // pipe for obstacles: 0 for reading, 1 for writing
-    int pipeTafd[2];    // pipe for targets: 0 for reading, 1 for writing
+    //int pipeObfd[2];    // pipe for obstacles: 0 for reading, 1 for writing
+    //int pipeTafd[2];    // pipe for targets: 0 for reading, 1 for writing
     fd_set read_fds;
     fd_set write_fds;
     fd_set master; // fd to monitor
@@ -287,10 +284,10 @@ int main(int argc, char* argv[]){
 
     sscanf(argv[1], "%d", &pipeDrfd[0]);
     sscanf(argv[2], "%d", &pipeDrfd[1]);
-    sscanf(argv[3], "%d", &pipeObfd[1]);
-    sscanf(argv[4], "%d", &pipeObfd[0]);
-    sscanf(argv[5], "%d", &pipeTafd[1]);
-    sscanf(argv[6], "%d", &pipeTafd[0]);
+    //sscanf(argv[3], "%d", &pipeObfd[1]);
+    //sscanf(argv[4], "%d", &pipeObfd[0]);
+    //sscanf(argv[5], "%d", &pipeTafd[1]);
+    //sscanf(argv[6], "%d", &pipeTafd[0]);
     writeToLog(debug, "SERVER: pipes opened");
 
     // Sending rows and cols to window and drone
@@ -348,17 +345,18 @@ int main(int argc, char* argv[]){
         read_fds = master;
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
-        FD_SET(pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
-        FD_SET(pipeTafd[0], &read_fds);
+        //FD_SET(pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
+        //FD_SET(pipeTafd[0], &read_fds);
         //FD_SET(pipeWdfd[1], &write_fds);
 
         int max_fd = -1;
+        /*
         if (pipeTafd[0] > max_fd) {
             max_fd = pipeTafd[0];
         }
         if(pipeObfd[0] > max_fd) {
             max_fd = pipeObfd[0];
-        }
+        }*/
         if(pipeDrfd[0] > max_fd) {
             max_fd = pipeDrfd[0];
         }
@@ -376,7 +374,7 @@ int main(int argc, char* argv[]){
         }
         else if(sel>0){
             
-            if(FD_ISSET(pipeTafd[0], &read_fds)){
+            /*if(FD_ISSET(pipeTafd[0], &read_fds)){
                 writeToLog(serdebug, "SERVER: TARGETS WIN");
                 writeToLog(serdebug,"SERVER: reading from targets\n");
                 int ntargets;
@@ -484,7 +482,7 @@ int main(int argc, char* argv[]){
                     }
                 }
                 //write(pipeDrfd[1], obstacles, sizeof(obstacles));
-            }
+            }*/
 
             if(FD_ISSET(pipeDrfd[0], &read_fds)){
                 if ((read(pipeDrfd[0], drone, sizeof(Drone))) == -1) { // reads from drone
@@ -521,21 +519,14 @@ int main(int argc, char* argv[]){
             perror("error in closing pipe");
             writeToLog(errors, "SERVER: error in closing pipe Drone");
         }
-        if (close(pipeObfd[i]) == -1){
+        /*if (close(pipeObfd[i]) == -1){
             perror("error in closing pipe");
             writeToLog(errors, "SERVER: error in closing pipe obstacles");
         }
         if (close(pipeTafd[i]) == -1){
             perror("error in closing pipe");
             writeToLog(errors, "SERVER: error in closing pipe Targets");
-        }
-    }
-    
-    for(int i = 0; i<nobstacles; i++){
-        free(edges[i]);
-    }
-    for(int i = 0; i<nobstacles; i++){
-        free(edges[i]);
+        }*/
     }
 
     close(pipeWdfd[0]);

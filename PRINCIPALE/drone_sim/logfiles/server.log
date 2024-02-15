@@ -1,14 +1,14 @@
-Wed Feb 14 16:37:18 2024
+Thu Feb 15 16:07:49 2024
  => SERVER: binding...
-Wed Feb 14 16:37:20 2024
+Thu Feb 15 16:07:51 2024
  => SERVER: received TI from targets
-Wed Feb 14 16:37:20 2024
+Thu Feb 15 16:07:51 2024
  => SERVER: sending rows and cols to targets
-Wed Feb 14 16:37:20 2024
+Thu Feb 15 16:07:51 2024
  => SERVER: received echo of rows and cols from targets
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => SERVER: received OI from obstacles
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => SERVER: sending rows and cols to obstacles
-Wed Feb 14 16:37:21 2024
+Thu Feb 15 16:07:52 2024
  => SERVER: received echo of rows and cols from targets

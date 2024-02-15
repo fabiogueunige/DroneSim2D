@@ -139,14 +139,6 @@ int main (int argc, char *argv[])
         perror("send");
         return 1;
     }
-    writeToLog(debug, "TARGETS: rows and cols received and echoed");
-    // opening pipes
-    int pipeSefd[2];
-    sscanf(argv[1], "%d", &pipeSefd[0]);
-    sscanf(argv[2], "%d", &pipeSefd[1]);
-    writeToLog(debug, "TARGETS: pipes opened");
-    
-    
     // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -214,7 +206,7 @@ int main (int argc, char *argv[])
             writeToLog(errors, "TARGETS: error in send()");
             exit(EXIT_FAILURE);
         }
-        writeToLog(debug, "TARGETS: targets sent to server");
+        writeToLog(tardebug, "TARGETS: targets sent to server");
         /*
         if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
             perror("error in writing to pipe");
@@ -232,13 +224,8 @@ int main (int argc, char *argv[])
         }
     }
 
-    // closing pipes
-    for (int i = 0; i < 2; i++){
-        if (close(pipeSefd[i]) == -1){
-            perror("error in closing pipe");
-            writeToLog(errors, "TARGETS: error in closing pipe");
-        }
-    }
+    // close the socket
+    close(sock);
     // freeing memory
     for(int i = 0; i<20; i++){
         free(target[i]);

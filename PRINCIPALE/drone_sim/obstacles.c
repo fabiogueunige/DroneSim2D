@@ -163,12 +163,6 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    // opening pipes
-    int pipeSefd[2];
-    sscanf(argv[1], "%d", &pipeSefd[0]);
-    sscanf(argv[2], "%d", &pipeSefd[1]);
-    writeToLog(debug, "OBSTACLES: pipes opened");
-    
     sprintf(msg, "OBSTACLES: rows = %d, cols = %d", rows, cols);
     writeToLog(obsdebug, msg);
     struct obstacle *obstacles[MAX_OBSTACLES];
@@ -231,13 +225,8 @@ int main (int argc, char *argv[])
         }
     }
 
-    // closing pipes
-    for (int i = 0; i < 2; i++){
-        if (close(pipeSefd[i]) == -1){
-            perror("error in closing pipe");
-            writeToLog(errors, "OBSTACLES: error in closing pipe");
-        }
-    }
+    // close the socket
+    close(sock);
     // free the memory allocated for obstacles
     for(int i = 0; i<20; i++){
         free(obstacles[i]);
