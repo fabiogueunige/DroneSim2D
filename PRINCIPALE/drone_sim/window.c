@@ -205,16 +205,19 @@ int main(char argc, char*argv[]){
     writeToLog(winfile, "WINDOW: pipe set");
 
     // Read Rows and Cols
-    if((read(pipeSefd, &rows, sizeof(int))) == -1){
+    float r, c;
+    if((read(pipeSefd, &r, sizeof(float))) == -1){
         perror("read");
         writeToLog(errors, "WINDOW: error in read rows");
         exit(EXIT_FAILURE);
     }
-    if((read(pipeSefd, &cols, sizeof(int))) == -1){
+    if((read(pipeSefd, &c, sizeof(float))) == -1){
         perror("read");
         writeToLog(errors, "WINDOW: error in read cols");
         exit(EXIT_FAILURE);
     }
+    rows = (int)r;
+    cols = (int)c;
     // Checking pipe functionality
   
     sprintf(msg, "WINDOW: rows = %d, cols = %d", rows, cols);

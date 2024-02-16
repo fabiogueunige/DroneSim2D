@@ -309,16 +309,19 @@ int main(int argc, char* argv[]){
 
     // READS WINDOW DIMENSIONS
     int rows, cols;
-    if ((read(pipeSefd[0], &rows, sizeof(int))) == -1){
+    float r,c;
+    if ((read(pipeSefd[0], &r, sizeof(float))) == -1){
         perror("error in reading from pipe");
         writeToLog(errors, "DRONE: error in reading from pipe rows");
         exit(EXIT_FAILURE);
     }
-    if ((read(pipeSefd[0], &cols, sizeof(int))) == -1){
+    if ((read(pipeSefd[0], &c, sizeof(float))) == -1){
         perror("error in reading from pipe");
         writeToLog(errors, "DRONE: error in reading from pipe cols");
         exit(EXIT_FAILURE);
     }
+    rows = (int)r;
+    cols = (int)c;
 
     sprintf(msg, "DRONE: rows = %d, cols = %d", rows, cols);
     writeToLog(drdebug, msg);

@@ -22,8 +22,8 @@ pid_t wd_pid = -1;
 bool sigint_rec = false;
 
 struct obstacle {
-    int x;
-    int y;
+    float x;
+    float y;
 };
 
 void sig_handler(int signo, siginfo_t *info, void *context) {
@@ -84,7 +84,7 @@ int main (int argc, char *argv[])
 
     struct sockaddr_in server_address;
     server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(50000);
+    server_address.sin_port = htons(50003);
     //char server_ip[100] = "130.251.107.87"; unige wifi
     // hotspot cell 192.168.39.210
     inet_pton(AF_INET, "130.251.107.87", &server_address.sin_addr);
@@ -128,8 +128,8 @@ int main (int argc, char *argv[])
     printf("TARGETS: Server sent: %s\n", buffer);
     writeToLog(obsdebug, buffer);
     // save rows and cols
-    char format_string[MAX_MSG_LEN]="%d,%d";
-    int rows, cols;
+    char format_string[MAX_MSG_LEN]="%.3f,%.3f";
+    float rows, cols;
     sscanf(buffer, format_string, &rows, &cols);
 
     // echo of rows and cols
@@ -163,7 +163,7 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    sprintf(msg, "OBSTACLES: rows = %d, cols = %d", rows, cols);
+    sprintf(msg, "OBSTACLES: rows = %.3f, cols = %.3f", rows, cols);
     writeToLog(obsdebug, msg);
     struct obstacle *obstacles[MAX_OBSTACLES];
     // obstacle generation cycle
@@ -196,12 +196,12 @@ int main (int argc, char *argv[])
         for (int i = 0; i < nobstacles; i++){
             obstacles[i] = malloc(sizeof(struct obstacle)); //allocate memory for each obstacle
             // generates random coordinates
-            obstacles[i]->x = rand() % (cols-2) + 1; 
-            obstacles[i]->y = rand() % (rows-2) + 1;
-            int x = obstacles[i]->x;
-            int y = obstacles[i]->y;
-            printf("OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
-            sprintf(msg, "OBSTACLES: obstacle %d created at (%d, %d)\n", i, x, y);
+            obstacles[i]->x = rand() % ((int)cols-2) + 1;
+            obstacles[i]->y = rand() % ((int)rows-2) + 1;
+            float x = obstacles[i]->x;
+            float y = obstacles[i]->y;
+            printf("OBSTACLES: obstacle %d created at (%.3f, %.3f)\n", i, x, y);
+            sprintf(msg, "OBSTACLES: obstacle %d created at (%.3f, %.3f)\n", i, x, y);
             writeToLog(obsdebug, msg);
             //sprintf(pos_obstacles[i], "%d,%d", x, y);
             // write to server with pipe
@@ -211,7 +211,7 @@ int main (int argc, char *argv[])
                 writeToLog(errors, "OBSTACLES: error in writing to pipe obstacles");
                 exit(EXIT_FAILURE);
             }*/
-            sprintf(temp, "%d,%d|", obstacles[i]->x, obstacles[i]->y);
+            sprintf(temp, "%.3f,%.3f|", obstacles[i]->x, obstacles[i]->y);
             strcat(obstacleStr, temp);
         }
         // Remove the last '|' character

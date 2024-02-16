@@ -107,8 +107,8 @@ int main(int argc, char* argv[]){
     Drone dr;
     drone = &dr;
     int nobstacles;
-    int rows = 50;
-    int cols = 100;
+    float rows = 50;
+    float cols = 100;
 
     //char *rowsandcols;
     //sprintf(rowsandcols, "%d, %d", rows, cols);
@@ -129,7 +129,7 @@ int main(int argc, char* argv[]){
     struct sockaddr_in server_address;
     memset(&server_address, 0, sizeof(server_address));
     server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(50000);
+    server_address.sin_port = htons(50003);
     server_address.sin_addr.s_addr = INADDR_ANY;
     writeToLog(serdebug, "SERVER: binding...");
     if (bind(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
@@ -180,7 +180,7 @@ int main(int argc, char* argv[]){
                 }
                 usleep(100); // give the time to target to receive the message before sending another one
                 char rowsandcols[MAX_MSG_LEN];
-                sprintf(rowsandcols, "%d, %d", rows, cols);
+                sprintf(rowsandcols, "%.3f, %.3f", rows, cols);
                 // send to target number of rows and cols
                 if(send(client_sock, rowsandcols, strlen(rowsandcols), 0) == -1){
                     perror("send");
@@ -210,7 +210,7 @@ int main(int argc, char* argv[]){
                 }
                 usleep(100);
                 char rowsandcols[MAX_MSG_LEN];
-                sprintf(rowsandcols, "%d, %d", rows, cols);
+                sprintf(rowsandcols, "%.3f, %.3f", rows, cols);
                 // send to obstacles number of rows and cols
                 if(send(client_sock, rowsandcols, strlen(rowsandcols), 0) == -1){
                     perror("send");
@@ -278,8 +278,7 @@ int main(int argc, char* argv[]){
     fd_set read_fds;
     fd_set write_fds;
     fd_set master; // fd to monitor
-    FD_ZERO(&read_fds);
-    FD_ZERO(&write_fds);
+    
     FD_ZERO(&master);
 
     sscanf(argv[1], "%d", &pipeDrfd[0]);
@@ -291,22 +290,22 @@ int main(int argc, char* argv[]){
     writeToLog(debug, "SERVER: pipes opened");
 
     // Sending rows and cols to window and drone
-    if((write(pipeWdfd[1], &rows, sizeof(int))) == -1){
+    if((write(pipeWdfd[1], &rows, sizeof(float))) == -1){
         perror("error in writing to pipe");
         writeToLog(errors, "SERVER: error in writing to pipe");
         exit(EXIT_FAILURE);
     }
-    if((write(pipeWdfd[1], &cols, sizeof(int))) == -1){
+    if((write(pipeWdfd[1], &cols, sizeof(float))) == -1){
         perror("error in writing to pipe");
         writeToLog(errors, "SERVER: error in writing to pipe");
         exit(EXIT_FAILURE);
     }
-    if((write(pipeDrfd[1], &rows, sizeof(int))) == -1){
+    if((write(pipeDrfd[1], &rows, sizeof(float))) == -1){
         perror("error in writing to pipe");
         writeToLog(errors, "SERVER: error in writing to pipe");
         exit(EXIT_FAILURE);
     }
-    if((write(pipeDrfd[1], &cols, sizeof(int))) == -1){
+    if((write(pipeDrfd[1], &cols, sizeof(float))) == -1){
         perror("error in writing to pipe");
         writeToLog(errors, "SERVER: error in writing to pipe");
         exit(EXIT_FAILURE);
@@ -342,9 +341,11 @@ int main(int argc, char* argv[]){
     }
     FD_SET(sock, &master);
     while(!sigint_rec){
-        read_fds = master;
+        FD_ZERO(&read_fds);
+        //read_fds = master;
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
+        FD_SET(sock, &read_fds);
         //FD_SET(pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
         //FD_SET(pipeTafd[0], &read_fds);
         //FD_SET(pipeWdfd[1], &write_fds);
@@ -357,14 +358,25 @@ int main(int argc, char* argv[]){
         if(pipeObfd[0] > max_fd) {
             max_fd = pipeObfd[0];
         }*/
-        if(pipeDrfd[0] > max_fd) {
+        
+        if(sock > max_fd) {
             max_fd = pipeDrfd[0];
         }
+        if(pipeDrfd[0] > max_fd){
+            max_fd = sock;
+        }
+        char msg[100];
+        sprintf(msg, "SERVER: sock fd = %d", sock);
+        writeToLog(serdebug, msg);
+        sprintf(msg, "SERVER: pipeDrfd fd = %d", pipeDrfd[0]);
+        writeToLog(serdebug, msg);
+        sprintf(msg, "SERVER: max_fd = %d", max_fd);
+        writeToLog(serdebug, msg);
         int sel;
         // ciclo do while per evitare errori dovuuti a segnali
         
         do{
-            sel = select(max_fd + 1, &read_fds, &write_fds, NULL, NULL);
+            sel = select(max_fd + 1, &read_fds, NULL, NULL, NULL);
         }while(sel == -1 && errno == EINTR);
         
         if(sel ==-1){
@@ -373,7 +385,11 @@ int main(int argc, char* argv[]){
             exit(EXIT_FAILURE);
         }
         else if(sel>0){
-            
+            printf("%d\n", FD_ISSET(sock, &read_fds));
+            printf("%d\n", FD_ISSET(pipeDrfd[0], &read_fds));
+            if(FD_ISSET(sock, &read_fds)){
+                writeToLog(serdebug, "SERVER: reading from socket\n");
+            }
             /*if(FD_ISSET(pipeTafd[0], &read_fds)){
                 writeToLog(serdebug, "SERVER: TARGETS WIN");
                 writeToLog(serdebug,"SERVER: reading from targets\n");

@@ -22,12 +22,10 @@ pid_t wd_pid = -1;
 bool sigint_rec = false;
 
 typedef struct {
-    int x;
-    int y;
+    float x;
+    float y;
     bool taken;
 } targets;
-
-
 
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
@@ -62,7 +60,6 @@ void writeToLog(FILE * logFile, const char *message) {
     fflush(logFile);
 }
 
-
 int main (int argc, char *argv[]) 
 {
     FILE * debug = fopen("logfiles/debug.log", "a");
@@ -87,7 +84,7 @@ int main (int argc, char *argv[])
 
     struct sockaddr_in server_address;
     server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(50000);  
+    server_address.sin_port = htons(50003);  
     //char server_ip[100] = "130.251.107.87";
     // router mio tel: 192.168.39.210
     inet_pton(AF_INET, "130.251.107.87", &server_address.sin_addr); 
@@ -100,6 +97,7 @@ int main (int argc, char *argv[])
     }
 
     char * message = "TI";
+    // Send message to server
     if (send(sock, message, strlen(message), 0) == -1) {
         perror("send");
         return 1;
@@ -131,8 +129,8 @@ int main (int argc, char *argv[])
     printf("TARGETS: Server sent: %s\n", buffer);
     writeToLog(tardebug, buffer);
     // save rows and cols
-    char format_string[MAX_MSG_LEN]="%d,%d";
-    int rows, cols;
+    char format_string[MAX_MSG_LEN]="%.3f,%.3f";
+    float rows, cols;
     sscanf(buffer, format_string, &rows, &cols);
     // echo of rows and cols
     if (send(sock, buffer, strlen(buffer), 0) == -1) {
@@ -187,13 +185,13 @@ int main (int argc, char *argv[])
             target[i] = malloc(sizeof(targets));
             // generates random coordinates for targets
             // i put targets away from edges because if they are too close to it coulb be a problem to take them due to repulsive force
-            target[i]->x = rand() % (cols-4) + 2;
-            target[i]->y = rand() % (rows-4) + 2;
+            target[i]->x = rand() % ((int)cols-4) + 2;
+            target[i]->y = rand() % ((int)rows-4) + 2;
             target[i]->taken = false;
-            sprintf(pos_targets[i], "%d,%d", target[i]->x, target[i]->y);
+            sprintf(pos_targets[i], "%.3f,%.3f", target[i]->x, target[i]->y);
             writeToLog(tardebug, pos_targets[i]);
-            printf("TARGETS: target %d: x = %d, y = %d\n", i, target[i]->x, target[i]->y);
-            sprintf(temp, "%d,%d|", target[i]->x, target[i]->y);
+            printf("TARGETS: target %d: x = %.3f, y = %.3f\n", i, target[i]->x, target[i]->y);
+            sprintf(temp, "%.3f,%.3f|", target[i]->x, target[i]->y);
             strcat(targetStr, temp);
             //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
             
