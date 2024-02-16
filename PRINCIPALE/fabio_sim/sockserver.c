@@ -30,7 +30,7 @@ int main (int argc, char *argv[]) {
     FILE * errors = fopen("logfiles/errors.log", "a");
     
     writeToLog(debug, "Socket server started");
-    char msg[100]; // for writing to log files
+    char msg[MAX_MSG_LEN]; // for writing to log files
     
     int pipeSe[2];
     int sockfd;
@@ -49,15 +49,15 @@ int main (int argc, char *argv[]) {
     sscanf(argv[3], "%d", &pipeSe[1]);
     writeToLog(sockdebug, "Socket server pipe created");
 
-    char buffer[MAX_MSG_LEN];
-    if ((recv(sockfd, buffer, strlen(buffer), 0)) < 0) {
+    memset(msg, '\0', MAX_MSG_LEN);
+    if ((recv(sockfd, msg, strlen(msg), 0)) < 0) {
         writeToLog(errors, "Error receiving message from client");
         exit(EXIT_FAILURE);
     }
     writeToLog(sockdebug, "Message received from client");
-    writeToLog(sockdebug, buffer);
+    writeToLog(sockdebug, msg);
     
-    if ((write(pipeSe[1], buffer, strlen(buffer))) < 0) {
+    if ((write(pipeSe[1], msg, strlen(msg))) < 0) {
         writeToLog(errors, "Error writing to pipe the message information");
         exit(EXIT_FAILURE);
     }

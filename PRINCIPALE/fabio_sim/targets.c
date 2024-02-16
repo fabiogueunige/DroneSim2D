@@ -77,7 +77,7 @@ int main (int argc, char *argv[])
     //struct hostent *server; put for ip address
 
     struct hostent *server;
-    char ipAddress[20] = "130.251.254.70";
+    char ipAddress[20] = "192.168.1.65";
     int port = 40000;
     int sock;
     char sockmsg[MAX_MSG_LEN];
@@ -116,8 +116,8 @@ int main (int argc, char *argv[])
     }
     writeToLog(debug, "TARGETS: connected to serverSocket");
 
-    char message[1024] = "TI";
-    message[2] = '\0'; // null-terminate the message
+    char *message = "TI";
+    writeToLog(tardebug, message);
     if (send(sock, message, strlen(message), 0) == -1) {
         perror("send");
         return 1;
@@ -156,7 +156,6 @@ int main (int argc, char *argv[])
         sprintf(msg, "TARGETS: ntargets = %d", ntargets);
         writeToLog(tardebug, msg);
         char pos_targets[ntargets][10];
-        //targets *target[ntargets];
         
         for(int i = 0; i<ntargets; i++){
             target[i] = malloc(sizeof(targets));
@@ -188,20 +187,11 @@ int main (int argc, char *argv[])
             t2 = time(NULL);
         }
     }
-
-    // closing pipes
-    /* Put in child server
-    for (int i = 0; i < 2; i++){
-        if (close(pipeSefd[i]) == -1){
-            perror("error in closing pipe");
-            writeToLog(errors, "TARGETS: error in closing pipe");
-        }
-    }
-    */
     // freeing memory
     for(int i = 0; i<20; i++){
         free(target[i]);
     }
+    close(sock);
     fclose(debug);
     fclose(errors);
     fclose(tardebug);

@@ -18,6 +18,7 @@
 
 
 #define MAX_OBSTACLES 20
+#define MAX_MSG_LEN 1024
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
@@ -68,21 +69,59 @@ int main (int argc, char *argv[])
     FILE * obsdebug = fopen("logfiles/obstacles.log", "w");
     // these var are used because there aren't pipes, but these values are imported by server
     char msg[100]; // message to write on debug file
+    struct sockaddr_in server_address;
+    //struct hostent *server; put for ip address
+
+    struct hostent *server;
+    char ipAddress[20] = "192.168.1.65";
+    int port = 40000;
+    int sock;
+    char sockmsg[MAX_MSG_LEN];
 
     int rows = 50, cols = 100;
+
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
         exit(EXIT_FAILURE);
     }
 
     writeToLog(debug, "OBSTACLES: process started");
-    printf("OBSTACLES: process started\n");
 
-    // opening pipes
-    int pipeSefd[2];
-    sscanf(argv[1], "%d", &pipeSefd[0]);
-    sscanf(argv[2], "%d", &pipeSefd[1]);
-    writeToLog(debug, "OBSTACLES: pipes opened");
+    sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock == -1) {
+        perror("socket");
+        writeToLog(errors, "OBSTACLES: error in creating socket");
+        return 1;
+    }
+
+    bzero((char *) &server_address, sizeof(server_address));
+    server_address.sin_family = AF_INET;
+    server_address.sin_port = htons(port);  
+
+    // convert the string in ip address
+    if ((inet_pton(AF_INET, ipAddress, &server_address.sin_addr)) <0) {
+        perror("inet_pton");
+        writeToLog(errors, "OBSTACLES: error in inet_pton() in converting IP address");
+        return 1;
+    }
+    
+    // Connect to the server
+    if ((connect(sock, (struct sockaddr*)&server_address, sizeof(server_address))) == -1) {
+        perror("connect");
+        writeToLog(errors, "OBSTACLES: error in connecting to server");
+        return 1;
+    }
+    writeToLog(debug, "OBSTACLES: connected to serverSocket");
+    memset(sockmsg, '\0', MAX_MSG_LEN);
+    char *message = "OI";
+    writeToLog(obsdebug, message);
+    // message[2] = '\0'; // null-terminate the message
+    if (send(sock, message, strlen(message), 0) == -1) {
+        perror("send");
+        return 1;
+    }
+    writeToLog(obsdebug, "OBSTACLES: message OI sent to server");
+
 
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -152,18 +191,12 @@ int main (int argc, char *argv[])
         }
     }
 
-    // closing pipes
-    for (int i = 0; i < 2; i++){
-        if (close(pipeSefd[i]) == -1){
-            perror("error in closing pipe");
-            writeToLog(errors, "OBSTACLES: error in closing pipe");
-        }
-    }
     // free the memory allocated for obstacles
     for(int i = 0; i<20; i++){
         free(obstacles[i]);
     }
     // close log files
+    close(sock);
     fclose(debug);
     fclose(errors);
     fclose(obsdebug);
