@@ -19,7 +19,6 @@
 
 float rho2 = 2;
 
-
 typedef struct {
     int x;
     int y;
@@ -115,10 +114,6 @@ bool isTargetTaken(int x, int y, int xt, int yt){
 }
 
 int main(char argc, char*argv[]){
-    // resizing the window
-    //sleep(1);
-    //char *get_wid = "xdotool search --onlyvisible --name window";
-
 
     FILE * debug = fopen("logfiles/debug.log", "a");
 	FILE * winfile = fopen("logfiles/window.log", "w");    // debug log file
@@ -141,7 +136,7 @@ int main(char argc, char*argv[]){
     char obs_symbol = 'o';
     char tar_symbol = 'T';
     int pipeSefd;
-    int rows, cols;
+    int rows = 50, cols = 100;
     int srows, scols, newrows, newcols;
     int x;
 	int y;
@@ -164,7 +159,6 @@ int main(char argc, char*argv[]){
     init_pair(4, COLOR_GREEN, COLOR_BLACK); // for targets
     init_pair(5, COLOR_CYAN, COLOR_BLACK); // for drones
     writeToLog(winfile, "WINDOW: colors initialized");
-
 
     if (stdscr == NULL) {
         // Gestisci l'errore di inizializzazione di ncurses
@@ -211,6 +205,7 @@ int main(char argc, char*argv[]){
     writeToLog(winfile, "WINDOW: pipe set");
 
     // Read Raws and Cols
+    /*
     if((read(pipeSefd, &rows, sizeof(int))) == -1){
         perror("read");
         writeToLog(errors, "WINDOW: error in read rows");
@@ -221,6 +216,7 @@ int main(char argc, char*argv[]){
         writeToLog(errors, "WINDOW: error in read cols");
         exit(EXIT_FAILURE);
     }
+    */
     // Checking pipe functionality
   
     sprintf(msg, "WINDOW: rows = %d, cols = %d", rows, cols);

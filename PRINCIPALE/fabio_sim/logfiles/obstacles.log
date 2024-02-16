@@ -1,11 +1,238 @@
-OBSTACLES: message OB sent to server
-OBSTACLES: socket closed
-OBSTACLES: received rows and cols from server
+OBSTACLES: number of obstacles = 6
+OBSTACLES: obstacle 0 created at (42, 32)
+
+OBSTACLES: obstacle 1 created at (93, 6)
+
+OBSTACLES: obstacle 2 created at (97, 14)
+
+OBSTACLES: obstacle 3 created at (93, 5)
+
+OBSTACLES: obstacle 4 created at (29, 25)
+
+OBSTACLES: obstacle 5 created at (68, 6)
+
+OBSTACLES: number of obstacles = 1
+OBSTACLES: obstacle 0 created at (39, 2)
+
+OBSTACLES: number of obstacles = 10
+OBSTACLES: obstacle 0 created at (48, 14)
+
+OBSTACLES: obstacle 1 created at (12, 26)
+
+OBSTACLES: obstacle 2 created at (5, 44)
+
+OBSTACLES: obstacle 3 created at (60, 21)
+
+OBSTACLES: obstacle 4 created at (20, 36)
+
+OBSTACLES: obstacle 5 created at (49, 40)
+
+OBSTACLES: obstacle 6 created at (35, 33)
+
+OBSTACLES: obstacle 7 created at (64, 15)
+
+OBSTACLES: obstacle 8 created at (48, 7)
+
+OBSTACLES: obstacle 9 created at (59, 44)
+
+OBSTACLES: number of obstacles = 10
+OBSTACLES: obstacle 0 created at (14, 1)
+
+OBSTACLES: obstacle 1 created at (96, 7)
+
+OBSTACLES: obstacle 2 created at (84, 27)
+
+OBSTACLES: obstacle 3 created at (93, 45)
+
+OBSTACLES: obstacle 4 created at (93, 30)
+
+OBSTACLES: obstacle 5 created at (22, 7)
+
+OBSTACLES: obstacle 6 created at (35, 41)
+
+OBSTACLES: obstacle 7 created at (78, 6)
+
+OBSTACLES: obstacle 8 created at (13, 9)
+
+OBSTACLES: obstacle 9 created at (83, 8)
+
+OBSTACLES: number of obstacles = 18
+OBSTACLES: obstacle 0 created at (34, 18)
+
+OBSTACLES: obstacle 1 created at (58, 40)
+
+OBSTACLES: obstacle 2 created at (71, 17)
+
+OBSTACLES: obstacle 3 created at (33, 38)
+
+OBSTACLES: obstacle 4 created at (63, 41)
+
+OBSTACLES: obstacle 5 created at (88, 37)
+
+OBSTACLES: obstacle 6 created at (47, 39)
+
+OBSTACLES: obstacle 7 created at (81, 7)
+
+OBSTACLES: obstacle 8 created at (96, 25)
+
+OBSTACLES: obstacle 9 created at (13, 8)
+
+OBSTACLES: obstacle 10 created at (76, 42)
+
+OBSTACLES: obstacle 11 created at (18, 41)
+
+OBSTACLES: obstacle 12 created at (11, 47)
+
+OBSTACLES: obstacle 13 created at (8, 26)
+
+OBSTACLES: obstacle 14 created at (77, 41)
+
+OBSTACLES: obstacle 15 created at (20, 34)
+
+OBSTACLES: obstacle 16 created at (98, 33)
+
+OBSTACLES: obstacle 17 created at (51, 31)
+
+OBSTACLES: number of obstacles = 14
+OBSTACLES: obstacle 0 created at (30, 1)
+
+OBSTACLES: obstacle 1 created at (32, 25)
+
+OBSTACLES: obstacle 2 created at (43, 8)
+
+OBSTACLES: obstacle 3 created at (57, 9)
+
+OBSTACLES: obstacle 4 created at (98, 47)
+
+OBSTACLES: obstacle 5 created at (55, 28)
+
+OBSTACLES: obstacle 6 created at (19, 9)
+
+OBSTACLES: obstacle 7 created at (30, 22)
+
+OBSTACLES: obstacle 8 created at (33, 3)
+
+OBSTACLES: obstacle 9 created at (58, 3)
+
+OBSTACLES: obstacle 10 created at (90, 1)
+
+OBSTACLES: obstacle 11 created at (63, 43)
+
+OBSTACLES: obstacle 12 created at (78, 13)
+
+OBSTACLES: obstacle 13 created at (54, 22)
 
 OBSTACLES: number of obstacles = 3
-OBSTACLES: obstacle 0 created at (33, 23)
+OBSTACLES: obstacle 0 created at (10, 42)
 
-OBSTACLES: obstacle 1 created at (7, 46)
+OBSTACLES: obstacle 1 created at (43, 44)
 
-OBSTACLES: obstacle 2 created at (95, 43)
+OBSTACLES: obstacle 2 created at (34, 18)
+
+OBSTACLES: number of obstacles = 7
+OBSTACLES: obstacle 0 created at (77, 17)
+
+OBSTACLES: obstacle 1 created at (98, 3)
+
+OBSTACLES: obstacle 2 created at (28, 47)
+
+OBSTACLES: obstacle 3 created at (9, 12)
+
+OBSTACLES: obstacle 4 created at (35, 6)
+
+OBSTACLES: obstacle 5 created at (93, 31)
+
+OBSTACLES: obstacle 6 created at (27, 14)
+
+OBSTACLES: number of obstacles = 9
+OBSTACLES: obstacle 0 created at (62, 1)
+
+OBSTACLES: obstacle 1 created at (71, 10)
+
+OBSTACLES: obstacle 2 created at (47, 3)
+
+OBSTACLES: obstacle 3 created at (96, 6)
+
+OBSTACLES: obstacle 4 created at (4, 11)
+
+OBSTACLES: obstacle 5 created at (17, 7)
+
+OBSTACLES: obstacle 6 created at (70, 37)
+
+OBSTACLES: obstacle 7 created at (15, 45)
+
+OBSTACLES: obstacle 8 created at (72, 16)
+
+OBSTACLES: number of obstacles = 9
+OBSTACLES: obstacle 0 created at (87, 22)
+
+OBSTACLES: obstacle 1 created at (49, 11)
+
+OBSTACLES: obstacle 2 created at (44, 45)
+
+OBSTACLES: obstacle 3 created at (8, 33)
+
+OBSTACLES: obstacle 4 created at (14, 13)
+
+OBSTACLES: obstacle 5 created at (65, 39)
+
+OBSTACLES: obstacle 6 created at (27, 8)
+
+OBSTACLES: obstacle 7 created at (73, 19)
+
+OBSTACLES: obstacle 8 created at (13, 8)
+
+OBSTACLES: number of obstacles = 19
+OBSTACLES: obstacle 0 created at (16, 42)
+
+OBSTACLES: obstacle 1 created at (91, 17)
+
+OBSTACLES: obstacle 2 created at (25, 9)
+
+OBSTACLES: obstacle 3 created at (82, 39)
+
+OBSTACLES: obstacle 4 created at (32, 34)
+
+OBSTACLES: obstacle 5 created at (30, 13)
+
+OBSTACLES: obstacle 6 created at (14, 31)
+
+OBSTACLES: obstacle 7 created at (15, 16)
+
+OBSTACLES: obstacle 8 created at (51, 40)
+
+OBSTACLES: obstacle 9 created at (97, 26)
+
+OBSTACLES: obstacle 10 created at (74, 6)
+
+OBSTACLES: obstacle 11 created at (61, 25)
+
+OBSTACLES: obstacle 12 created at (66, 40)
+
+OBSTACLES: obstacle 13 created at (79, 48)
+
+OBSTACLES: obstacle 14 created at (33, 29)
+
+OBSTACLES: obstacle 15 created at (31, 18)
+
+OBSTACLES: obstacle 16 created at (56, 10)
+
+OBSTACLES: obstacle 17 created at (40, 23)
+
+OBSTACLES: obstacle 18 created at (44, 37)
+
+OBSTACLES: number of obstacles = 7
+OBSTACLES: obstacle 0 created at (34, 42)
+
+OBSTACLES: obstacle 1 created at (37, 7)
+
+OBSTACLES: obstacle 2 created at (15, 33)
+
+OBSTACLES: obstacle 3 created at (3, 26)
+
+OBSTACLES: obstacle 4 created at (66, 5)
+
+OBSTACLES: obstacle 5 created at (51, 36)
+
+OBSTACLES: obstacle 6 created at (94, 20)
 

@@ -73,15 +73,17 @@ int main (int argc, char *argv[])
     char msg[100]; // for writing to log files
     targets *target[MAX_TARGETS];
     int ntargets = 0;
+
     struct sockaddr_in server_address;
     //struct hostent *server; put for ip address
 
+    // socket variables
     struct hostent *server;
     char ipAddress[20] = "130.251.254.70";
     int port = 40000;
     int sock;
     char sockmsg[MAX_MSG_LEN];
-    int rows = 50, cols = 100;
+    int rows = 0, cols = 0;
     
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
@@ -90,13 +92,25 @@ int main (int argc, char *argv[])
     writeToLog(debug, "TARGETS: process started");
     printf("TARGETS: process started\n");
 
+    // Create a socket
     sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1) {
         perror("socket");
         writeToLog(errors, "TARGETS: error in creating socket");
         return 1;
     }
+    
+    /* give from the master and change the argv index
+    if ((server = gethostbyname(argv[1])) == NULL) {
+        perror("gethostbyname");
+        writeToLog(errors, "TARGETS: error in gethostbyname()");
+        return 1;
 
+        Or just put the argv from the master
+    }
+
+    Take the port from the master
+    */
     bzero((char *) &server_address, sizeof(server_address));
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(port);  
@@ -114,16 +128,51 @@ int main (int argc, char *argv[])
         writeToLog(errors, "TARGETS: error in connecting to server");
         return 1;
     }
-    writeToLog(debug, "TARGETS: connected to serverSocket");
+    writeToLog(debug, "TARGETS: connected to server");
 
-    char message[1024] = "TI";
-    message[2] = '\0'; // null-terminate the message
+    char * message = "TI";
     if (send(sock, message, strlen(message), 0) == -1) {
         perror("send");
         return 1;
     }
     writeToLog(tardebug, "TARGETS: message TI sent to server");
+    if (recv(sock, sockmsg, sizeof(sockmsg) - 1, 0) == -1) {
+        perror("recv");
+        writeToLog(errors, "TARGETS: error in receiving echo message from server");
+        return 1;
+    }
+    writeToLog(tardebug, "Message echo send");
+    // bzero(sockmsg, sizeof(sockmsg));
+    /*
+    if (recv(sock, sockmsg, sizeof(sockmsg) - 1, 0) == -1) {
+        perror("recv");
+        writeToLog(errors, "TARGETS: error in receiving rows and cols from server");
+        return 1;
+    }
+    writeToLog(tardebug, "Message rows received");
+    if (send(sock, sockmsg, sizeof(sockmsg) - 1, 0) == -1)
+    {
+        perror("send");
+        writeToLog(errors, "TARGETS: error in sending echo rows to server");
+        return 1;
+    }
+    writeToLog(tardebug, "Message echo sent");
+    
+    sscanf(sockmsg, "%d,%d", &rows, &cols);
+    sprintf(msg, "TARGETS: rows = %d, cols = %d", rows, cols);
+    writeToLog(tardebug, msg);
+    bzero(sockmsg, sizeof(sockmsg));
+    */
 
+    /* not needed in client?
+    if ((close(sock)) == -1){
+        perror("error in closing socket");
+        writeToLog(errors, "TARGETS: error in closing socket");
+        return 2;
+    }
+    writeToLog(tardebug, "TARGETS: socket closed"); // temporary
+    */
+    
     // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -147,7 +196,7 @@ int main (int argc, char *argv[])
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
     }
-    
+
     sleep(2);
     while(!sigint_rec){
         time_t t = time(NULL);
@@ -168,36 +217,15 @@ int main (int argc, char *argv[])
             sprintf(pos_targets[i], "%d,%d", target[i]->x, target[i]->y);
             writeToLog(tardebug, pos_targets[i]);
             printf("TARGETS: target %d: x = %d, y = %d\n", i, target[i]->x, target[i]->y);
-            //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
-            
+            //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);   
         }
-        /* Put in server child
-        if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
-            perror("error in writing to pipe");
-            writeToLog(errors, "TARGETS: error in writing to pipe");
-        }
-        for(int i = 0; i<ntargets; i++){
-            if ((write(pipeSefd[1], target[i],sizeof(targets))) == -1){
-                perror("error in writing to pipe");
-                writeToLog(errors, "TARGETS: error in writing to pipe");
-            }
-        }
-        */
+
         time_t t2 = time(NULL);
         while(t2-t < 60){
             t2 = time(NULL);
         }
     }
 
-    // closing pipes
-    /* Put in child server
-    for (int i = 0; i < 2; i++){
-        if (close(pipeSefd[i]) == -1){
-            perror("error in closing pipe");
-            writeToLog(errors, "TARGETS: error in closing pipe");
-        }
-    }
-    */
     // freeing memory
     for(int i = 0; i<20; i++){
         free(target[i]);

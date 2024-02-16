@@ -1,86 +1,24 @@
-Wed Feb  7 12:17:53 2024
+Fri Feb 16 14:03:33 2024
  => SERVER: binding...
-Wed Feb  7 12:17:53 2024
+Fri Feb 16 14:03:33 2024
  => SERVER: listening...
-Wed Feb  7 12:17:55 2024
- => SERVER: received something else unexpected
-Wed Feb  7 12:17:55 2024
- => O|
-Wed Feb  7 12:17:55 2024
- => SERVER: received something else unexpected
-Wed Feb  7 12:17:55 2024
- => SERVER: Window opened and socket created
-Wed Feb  7 12:17:55 2024
- => T|
-Wed Feb  7 12:17:56 2024
- => SERVER: OBSTACLE WIN 
-Wed Feb  7 12:17:56 2024
- => SERVER: reading from obstacles
-
-Wed Feb  7 12:17:56 2024
- => SERVER: number of obstacles: 3
-
-Wed Feb  7 12:17:56 2024
- => SERVER: obstacle 0 position: (33, 23)
-
-Wed Feb  7 12:17:56 2024
- => SERVER: obstacle 1 position: (7, 46)
-
-Wed Feb  7 12:17:56 2024
- => SERVER: obstacle 2 position: (95, 43)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: TARGETS WIN
-Wed Feb  7 12:17:57 2024
- => SERVER: reading from targets
-
-Wed Feb  7 12:17:57 2024
- => SERVER: number of targets: 16
-Wed Feb  7 12:17:57 2024
- => SERVER: target 0 position: (16, 4)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 1 position: (74, 35)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 2 position: (41, 6)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 3 position: (56, 26)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 4 position: (38, 5)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 5 position: (61, 8)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 6 position: (9, 42)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 7 position: (9, 9)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 8 position: (70, 4)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 9 position: (81, 46)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 10 position: (69, 44)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 11 position: (49, 5)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 12 position: (50, 6)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 13 position: (81, 25)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 14 position: (62, 5)
-
-Wed Feb  7 12:17:57 2024
- => SERVER: target 15 position: (8, 40)
-
+Fri Feb 16 14:03:33 2024
+ => SERVER: pipes opened
+Fri Feb 16 14:03:33 2024
+ => SERVER: pipes converted in strings
+Fri Feb 16 14:03:35 2024
+ => SERVER: connection accepted
+Fri Feb 16 14:03:35 2024
+ => SERVER: forked
+Fri Feb 16 14:03:35 2024
+ => SERVER: generating the map
+Fri Feb 16 14:03:35 2024
+ => SERVER: reading the pipe !!
+Fri Feb 16 14:03:35 2024
+ => T
+Fri Feb 16 14:03:35 2024
+ => SERVER: opening pipes
+Fri Feb 16 14:03:35 2024
+ => SERVER: pipes opened
+Fri Feb 16 14:03:35 2024
+ => SERVER: rows and cols sent to window and drone
