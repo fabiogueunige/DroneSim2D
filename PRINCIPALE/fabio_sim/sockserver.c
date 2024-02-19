@@ -43,6 +43,8 @@ int main (int argc, char *argv[]) {
     FILE * sockdebug = fopen(msg, "w");
     writeToLog(sockdebug, "Socket server started");
     
+    // strlen = numero caratteri di una stringa
+    // sizeof = numero di byte di un tipo di dato (non sicuro -> sostituidci)
 
     sscanf(argv[1], "%d", &sockfd);
     sscanf(argv[2], "%d", &pipeSe[0]);
@@ -50,17 +52,46 @@ int main (int argc, char *argv[]) {
     writeToLog(sockdebug, "Socket server pipe created");
 
     memset(msg, '\0', MAX_MSG_LEN);
-    if ((recv(sockfd, msg, strlen(msg), 0)) < 0) {
+    if ((recv(sockfd, msg, MAX_MSG_LEN, 0)) < 0) {
         writeToLog(errors, "Error receiving message from client");
         exit(EXIT_FAILURE);
     }
     writeToLog(sockdebug, "Message received from client");
     writeToLog(sockdebug, msg);
     
-    if ((write(pipeSe[1], msg, strlen(msg))) < 0) {
+    if ((write(pipeSe[1], msg, strlen (msg) + 1)) < 0) {
         writeToLog(errors, "Error writing to pipe the message information");
         exit(EXIT_FAILURE);
     }
+    writeToLog(sockdebug, "Message sent to parent process");
+    writeToLog(sockdebug, msg);
+
+    // Sending rows and cols to the clients
+    if ((send(sockfd, argv[5], strlen(argv[5]) + 1, 0)) < 0) {
+        perror("Error sending rows and cols to client");
+        writeToLog(errors, "Error sending rows and cols to client");
+        writeToLog(sockdebug, "Error sending rows and cols to client");
+        exit(EXIT_FAILURE);
+    }
+
+
+    /*while (1) 
+    {
+        memset(msg, '\0', MAX_MSG_LEN);
+        if ((recv(sockfd, msg, strlen(msg), 0)) < 0) {
+            writeToLog(errors, "Error receiving message from client");
+            exit(EXIT_FAILURE);
+        }
+        writeToLog(sockdebug, "Message received from client");
+        writeToLog(sockdebug, msg);
+        
+        if ((write(pipeSe[1], msg, strlen(msg))) < 0) {
+            writeToLog(errors, "Error writing to pipe the message information");
+            exit(EXIT_FAILURE);
+        }
+        writeToLog(sockdebug, "Message sent to parent process");
+        writeToLog(sockdebug, msg);
+    }*/
 
     close(sockfd);
     close(pipeSe[0]);

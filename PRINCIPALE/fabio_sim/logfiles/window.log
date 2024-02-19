@@ -1,2404 +1,5184 @@
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: curses mode started
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: colors initialized
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: max rows and cols taken
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: pipe set
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: rows = 50, cols = 100
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: window moved after resizing
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: window created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:54 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:55 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:55 2024
  => coo
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: border created
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:50 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => coo
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: border created
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => coo
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: border created
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => coo
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: border created
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => coo
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: border created
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => coo
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: border created
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => coo
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: border created
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => coo
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: border created
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => coo
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: border created
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:55 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:56 2024
  => coo
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: border created
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:56 2024
  => coo
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: border created
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:51 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => coo
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: border created
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => coo
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: border created
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => coo
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: border created
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => coo
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: border created
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => coo
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: border created
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => coo
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: border created
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => coo
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: border created
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => coo
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: border created
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:56 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:52 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:53 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:57 2024
  => coo
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: border created
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:57 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:54 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => coo
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: border created
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:58 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => coo
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: border created
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => coo
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: border created
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => coo
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: border created
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => coo
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: border created
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => coo
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: border created
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => coo
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: border created
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:55 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => coo
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: border created
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => coo
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: border created
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => coo
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: border created
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => coo
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: border created
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:29:59 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => coo
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: border created
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => coo
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: border created
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => coo
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: border created
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => coo
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: border created
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => coo
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: border created
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => coo
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: border created
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:56 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => coo
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: border created
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => coo
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: border created
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => coo
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: border created
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => coo
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: border created
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:00 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => coo
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: border created
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => coo
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: border created
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => coo
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: border created
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => coo
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: border created
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => coo
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: border created
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => coo
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: border created
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:57 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => coo
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: border created
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => coo
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: border created
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => coo
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: border created
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => coo
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: border created
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:01 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => coo
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: border created
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => coo
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: border created
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => coo
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: border created
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => coo
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: border created
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => coo
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: border created
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => coo
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: border created
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:58 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => coo
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: border created
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => coo
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: border created
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => coo
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: border created
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => coo
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: border created
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:02 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => coo
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: border created
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => coo
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: border created
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => coo
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: border created
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => coo
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: border created
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => coo
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: border created
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: info printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => coo
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: reading drone
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: border created
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: drone printed
-Fri Feb 16 18:40:59 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => coo
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: border created
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => coo
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: border created
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => coo
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: border created
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => coo
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: border created
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:03 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => coo
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: border created
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => coo
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: border created
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => coo
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: border created
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => coo
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: border created
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => coo
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: border created
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => coo
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: border created
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:00 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => coo
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: border created
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => coo
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: border created
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => coo
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: border created
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => coo
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: border created
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:04 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => coo
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: border created
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => coo
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: border created
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => coo
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: border created
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => coo
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: border created
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => coo
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: border created
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => coo
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: border created
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:01 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => coo
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: border created
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => coo
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: border created
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => coo
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: border created
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => coo
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: border created
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:05 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => coo
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: border created
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => coo
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: border created
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => coo
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: border created
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => coo
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: border created
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => coo
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: border created
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => coo
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: border created
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:02 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => coo
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: border created
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => coo
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: border created
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => coo
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: border created
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => coo
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: border created
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:06 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => coo
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: border created
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => coo
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: border created
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => coo
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: border created
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => coo
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: border created
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => coo
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: border created
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => coo
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: border created
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:03 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => coo
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: border created
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => coo
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: border created
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => coo
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: border created
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => coo
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: border created
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:07 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => coo
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: border created
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => coo
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: border created
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => coo
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: border created
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => coo
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: border created
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => coo
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: border created
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => coo
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: border created
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:04 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => coo
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: border created
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => coo
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: border created
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => coo
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: border created
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => coo
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: border created
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:08 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => coo
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: border created
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => coo
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: border created
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => coo
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: border created
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => coo
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: border created
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => coo
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: border created
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => coo
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: border created
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:05 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:09 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => coo
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: border created
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:06 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:10 2024
  => coo
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: border created
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:10 2024
  => coo
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: border created
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:10 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => coo
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: border created
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => coo
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: border created
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => coo
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: border created
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => coo
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: border created
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => coo
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: border created
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => coo
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: border created
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => coo
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: border created
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => coo
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: border created
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => coo
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: border created
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:07 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:11 2024
  => coo
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: border created
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:11 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => coo
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: border created
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => coo
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: border created
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => coo
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: border created
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => coo
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: border created
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => coo
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: border created
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => coo
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: border created
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => coo
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: border created
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => coo
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: border created
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => coo
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: border created
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:08 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:12 2024
  => coo
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: border created
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:12 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => coo
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: border created
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => coo
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: border created
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => coo
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: border created
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => coo
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: border created
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => coo
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: border created
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => coo
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: border created
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => coo
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: border created
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => coo
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: border created
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => coo
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: border created
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:09 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:13 2024
  => coo
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: border created
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:13 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => coo
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: border created
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => coo
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: border created
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => coo
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: border created
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => coo
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: border created
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => coo
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: border created
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => coo
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: border created
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => coo
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: border created
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => coo
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: border created
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => coo
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: border created
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:10 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:14 2024
  => coo
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: border created
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:14 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => coo
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: border created
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => coo
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: border created
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => coo
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: border created
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => coo
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: border created
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => coo
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: border created
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => coo
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: border created
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => coo
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: border created
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => coo
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: border created
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => coo
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: border created
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:11 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:15 2024
  => coo
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: border created
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:15 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => coo
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: border created
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => coo
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: border created
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => coo
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: border created
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => coo
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: border created
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => coo
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: border created
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => coo
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: border created
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => coo
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: border created
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => coo
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: border created
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => coo
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: border created
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:12 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:16 2024
  => coo
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: border created
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:16 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:17 2024
  => coo
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:17 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:17 2024
  => WINDOW: border created
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:17 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:17 2024
  => WINDOW: info printed
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:17 2024
  => coo
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:17 2024
  => WINDOW: reading drone
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:17 2024
  => WINDOW: border created
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:17 2024
  => WINDOW: drone printed
-Fri Feb 16 18:41:13 2024
+Mon Feb 19 23:30:17 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:17 2024
+ => coo
+Mon Feb 19 23:30:17 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:17 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:17 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:17 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:17 2024
+ => coo
+Mon Feb 19 23:30:17 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:17 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:17 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:17 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:17 2024
+ => coo
+Mon Feb 19 23:30:17 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:17 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:17 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:17 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:17 2024
+ => coo
+Mon Feb 19 23:30:17 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:17 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:17 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:17 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:17 2024
+ => coo
+Mon Feb 19 23:30:17 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:17 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:17 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:17 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:17 2024
+ => coo
+Mon Feb 19 23:30:17 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:17 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:17 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:17 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:17 2024
+ => coo
+Mon Feb 19 23:30:17 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:17 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:17 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:17 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:17 2024
+ => coo
+Mon Feb 19 23:30:17 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:17 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:17 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:17 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:18 2024
+ => coo
+Mon Feb 19 23:30:18 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:18 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:18 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:18 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:18 2024
+ => coo
+Mon Feb 19 23:30:18 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:18 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:18 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:18 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:18 2024
+ => coo
+Mon Feb 19 23:30:18 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:18 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:18 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:18 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:18 2024
+ => coo
+Mon Feb 19 23:30:18 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:18 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:18 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:18 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:18 2024
+ => coo
+Mon Feb 19 23:30:18 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:18 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:18 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:18 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:18 2024
+ => coo
+Mon Feb 19 23:30:18 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:18 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:18 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:18 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:18 2024
+ => coo
+Mon Feb 19 23:30:18 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:18 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:18 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:18 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:18 2024
+ => coo
+Mon Feb 19 23:30:18 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:18 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:18 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:18 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:18 2024
+ => coo
+Mon Feb 19 23:30:18 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:18 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:18 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:18 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:18 2024
+ => coo
+Mon Feb 19 23:30:18 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:18 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:18 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:18 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:19 2024
+ => coo
+Mon Feb 19 23:30:19 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:19 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:19 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:19 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:19 2024
+ => coo
+Mon Feb 19 23:30:19 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:19 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:19 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:19 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:19 2024
+ => coo
+Mon Feb 19 23:30:19 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:19 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:19 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:19 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:19 2024
+ => coo
+Mon Feb 19 23:30:19 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:19 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:19 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:19 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:19 2024
+ => coo
+Mon Feb 19 23:30:19 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:19 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:19 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:19 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:19 2024
+ => coo
+Mon Feb 19 23:30:19 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:19 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:19 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:19 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:19 2024
+ => coo
+Mon Feb 19 23:30:19 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:19 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:19 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:19 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:19 2024
+ => coo
+Mon Feb 19 23:30:19 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:19 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:19 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:19 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:19 2024
+ => coo
+Mon Feb 19 23:30:19 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:19 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:19 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:19 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:19 2024
+ => coo
+Mon Feb 19 23:30:19 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:19 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:19 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:19 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:20 2024
+ => coo
+Mon Feb 19 23:30:20 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:20 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:20 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:20 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:20 2024
+ => coo
+Mon Feb 19 23:30:20 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:20 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:20 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:20 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:20 2024
+ => coo
+Mon Feb 19 23:30:20 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:20 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:20 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:20 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:20 2024
+ => coo
+Mon Feb 19 23:30:20 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:20 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:20 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:20 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:20 2024
+ => coo
+Mon Feb 19 23:30:20 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:20 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:20 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:20 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:20 2024
+ => coo
+Mon Feb 19 23:30:20 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:20 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:20 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:20 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:20 2024
+ => coo
+Mon Feb 19 23:30:20 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:20 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:20 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:20 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:20 2024
+ => coo
+Mon Feb 19 23:30:20 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:20 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:20 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:20 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:20 2024
+ => coo
+Mon Feb 19 23:30:20 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:20 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:20 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:20 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:20 2024
+ => coo
+Mon Feb 19 23:30:20 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:20 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:20 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:20 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:21 2024
+ => coo
+Mon Feb 19 23:30:21 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:21 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:21 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:21 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:21 2024
+ => coo
+Mon Feb 19 23:30:21 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:21 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:21 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:21 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:21 2024
+ => coo
+Mon Feb 19 23:30:21 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:21 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:21 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:21 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:21 2024
+ => coo
+Mon Feb 19 23:30:21 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:21 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:21 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:21 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:21 2024
+ => coo
+Mon Feb 19 23:30:21 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:21 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:21 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:21 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:21 2024
+ => coo
+Mon Feb 19 23:30:21 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:21 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:21 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:21 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:21 2024
+ => coo
+Mon Feb 19 23:30:21 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:21 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:21 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:21 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:21 2024
+ => coo
+Mon Feb 19 23:30:21 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:21 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:21 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:21 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:21 2024
+ => coo
+Mon Feb 19 23:30:21 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:21 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:21 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:21 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:21 2024
+ => coo
+Mon Feb 19 23:30:21 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:21 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:21 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:21 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:22 2024
+ => coo
+Mon Feb 19 23:30:22 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:22 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:22 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:22 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:22 2024
+ => coo
+Mon Feb 19 23:30:22 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:22 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:22 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:22 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:22 2024
+ => coo
+Mon Feb 19 23:30:22 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:22 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:22 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:22 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:22 2024
+ => coo
+Mon Feb 19 23:30:22 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:22 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:22 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:22 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:22 2024
+ => coo
+Mon Feb 19 23:30:22 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:22 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:22 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:22 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:22 2024
+ => coo
+Mon Feb 19 23:30:22 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:22 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:22 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:22 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:22 2024
+ => coo
+Mon Feb 19 23:30:22 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:22 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:22 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:22 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:22 2024
+ => coo
+Mon Feb 19 23:30:22 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:22 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:22 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:22 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:22 2024
+ => coo
+Mon Feb 19 23:30:22 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:22 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:22 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:22 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:22 2024
+ => coo
+Mon Feb 19 23:30:22 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:22 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:22 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:22 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:23 2024
+ => coo
+Mon Feb 19 23:30:23 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:23 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:23 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:23 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:23 2024
+ => coo
+Mon Feb 19 23:30:23 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:23 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:23 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:23 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:23 2024
+ => coo
+Mon Feb 19 23:30:23 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:23 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:23 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:23 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:23 2024
+ => coo
+Mon Feb 19 23:30:23 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:23 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:23 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:23 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:23 2024
+ => coo
+Mon Feb 19 23:30:23 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:23 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:23 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:23 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:23 2024
+ => coo
+Mon Feb 19 23:30:23 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:23 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:23 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:23 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:23 2024
+ => coo
+Mon Feb 19 23:30:23 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:23 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:23 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:23 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:23 2024
+ => coo
+Mon Feb 19 23:30:23 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:23 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:23 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:23 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:23 2024
+ => coo
+Mon Feb 19 23:30:23 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:23 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:23 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:23 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:23 2024
+ => coo
+Mon Feb 19 23:30:23 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:23 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:23 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:23 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:24 2024
+ => coo
+Mon Feb 19 23:30:24 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:24 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:24 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:24 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:24 2024
+ => coo
+Mon Feb 19 23:30:24 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:24 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:24 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:24 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:24 2024
+ => coo
+Mon Feb 19 23:30:24 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:24 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:24 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:24 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:24 2024
+ => coo
+Mon Feb 19 23:30:24 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:24 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:24 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:24 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:24 2024
+ => coo
+Mon Feb 19 23:30:24 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:24 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:24 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:24 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:24 2024
+ => coo
+Mon Feb 19 23:30:24 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:24 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:24 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:24 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:24 2024
+ => coo
+Mon Feb 19 23:30:24 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:24 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:24 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:24 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:24 2024
+ => coo
+Mon Feb 19 23:30:24 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:24 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:24 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:24 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:24 2024
+ => coo
+Mon Feb 19 23:30:24 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:24 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:24 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:24 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:24 2024
+ => coo
+Mon Feb 19 23:30:24 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:24 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:24 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:24 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:25 2024
+ => coo
+Mon Feb 19 23:30:25 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:25 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:25 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:25 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:25 2024
+ => coo
+Mon Feb 19 23:30:25 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:25 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:25 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:25 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:25 2024
+ => coo
+Mon Feb 19 23:30:25 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:25 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:25 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:25 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:25 2024
+ => coo
+Mon Feb 19 23:30:25 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:25 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:25 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:25 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:25 2024
+ => coo
+Mon Feb 19 23:30:25 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:25 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:25 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:25 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:25 2024
+ => coo
+Mon Feb 19 23:30:25 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:25 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:25 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:25 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:25 2024
+ => coo
+Mon Feb 19 23:30:25 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:25 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:25 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:25 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:25 2024
+ => coo
+Mon Feb 19 23:30:25 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:25 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:25 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:25 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:25 2024
+ => coo
+Mon Feb 19 23:30:25 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:25 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:25 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:25 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:25 2024
+ => coo
+Mon Feb 19 23:30:25 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:25 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:25 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:25 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:26 2024
+ => coo
+Mon Feb 19 23:30:26 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:26 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:26 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:26 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:26 2024
+ => coo
+Mon Feb 19 23:30:26 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:26 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:26 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:26 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:26 2024
+ => coo
+Mon Feb 19 23:30:26 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:26 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:26 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:26 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:26 2024
+ => coo
+Mon Feb 19 23:30:26 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:26 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:26 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:26 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:26 2024
+ => coo
+Mon Feb 19 23:30:26 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:26 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:26 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:26 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:26 2024
+ => coo
+Mon Feb 19 23:30:26 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:26 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:26 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:26 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:26 2024
+ => coo
+Mon Feb 19 23:30:26 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:26 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:26 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:26 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:26 2024
+ => coo
+Mon Feb 19 23:30:26 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:26 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:26 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:26 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:26 2024
+ => coo
+Mon Feb 19 23:30:26 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:26 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:26 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:26 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:26 2024
+ => coo
+Mon Feb 19 23:30:26 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:26 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:26 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:26 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:27 2024
+ => coo
+Mon Feb 19 23:30:27 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:27 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:27 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:27 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:27 2024
+ => coo
+Mon Feb 19 23:30:27 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:27 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:27 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:27 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:27 2024
+ => coo
+Mon Feb 19 23:30:27 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:27 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:27 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:27 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:27 2024
+ => coo
+Mon Feb 19 23:30:27 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:27 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:27 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:27 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:27 2024
+ => coo
+Mon Feb 19 23:30:27 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:27 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:27 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:27 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:27 2024
+ => coo
+Mon Feb 19 23:30:27 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:27 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:27 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:27 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:27 2024
+ => coo
+Mon Feb 19 23:30:27 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:27 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:27 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:27 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:27 2024
+ => coo
+Mon Feb 19 23:30:27 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:27 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:27 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:27 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:27 2024
+ => coo
+Mon Feb 19 23:30:27 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:27 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:27 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:27 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:27 2024
+ => coo
+Mon Feb 19 23:30:27 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:27 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:27 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:27 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:28 2024
+ => coo
+Mon Feb 19 23:30:28 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:28 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:28 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:28 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:28 2024
+ => coo
+Mon Feb 19 23:30:28 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:28 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:28 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:28 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:28 2024
+ => coo
+Mon Feb 19 23:30:28 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:28 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:28 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:28 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:28 2024
+ => coo
+Mon Feb 19 23:30:28 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:28 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:28 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:28 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:28 2024
+ => coo
+Mon Feb 19 23:30:28 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:28 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:28 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:28 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:28 2024
+ => coo
+Mon Feb 19 23:30:28 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:28 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:28 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:28 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:28 2024
+ => coo
+Mon Feb 19 23:30:28 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:28 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:28 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:28 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:28 2024
+ => coo
+Mon Feb 19 23:30:28 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:28 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:28 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:28 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:28 2024
+ => coo
+Mon Feb 19 23:30:28 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:28 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:28 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:28 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:28 2024
+ => coo
+Mon Feb 19 23:30:28 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:28 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:28 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:28 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:29 2024
+ => coo
+Mon Feb 19 23:30:29 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:29 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:29 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:29 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:29 2024
+ => coo
+Mon Feb 19 23:30:29 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:29 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:29 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:29 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:29 2024
+ => coo
+Mon Feb 19 23:30:29 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:29 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:29 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:29 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:29 2024
+ => coo
+Mon Feb 19 23:30:29 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:29 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:29 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:29 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:29 2024
+ => coo
+Mon Feb 19 23:30:29 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:29 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:29 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:29 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:29 2024
+ => coo
+Mon Feb 19 23:30:29 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:29 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:29 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:29 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:29 2024
+ => coo
+Mon Feb 19 23:30:29 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:29 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:29 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:29 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:29 2024
+ => coo
+Mon Feb 19 23:30:29 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:29 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:29 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:29 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:29 2024
+ => coo
+Mon Feb 19 23:30:29 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:29 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:29 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:29 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:29 2024
+ => coo
+Mon Feb 19 23:30:29 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:29 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:29 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:29 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:30 2024
+ => coo
+Mon Feb 19 23:30:30 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:30 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:30 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:30 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:30 2024
+ => coo
+Mon Feb 19 23:30:30 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:30 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:30 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:30 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:30 2024
+ => coo
+Mon Feb 19 23:30:30 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:30 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:30 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:30 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:30 2024
+ => coo
+Mon Feb 19 23:30:30 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:30 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:30 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:30 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:30 2024
+ => coo
+Mon Feb 19 23:30:30 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:30 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:30 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:30 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:30 2024
+ => coo
+Mon Feb 19 23:30:30 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:30 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:30 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:30 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:30 2024
+ => coo
+Mon Feb 19 23:30:30 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:30 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:30 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:30 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:30 2024
+ => coo
+Mon Feb 19 23:30:30 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:30 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:30 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:30 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:30 2024
+ => coo
+Mon Feb 19 23:30:30 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:30 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:30 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:30 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:30 2024
+ => coo
+Mon Feb 19 23:30:30 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:30 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:30 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:30 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:31 2024
+ => coo
+Mon Feb 19 23:30:31 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:31 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:31 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:31 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:31 2024
+ => coo
+Mon Feb 19 23:30:31 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:31 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:31 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:31 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:31 2024
+ => coo
+Mon Feb 19 23:30:31 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:31 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:31 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:31 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:31 2024
+ => coo
+Mon Feb 19 23:30:31 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:31 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:31 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:31 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:31 2024
+ => coo
+Mon Feb 19 23:30:31 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:31 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:31 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:31 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:31 2024
+ => coo
+Mon Feb 19 23:30:31 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:31 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:31 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:31 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:31 2024
+ => coo
+Mon Feb 19 23:30:31 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:31 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:31 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:31 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:31 2024
+ => coo
+Mon Feb 19 23:30:31 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:31 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:31 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:31 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:31 2024
+ => coo
+Mon Feb 19 23:30:31 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:31 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:31 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:31 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:31 2024
+ => coo
+Mon Feb 19 23:30:31 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:31 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:31 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:31 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:32 2024
+ => coo
+Mon Feb 19 23:30:32 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:32 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:32 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:32 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:32 2024
+ => coo
+Mon Feb 19 23:30:32 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:32 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:32 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:32 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:32 2024
+ => coo
+Mon Feb 19 23:30:32 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:32 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:32 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:32 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:32 2024
+ => coo
+Mon Feb 19 23:30:32 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:32 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:32 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:32 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:32 2024
+ => coo
+Mon Feb 19 23:30:32 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:32 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:32 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:32 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:32 2024
+ => coo
+Mon Feb 19 23:30:32 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:32 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:32 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:32 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:32 2024
+ => coo
+Mon Feb 19 23:30:32 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:32 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:32 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:32 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:32 2024
+ => coo
+Mon Feb 19 23:30:32 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:32 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:32 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:32 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:32 2024
+ => coo
+Mon Feb 19 23:30:32 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:32 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:32 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:32 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:32 2024
+ => coo
+Mon Feb 19 23:30:32 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:32 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:32 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:32 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:33 2024
+ => coo
+Mon Feb 19 23:30:33 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:33 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:33 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:33 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:33 2024
+ => coo
+Mon Feb 19 23:30:33 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:33 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:33 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:33 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:33 2024
+ => coo
+Mon Feb 19 23:30:33 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:33 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:33 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:33 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:33 2024
+ => coo
+Mon Feb 19 23:30:33 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:33 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:33 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:33 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:33 2024
+ => coo
+Mon Feb 19 23:30:33 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:33 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:33 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:33 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:33 2024
+ => coo
+Mon Feb 19 23:30:33 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:33 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:33 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:33 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:33 2024
+ => coo
+Mon Feb 19 23:30:33 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:33 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:33 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:33 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:33 2024
+ => coo
+Mon Feb 19 23:30:33 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:33 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:33 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:33 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:33 2024
+ => coo
+Mon Feb 19 23:30:33 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:33 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:33 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:33 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:33 2024
+ => coo
+Mon Feb 19 23:30:33 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:33 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:33 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:33 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:34 2024
+ => coo
+Mon Feb 19 23:30:34 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:34 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:34 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:34 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:34 2024
+ => coo
+Mon Feb 19 23:30:34 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:34 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:34 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:34 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:34 2024
+ => coo
+Mon Feb 19 23:30:34 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:34 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:34 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:34 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:34 2024
+ => coo
+Mon Feb 19 23:30:34 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:34 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:34 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:34 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:34 2024
+ => coo
+Mon Feb 19 23:30:34 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:34 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:34 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:34 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:34 2024
+ => coo
+Mon Feb 19 23:30:34 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:34 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:34 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:34 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:34 2024
+ => coo
+Mon Feb 19 23:30:34 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:34 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:34 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:34 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:34 2024
+ => coo
+Mon Feb 19 23:30:34 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:34 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:34 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:34 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:34 2024
+ => coo
+Mon Feb 19 23:30:34 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:34 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:34 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:34 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:34 2024
+ => coo
+Mon Feb 19 23:30:34 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:34 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:34 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:34 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:35 2024
+ => coo
+Mon Feb 19 23:30:35 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:35 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:35 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:35 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:35 2024
+ => coo
+Mon Feb 19 23:30:35 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:35 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:35 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:35 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:35 2024
+ => coo
+Mon Feb 19 23:30:35 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:35 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:35 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:35 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:35 2024
+ => coo
+Mon Feb 19 23:30:35 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:35 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:35 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:35 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:35 2024
+ => coo
+Mon Feb 19 23:30:35 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:35 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:35 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:35 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:35 2024
+ => coo
+Mon Feb 19 23:30:35 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:35 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:35 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:35 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:35 2024
+ => coo
+Mon Feb 19 23:30:35 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:35 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:35 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:35 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:35 2024
+ => coo
+Mon Feb 19 23:30:35 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:35 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:35 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:35 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:35 2024
+ => coo
+Mon Feb 19 23:30:35 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:35 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:35 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:35 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:35 2024
+ => coo
+Mon Feb 19 23:30:35 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:35 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:35 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:35 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:36 2024
+ => coo
+Mon Feb 19 23:30:36 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:36 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:36 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:36 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:36 2024
+ => coo
+Mon Feb 19 23:30:36 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:36 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:36 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:36 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:36 2024
+ => coo
+Mon Feb 19 23:30:36 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:36 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:36 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:36 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:36 2024
+ => coo
+Mon Feb 19 23:30:36 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:36 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:36 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:36 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:36 2024
+ => coo
+Mon Feb 19 23:30:36 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:36 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:36 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:36 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:36 2024
+ => coo
+Mon Feb 19 23:30:36 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:36 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:36 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:36 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:36 2024
+ => coo
+Mon Feb 19 23:30:36 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:36 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:36 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:36 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:36 2024
+ => coo
+Mon Feb 19 23:30:36 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:36 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:36 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:36 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:36 2024
+ => coo
+Mon Feb 19 23:30:36 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:36 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:36 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:36 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:36 2024
+ => coo
+Mon Feb 19 23:30:36 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:36 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:36 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:36 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:37 2024
+ => coo
+Mon Feb 19 23:30:37 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:37 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:37 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:37 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:37 2024
+ => coo
+Mon Feb 19 23:30:37 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:37 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:37 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:37 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:37 2024
+ => coo
+Mon Feb 19 23:30:37 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:37 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:37 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:37 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:37 2024
+ => coo
+Mon Feb 19 23:30:37 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:37 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:37 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:37 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:37 2024
+ => coo
+Mon Feb 19 23:30:37 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:37 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:37 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:37 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:37 2024
+ => coo
+Mon Feb 19 23:30:37 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:37 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:37 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:37 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:37 2024
+ => coo
+Mon Feb 19 23:30:37 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:37 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:37 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:37 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:37 2024
+ => coo
+Mon Feb 19 23:30:37 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:37 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:37 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:37 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:37 2024
+ => coo
+Mon Feb 19 23:30:37 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:37 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:37 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:37 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:37 2024
+ => coo
+Mon Feb 19 23:30:37 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:37 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:37 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:37 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:38 2024
+ => coo
+Mon Feb 19 23:30:38 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:38 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:38 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:38 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:38 2024
+ => coo
+Mon Feb 19 23:30:38 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:38 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:38 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:38 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:38 2024
+ => coo
+Mon Feb 19 23:30:38 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:38 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:38 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:38 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:38 2024
+ => coo
+Mon Feb 19 23:30:38 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:38 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:38 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:38 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:38 2024
+ => coo
+Mon Feb 19 23:30:38 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:38 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:38 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:38 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:38 2024
+ => coo
+Mon Feb 19 23:30:38 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:38 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:38 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:38 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:38 2024
+ => coo
+Mon Feb 19 23:30:38 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:38 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:38 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:38 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:38 2024
+ => coo
+Mon Feb 19 23:30:38 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:38 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:38 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:38 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:38 2024
+ => coo
+Mon Feb 19 23:30:38 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:38 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:38 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:38 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:38 2024
+ => coo
+Mon Feb 19 23:30:38 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:38 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:38 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:38 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:39 2024
+ => coo
+Mon Feb 19 23:30:39 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:39 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:39 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:39 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:39 2024
+ => coo
+Mon Feb 19 23:30:39 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:39 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:39 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:39 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:39 2024
+ => coo
+Mon Feb 19 23:30:39 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:39 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:39 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:39 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:39 2024
+ => coo
+Mon Feb 19 23:30:39 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:39 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:39 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:39 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:39 2024
+ => coo
+Mon Feb 19 23:30:39 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:39 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:39 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:39 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:39 2024
+ => coo
+Mon Feb 19 23:30:39 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:39 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:39 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:39 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:39 2024
+ => coo
+Mon Feb 19 23:30:39 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:39 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:39 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:39 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:39 2024
+ => coo
+Mon Feb 19 23:30:39 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:39 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:39 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:39 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:39 2024
+ => coo
+Mon Feb 19 23:30:39 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:39 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:39 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:39 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:39 2024
+ => coo
+Mon Feb 19 23:30:39 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:39 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:39 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:39 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:40 2024
+ => coo
+Mon Feb 19 23:30:40 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:40 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:40 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:40 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:40 2024
+ => coo
+Mon Feb 19 23:30:40 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:40 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:40 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:40 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:40 2024
+ => coo
+Mon Feb 19 23:30:40 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:40 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:40 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:40 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:40 2024
+ => coo
+Mon Feb 19 23:30:40 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:40 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:40 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:40 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:40 2024
+ => coo
+Mon Feb 19 23:30:40 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:40 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:40 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:40 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:40 2024
+ => coo
+Mon Feb 19 23:30:40 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:40 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:40 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:40 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:40 2024
+ => coo
+Mon Feb 19 23:30:40 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:40 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:40 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:40 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:40 2024
+ => coo
+Mon Feb 19 23:30:40 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:40 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:40 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:40 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:40 2024
+ => coo
+Mon Feb 19 23:30:40 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:40 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:40 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:40 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:40 2024
+ => coo
+Mon Feb 19 23:30:40 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:40 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:40 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:40 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:41 2024
+ => coo
+Mon Feb 19 23:30:41 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:41 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:41 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:41 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:41 2024
+ => coo
+Mon Feb 19 23:30:41 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:41 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:41 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:41 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:41 2024
+ => coo
+Mon Feb 19 23:30:41 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:41 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:41 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:41 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:41 2024
+ => coo
+Mon Feb 19 23:30:41 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:41 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:41 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:41 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:41 2024
+ => coo
+Mon Feb 19 23:30:41 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:41 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:41 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:41 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:41 2024
+ => coo
+Mon Feb 19 23:30:41 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:41 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:41 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:41 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:41 2024
+ => coo
+Mon Feb 19 23:30:41 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:41 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:41 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:41 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:41 2024
+ => coo
+Mon Feb 19 23:30:41 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:41 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:41 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:41 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:41 2024
+ => coo
+Mon Feb 19 23:30:41 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:41 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:41 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:41 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:41 2024
+ => coo
+Mon Feb 19 23:30:41 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:41 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:41 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:41 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:42 2024
+ => coo
+Mon Feb 19 23:30:42 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:42 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:42 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:42 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:42 2024
+ => coo
+Mon Feb 19 23:30:42 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:42 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:42 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:42 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:42 2024
+ => coo
+Mon Feb 19 23:30:42 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:42 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:42 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:42 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:42 2024
+ => coo
+Mon Feb 19 23:30:42 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:42 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:42 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:42 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:42 2024
+ => coo
+Mon Feb 19 23:30:42 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:42 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:42 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:42 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:42 2024
+ => coo
+Mon Feb 19 23:30:42 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:42 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:42 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:42 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:42 2024
+ => coo
+Mon Feb 19 23:30:42 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:42 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:42 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:42 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:42 2024
+ => coo
+Mon Feb 19 23:30:42 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:42 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:42 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:42 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:42 2024
+ => coo
+Mon Feb 19 23:30:42 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:42 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:42 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:42 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:42 2024
+ => coo
+Mon Feb 19 23:30:42 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:42 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:42 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:42 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:43 2024
+ => coo
+Mon Feb 19 23:30:43 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:43 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:43 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:43 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:43 2024
+ => coo
+Mon Feb 19 23:30:43 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:43 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:43 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:43 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:43 2024
+ => coo
+Mon Feb 19 23:30:43 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:43 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:43 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:43 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:43 2024
+ => coo
+Mon Feb 19 23:30:43 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:43 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:43 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:43 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:43 2024
+ => coo
+Mon Feb 19 23:30:43 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:43 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:43 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:43 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:43 2024
+ => coo
+Mon Feb 19 23:30:43 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:43 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:43 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:43 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:43 2024
+ => coo
+Mon Feb 19 23:30:43 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:43 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:43 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:43 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:43 2024
+ => coo
+Mon Feb 19 23:30:43 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:43 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:43 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:43 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:43 2024
+ => coo
+Mon Feb 19 23:30:43 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:43 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:43 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:43 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:43 2024
+ => coo
+Mon Feb 19 23:30:43 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:43 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:43 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:43 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:44 2024
+ => coo
+Mon Feb 19 23:30:44 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:44 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:44 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:44 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:44 2024
+ => coo
+Mon Feb 19 23:30:44 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:44 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:44 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:44 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:44 2024
+ => coo
+Mon Feb 19 23:30:44 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:44 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:44 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:44 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:44 2024
+ => coo
+Mon Feb 19 23:30:44 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:44 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:44 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:44 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:44 2024
+ => coo
+Mon Feb 19 23:30:44 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:44 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:44 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:44 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:44 2024
+ => coo
+Mon Feb 19 23:30:44 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:44 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:44 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:44 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:44 2024
+ => coo
+Mon Feb 19 23:30:44 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:44 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:44 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:44 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:44 2024
+ => coo
+Mon Feb 19 23:30:44 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:44 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:44 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:44 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:44 2024
+ => coo
+Mon Feb 19 23:30:44 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:44 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:44 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:44 2024
+ => WINDOW: info printed
+Mon Feb 19 23:30:44 2024
+ => coo
+Mon Feb 19 23:30:44 2024
+ => WINDOW: reading drone
+Mon Feb 19 23:30:44 2024
+ => WINDOW: border created
+Mon Feb 19 23:30:44 2024
+ => WINDOW: drone printed
+Mon Feb 19 23:30:44 2024
  => WINDOW: info printed

@@ -1,22 +1,14 @@
 TI
 TARGETS: message TI sent to server
-TARGETS: ntargets = 19
-60,37
-3,25
-18,44
-3,17
-73,24
-15,13
-22,31
-33,43
-96,5
-14,37
-58,22
-70,45
-93,22
-94,18
-41,46
-47,31
-61,16
-23,34
-82,24
+TARGETS: message received from server
+50.000,100.000
+TARGETS: ntargets = 9
+90,11
+5,22
+33,15
+3,33
+92,37
+61,38
+6,24
+64,30
+93,15

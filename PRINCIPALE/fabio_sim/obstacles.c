@@ -73,12 +73,13 @@ int main (int argc, char *argv[])
     //struct hostent *server; put for ip address
 
     struct hostent *server;
-    char ipAddress[20] = "192.168.1.65";
-    int port = 40000;
+    char ipAddress[20] = "192.168.1.61";
+    int port = 40001;
     int sock;
     char sockmsg[MAX_MSG_LEN];
 
-    int rows = 50, cols = 100;
+    int rows = 20, cols = 10;
+    struct obstacle *obstacles[MAX_OBSTACLES];
 
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
@@ -113,10 +114,10 @@ int main (int argc, char *argv[])
     }
     writeToLog(debug, "OBSTACLES: connected to serverSocket");
     memset(sockmsg, '\0', MAX_MSG_LEN);
-    char *message = "OI";
+    char message [10];
+    sprintf(message, "OI");
     writeToLog(obsdebug, message);
-    // message[2] = '\0'; // null-terminate the message
-    if (send(sock, message, strlen(message), 0) == -1) {
+    if (send(sock, message, strlen(message) + 1, 0) == -1) {
         perror("send");
         return 1;
     }
@@ -145,8 +146,18 @@ int main (int argc, char *argv[])
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
     }
+
+    // receiving rows and cols from server
+    if ((recv(sock, sockmsg, MAX_MSG_LEN, 0)) < 0) {
+        writeToLog(errors, "Error receiving message from server");
+        exit(EXIT_FAILURE);
+    }
+    writeToLog(obsdebug, "OBSTACLES: message received from server");
+    writeToLog(obsdebug, sockmsg);
+    // setting rows and cols
+    sscanf(sockmsg, "%d,%d", &rows, &cols);
     
-    struct obstacle *obstacles[MAX_OBSTACLES];
+    
     sleep(1); // wait for server to read rows and cols
     // obstacle generation cycle
     while(!sigint_rec){

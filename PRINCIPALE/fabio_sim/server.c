@@ -139,6 +139,8 @@ int main(int argc, char* argv[]){
     */
     int pipeDrfd[2];    // pipe for drone: 0 for reading, 1 for writing
     int *pipeObfd[2];    // pipe for obstacles: 0 for reading, 1 for writing
+    char ti[] = "TI";
+    char oi[] = "OI";
     int *pipeTafd[2]; 
     char piperd[NUMPIPE][10];    // string that contains the readable fd of pipe_fd
     char pipewr[NUMPIPE][10];
@@ -146,7 +148,7 @@ int main(int argc, char* argv[]){
     pid_t pidch[NUMCLIENT]; 
     pid_t window_pid;
     char fd_str[10];
-    int port = 40000;
+    int port = 40001;
     int client_sock;
 
     int nobstacles_edge = 2 * (rows + cols);
@@ -221,8 +223,10 @@ int main(int argc, char* argv[]){
             sprintf(fd_str, "%d", client_sock);
             char id[5];
             sprintf(id, "%d", i);
+            char rc[100];
+            sprintf(rc, "%d.000,%d.000", rows,cols);
 
-            char *args[] = {"./sockserver",fd_str, piperd[i*2], pipewr[i*2+1], id, NULL};  // path of child process
+            char *args[] = {"./sockserver",fd_str, piperd[i*2], pipewr[i*2+1], id, rc, NULL};  // path of child process
             execvp(args[0], args);
             perror("execvp");
             char error[50];
@@ -275,21 +279,23 @@ int main(int argc, char* argv[]){
     writeToLog(serdebug, "SERVER: reading the pipe with sockets");
     for (int i= 0; i < NUMCLIENT; i++){
         char buffer[MAX_MSG_LEN];
-        if ((read(pipe_fd[i*2+1][0], buffer, strlen(buffer))) == -1) { // reads from obstacles
+        if ((read(pipe_fd[i*2+1][0], buffer, MAX_MSG_LEN)) == -1) { // reads from obstacles
             perror("error in reading from pipe from sockChild 1");
             writeToLog(errors, "SERVER: error in reading from pipe sockChild 1");
             exit(EXIT_FAILURE);
         }
         writeToLog(serdebug, buffer);
-        if (buffer == "TI")
+        if (strcmp(buffer, ti) == 0)
         {
             pipeTafd[0] = &pipe_fd[i*2+1][0];
             pipeTafd[1] = &pipe_fd[i*2][1];
+            writeToLog(serdebug, "SERVER: pipeTafd set");
         }
-        if (buffer == "OI")
+        if (strcmp(buffer, oi) == 0)
         {
             pipeObfd[0] = &pipe_fd[i*2+1][0];
             pipeObfd[1] = &pipe_fd[i*2][1];
+            writeToLog(serdebug, "SERVER: pipeObfd set");
         }
     }
 
