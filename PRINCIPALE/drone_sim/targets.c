@@ -65,7 +65,7 @@ void writeToLog(FILE * logFile, const char *message) {
 
 void Send(int sock, char *msg, FILE *tardebug){
     FILE *error = fopen("logfiles/errors.log", "a");
-    if (send(sock, msg, strlen(msg) + 1, 0) == -1) {
+    if (send(sock, msg, strlen(msg), 0) == -1) {
         perror("send");
         writeToLog(error, "TARGETS: error in sending message to server");
         exit(EXIT_FAILURE);
@@ -212,7 +212,9 @@ int main (int argc, char *argv[])
             //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
             
         }
-        targetStr[strlen(targetStr)-1] = '\0'; // remove the last |
+        if(ntargets != 0){
+            targetStr[strlen(targetStr)-1] = '\0'; // remove the last |
+        }
         writeToLog(tardebug, targetStr);
         /*if(send(sock, targetStr, strlen(targetStr) + 1, 0) == -1){
             perror("send");

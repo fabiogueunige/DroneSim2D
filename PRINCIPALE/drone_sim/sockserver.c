@@ -23,25 +23,34 @@ void writeToLog(FILE * logFile, const char *message) {
     fprintf(logFile, "%s\n", message);
     fflush(logFile);
 }
-void Receive(int sockfd, char *buffer, int *pipetowritefd) {
-    FILE * debug = fopen("logfiles/debug.log", "a");
-    if(recv(sockfd, buffer, MAX_MSG_LEN, 0) < 0) {
+void Receive(int sockfd, char *buffer, int pipetowritefd, FILE *debug) {
+    /*if(recv(sockfd, buffer, MAX_MSG_LEN, 0) < 0) {
         writeToLog(stderr, "Error receiving message from client");
         exit(EXIT_FAILURE);
     }
     writeToLog(debug, buffer);
     //char msg[MAX_MSG_LEN] = buffer;
 
-    if(write(*pipetowritefd, buffer, strlen(buffer)+1) < 0) {
+    if(write(pipetowritefd, buffer, strlen(buffer)) < 0) {
+        writeToLog(stderr, "Error writing to pipe the message information");
+        exit(EXIT_FAILURE);
+    }*/
+    ssize_t received_bytes = recv(sockfd, buffer, MAX_MSG_LEN, 0);
+    if (received_bytes < 0) {
+        writeToLog(stderr, "Error receiving message from client");
+        exit(EXIT_FAILURE);
+    }
+    writeToLog(debug, buffer);
+    // Write the received data to the pipe
+    if (write(pipetowritefd, buffer, received_bytes) < 0) {
         writeToLog(stderr, "Error writing to pipe the message information");
         exit(EXIT_FAILURE);
     }
     writeToLog(debug, "Message sent to parent process");
-    if(send(sockfd, buffer, strlen(buffer)+1, 0) < 0) {
+    if(send(sockfd, buffer, strlen(buffer), 0) < 0) {
         writeToLog(stderr, "Error sending message to client");
         exit(EXIT_FAILURE);
     }
-    fclose(debug);
 }
 int main (int argc, char *argv[]) {
 
@@ -95,9 +104,11 @@ int main (int argc, char *argv[]) {
         writeToLog(sockdebug, "Error sending rows and cols to client");
         exit(EXIT_FAILURE);
     }
-
+while(1){
     memset(msg, '\0', MAX_MSG_LEN);
-    Receive(sockfd, msg, &pipeSe[1]);
+    Receive(sockfd, msg, pipeSe[1], sockdebug);
+}
+
     /*if(recv(sockfd, msg, MAX_MSG_LEN, 0)==-1){
         perror("Error receiving message from client");
         writeToLog(errors, "Error receiving message from client");

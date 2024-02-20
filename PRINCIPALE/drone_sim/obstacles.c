@@ -63,7 +63,7 @@ void writeToLog(FILE * logFile, const char *message) {
 
 void Send(int sock, char *msg, FILE *obsdebug){
     FILE *error = fopen("logfiles/errors.log", "a");
-    if (send(sock, msg, strlen(msg) + 1, 0) == -1) {
+    if (send(sock, msg, strlen(msg), 0) == -1) {
         perror("send");
         writeToLog(error, "TARGETS: error in sending message to server");
         exit(EXIT_FAILURE);
@@ -215,7 +215,9 @@ int main (int argc, char *argv[])
                 exit(EXIT_FAILURE);
             }*/
         }
-        obstacleStr[strlen(obstacleStr)-1] = '\0'; // remove the last |
+        if(nobstacles != 0){
+            obstacleStr[strlen(obstacleStr)-1] = '\0'; // remove the last |
+        }
         writeToLog(obsdebug, obstacleStr);
         Send(sock, obstacleStr, obsdebug);
         // wait 60 seconds before generating new obstacles
