@@ -4,3 +4,5 @@ Message received from client
 OI
 Message sent to parent process
 OI
+Pipe sent to parent process
+O[6]1.000,22.000|1.000,15.000|1.000,39.000|2.000,38.000|2.000,16.000|2.000,5.000

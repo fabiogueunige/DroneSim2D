@@ -23,8 +23,8 @@ pid_t wd_pid = -1;
 bool sigint_rec = false;
 
 typedef struct {
-    int x;
-    int y;
+    float x;
+    float y;
     bool taken;
 } targets;
 
@@ -63,6 +63,28 @@ void writeToLog(FILE * logFile, const char *message) {
     fflush(logFile);
 }
 
+void Send(int sock, char *msg, FILE *tardebug){
+    FILE *error = fopen("logfiles/errors.log", "a");
+    if (send(sock, msg, strlen(msg) + 1, 0) == -1) {
+        perror("send");
+        writeToLog(error, "TARGETS: error in sending message to server");
+        exit(EXIT_FAILURE);
+    }
+    char recvmsg[MAX_MSG_LEN];
+    if (recv(sock, recvmsg, MAX_MSG_LEN, 0) < 0) {
+        perror("recv");
+        writeToLog(error, "TARGETS: error in receiving message from server");
+        exit(EXIT_FAILURE);
+    }
+    writeToLog(tardebug, "Message echo:");
+    writeToLog(tardebug, recvmsg);
+    if(strcmp(recvmsg, msg) != 0){
+        writeToLog(error, "TARGETS: echo is not equal to the message sent");
+        exit(EXIT_FAILURE);
+    }
+    fclose(error);
+}
+
 
 int main (int argc, char *argv[]) 
 {
@@ -77,7 +99,7 @@ int main (int argc, char *argv[])
     //struct hostent *server; put for ip address
 
     struct hostent *server;
-    char ipAddress[20] = "192.168.1.61";
+    char ipAddress[20] = "130.251.242.153";
     int port = 40001;
     int sock;
     char sockmsg[MAX_MSG_LEN];
@@ -171,6 +193,14 @@ int main (int argc, char *argv[])
         writeToLog(tardebug, msg);
         char pos_targets[ntargets][10];
         
+        char targetStr[MAX_MSG_LEN];
+        char temp[50];
+        // add number of targets to the string
+        sprintf(targetStr, "T[%d]", ntargets);
+        if (ntargets == 0){
+            strcat(targetStr, "|");
+        }
+
         for(int i = 0; i<ntargets; i++){
             target[i] = malloc(sizeof(targets));
             // generates random coordinates for targets
@@ -178,12 +208,20 @@ int main (int argc, char *argv[])
             target[i]->x = rand() % (cols-4) + 2;
             target[i]->y = rand() % (rows-4) + 2;
             target[i]->taken = false;
-            sprintf(pos_targets[i], "%d,%d", target[i]->x, target[i]->y);
+            sprintf(temp, "%.3f,%.3f|", target[i]->x, target[i]->y);
+            strcat(targetStr, temp);
+            sprintf(pos_targets[i], "%.3f,%.3f", target[i]->x, target[i]->y);
             writeToLog(tardebug, pos_targets[i]);
-            printf("TARGETS: target %d: x = %d, y = %d\n", i, target[i]->x, target[i]->y);
+            printf("TARGETS: target %d: x = %.3f, y = %.3f\n", i, target[i]->x, target[i]->y);
             //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
             
         }
+        targetStr[strlen(targetStr)-1] = '\0'; // remove the last |
+        writeToLog(tardebug, targetStr);
+
+        // Send the targets to the socket server
+        Send(sock, targetStr, tardebug);
+
         /* Put in server child
         if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
             perror("error in writing to pipe");

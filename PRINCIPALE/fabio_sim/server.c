@@ -125,7 +125,6 @@ int main(int argc, char* argv[]){
     Drone * drone;
     Drone dr;
     drone = &dr;
-    int nobstacles;
     int rows = 50;
     int cols = 100;
 
@@ -139,7 +138,8 @@ int main(int argc, char* argv[]){
         pipe 3: ch2 -> server wr3 al server: re3
     */
     int pipeDrfd[2];    // pipe for drone: 0 for reading, 1 for writing
-    int *pipeObfd[2];    // pipe for obstacles: 0 for reading, 1 for writing
+    int *pipeObfd[2]; 
+    int ntragets = 0, nobstacles = 0;   // pipe for obstacles: 0 for reading, 1 for writing
     char ti[] = "TI";
     char oi[] = "OI";
     int *pipeTafd[2]; 
@@ -151,6 +151,7 @@ int main(int argc, char* argv[]){
     char fd_str[10];
     int port = 40001;
     int client_sock;
+    char sockmsg[MAX_MSG_LEN];
 
     int nobstacles_edge = 2 * (rows + cols);
     struct obstacle *edges[nobstacles_edge];
@@ -365,16 +366,16 @@ int main(int argc, char* argv[]){
     while(!sigint_rec){
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
-        //FD_SET(*pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
-        //FD_SET(*pipeTafd[0], &read_fds);
+        FD_SET(*pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
+        FD_SET(*pipeTafd[0], &read_fds);
 
         int max_fd = -1;
-        /*if (*pipeTafd[0] > max_fd) {
+        if (*pipeTafd[0] > max_fd) {
             max_fd = *pipeTafd[0];
-        }*/
-        /*if(*pipeObfd[0] > max_fd) {
+        }
+        if(*pipeObfd[0] > max_fd) {
             max_fd = *pipeObfd[0];
-        }*/
+        }
         if(pipeDrfd[0] > max_fd) {
             max_fd = pipeDrfd[0];
         }
@@ -391,9 +392,16 @@ int main(int argc, char* argv[]){
             exit(EXIT_FAILURE);
         }
         else if(sel>0){
-            /*
             if(FD_ISSET(*pipeTafd[0], &read_fds)){
                 writeToLog(serdebug, "SERVER: TARGETS WIN");
+                memset(sockmsg, '\0', MAX_MSG_LEN);
+                if ((read(*pipeTafd[0], sockmsg, MAX_MSG_LEN)) == -1) { // reads from drone ntargets
+                    perror("error in reading from pipe");
+                    writeToLog(errors, "SERVER: error in reading from pipe targets");
+                    exit(EXIT_FAILURE);
+                }
+                writeToLog(serdebug, sockmsg);
+                /*writeToLog(serdebug, "SERVER: TARGETS WIN");
                 writeToLog(serdebug,"SERVER: reading from targets\n");
                 int ntargets;
                 if ((read(*pipeTafd[0], &ntargets, sizeof(int))) == -1) { // reads from drone ntargets
@@ -444,12 +452,20 @@ int main(int argc, char* argv[]){
                         writeToLog(errors, "SERVER: error in writing to pipe window the targets");
                         exit(EXIT_FAILURE);
                     }
-                }
+                }*/
             }
             
 
             if(FD_ISSET(*pipeObfd[0], &read_fds)){
-                writeToLog(serdebug, "SERVER: OBSTACLE WIN ");
+                writeToLog(serdebug, "SERVER: OBSTACLE WIN");
+                memset(sockmsg, '\0', MAX_MSG_LEN);
+                if ((read(*pipeObfd[0], sockmsg, MAX_MSG_LEN)) == -1) { // reads from drone nobstacles
+                    perror("error in reading from pipe");
+                    writeToLog(errors, "SERVER: error in reading from pipe obstacles");
+                    exit(EXIT_FAILURE);
+                }
+                writeToLog(serdebug, sockmsg);
+                /*writeToLog(serdebug, "SERVER: OBSTACLE WIN ");
                 writeToLog(serdebug,"SERVER: reading from obstacles\n");
                 if ((read(*pipeObfd[0], &nobstacles, sizeof(int))) == -1) { // reads from drone nobstacles
                     perror("error in reading from pipe");
@@ -501,9 +517,9 @@ int main(int argc, char* argv[]){
                         exit(EXIT_FAILURE);
                     }
                 }
-                //write(pipeDrfd[1], obstacles, sizeof(obstacles));
+                //write(pipeDrfd[1], obstacles, sizeof(obstacles));*/
             }
-            */
+            
             if(FD_ISSET(pipeDrfd[0], &read_fds)){
                 if ((read(pipeDrfd[0], drone, sizeof(Drone))) == -1) { // reads from drone
                     perror("error in reading from pipe");
