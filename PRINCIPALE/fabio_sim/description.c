@@ -22,6 +22,7 @@ int main (int argc, char* argv[])
     WINDOW *arrw[NUMWINDOWS]; // change numwindows in library
     char ch;
     int i, index = 0;
+    int fdMaster;
     // change with the new windows.c and the new functiones
     
     int nrows, ncols;
@@ -35,6 +36,8 @@ int main (int argc, char* argv[])
 
     getmaxyx(stdscr, h, w);
     refresh();
+
+    sscanf(argv[1], "%d", &fdMaster);
     
     // Windows initialization
     //init_windows(Srow, Scol, &external_window, &printing_window,&PRy,&PRx,&Startx,&Starty,&Wcol,&Wrow);
@@ -91,9 +94,13 @@ int main (int argc, char* argv[])
     }
 
     printw("\nPress any key to exit\n");
-    sleep (4);
+    sleep (2);
     refresh();
     ch = getch();
+    if ((write(fdMaster, &ch, sizeof(char))) < 0){
+        perror("Error writing to pipe");
+        exit(EXIT_FAILURE);
+    }
     printw("Enjoy");
     refresh();
     for (i = 0; i < NUMWINDOWS; i++)
@@ -101,6 +108,7 @@ int main (int argc, char* argv[])
         destroy_win(arrw[i]);
     }
     endwin();
+    close(fdMaster);
 
     return 0;
 }

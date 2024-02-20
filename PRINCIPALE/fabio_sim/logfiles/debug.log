@@ -1,8 +1,8 @@
-Tue Feb 20 17:38:05 2024
+Tue Feb 20 22:12:17 2024
  => SERVER: process started
-Tue Feb 20 17:38:05 2024
+Tue Feb 20 22:12:17 2024
  => DRONE: process started
-Tue Feb 20 17:38:05 2024
+Tue Feb 20 22:12:17 2024
  => DRONE: pipes opened
 INPUT: process started
 OBSTACLES: process started
@@ -11,82 +11,84 @@ Socket server started
 TARGETS: process started
 TARGETS: connected to serverSocket
 Socket server started
-O[6]1.000,22.000|1.000,15.000|1.000,39.000|2.000,38.000|2.000,16.000|2.000,5.000
-Tue Feb 20 17:38:08 2024
+Tue Feb 20 22:12:19 2024
+ => obs
+Tue Feb 20 22:12:20 2024
  => WINDOW: process started
-Tue Feb 20 17:38:08 2024
+Tue Feb 20 22:12:20 2024
  => WINDOW: pipe opened
-Tue Feb 20 17:38:08 2024
+Tue Feb 20 22:12:20 2024
  => WATCH DOG: process started
-Tue Feb 20 17:38:08 2024
+Tue Feb 20 22:12:20 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:08 2024
+Tue Feb 20 22:12:20 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:08 2024
+Tue Feb 20 22:12:20 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:08 2024
+Tue Feb 20 22:12:20 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:08 2024
+Tue Feb 20 22:12:20 2024
  => WATCH DOG: OBSTACLE received signal
 TARGETS: signal SIGUSR1 received from WATCH DOG
-T[4]2.000,42.000|5.000,44.000|3.000,30.000|5.000,34.000
-Tue Feb 20 17:38:08 2024
+Tue Feb 20 22:12:20 2024
  => WATCH DOG: TARGETS received signal
-Tue Feb 20 17:38:18 2024
+Tue Feb 20 22:12:20 2024
+ => tar
+Tue Feb 20 22:12:30 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:18 2024
+Tue Feb 20 22:12:30 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:18 2024
+Tue Feb 20 22:12:30 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:18 2024
+Tue Feb 20 22:12:30 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:18 2024
+Tue Feb 20 22:12:30 2024
  => WATCH DOG: OBSTACLE received signal
 TARGETS: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:18 2024
+Tue Feb 20 22:12:30 2024
  => WATCH DOG: TARGETS received signal
-Tue Feb 20 17:38:28 2024
+Tue Feb 20 22:12:40 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:28 2024
+Tue Feb 20 22:12:40 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:28 2024
+Tue Feb 20 22:12:40 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:28 2024
+Tue Feb 20 22:12:40 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:28 2024
+Tue Feb 20 22:12:40 2024
  => WATCH DOG: OBSTACLE received signal
 TARGETS: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:28 2024
+Tue Feb 20 22:12:40 2024
  => WATCH DOG: TARGETS received signal
-Tue Feb 20 17:38:38 2024
+Tue Feb 20 22:12:50 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:38 2024
+Tue Feb 20 22:12:50 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:38 2024
+Tue Feb 20 22:12:50 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:38 2024
+Tue Feb 20 22:12:50 2024
  => WATCH DOG: INPUT received signal
 OBSTACLES: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:38 2024
+Tue Feb 20 22:12:51 2024
  => WATCH DOG: OBSTACLE received signal
 TARGETS: signal SIGUSR1 received from WATCH DOG
-Tue Feb 20 17:38:38 2024
+Tue Feb 20 22:12:51 2024
  => WATCH DOG: TARGETS received signal
-TARGETS: terminating with return value 0...
 OBSTACLE: terminating with return value 0...
 SERVER: terminating with return value 0...
+TARGETS: terminating with return value 0...

@@ -99,8 +99,7 @@ int main (int argc, char *argv[])
     //struct hostent *server; put for ip address
 
     struct hostent *server;
-    char ipAddress[20] = "130.251.242.153";
-    int port = 40001;
+    int port = 40000; // default port
     int sock;
     char sockmsg[MAX_MSG_LEN];
     int rows = 0, cols = 0;
@@ -116,6 +115,8 @@ int main (int argc, char *argv[])
     writeToLog(debug, "TARGETS: process started");
     printf("TARGETS: process started\n");
 
+    sscanf(argv[1], "%d", &port);
+
     sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1) {
         perror("socket");
@@ -128,7 +129,7 @@ int main (int argc, char *argv[])
     server_address.sin_port = htons(port);  
 
     // convert the string in ip address
-    if ((inet_pton(AF_INET, ipAddress, &server_address.sin_addr)) <0) {
+    if ((inet_pton(AF_INET, argv[2], &server_address.sin_addr)) < 0) {
         perror("inet_pton");
         writeToLog(errors, "TARGETS: error in inet_pton() in converting IP address");
         return 1;
@@ -222,18 +223,7 @@ int main (int argc, char *argv[])
         // Send the targets to the socket server
         Send(sock, targetStr, tardebug);
 
-        /* Put in server child
-        if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
-            perror("error in writing to pipe");
-            writeToLog(errors, "TARGETS: error in writing to pipe");
-        }
-        for(int i = 0; i<ntargets; i++){
-            if ((write(pipeSefd[1], target[i],sizeof(targets))) == -1){
-                perror("error in writing to pipe");
-                writeToLog(errors, "TARGETS: error in writing to pipe");
-            }
-        }
-        */
+
        // change time with GE
         time_t t2 = time(NULL);
         while(t2-t < 60){

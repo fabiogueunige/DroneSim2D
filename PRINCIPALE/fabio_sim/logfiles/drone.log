@@ -1,2 +1,46 @@
-Tue Feb 20 17:38:07 2024
+Tue Feb 20 22:12:19 2024
  => DRONE: rows = 50, cols = 100
+Tue Feb 20 22:12:19 2024
+ => DRONE: reading obstacles and targets
+Tue Feb 20 22:12:19 2024
+ => DRONE: reading obstacles
+Tue Feb 20 22:12:19 2024
+ => DRONE: number of obstacles: 0
+
+Tue Feb 20 22:12:20 2024
+ => DRONE: reading obstacles and targets
+Tue Feb 20 22:12:20 2024
+ => DRONE: reading targets
+Tue Feb 20 22:12:20 2024
+ => DRONE: number of targets: 10
+
+Tue Feb 20 22:12:20 2024
+ => DRONE: target 0 at (4, 25)
+
+Tue Feb 20 22:12:20 2024
+ => DRONE: target 1 at (5, 5)
+
+Tue Feb 20 22:12:20 2024
+ => DRONE: target 2 at (5, 41)
+
+Tue Feb 20 22:12:20 2024
+ => DRONE: target 3 at (5, 29)
+
+Tue Feb 20 22:12:20 2024
+ => DRONE: target 4 at (5, 30)
+
+Tue Feb 20 22:12:20 2024
+ => DRONE: target 5 at (4, 46)
+
+Tue Feb 20 22:12:20 2024
+ => DRONE: target 6 at (2, 39)
+
+Tue Feb 20 22:12:20 2024
+ => DRONE: target 7 at (4, 28)
+
+Tue Feb 20 22:12:20 2024
+ => DRONE: target 8 at (2, 19)
+
+Tue Feb 20 22:12:20 2024
+ => DRONE: target 9 at (5, 42)
+

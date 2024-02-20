@@ -1,3 +1,6 @@
+# Ripulisce
+./clean.sh
+
 # Compila il programma C
 cd library/
 gcc -c win.c 

@@ -2,19 +2,7 @@ OI
 OBSTACLES: message OI sent to server
 OBSTACLES: message received from server
 50.000,100.000
-OBSTACLES: number of obstacles = 6
-OBSTACLES: obstacle 0 created at (1.000, 22.000)
-
-OBSTACLES: obstacle 1 created at (1.000, 15.000)
-
-OBSTACLES: obstacle 2 created at (1.000, 39.000)
-
-OBSTACLES: obstacle 3 created at (2.000, 38.000)
-
-OBSTACLES: obstacle 4 created at (2.000, 16.000)
-
-OBSTACLES: obstacle 5 created at (2.000, 5.000)
-
-O[6]1.000,22.000|1.000,15.000|1.000,39.000|2.000,38.000|2.000,16.000|2.000,5.000
+OBSTACLES: number of obstacles = 0
+O[0]
 Message echo:
-O[6]1.000,22.000|1.000,15.000|1.000,39.000|2.000,38.000|2.000,16.000|2.000,5.000
+O[0]

@@ -24,25 +24,24 @@ void writeToLog(FILE * logFile, const char *message) {
     fflush(logFile);
 }
 
-void Receive(int sockfd, char *buffer, int *pipetowritefd) {
-    FILE * debug = fopen("logfiles/debug.log", "a");
+void Receive(int sockfd, char *buffer, int *pipetowritefd, FILE *sckfile) {
+    FILE *error = fopen("logfiles/errors.log", "a");
     if(recv(sockfd, buffer, MAX_MSG_LEN, 0) < 0) {
-        writeToLog(stderr, "Error receiving message from client");
+        writeToLog(error, "Error receiving message from client");
         exit(EXIT_FAILURE);
     }
-    writeToLog(debug, buffer);
+    writeToLog(sckfile, buffer);
     //char msg[MAX_MSG_LEN] = buffer;
 
-    /*if(write(*pipetowritefd, buffer, strlen(buffer)+1) < 0) {
-        writeToLog(stderr, "Error writing to pipe the message information");
+    if(write(*pipetowritefd, buffer, strlen(buffer)+1) < 0) {
+        writeToLog(error, "Error writing to pipe the message information");
         exit(EXIT_FAILURE);
     }
-    writeToLog(debug, "Message sent to parent process");*/
     if(send(sockfd, buffer, strlen(buffer)+1, 0) < 0) {
-        writeToLog(stderr, "Error sending message to client");
+        writeToLog(error, "Error sending message to client");
         exit(EXIT_FAILURE);
     }
-    fclose(debug);
+    fclose(error);
 }
 
 int main (int argc, char *argv[]) {
@@ -97,35 +96,17 @@ int main (int argc, char *argv[]) {
         writeToLog(sockdebug, "Error sending rows and cols to client");
         exit(EXIT_FAILURE);
     }
-    while (1) {
+    while (!stopReceived) {
         memset(msg, '\0', MAX_MSG_LEN);
-        Receive(sockfd, msg, &pipeSe[1]);
-        if ((write(pipeSe[1], msg, strlen(msg) + 1)) < 0) {
-            writeToLog(errors, "Error writing to pipe the message information");
-            exit(EXIT_FAILURE);
-        }
+        Receive(sockfd, msg, &pipeSe[1], sockdebug);
         writeToLog(sockdebug, "Pipe sent to parent process");
         writeToLog(sockdebug, msg);
+
+        if (strcmp(msg, stop) == 0) {
+            stopReceived = true;
+        }
     }
 
-
-    /*while (!stopReceived) 
-    {
-        memset(msg, '\0', MAX_MSG_LEN);
-        if ((recv(sockfd, msg, strlen(msg), 0)) < 0) {
-            writeToLog(errors, "Error receiving message from client");
-            exit(EXIT_FAILURE);
-        }
-        writeToLog(sockdebug, "Message received from client");
-        writeToLog(sockdebug, msg);
-        
-        if ((write(pipeSe[1], msg, strlen(msg))) < 0) {
-            writeToLog(errors, "Error writing to pipe the message information");
-            exit(EXIT_FAILURE);
-        }
-        writeToLog(sockdebug, "Message sent to parent process");
-        writeToLog(sockdebug, msg);
-    }*/
 
     close(sockfd);
     close(pipeSe[0]);

@@ -94,8 +94,7 @@ int main (int argc, char *argv[])
     //struct hostent *server; put for ip address
 
     struct hostent *server;
-    char ipAddress[20] = "130.251.242.153";
-    int port = 40001;
+    int port = 40000; // default port
     int sock;
     char sockmsg[MAX_MSG_LEN];
 
@@ -111,6 +110,8 @@ int main (int argc, char *argv[])
     }
 
     writeToLog(debug, "OBSTACLES: process started");
+    
+    sscanf(argv[1], "%d", &port);
 
     sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1) {
@@ -124,7 +125,7 @@ int main (int argc, char *argv[])
     server_address.sin_port = htons(port);  
 
     // convert the string in ip address
-    if ((inet_pton(AF_INET, ipAddress, &server_address.sin_addr)) <0) {
+    if ((inet_pton(AF_INET, argv[2], &server_address.sin_addr)) <0) {
         perror("inet_pton");
         writeToLog(errors, "OBSTACLES: error in inet_pton() in converting IP address");
         return 1;
@@ -210,13 +211,6 @@ int main (int argc, char *argv[])
             writeToLog(obsdebug, msg);
             sprintf(temp, "%.3f,%.3f|", obstacles[i]->x, obstacles[i]->y);
             strcat(obstacleStr, temp);
-            //sprintf(pos_obstacles[i], "%d,%d", x, y);
-            // write to server with pipe
-            /*if (write(pipeSefd[1], obstacles[i], sizeof(struct obstacle)) == -1){
-                perror("error in writing to pipe");
-                writeToLog(errors, "OBSTACLES: error in writing to pipe obstacles");
-                exit(EXIT_FAILURE);
-            }*/
         }
         obstacleStr[strlen(obstacleStr)-1] = '\0'; // remove the last |
         writeToLog(obsdebug, obstacleStr);
