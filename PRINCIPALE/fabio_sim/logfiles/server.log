@@ -1,32 +1,32 @@
-Mon Feb 19 23:29:51 2024
+Mon Feb 19 23:52:43 2024
  => SERVER: binding...
-Mon Feb 19 23:29:51 2024
+Mon Feb 19 23:52:43 2024
  => SERVER: listening...
-Mon Feb 19 23:29:51 2024
+Mon Feb 19 23:52:43 2024
  => SERVER: pipes opened
-Mon Feb 19 23:29:51 2024
+Mon Feb 19 23:52:43 2024
  => SERVER: pipes converted in strings
-Mon Feb 19 23:29:52 2024
+Mon Feb 19 23:52:45 2024
  => SERVER: connection accepted
-Mon Feb 19 23:29:52 2024
+Mon Feb 19 23:52:45 2024
  => SERVER: forked
-Mon Feb 19 23:29:53 2024
+Mon Feb 19 23:52:45 2024
  => SERVER: connection accepted
-Mon Feb 19 23:29:53 2024
+Mon Feb 19 23:52:45 2024
  => SERVER: forked
-Mon Feb 19 23:29:53 2024
+Mon Feb 19 23:52:46 2024
  => SERVER: generating the map
-Mon Feb 19 23:29:53 2024
+Mon Feb 19 23:52:46 2024
  => SERVER: reading the pipe with sockets
-Mon Feb 19 23:29:53 2024
+Mon Feb 19 23:52:46 2024
  => OI
-Mon Feb 19 23:29:53 2024
+Mon Feb 19 23:52:46 2024
  => SERVER: pipeObfd set
-Mon Feb 19 23:29:53 2024
+Mon Feb 19 23:52:46 2024
  => TI
-Mon Feb 19 23:29:53 2024
+Mon Feb 19 23:52:46 2024
  => SERVER: pipeTafd set
-Mon Feb 19 23:29:53 2024
+Mon Feb 19 23:52:46 2024
  => SERVER: pipes opened
-Mon Feb 19 23:29:53 2024
+Mon Feb 19 23:52:46 2024
  => SERVER: rows and cols sent to window and drone

@@ -81,7 +81,11 @@ int main (int argc, char *argv[])
     int port = 40001;
     int sock;
     char sockmsg[MAX_MSG_LEN];
-    int rows = 50, cols = 100;
+    int rows = 0, cols = 0;
+    char stop[] = "STOP";
+    char message [] = "TI";
+    char ge[] = "GE";
+    bool stopReceived = false;
     
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
@@ -116,8 +120,7 @@ int main (int argc, char *argv[])
     }
     writeToLog(debug, "TARGETS: connected to serverSocket");
 
-    char message [10];
-    sprintf(message, "TI");
+    
     writeToLog(tardebug, message);
     if (send(sock, message, strlen(message) + 1, 0) == -1) {
         perror("send");
@@ -193,6 +196,7 @@ int main (int argc, char *argv[])
             }
         }
         */
+       // change time with GE
         time_t t2 = time(NULL);
         while(t2-t < 60){
             t2 = time(NULL);

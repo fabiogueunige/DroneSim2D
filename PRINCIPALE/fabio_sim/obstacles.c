@@ -78,7 +78,10 @@ int main (int argc, char *argv[])
     int sock;
     char sockmsg[MAX_MSG_LEN];
 
-    int rows = 20, cols = 10;
+    int rows = 0, cols = 0;
+    char stop[] = "STOP";
+    char message [] = "OI";
+    bool stopReceived = false;
     struct obstacle *obstacles[MAX_OBSTACLES];
 
     if (debug == NULL || errors == NULL){
@@ -114,8 +117,7 @@ int main (int argc, char *argv[])
     }
     writeToLog(debug, "OBSTACLES: connected to serverSocket");
     memset(sockmsg, '\0', MAX_MSG_LEN);
-    char message [10];
-    sprintf(message, "OI");
+    
     writeToLog(obsdebug, message);
     if (send(sock, message, strlen(message) + 1, 0) == -1) {
         perror("send");

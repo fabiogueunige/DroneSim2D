@@ -35,6 +35,9 @@ int main (int argc, char *argv[]) {
     int pipeSe[2];
     int sockfd;
     int identifier; // to know which is the child process (0 = TA, 1 = OBS)
+    char stop[] = "STOP";
+    char ge[] = "GE";
+    bool stopReceived = false;
 
 
     sscanf(argv[4], "%d", &identifier);
@@ -75,7 +78,7 @@ int main (int argc, char *argv[]) {
     }
 
 
-    /*while (1) 
+    /*while (!stopReceived) 
     {
         memset(msg, '\0', MAX_MSG_LEN);
         if ((recv(sockfd, msg, strlen(msg), 0)) < 0) {

@@ -100,6 +100,7 @@ void writeToLog(FILE *logFile, const char *message) {
     }
 }
 
+// Use for the children processes
 int spawn(const char * program, char ** arg_list) {
     FILE * errors = fopen("logfiles/errors.log", "a");
     pid_t child_pid = fork();
@@ -108,7 +109,7 @@ int spawn(const char * program, char ** arg_list) {
     else {
         execvp (program, arg_list);
         perror("exec failed");
-        writeToLog(errors, "MASTER: execvp failed");
+        writeToLog(errors, "SERVER: execvp failed");
         exit(EXIT_FAILURE);
     }
     fclose(errors);
@@ -522,10 +523,7 @@ int main(int argc, char* argv[]){
                 writeToLog(errors, "SERVER: error in writing to pipe window the drone");
                 exit(EXIT_FAILURE);
             }
-            
-
-        }
-        
+        }   
     }
 
     // waits window to terminate
