@@ -19,6 +19,7 @@
 
 float rho2 = 2;
 
+
 typedef struct {
     int x;
     int y;
@@ -114,6 +115,10 @@ bool isTargetTaken(int x, int y, int xt, int yt){
 }
 
 int main(char argc, char*argv[]){
+    // resizing the window
+    //sleep(1);
+    //char *get_wid = "xdotool search --onlyvisible --name window";
+
 
     FILE * debug = fopen("logfiles/debug.log", "a");
 	FILE * winfile = fopen("logfiles/window.log", "w");    // debug log file
@@ -160,6 +165,7 @@ int main(char argc, char*argv[]){
     init_pair(5, COLOR_CYAN, COLOR_BLACK); // for drones
     writeToLog(winfile, "WINDOW: colors initialized");
 
+
     if (stdscr == NULL) {
         // Gestisci l'errore di inizializzazione di ncurses
         fprintf(errors, "WINDOW: Errore durante l'inizializzazione di ncurses\n");
@@ -204,20 +210,17 @@ int main(char argc, char*argv[]){
     FD_SET(pipeSefd, &readfds);
     writeToLog(winfile, "WINDOW: pipe set");
 
-    // Read Rows and Cols
-    float r, c;
-    if((read(pipeSefd, &r, sizeof(float))) == -1){
+    // Read Raws and Cols
+    if((read(pipeSefd, &rows, sizeof(int))) == -1){
         perror("read");
         writeToLog(errors, "WINDOW: error in read rows");
         exit(EXIT_FAILURE);
     }
-    if((read(pipeSefd, &c, sizeof(float))) == -1){
+    if((read(pipeSefd, &cols, sizeof(int))) == -1){
         perror("read");
         writeToLog(errors, "WINDOW: error in read cols");
         exit(EXIT_FAILURE);
     }
-    rows = (int)r;
-    cols = (int)c;
     // Checking pipe functionality
   
     sprintf(msg, "WINDOW: rows = %d, cols = %d", rows, cols);

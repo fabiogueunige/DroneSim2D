@@ -66,5 +66,12 @@ if [ $? -eq 0 ]; then
         echo "Errore durante la compilazione di targets.c"
     fi
 
+cc -o "sockserver" "sockserver.c" 
+if [ $? -eq 0 ]; then
+        echo "Compilazione di sockServer completata con successo"
+    else
+        echo "Errore durante la compilazione di sockserver.c"
+    fi
+
 export QT_QPA_PLATFORM=wayland
 ./master

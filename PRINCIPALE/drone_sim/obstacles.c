@@ -15,8 +15,10 @@
 #include <netinet/in.h>
 #include <netdb.h> 
 #include <arpa/inet.h>
-#define MAX_MSG_LEN 1024
+
+
 #define MAX_OBSTACLES 20
+#define MAX_MSG_LEN 1024
 
 pid_t wd_pid = -1;
 bool sigint_rec = false;
@@ -59,6 +61,26 @@ void writeToLog(FILE * logFile, const char *message) {
     fflush(logFile);
 }
 
+void Send(int sock, char *msg, FILE *obsdebug){
+    FILE *error = fopen("logfiles/errors.log", "a");
+    if (send(sock, msg, strlen(msg) + 1, 0) == -1) {
+        perror("send");
+        writeToLog(error, "TARGETS: error in sending message to server");
+        exit(EXIT_FAILURE);
+    }
+    char recvmsg[MAX_MSG_LEN];
+    if (recv(sock, recvmsg, MAX_MSG_LEN, 0) < 0) {
+        perror("recv");
+        writeToLog(error, "TARGETS: error in receiving message from server");
+        exit(EXIT_FAILURE);
+    }
+    writeToLog(obsdebug, recvmsg);
+    if(strcmp(recvmsg, msg) != 0){
+        writeToLog(error, "TARGETS: echo is not equal to the message sent");
+        exit(EXIT_FAILURE);
+    }
+    fclose(error);
+}
 
 int main (int argc, char *argv[]) 
 {
@@ -67,79 +89,64 @@ int main (int argc, char *argv[])
     FILE * obsdebug = fopen("logfiles/obstacles.log", "w");
     // these var are used because there aren't pipes, but these values are imported by server
     char msg[100]; // message to write on debug file
+    struct sockaddr_in server_address;
+    //struct hostent *server; put for ip address
+
+    struct hostent *server;
+    char ipAddress[20] = "130.251.107.87";
+    //130.251.107.87
+    int port = 40000;
+    int sock;
+    char sockmsg[MAX_MSG_LEN];
+
+    int rows = 0, cols = 0;
+    char stop[] = "STOP";
+    char message [] = "OI";
+    bool stopReceived = false;
+    struct obstacle *obstacles[MAX_OBSTACLES];
+
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
         exit(EXIT_FAILURE);
     }
 
     writeToLog(debug, "OBSTACLES: process started");
-    printf("OBSTACLES: process started\n");
-    sleep(1);
-    // SOCKETS
-    int sock = socket(AF_INET, SOCK_STREAM, 0);
+
+    sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1) {
         perror("socket");
+        writeToLog(errors, "OBSTACLES: error in creating socket");
         return 1;
     }
 
-    struct sockaddr_in server_address;
+    bzero((char *) &server_address, sizeof(server_address));
     server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(50003);
-    //char server_ip[100] = "130.251.107.87"; unige wifi
-    // hotspot cell 192.168.39.210
-    inet_pton(AF_INET, "130.251.107.87", &server_address.sin_addr);
+    server_address.sin_port = htons(port);  
+
+    // convert the string in ip address
+    if ((inet_pton(AF_INET, ipAddress, &server_address.sin_addr)) <0) {
+        perror("inet_pton");
+        writeToLog(errors, "OBSTACLES: error in inet_pton() in converting IP address");
+        return 1;
+    }
     
     // Connect to the server
-    if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
+    if ((connect(sock, (struct sockaddr*)&server_address, sizeof(server_address))) == -1) {
         perror("connect");
-        writeToLog(errors, "OBSTACLES: error in connect()");
+        writeToLog(errors, "OBSTACLES: error in connecting to server");
         return 1;
     }
-
-    char * message = "OI";
-    if (send(sock, message, strlen(message), 0) == -1) {
-        perror("send");
-        return 1;
-    }
-    // Receive echo from server
-    char buffer[MAX_MSG_LEN];
-    ssize_t bytesRead = recv(sock, buffer, sizeof(buffer) - 1, 0);
-    if (bytesRead == -1) {
-        perror("recv");
-        writeToLog(errors, "OBSTACLES: error in recv()");
-        exit(EXIT_FAILURE);
-    }
-    buffer[bytesRead] = '\0';
-    printf("OBSTACLES: Server sent: %s\n", buffer);
-    writeToLog(obsdebug, buffer);
-
-    // Null-terminate the string
-    if (strcmp(buffer, "OI") != 0) {
-        writeToLog(errors, "OBSTACLES: server did not respond with OI");
-        exit(EXIT_FAILURE);
-    }
-    bytesRead = recv(sock, buffer, sizeof(buffer) - 1, 0);
-    if (bytesRead == -1) {
-        perror("recv");
-        writeToLog(errors, "OBSTACLES: error in recv()");
-        exit(EXIT_FAILURE);
-    }
-    buffer[bytesRead] = '\0'; // null terminate the strings
-    printf("TARGETS: Server sent: %s\n", buffer);
-    writeToLog(obsdebug, buffer);
-    // save rows and cols
-    char format_string[MAX_MSG_LEN]="%.3f,%.3f";
-    float rows, cols;
-    sscanf(buffer, format_string, &rows, &cols);
-
-    // echo of rows and cols
-    if (send(sock, buffer, strlen(buffer), 0) == -1) {
-        perror("send");
-        return 1;
-    }
-    writeToLog(debug, "OBSTACLES: rows and cols sent to server");
+    writeToLog(debug, "OBSTACLES: connected to serverSocket");
+    memset(sockmsg, '\0', MAX_MSG_LEN);
     
-    // SIGNALS
+    writeToLog(obsdebug, message);
+    if (send(sock, message, strlen(message) + 1, 0) == -1) {
+        perror("send");
+        return 1;
+    }
+    writeToLog(obsdebug, "OBSTACLES: message OI sent to server");
+
+
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
     sa.sa_sigaction = sig_handler;
@@ -163,61 +170,54 @@ int main (int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    sprintf(msg, "OBSTACLES: rows = %.3f, cols = %.3f", rows, cols);
-    writeToLog(obsdebug, msg);
-    struct obstacle *obstacles[MAX_OBSTACLES];
+    // receiving rows and cols from server
+    if ((recv(sock, sockmsg, MAX_MSG_LEN, 0)) < 0) {
+        writeToLog(errors, "Error receiving message from server");
+        exit(EXIT_FAILURE);
+    }
+    writeToLog(obsdebug, "OBSTACLES: message received from server");
+    writeToLog(obsdebug, sockmsg);
+    // setting rows and cols
+    sscanf(sockmsg, "%d,%d", &rows, &cols);
+    
+    
+    sleep(1); // wait for server to read rows and cols
     // obstacle generation cycle
     while(!sigint_rec){
         time_t t = time(NULL);
-
-        
-
         srand(time(NULL));
         int nobstacles = rand() % MAX_OBSTACLES;
         printf("OBSTACLES: number of obstacles = %d\n", nobstacles);
         sprintf(msg, "OBSTACLES: number of obstacles = %d", nobstacles);
         writeToLog(obsdebug, msg);
         char pos_obstacles[nobstacles][10];
-        //struct obstacle *obstacles[nobstacles];
-
-        char obstacleStr[1024] = "";
-        char temp[50];
-        // Add number of targets to the string
-        sprintf(temp, "O[%d]", nobstacles);
-        strcat(obstacleStr, temp);
-/*
-        if ((write(pipeSefd[1], &nobstacles, sizeof(int))) == -1){ // implementare lettura su server
-            perror("error in writing to pipe");
-            writeToLog(errors, "OBSTACLES: error in writing to pipe number of obstacles");
-            exit(EXIT_FAILURE);
-        }*/
         
+        char obstacleStr[MAX_MSG_LEN];
+        char temp[50];
+        // add number of targets to the string
+        sprintf(obstacleStr, "O[%d]", nobstacles);
         // create obstacles
         for (int i = 0; i < nobstacles; i++){
             obstacles[i] = malloc(sizeof(struct obstacle)); //allocate memory for each obstacle
             // generates random coordinates
-            obstacles[i]->x = rand() % ((int)cols-2) + 1;
-            obstacles[i]->y = rand() % ((int)rows-2) + 1;
-            float x = obstacles[i]->x;
-            float y = obstacles[i]->y;
-            printf("OBSTACLES: obstacle %d created at (%.3f, %.3f)\n", i, x, y);
-            sprintf(msg, "OBSTACLES: obstacle %d created at (%.3f, %.3f)\n", i, x, y);
+            obstacles[i]->x = rand() % (cols-2) + 1; 
+            obstacles[i]->y = rand() % (rows-2) + 1;
+            printf("OBSTACLES: obstacle %d created at (%.3f, %.3f)\n", i, obstacles[i]->x, obstacles[i]->y);
+            sprintf(msg, "OBSTACLES: obstacle %d created at (%.3f, %.3f)\n", i, obstacles[i]->x, obstacles[i]->y);
             writeToLog(obsdebug, msg);
+            sprintf(temp, "%.3f,%.3f|", obstacles[i]->x, obstacles[i]->y);
+            strcat(obstacleStr, temp);
             //sprintf(pos_obstacles[i], "%d,%d", x, y);
             // write to server with pipe
-            /*
-            if (write(pipeSefd[1], obstacles[i], sizeof(struct obstacle)) == -1){
+            /*if (write(pipeSefd[1], obstacles[i], sizeof(struct obstacle)) == -1){
                 perror("error in writing to pipe");
                 writeToLog(errors, "OBSTACLES: error in writing to pipe obstacles");
                 exit(EXIT_FAILURE);
             }*/
-            sprintf(temp, "%.3f,%.3f|", obstacles[i]->x, obstacles[i]->y);
-            strcat(obstacleStr, temp);
         }
-        // Remove the last '|' character
-        obstacleStr[strlen(obstacleStr) - 1] = '\0';
+        obstacleStr[strlen(obstacleStr)-1] = '\0'; // remove the last |
         writeToLog(obsdebug, obstacleStr);
-        
+        Send(sock, obstacleStr, obsdebug);
         // wait 60 seconds before generating new obstacles
         time_t t2 = time(NULL); 
         while(t2 - t < 60){
@@ -225,13 +225,12 @@ int main (int argc, char *argv[])
         }
     }
 
-    // close the socket
-    close(sock);
     // free the memory allocated for obstacles
     for(int i = 0; i<20; i++){
         free(obstacles[i]);
     }
     // close log files
+    close(sock);
     fclose(debug);
     fclose(errors);
     fclose(obsdebug);
