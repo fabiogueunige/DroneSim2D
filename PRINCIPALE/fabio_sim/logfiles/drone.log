@@ -1,46 +1,173 @@
-Tue Feb 20 22:12:19 2024
+Wed Feb 21 16:17:37 2024
  => DRONE: rows = 50, cols = 100
-Tue Feb 20 22:12:19 2024
+Wed Feb 21 16:17:37 2024
  => DRONE: reading obstacles and targets
-Tue Feb 20 22:12:19 2024
+Wed Feb 21 16:17:37 2024
  => DRONE: reading obstacles
-Tue Feb 20 22:12:19 2024
- => DRONE: number of obstacles: 0
+Wed Feb 21 16:17:37 2024
+ => DRONE: number of obstacles: 4
 
-Tue Feb 20 22:12:20 2024
+Wed Feb 21 16:17:37 2024
+ => DRONE: obstacle 0 at (2, 46)
+
+Wed Feb 21 16:17:37 2024
+ => DRONE: obstacle 1 at (2, 27)
+
+Wed Feb 21 16:17:37 2024
+ => DRONE: obstacle 2 at (2, 20)
+
+Wed Feb 21 16:17:37 2024
+ => DRONE: obstacle 3 at (2, 34)
+
+Wed Feb 21 16:17:38 2024
  => DRONE: reading obstacles and targets
-Tue Feb 20 22:12:20 2024
+Wed Feb 21 16:17:38 2024
  => DRONE: reading targets
-Tue Feb 20 22:12:20 2024
- => DRONE: number of targets: 10
+Wed Feb 21 16:17:38 2024
+ => DRONE: number of targets: 11
 
-Tue Feb 20 22:12:20 2024
- => DRONE: target 0 at (4, 25)
+Wed Feb 21 16:17:38 2024
+ => DRONE: target 0 at (4, 19)
 
-Tue Feb 20 22:12:20 2024
- => DRONE: target 1 at (5, 5)
+Wed Feb 21 16:17:38 2024
+ => DRONE: target 1 at (3, 21)
 
-Tue Feb 20 22:12:20 2024
- => DRONE: target 2 at (5, 41)
+Wed Feb 21 16:17:38 2024
+ => DRONE: target 2 at (5, 44)
 
-Tue Feb 20 22:12:20 2024
- => DRONE: target 3 at (5, 29)
+Wed Feb 21 16:17:38 2024
+ => DRONE: target 3 at (4, 22)
 
-Tue Feb 20 22:12:20 2024
- => DRONE: target 4 at (5, 30)
+Wed Feb 21 16:17:38 2024
+ => DRONE: target 4 at (2, 19)
 
-Tue Feb 20 22:12:20 2024
- => DRONE: target 5 at (4, 46)
+Wed Feb 21 16:17:38 2024
+ => DRONE: target 5 at (4, 45)
 
-Tue Feb 20 22:12:20 2024
- => DRONE: target 6 at (2, 39)
+Wed Feb 21 16:17:38 2024
+ => DRONE: target 6 at (2, 30)
 
-Tue Feb 20 22:12:20 2024
- => DRONE: target 7 at (4, 28)
+Wed Feb 21 16:17:38 2024
+ => DRONE: target 7 at (5, 34)
 
-Tue Feb 20 22:12:20 2024
- => DRONE: target 8 at (2, 19)
+Wed Feb 21 16:17:38 2024
+ => DRONE: target 8 at (3, 23)
 
-Tue Feb 20 22:12:20 2024
- => DRONE: target 9 at (5, 42)
+Wed Feb 21 16:17:38 2024
+ => DRONE: target 9 at (4, 26)
+
+Wed Feb 21 16:17:38 2024
+ => DRONE: target 10 at (5, 21)
+
+Wed Feb 21 16:18:37 2024
+ => DRONE: reading obstacles and targets
+Wed Feb 21 16:18:37 2024
+ => DRONE: reading obstacles
+Wed Feb 21 16:18:37 2024
+ => DRONE: number of obstacles: 4
+
+Wed Feb 21 16:18:37 2024
+ => DRONE: obstacle 0 at (2, 3)
+
+Wed Feb 21 16:18:37 2024
+ => DRONE: obstacle 1 at (1, 44)
+
+Wed Feb 21 16:18:37 2024
+ => DRONE: obstacle 2 at (1, 27)
+
+Wed Feb 21 16:18:37 2024
+ => DRONE: obstacle 3 at (1, 10)
+
+Wed Feb 21 16:18:38 2024
+ => DRONE: reading obstacles and targets
+Wed Feb 21 16:18:38 2024
+ => DRONE: reading targets
+Wed Feb 21 16:18:38 2024
+ => DRONE: number of targets: 0
+
+Wed Feb 21 16:19:37 2024
+ => DRONE: reading obstacles and targets
+Wed Feb 21 16:19:37 2024
+ => DRONE: reading obstacles
+Wed Feb 21 16:19:37 2024
+ => DRONE: number of obstacles: 9
+
+Wed Feb 21 16:19:37 2024
+ => DRONE: obstacle 0 at (1, 46)
+
+Wed Feb 21 16:19:37 2024
+ => DRONE: obstacle 1 at (1, 23)
+
+Wed Feb 21 16:19:37 2024
+ => DRONE: obstacle 2 at (2, 35)
+
+Wed Feb 21 16:19:37 2024
+ => DRONE: obstacle 3 at (1, 2)
+
+Wed Feb 21 16:19:37 2024
+ => DRONE: obstacle 4 at (2, 46)
+
+Wed Feb 21 16:19:37 2024
+ => DRONE: obstacle 5 at (2, 12)
+
+Wed Feb 21 16:19:37 2024
+ => DRONE: obstacle 6 at (1, 35)
+
+Wed Feb 21 16:19:37 2024
+ => DRONE: obstacle 7 at (1, 47)
+
+Wed Feb 21 16:19:37 2024
+ => DRONE: obstacle 8 at (1, 18)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: reading obstacles and targets
+Wed Feb 21 16:19:38 2024
+ => DRONE: reading targets
+Wed Feb 21 16:19:38 2024
+ => DRONE: number of targets: 15
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 0 at (4, 7)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 1 at (3, 18)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 2 at (2, 9)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 3 at (2, 17)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 4 at (4, 34)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 5 at (2, 40)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 6 at (4, 47)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 7 at (2, 25)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 8 at (5, 17)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 9 at (5, 8)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 10 at (4, 44)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 11 at (5, 16)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 12 at (4, 39)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 13 at (3, 29)
+
+Wed Feb 21 16:19:38 2024
+ => DRONE: target 14 at (5, 33)
 

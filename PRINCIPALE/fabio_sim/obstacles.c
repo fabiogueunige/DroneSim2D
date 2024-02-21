@@ -184,7 +184,7 @@ int main (int argc, char *argv[])
     
     sleep(1); // wait for server to read rows and cols
     // obstacle generation cycle
-    while(!sigint_rec){
+    while(!sigint_rec || !stopReceived){
         time_t t = time(NULL);
         srand(time(NULL));
         int nobstacles = rand() % MAX_OBSTACLES;
@@ -206,7 +206,6 @@ int main (int argc, char *argv[])
             // generates random coordinates
             obstacles[i]->x = rand() % (cols-2) + 1; 
             obstacles[i]->y = rand() % (rows-2) + 1;
-            printf("OBSTACLES: obstacle %d created at (%.3f, %.3f)\n", i, obstacles[i]->x, obstacles[i]->y);
             sprintf(msg, "OBSTACLES: obstacle %d created at (%.3f, %.3f)\n", i, obstacles[i]->x, obstacles[i]->y);
             writeToLog(obsdebug, msg);
             sprintf(temp, "%.3f,%.3f|", obstacles[i]->x, obstacles[i]->y);
@@ -218,6 +217,12 @@ int main (int argc, char *argv[])
         // Sending the obstacles to the socket server
         Send(sock, obstacleStr, obsdebug);
         // wait 60 seconds before generating new obstacles
+
+        // checking if the process has terminated (put after the read of the socket
+        /* USA SELECT con timeout
+        if (strcmp(stop, sockmsg) == 0){
+            stopReceived = true;
+        }*/
         time_t t2 = time(NULL); 
         while(t2 - t < 60){
             t2 = time(NULL);

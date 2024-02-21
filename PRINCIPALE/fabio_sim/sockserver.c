@@ -100,8 +100,8 @@ int main (int argc, char *argv[]) {
         memset(msg, '\0', MAX_MSG_LEN);
         Receive(sockfd, msg, &pipeSe[1], sockdebug);
         writeToLog(sockdebug, "Pipe sent to parent process");
-        writeToLog(sockdebug, msg);
 
+        // IMPLEENTA LA SELECT PER LA LETTURA DELLA PIPE con timeout
         if (strcmp(msg, stop) == 0) {
             stopReceived = true;
         }

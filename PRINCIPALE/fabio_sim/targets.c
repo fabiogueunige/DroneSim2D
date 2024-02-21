@@ -186,7 +186,7 @@ int main (int argc, char *argv[])
     sscanf(sockmsg, "%d,%d", &rows, &cols);
     
     sleep(2);
-    while(!sigint_rec){
+    while(!sigint_rec || !stopReceived){
         time_t t = time(NULL);
         srand(time(NULL)); // for change every time the seed of rand()
         ntargets = rand() % MAX_TARGETS;
@@ -211,11 +211,8 @@ int main (int argc, char *argv[])
             target[i]->taken = false;
             sprintf(temp, "%.3f,%.3f|", target[i]->x, target[i]->y);
             strcat(targetStr, temp);
-            sprintf(pos_targets[i], "%.3f,%.3f", target[i]->x, target[i]->y);
-            writeToLog(tardebug, pos_targets[i]);
-            printf("TARGETS: target %d: x = %.3f, y = %.3f\n", i, target[i]->x, target[i]->y);
-            //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
-            
+            sprintf(msg,"TARGETS: target %d: x = %.3f, y = %.3f\n", i, target[i]->x, target[i]->y);
+            writeToLog(tardebug, msg);
         }
         targetStr[strlen(targetStr)-1] = '\0'; // remove the last |
         writeToLog(tardebug, targetStr);
@@ -223,8 +220,22 @@ int main (int argc, char *argv[])
         // Send the targets to the socket server
         Send(sock, targetStr, tardebug);
 
-
        // change time with GE
+       /* FARE IMPLEMENTAZIONE SUL SERVER!! DEVE SEmPRE ASPETTARE LA RICEZIONE
+        do { 
+            memset(sockmsg, '\0', MAX_MSG_LEN);
+            if ((recv(sock, sockmsg, MAX_MSG_LEN, 0)) < 0) {
+                writeToLog(errors, "Error receiving message from server");
+                exit(EXIT_FAILURE);
+            }
+            if ((strcmp(sockmsg, stop) == 0)){
+                stopReceived = true;
+                writeToLog(tardebug, "TARGETS: stop message received from server");
+            }
+        } while ((strcmp(sockmsg, ge) != 0) || (strcmp(sockmsg, stop) != 0));
+        */
+        
+        
         time_t t2 = time(NULL);
         while(t2-t < 60){
             t2 = time(NULL);
