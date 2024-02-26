@@ -122,6 +122,10 @@ int main (int argc, char *argv[])
     }
     
     // Connect to the server
+    do {
+        writeToLog(obsdebug, "OBSTACLES: trying to connect to serverSocket");
+    }
+    while ((connect(sock, (struct sockaddr*)&server_address, sizeof(server_address))));
     if ((connect(sock, (struct sockaddr*)&server_address, sizeof(server_address))) == -1) {
         perror("connect");
         writeToLog(errors, "OBSTACLES: error in connecting to server");

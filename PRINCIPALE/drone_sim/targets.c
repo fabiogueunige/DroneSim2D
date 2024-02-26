@@ -124,11 +124,10 @@ int main (int argc, char *argv[])
     }
     
     // Connect to the server
-    if ((connect(sock, (struct sockaddr*)&server_address, sizeof(server_address))) == -1) {
-        perror("connect");
-        writeToLog(errors, "TARGETS: error in connecting to server");
-        return 1;
+    do {
+        writeToLog(tardebug, "TARGET: trying to connect to serverSocket");
     }
+    while ((connect(sock, (struct sockaddr*)&server_address, sizeof(server_address))));
     writeToLog(debug, "TARGETS: connected to serverSocket");
 
     

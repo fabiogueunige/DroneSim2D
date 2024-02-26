@@ -196,73 +196,7 @@ int main(int argc, char* argv[]){
 
     sscanf(argv[3], "%d", &port);
 
-    // SOCKET IMPLEMENTATION
-    // generating socket
-    int sock = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock == -1) {
-        perror("socket");
-        return 1;
-    }
-    // Bind the socket
-    struct sockaddr_in server_address;
-    memset(&server_address, 0, sizeof(server_address));
-    server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(port);
-    server_address.sin_addr.s_addr = INADDR_ANY;
-    writeToLog(serdebug, "SERVER: binding...");
     
-    if (bind(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
-        perror("bind");
-        writeToLog(errors, "SERVER: error in bind()");
-        return 1;
-    }
-
-    // Listen for connections
-    if (listen(sock, 5) == -1) {  // 5 is the maximum length of the queue of pending connections
-        perror("listen");
-        return 1;
-    }
-    writeToLog(serdebug, "SERVER: listening...");
-
-    // generates all the pipes
-    for (int i = 0; i < NUMPIPE; i++){
-        if (pipe(pipe_fd[i]) == -1){
-            perror("error in pipe");
-            writeToLog(errors, "SERVER: error opening pipe");
-        }
-    }
-    writeToLog(serdebug, "SERVER: pipes opened");
-    // converts the fd of the pipes in strings
-    for (int i = 0; i < NUMPIPE; i++){
-        sprintf(piperd[i], "%d", pipe_fd[i][0]);
-        sprintf(pipewr[i], "%d", pipe_fd[i][1]);
-    }
-    writeToLog(serdebug, "SERVER: pipes converted in strings");
-
-    // Generating all the server children for socket connection
-    for (int i = 0; i < NUMCLIENT; i++){ // for make sure that obstacles and targets are ready to send data
-        client_sock = accept(sock, NULL, NULL); // accept the connection
-        writeToLog(serdebug, "SERVER: connection accepted");
-        if (client_sock == -1) {
-            perror("accept");
-            return 1;
-        }
-        sprintf(fd_str, "%d", client_sock);
-        char id[5];
-        sprintf(id, "%d", i);
-        char rc[100];
-        sprintf(rc, "%d.000,%d.000", rows,cols);
-
-        char *args[] = {"./sockserver",fd_str, piperd[i*2], pipewr[i*2+1], id, rc, NULL};  // path of child process
-        pidch[i] = spawn("./sockserver", args); // spawn the child process
-        
-        // Parent process: close the client socket and go back to accept the next connection
-        writeToLog(serdebug, "SERVER: forked");
-        close(client_sock);
-        close(pipe_fd[i*2][0]);
-        close(pipe_fd[i*2+1][1]);
-    }
-    usleep(500000);
     // Window generation
     writeToLog(serdebug, "SERVER: generating the map");
     char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
@@ -343,6 +277,74 @@ int main(int argc, char* argv[]){
     char *obs = "obs";
     char *tar = "tar";
     char *coo = "coo";
+
+    // SOCKET IMPLEMENTATION
+    // generating socket
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock == -1) {
+        perror("socket");
+        return 1;
+    }
+    // Bind the socket
+    struct sockaddr_in server_address;
+    memset(&server_address, 0, sizeof(server_address));
+    server_address.sin_family = AF_INET;
+    server_address.sin_port = htons(port);
+    server_address.sin_addr.s_addr = INADDR_ANY;
+    writeToLog(serdebug, "SERVER: binding...");
+    
+    if (bind(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
+        perror("bind");
+        writeToLog(errors, "SERVER: error in bind()");
+        return 1;
+    }
+
+    // Listen for connections
+    if (listen(sock, 5) == -1) {  // 5 is the maximum length of the queue of pending connections
+        perror("listen");
+        return 1;
+    }
+    writeToLog(serdebug, "SERVER: listening...");
+
+    // generates all the pipes
+    for (int i = 0; i < NUMPIPE; i++){
+        if (pipe(pipe_fd[i]) == -1){
+            perror("error in pipe");
+            writeToLog(errors, "SERVER: error opening pipe");
+        }
+    }
+    writeToLog(serdebug, "SERVER: pipes opened");
+    // converts the fd of the pipes in strings
+    for (int i = 0; i < NUMPIPE; i++){
+        sprintf(piperd[i], "%d", pipe_fd[i][0]);
+        sprintf(pipewr[i], "%d", pipe_fd[i][1]);
+    }
+    writeToLog(serdebug, "SERVER: pipes converted in strings");
+
+    // Generating all the server children for socket connection
+    for (int i = 0; i < NUMCLIENT; i++){ // for make sure that obstacles and targets are ready to send data
+        client_sock = accept(sock, NULL, NULL); // accept the connection
+        writeToLog(serdebug, "SERVER: connection accepted");
+        if (client_sock == -1) {
+            perror("accept");
+            return 1;
+        }
+        sprintf(fd_str, "%d", client_sock);
+        char id[5];
+        sprintf(id, "%d", i);
+        char rc[100];
+        sprintf(rc, "%d.000,%d.000", rows,cols);
+
+        char *args[] = {"./sockserver",fd_str, piperd[i*2], pipewr[i*2+1], id, rc, NULL};  // path of child process
+        pidch[i] = spawn("./sockserver", args); // spawn the child process
+        
+        // Parent process: close the client socket and go back to accept the next connection
+        writeToLog(serdebug, "SERVER: forked");
+        close(client_sock);
+        close(pipe_fd[i*2][0]);
+        close(pipe_fd[i*2+1][1]);
+    }
+    usleep(500000);
 
    // SIGNALS
     struct sigaction sa; //initialize sigaction

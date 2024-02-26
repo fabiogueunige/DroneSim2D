@@ -68,7 +68,7 @@ int main(int argc, char* argv[]){
     int portTO = 40002;
     char portStrSe[10];
     char portStrTO[10];
-    char ipAddress[20] = "130.251.41.239";
+    char ipAddress[20] = "192.168.177.196";
     int nprc = 0;
 
     // CREATING PIPE
@@ -172,7 +172,7 @@ int main(int argc, char* argv[]){
 
     switch (keyy){
         case 'i':
-            sleep(3);
+            sleep(1);
             nprc = 3;
             proIds[SERVER] = spawn("./server", server_path);
             usleep(500000);
