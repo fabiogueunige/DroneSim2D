@@ -16,7 +16,7 @@ if [ $? -eq 0 ]; then
         echo "Errore durante la compilazione di master.c"
     fi
 
-cc -o "server"  "server.c"
+cc -o "server"  "server.c" -lm
 if [ $? -eq 0 ]; then
         echo "Compilazione di server.c completata con successo"
     else

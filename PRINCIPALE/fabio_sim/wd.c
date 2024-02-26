@@ -9,6 +9,7 @@
 #include <signal.h>
 #include <time.h>
 #include <sys/file.h>
+#include <stdbool.h>
 typedef enum {FALSE=0, TRUE=1} BOOL;
 
 BOOL server_check, drone_check, input_check, obstacle_check, targets_check;
@@ -94,6 +95,9 @@ int main(int argc, char* argv[]){
     writeToLog(debug, "WATCH DOG: process started");
     printf("WATCH DOG: process started");
 
+    bool inpMode = false;
+    bool toMode = false;
+
 // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -113,56 +117,77 @@ int main(int argc, char* argv[]){
         exit(EXIT_FAILURE);
     }
 
-    char * string1 = argv[1];   // s
-    char * string2 = argv[2];   // d
-    char * string3 = argv[3];   // i
-    char * string4 = argv[4];   // o
-    char * string5 = argv[5];   // t
+    if (argc == 4) {
+        inpMode = true;
+        char * string1 = argv[1];   // s
+        char * string2 = argv[2];   // d
+        char * string3 = argv[3];   // i
+        server_pid = atoi(string1);
+        drone_pid = atoi(string2);
+        input_pid = atoi(string3);
+    }
+    if (argc == 3) {
+        toMode = true;
+        char * string4 = argv[1];   // o
+        char * string5 = argv[2];   // t
+        obstacle_pid = atoi(string4);
+        targets_pid = atoi(string5);
+    }
+    else {
+        toMode = true;
+        inpMode = true;
+        char * string1 = argv[1];   // s
+        char * string2 = argv[2];   // d
+        char * string3 = argv[3];   // i
+        char * string4 = argv[4];   // o
+        char * string5 = argv[5];   // t
 
-    server_pid = atoi(string1);
-    drone_pid = atoi(string2);
-    input_pid = atoi(string3);
-    obstacle_pid = atoi(string4);
-    targets_pid = atoi(string5);
-
+        server_pid = atoi(string1);
+        drone_pid = atoi(string2);
+        input_pid = atoi(string3);
+        obstacle_pid = atoi(string4);
+        targets_pid = atoi(string5);
+    }
+    
     
     while(1){
         time_t t = time(NULL);
         writeToLog(debug, "WATCH DOG: sending signals to processes");
-        server_check = FALSE;
-        input_check = FALSE;
-        drone_check = FALSE;
-        obstacle_check = FALSE;
-        targets_check = FALSE;
 
-        if (kill(server_pid, SIGUSR1) == -1) {  // send SIGUSR1 to server
-            perror("kill server");
-            writeToLog(errors, "WATCH DOG: error in kill server");
+        if (inpMode){
+            server_check = FALSE;
+            input_check = FALSE;
+            drone_check = FALSE;
+            if (kill(server_pid, SIGUSR1) == -1) {  // send SIGUSR1 to server
+                perror("kill server");
+                writeToLog(errors, "WATCH DOG: error in kill server");
+            }
+            
+            sleep(1);
+            if (kill(drone_pid, SIGUSR1) == -1) {   // send SIGUSR1 to drone
+                perror("kill drone");
+                writeToLog(errors, "WATCH DOG: error in kill drone");
+            }
+            
+            sleep(1);
+            if (kill(input_pid, SIGUSR1) == -1) {   // send SIGUSR1 to input
+                perror("kill input");
+                writeToLog(errors, "WATCH DOG: error in kill input");
+            }
+            sleep(1);
         }
-        
-        sleep(1);
-        if (kill(drone_pid, SIGUSR1) == -1) {   // send SIGUSR1 to drone
-            perror("kill drone");
-            writeToLog(errors, "WATCH DOG: error in kill drone");
-        }
-        
-        sleep(1);
-        if (kill(input_pid, SIGUSR1) == -1) {   // send SIGUSR1 to input
-            perror("kill input");
-            writeToLog(errors, "WATCH DOG: error in kill input");
-        }
-        sleep(1);
-        
-        if (kill(obstacle_pid, SIGUSR1) == -1) {   // send SIGUSR1 to obstacle
-            perror("kill obstacle");
-            writeToLog(errors, "WATCH DOG: error in kill obstacle");
-        }
+        if (toMode){
+            if (kill(obstacle_pid, SIGUSR1) == -1) {   // send SIGUSR1 to obstacle
+                perror("kill obstacle");
+                writeToLog(errors, "WATCH DOG: error in kill obstacle");
+            }
 
-        sleep(1);
+            sleep(1);
 
-        if (kill(targets_pid, SIGUSR1) == -1) {   // send SIGUSR1 to obstacle
-            perror("kill target");
-            writeToLog(errors, "WATCH DOG: error in kill target");
+            if (kill(targets_pid, SIGUSR1) == -1) {   // send SIGUSR1 to obstacle
+                perror("kill target");
+                writeToLog(errors, "WATCH DOG: error in kill target");
+            }
         }
 
         time_t t2 = time(NULL);
@@ -173,145 +198,151 @@ int main(int argc, char* argv[]){
         /* Here we decided to identificate wich process stopped working using 3 different if in order to make, 
         in the 2nd assignment, the watch dog to close and reopen only the process that stopped working, then if after a certain 
         number of times it doesn't respond, we will terminate it. In firt assignment we only make it terminate the whole program.*/
+        if (inpMode) {
+            if(server_check==FALSE) //checks if server responded
+            {
+                writeToLog(debug, "WATCH DOG: SERVER is not responding, terminating the program...");
+                if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
+                    perror("kill server");
+                    writeToLog(errors, "WATCH DOG: error in kill server");
+                }
+                if (kill(drone_pid, SIGUSR2) == -1) {   // send SIGUSR2 to drone
+                perror("kill drone");
+                writeToLog(errors, "WATCH DOG: error in kill drone");
+                }
+                if (kill(input_pid, SIGUSR2) == -1) {   // send SIGUSR2 to input
+                    perror("kill input");
+                    writeToLog(errors, "WATCH DOG: error in kill input");
+                }
+                if(kill(obstacle_pid, SIGUSR2) == -1){
+                    perror("kill obstacle");
+                    writeToLog(errors, "WATCH DOG: error in kill obstacle");
+                }
+                if(kill(targets_pid, SIGUSR2) == -1){
+                    perror("kill target");
+                    writeToLog(errors, "WATCH DOG: error in kill target");
+                }
+                exit(EXIT_FAILURE);
+            }
+            else
+                printf("WATCH DOG: SERVER received signal\n");
+            
 
-        if(server_check==FALSE) //checks if server responded
-        {
-            writeToLog(debug, "WATCH DOG: SERVER is not responding, terminating the program...");
-            if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
-                perror("kill server");
-                writeToLog(errors, "WATCH DOG: error in kill server");
+            if(drone_check==FALSE) //checks if server responded
+            {
+                writeToLog(debug, "WATCH DOG: DRONE is not responding, terminating the program...");
+                if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
+                    perror("kill server");
+                    writeToLog(errors, "WATCH DOG: error in kill server");
+                }
+                if (kill(drone_pid, SIGUSR2) == -1) {   // send SIGUSR2 to drone
+                perror("kill drone");
+                writeToLog(errors, "WATCH DOG: error in kill drone");
+                }
+                if (kill(input_pid, SIGUSR2) == -1) {   // send SIGUSR2 to input
+                    perror("kill input");
+                    writeToLog(errors, "WATCH DOG: error in kill input");
+                }
+                if(kill(obstacle_pid, SIGUSR2) == -1){
+                    perror("kill obstacle");
+                    writeToLog(errors, "WATCH DOG: error in kill obstacle");
+                }
+                if(kill(targets_pid, SIGUSR2) == -1){
+                    perror("kill target");
+                    writeToLog(errors, "WATCH DOG: error in kill target");
+                }
+                exit(EXIT_FAILURE);
             }
-            if (kill(drone_pid, SIGUSR2) == -1) {   // send SIGUSR2 to drone
-            perror("kill drone");
-            writeToLog(errors, "WATCH DOG: error in kill drone");
+            else
+                printf("WATCH DOG: DRONE received signal\n");
+            
+            if(input_check==FALSE) //checks if server responded
+            {
+                writeToLog(debug, "WATCH DOG: INPUT is not responding, terminating the program...");
+                if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
+                    perror("kill server");
+                    writeToLog(errors, "WATCH DOG: error in kill server");
+                }
+                if (kill(drone_pid, SIGUSR2) == -1) {   // send SIGUSR2 to drone
+                perror("kill drone");
+                writeToLog(errors, "WATCH DOG: error in kill drone");
+                }
+                if (kill(input_pid, SIGUSR2) == -1) {   // send SIGUSR2 to input
+                    perror("kill input");
+                    writeToLog(errors, "WATCH DOG: error in kill input");
+                }
+                if(kill(obstacle_pid, SIGUSR2) == -1){
+                    perror("kill obstacle");
+                    writeToLog(errors, "WATCH DOG: error in kill obstacle");
+                }
+                if(kill(targets_pid, SIGUSR2) == -1){
+                    perror("kill target");
+                    writeToLog(errors, "WATCH DOG: error in kill target");
+                }
+                exit(EXIT_FAILURE);
             }
-            if (kill(input_pid, SIGUSR2) == -1) {   // send SIGUSR2 to input
-                perror("kill input");
-                writeToLog(errors, "WATCH DOG: error in kill input");
-            }
-            if(kill(obstacle_pid, SIGUSR2) == -1){
-                perror("kill obstacle");
-                writeToLog(errors, "WATCH DOG: error in kill obstacle");
-            }
-            if(kill(targets_pid, SIGUSR2) == -1){
-                perror("kill target");
-                writeToLog(errors, "WATCH DOG: error in kill target");
-            }
-            exit(EXIT_FAILURE);
+            else
+                printf("WATCH DOG: INPUT received signal\n");
+            // sends a signal to all processes to check they are alive
         }
-        else
-            printf("WATCH DOG: SERVER received signal\n");
-        
 
-        if(drone_check==FALSE) //checks if server responded
-        {
-            writeToLog(debug, "WATCH DOG: DRONE is not responding, terminating the program...");
-            if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
-                perror("kill server");
-                writeToLog(errors, "WATCH DOG: error in kill server");
-            }
-            if (kill(drone_pid, SIGUSR2) == -1) {   // send SIGUSR2 to drone
-            perror("kill drone");
-            writeToLog(errors, "WATCH DOG: error in kill drone");
-            }
-            if (kill(input_pid, SIGUSR2) == -1) {   // send SIGUSR2 to input
-                perror("kill input");
-                writeToLog(errors, "WATCH DOG: error in kill input");
-            }
-            if(kill(obstacle_pid, SIGUSR2) == -1){
-                perror("kill obstacle");
-                writeToLog(errors, "WATCH DOG: error in kill obstacle");
-            }
-            if(kill(targets_pid, SIGUSR2) == -1){
-                perror("kill target");
-                writeToLog(errors, "WATCH DOG: error in kill target");
-            }
-            exit(EXIT_FAILURE);
-        }
-        else
-            printf("WATCH DOG: DRONE received signal\n");
-        
-        if(input_check==FALSE) //checks if server responded
-        {
-            writeToLog(debug, "WATCH DOG: INPUT is not responding, terminating the program...");
-            if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
-                perror("kill server");
-                writeToLog(errors, "WATCH DOG: error in kill server");
-            }
-            if (kill(drone_pid, SIGUSR2) == -1) {   // send SIGUSR2 to drone
-            perror("kill drone");
-            writeToLog(errors, "WATCH DOG: error in kill drone");
-            }
-            if (kill(input_pid, SIGUSR2) == -1) {   // send SIGUSR2 to input
-                perror("kill input");
-                writeToLog(errors, "WATCH DOG: error in kill input");
-            }
-            if(kill(obstacle_pid, SIGUSR2) == -1){
-                perror("kill obstacle");
-                writeToLog(errors, "WATCH DOG: error in kill obstacle");
-            }
-            if(kill(targets_pid, SIGUSR2) == -1){
-                perror("kill target");
-                writeToLog(errors, "WATCH DOG: error in kill target");
-            }
-            exit(EXIT_FAILURE);
-        }
-        else
-            printf("WATCH DOG: INPUT received signal\n");
-        // sends a signal to all processes to check they are alive
+        if (toMode) {
+            obstacle_check = FALSE;
+            targets_check = FALSE;
 
-        if(obstacle_check==FALSE) //checks if server responded
-        {
-            writeToLog(debug, "WATCH DOG: OBSTACLE is not responding, terminating the program...");
-            if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
-                perror("kill server");
-                writeToLog(errors, "WATCH DOG: error in kill server");
+            if(obstacle_check==FALSE) //checks if server responded
+            {
+                writeToLog(debug, "WATCH DOG: OBSTACLE is not responding, terminating the program...");
+                if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
+                    perror("kill server");
+                    writeToLog(errors, "WATCH DOG: error in kill server");
+                }
+                if (kill(drone_pid, SIGUSR2) == -1) {   // send SIGUSR2 to drone
+                perror("kill drone");
+                writeToLog(errors, "WATCH DOG: error in kill drone");
+                }
+                if (kill(input_pid, SIGUSR2) == -1) {   // send SIGUSR2 to input
+                    perror("kill input");
+                    writeToLog(errors, "WATCH DOG: error in kill input");
+                }
+                if(kill(obstacle_pid, SIGUSR2) == -1){
+                    perror("kill obstacle");
+                    writeToLog(errors, "WATCH DOG: error in kill obstacle");
+                }
+                if(kill(targets_pid, SIGUSR2) == -1){
+                    perror("kill target");
+                    writeToLog(errors, "WATCH DOG: error in kill target");
+                }
+                exit(EXIT_FAILURE);
             }
-            if (kill(drone_pid, SIGUSR2) == -1) {   // send SIGUSR2 to drone
-            perror("kill drone");
-            writeToLog(errors, "WATCH DOG: error in kill drone");
+            if(targets_check == FALSE){
+                writeToLog(debug, "WATCH DOG: TARGETS is not responding, terminating the program...");
+                if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
+                    perror("kill server");
+                    writeToLog(errors, "WATCH DOG: error in kill server");
+                }
+                if (kill(drone_pid, SIGUSR2) == -1) {   // send SIGUSR2 to drone
+                perror("kill drone");
+                writeToLog(errors, "WATCH DOG: error in kill drone");
+                }
+                if (kill(input_pid, SIGUSR2) == -1) {   // send SIGUSR2 to input
+                    perror("kill input");
+                    writeToLog(errors, "WATCH DOG: error in kill input");
+                }
+                if(kill(obstacle_pid, SIGUSR2) == -1){
+                    perror("kill obstacle");
+                    writeToLog(errors, "WATCH DOG: error in kill obstacle");
+                }
+                if(kill(targets_pid, SIGUSR2) == -1){
+                    perror("kill target");
+                    writeToLog(errors, "WATCH DOG: error in kill target");
+                }
+                exit(EXIT_FAILURE);
+            
             }
-            if (kill(input_pid, SIGUSR2) == -1) {   // send SIGUSR2 to input
-                perror("kill input");
-                writeToLog(errors, "WATCH DOG: error in kill input");
-            }
-            if(kill(obstacle_pid, SIGUSR2) == -1){
-                perror("kill obstacle");
-                writeToLog(errors, "WATCH DOG: error in kill obstacle");
-            }
-            if(kill(targets_pid, SIGUSR2) == -1){
-                perror("kill target");
-                writeToLog(errors, "WATCH DOG: error in kill target");
-            }
-            exit(EXIT_FAILURE);
+            else
+                printf("WATCH DOG: DRONE received signal\n");
         }
-        if(targets_check == FALSE){
-            writeToLog(debug, "WATCH DOG: TARGETS is not responding, terminating the program...");
-            if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
-                perror("kill server");
-                writeToLog(errors, "WATCH DOG: error in kill server");
-            }
-            if (kill(drone_pid, SIGUSR2) == -1) {   // send SIGUSR2 to drone
-            perror("kill drone");
-            writeToLog(errors, "WATCH DOG: error in kill drone");
-            }
-            if (kill(input_pid, SIGUSR2) == -1) {   // send SIGUSR2 to input
-                perror("kill input");
-                writeToLog(errors, "WATCH DOG: error in kill input");
-            }
-            if(kill(obstacle_pid, SIGUSR2) == -1){
-                perror("kill obstacle");
-                writeToLog(errors, "WATCH DOG: error in kill obstacle");
-            }
-            if(kill(targets_pid, SIGUSR2) == -1){
-                perror("kill target");
-                writeToLog(errors, "WATCH DOG: error in kill target");
-            }
-            exit(EXIT_FAILURE);
-        
-        }
-        else
-            printf("WATCH DOG: DRONE received signal\n");
     }
     fclose(debug);
     fclose(errors);

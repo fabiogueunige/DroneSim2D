@@ -231,7 +231,10 @@ int main(int argc, char* argv[]){
     fd_set write_fds;
     FD_ZERO(&read_fds);
     //FD_ZERO(&write_fds);
-    
+    /*char * string = argv[4];   // i
+    pid_t server_pid;
+    server_pid = atoi(string);
+    writeToLog(drdebug, string);*/
     int keyfd; //readable file descriptor for key pressed in input 
     sscanf(argv[1], "%d", &keyfd);
     char input;
@@ -243,7 +246,7 @@ int main(int argc, char* argv[]){
     int pipeSefd[2];
     bool is_on_drone[20] = {false}; // vector to check if the i-th obstacle is on the drone when generated
     char msg[100]; // message to write on debug file
-    
+    char *coo = "coo";
     // FILE Opening
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
@@ -525,7 +528,13 @@ int main(int argc, char* argv[]){
                         F[i] = F[i] + FORCE_MODULE * vf[i];
                     break;
                 case 'q':
-                    exit(EXIT_SUCCESS);  // Exit the program
+                    /*if(kill(server_pid, SIGINT) == -1){
+                        perror("error in sending signal to server");
+                        writeToLog(errors, "DRONE: error in sending ending signal to server");
+                        exit(EXIT_SUCCESS);  // Exit the program
+                    }*/
+                    writeToLog(debug, "DRONE: Exiting program...");
+                    exit(EXIT_SUCCESS);
                 case 'u':
                     //reset drone
                     x = x0;
@@ -558,7 +567,7 @@ int main(int argc, char* argv[]){
         }
         // compute attractive force of targets
         for(int i = 0; i<ntargets; i++){
-            if(target[i]->taken && (x, y, target[i]->x, target[i]->y)){
+            if(!(target[i]->taken) && isTargetTaken(x, y, target[i]->x, target[i]->y)){
                 target[i]->taken = true;
                 sprintf(msg,"target at %d %d", target[i]->x, target[i]-> y);
                 writeToLog(drdebug, msg);
@@ -612,7 +621,17 @@ int main(int argc, char* argv[]){
         drone->vy = vy;
         drone->fx = F[0];
         drone->fy = F[1];
-        
+
+        /*if((write(pipeSefd[1], "coo", strlen("coo"))) == -1){
+            perror("error in writing to pipe");
+            writeToLog(errors, "DRONE: error in writing coo to pipe");
+            exit(EXIT_FAILURE);
+        }*/
+        /*if((write(pipeSefd[1], coo, strlen(coo))) == -1){
+            perror("error in writing to pipe");
+            writeToLog(errors, "DRONE: error in writing coo to pipe server");
+            exit(EXIT_FAILURE);
+        }*/
         if ((write(pipeSefd[1], drone, sizeof(Drone))) == -1){
             perror("error in writing to pipe");
             writeToLog(errors, "DRONE: error in writing to pipe x");

@@ -16,6 +16,8 @@
 #include <netdb.h> 
 #include <arpa/inet.h>
 
+#include <sys/select.h>
+
 
 #define MAX_OBSTACLES 20
 #define MAX_MSG_LEN 1024
@@ -83,6 +85,21 @@ void Send(int sock, char *msg, FILE *obsdebug){
     fclose(error);
 }
 
+void Receive(int sockfd, char *buffer, FILE *debug) {
+    FILE *error = fopen("logfiles/errors.log", "a");
+    if(recv(sockfd, buffer, MAX_MSG_LEN, 0) < 0) {
+        writeToLog(error, "SOCKSERVER: Error receiving message from client");
+        exit(EXIT_FAILURE);
+    }
+    writeToLog(debug, buffer);
+    //char msg[MAX_MSG_LEN] = buffer;
+    if(send(sockfd, buffer, strlen(buffer)+1, 0) < 0) {
+        writeToLog(error, "SOCKSERVER: Error sending message to client");
+        exit(EXIT_FAILURE);
+    }
+    fclose(error);
+}
+
 int main (int argc, char *argv[]) 
 {
     FILE * debug = fopen("logfiles/debug.log", "a");
@@ -92,17 +109,20 @@ int main (int argc, char *argv[])
     char msg[100]; // message to write on debug file
     struct sockaddr_in server_address;
     //struct hostent *server; put for ip address
-
+    
     struct hostent *server;
     int port = 40000; // default port
     int sock;
     char sockmsg[MAX_MSG_LEN];
-
+    float r,c;
     int rows = 0, cols = 0;
     char stop[] = "STOP";
     char message [] = "OI";
     bool stopReceived = false;
+    int nobstacles = 0;
     struct obstacle *obstacles[MAX_OBSTACLES];
+    fd_set readfds;
+    FD_ZERO(&readfds);
 
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
@@ -147,7 +167,6 @@ int main (int argc, char *argv[])
     }
     writeToLog(obsdebug, "OBSTACLES: message OI sent to server");
 
-
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
     sa.sa_sigaction = sig_handler;
@@ -179,15 +198,18 @@ int main (int argc, char *argv[])
     writeToLog(obsdebug, "OBSTACLES: message received from server");
     writeToLog(obsdebug, sockmsg);
     // setting rows and cols
-    sscanf(sockmsg, "%d,%d", &rows, &cols);
-    
+    char *format = "%f,%f";
+    sscanf(sockmsg, format, &r, &c);
+    rows = (int)r;
+    cols = (int)c;
+    printf("OBSTACLES: rows = %d, cols = %d\n", rows, cols);
     
     sleep(1); // wait for server to read rows and cols
     // obstacle generation cycle
-    while(!sigint_rec || !stopReceived){
-        time_t t = time(NULL);
+    while(!stopReceived){
+        //time_t t = time(NULL);
         srand(time(NULL));
-        int nobstacles = rand() % MAX_OBSTACLES;
+        nobstacles = rand() % MAX_OBSTACLES;
         printf("OBSTACLES: number of obstacles = %d\n", nobstacles);
         sprintf(msg, "OBSTACLES: number of obstacles = %d", nobstacles);
         writeToLog(obsdebug, msg);
@@ -223,14 +245,41 @@ int main (int argc, char *argv[])
         if (strcmp(stop, sockmsg) == 0){
             stopReceived = true;
         }*/
-        time_t t2 = time(NULL); 
+        struct timeval timeout;
+        timeout.tv_sec = 10;
+        timeout.tv_usec = 0;
+        FD_SET(sock, &readfds);
+        int sel = select(sock+1, &readfds, NULL, NULL, &timeout);
+        if (sel<0){
+            writeToLog(errors, "TARGETS: error in select");
+            perror("select");
+            exit(EXIT_FAILURE);
+        }
+        else if (sel>0){
+            if(FD_ISSET(sock, &readfds)){
+                writeToLog(obsdebug, "Reading message sent via socket");
+                char buffer[MAX_MSG_LEN];
+                Receive(sock, buffer, obsdebug);
+                if(strcmp(buffer, stop) == 0){
+                    writeToLog(obsdebug, "OBSTACLES: STOP message received from server");
+                    stopReceived = true;
+                    //exit(EXIT_SUCCESS); // VEDERE MEGLIO COME FARE L'EXIT SE CON FLAG O XON LA SYS CALL
+                }
+            }
+        }
+        else{
+            writeToLog(obsdebug, "OBSTACLES: timeout expired");
+            /*time_t t2 = time(NULL); 
         while(t2 - t < 60){
             t2 = time(NULL);
+        }*/
         }
+        
     }
+    writeToLog(obsdebug, "OBSTACLES: exiting with return value 0");
 
     // free the memory allocated for obstacles
-    for(int i = 0; i<20; i++){
+    for(int i = 0; i<nobstacles; i++){
         free(obstacles[i]);
     }
     // close log files

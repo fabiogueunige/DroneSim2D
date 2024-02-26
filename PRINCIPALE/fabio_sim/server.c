@@ -16,6 +16,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <math.h>
 
 # define MAX_MSG_LEN 1024
 # define NUMPIPE 4
@@ -25,6 +26,9 @@
 pid_t wd_pid = -1;
 pid_t window_pid;
 bool sigint_rec = false;
+float rho2 = 2;
+int *pipeObfd[2]; 
+int *pipeTafd[2]; 
 
 typedef struct {
     int x;
@@ -44,6 +48,25 @@ typedef struct {
     bool taken;
 } targets;
 
+void writeToLog(FILE *logFile, const char *message) {
+    time_t crtime;
+    time(&crtime);
+    int lockResult = flock(fileno(logFile), LOCK_EX);
+    if (lockResult == -1) {
+        perror("Failed to lock the log file");
+        // Handle the error as needed (e.g., exit or return)
+        return;
+    }
+    fprintf(logFile,"%s => ", ctime(&crtime));
+    fprintf(logFile, "%s\n", message);
+    fflush(logFile);
+
+    int unlockResult = flock(fileno(logFile), LOCK_UN);
+    if (unlockResult == -1) {
+        perror("Failed to unlock the log file");
+        // Handle the error as needed (e.g., exit or return)
+    }
+}
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
     if (signo == SIGUSR1) {
@@ -73,33 +96,38 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
         //pressed q or CTRL+C
         printf("SERVER: Terminating with return value 0...");
         FILE *debug = fopen("logfiles/debug.log", "a");
+        FILE *errors = fopen("logfiles/errors.log", "a");
         fprintf(debug, "%s\n", "SERVER: terminating with return value 0...");
         fclose(debug);
-        kill(window_pid, SIGTERM);
         sigint_rec = true;
+        if(write(*pipeObfd[1], "STOP", strlen("STOP")) == -1){
+            perror("error in writing to pipe");
+            writeToLog(errors, "SERVER: error in writing to pipe obstacles");
+            exit(EXIT_FAILURE);
+        }
+        if(write(*pipeTafd[1], "STOP", strlen("STOP")) == -1){
+            perror("error in writing to pipe");
+            writeToLog(errors, "SERVER: error in writing to pipe targets");
+            exit(EXIT_FAILURE);
+        }
+        fclose(errors);
+        sleep(1);
+        kill(window_pid, SIGTERM);
+        
     }
 }
 
-void writeToLog(FILE *logFile, const char *message) {
-    time_t crtime;
-    time(&crtime);
-    int lockResult = flock(fileno(logFile), LOCK_EX);
-    if (lockResult == -1) {
-        perror("Failed to lock the log file");
-        // Handle the error as needed (e.g., exit or return)
-        return;
-    }
-    fprintf(logFile,"%s => ", ctime(&crtime));
-    fprintf(logFile, "%s\n", message);
-    fflush(logFile);
-
-    int unlockResult = flock(fileno(logFile), LOCK_UN);
-    if (unlockResult == -1) {
-        perror("Failed to unlock the log file");
-        // Handle the error as needed (e.g., exit or return)
-    }
+bool isTargetTaken(int x, int y, int xt, int yt){
+    /*
+    Function to determine if th target is taken
+    input: x, y: drone coordinates
+           xt, yt: target coordinates
+    output: true if the target is taken, false otherwise
+    */
+    float rho = sqrt(pow(x-xt, 2) + pow(y-yt, 2)); //distance between target and drone
+    if(rho < rho2) //if it is in the "take area"
+        return true;
 }
-
 // Use for the children processes (put an error string different each process)
 pid_t spawn(const char * program, char ** arg_list) {
     FILE * errors = fopen("logfiles/errors.log", "a");
@@ -138,11 +166,11 @@ int main(int argc, char* argv[]){
         pipe 3: ch2 -> server wr3 al server: re3
     */
     int pipeDrfd[2];    // pipe for drone: 0 for reading, 1 for writing
-    int *pipeObfd[2]; 
+    
     int ntargets = 0, nobstacles = 0;   // pipe for obstacles: 0 for reading, 1 for writing
+    int targettaken = 0;
     char ti[] = "TI";
     char oi[] = "OI";
-    int *pipeTafd[2]; 
     char piperd[NUMPIPE][10];    // string that contains the readable fd of pipe_fd
     char pipewr[NUMPIPE][10];
     int pipe_fd[NUMPIPE][2]; 
@@ -157,7 +185,7 @@ int main(int argc, char* argv[]){
     char stop[] = "STOP";
     char ge[] = "GE";
     bool stopReceived = false;
-
+    bool first_set_of_targets_arrived = false;
     int nobstacles_edge = 2 * (rows + cols);
     struct obstacle *edges[nobstacles_edge];
 
@@ -168,73 +196,7 @@ int main(int argc, char* argv[]){
 
     sscanf(argv[3], "%d", &port);
 
-    // SOCKET IMPLEMENTATION
-    // generating socket
-    int sock = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock == -1) {
-        perror("socket");
-        return 1;
-    }
-    // Bind the socket
-    struct sockaddr_in server_address;
-    memset(&server_address, 0, sizeof(server_address));
-    server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(port);
-    server_address.sin_addr.s_addr = INADDR_ANY;
-    writeToLog(serdebug, "SERVER: binding...");
     
-    if (bind(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
-        perror("bind");
-        writeToLog(errors, "SERVER: error in bind()");
-        return 1;
-    }
-
-    // Listen for connections
-    if (listen(sock, 5) == -1) {  // 5 is the maximum length of the queue of pending connections
-        perror("listen");
-        return 1;
-    }
-    writeToLog(serdebug, "SERVER: listening...");
-
-    // generates all the pipes
-    for (int i = 0; i < NUMPIPE; i++){
-        if (pipe(pipe_fd[i]) == -1){
-            perror("error in pipe");
-            writeToLog(errors, "SERVER: error opening pipe");
-        }
-    }
-    writeToLog(serdebug, "SERVER: pipes opened");
-    // converts the fd of the pipes in strings
-    for (int i = 0; i < NUMPIPE; i++){
-        sprintf(piperd[i], "%d", pipe_fd[i][0]);
-        sprintf(pipewr[i], "%d", pipe_fd[i][1]);
-    }
-    writeToLog(serdebug, "SERVER: pipes converted in strings");
-
-    // Generating all the server children for socket connection
-    for (int i = 0; i < NUMCLIENT; i++){ // for make sure that obstacles and targets are ready to send data
-        client_sock = accept(sock, NULL, NULL); // accept the connection
-        writeToLog(serdebug, "SERVER: connection accepted");
-        if (client_sock == -1) {
-            perror("accept");
-            return 1;
-        }
-        sprintf(fd_str, "%d", client_sock);
-        char id[5];
-        sprintf(id, "%d", i);
-        char rc[100];
-        sprintf(rc, "%d.000,%d.000", rows,cols);
-
-        char *args[] = {"./sockserver",fd_str, piperd[i*2], pipewr[i*2+1], id, rc, NULL};  // path of child process
-        pidch[i] = spawn("./sockserver", args); // spawn the child process
-        
-        // Parent process: close the client socket and go back to accept the next connection
-        writeToLog(serdebug, "SERVER: forked");
-        close(client_sock);
-        close(pipe_fd[i*2][0]);
-        close(pipe_fd[i*2+1][1]);
-    }
-    usleep(500000);
     // Window generation
     writeToLog(serdebug, "SERVER: generating the map");
     char *window_path[] = {"konsole", "-e", "./window", NULL};  // path of window process
@@ -316,6 +278,74 @@ int main(int argc, char* argv[]){
     char *tar = "tar";
     char *coo = "coo";
 
+    // SOCKET IMPLEMENTATION
+    // generating socket
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock == -1) {
+        perror("socket");
+        return 1;
+    }
+    // Bind the socket
+    struct sockaddr_in server_address;
+    memset(&server_address, 0, sizeof(server_address));
+    server_address.sin_family = AF_INET;
+    server_address.sin_port = htons(port);
+    server_address.sin_addr.s_addr = INADDR_ANY;
+    writeToLog(serdebug, "SERVER: binding...");
+    
+    if (bind(sock, (struct sockaddr*)&server_address, sizeof(server_address)) == -1) {
+        perror("bind");
+        writeToLog(errors, "SERVER: error in bind()");
+        return 1;
+    }
+
+    // Listen for connections
+    if (listen(sock, 5) == -1) {  // 5 is the maximum length of the queue of pending connections
+        perror("listen");
+        return 1;
+    }
+    writeToLog(serdebug, "SERVER: listening...");
+
+    // generates all the pipes
+    for (int i = 0; i < NUMPIPE; i++){
+        if (pipe(pipe_fd[i]) == -1){
+            perror("error in pipe");
+            writeToLog(errors, "SERVER: error opening pipe");
+        }
+    }
+    writeToLog(serdebug, "SERVER: pipes opened");
+    // converts the fd of the pipes in strings
+    for (int i = 0; i < NUMPIPE; i++){
+        sprintf(piperd[i], "%d", pipe_fd[i][0]);
+        sprintf(pipewr[i], "%d", pipe_fd[i][1]);
+    }
+    writeToLog(serdebug, "SERVER: pipes converted in strings");
+
+    // Generating all the server children for socket connection
+    for (int i = 0; i < NUMCLIENT; i++){ // for make sure that obstacles and targets are ready to send data
+        client_sock = accept(sock, NULL, NULL); // accept the connection
+        writeToLog(serdebug, "SERVER: connection accepted");
+        if (client_sock == -1) {
+            perror("accept");
+            return 1;
+        }
+        sprintf(fd_str, "%d", client_sock);
+        char id[5];
+        sprintf(id, "%d", i);
+        char rc[100];
+        sprintf(rc, "%d.000,%d.000", rows,cols);
+
+        char *args[] = {"./sockserver",fd_str, piperd[i*2], pipewr[i*2+1], id, rc, NULL};  // path of child process
+        pidch[i] = spawn("./sockserver", args); // spawn the child process
+        
+        // Parent process: close the client socket and go back to accept the next connection
+        writeToLog(serdebug, "SERVER: forked");
+        close(client_sock);
+        close(pipe_fd[i*2][0]);
+        close(pipe_fd[i*2+1][1]);
+    }
+    usleep(500000);
+
    // SIGNALS
     struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
@@ -342,7 +372,8 @@ int main(int argc, char* argv[]){
     int count = 0;
     float num1, num2;
     int sel;
-    while(!sigint_rec || !stopReceived){
+    targets *target[20];
+    while(!sigint_rec){
         // select wich pipe to read from between drone and obstacles
         FD_SET(pipeDrfd[0], &read_fds);
         FD_SET(*pipeObfd[0], &read_fds); // include pipeObfd[0] in read_fds
@@ -363,7 +394,7 @@ int main(int argc, char* argv[]){
         
         do{
             sel = select(max_fd + 1, &read_fds, &write_fds, NULL, NULL);
-        }while(sel == -1 && errno == EINTR);
+        }while(sel == -1 && errno == EINTR && !sigint_rec);
         
         if(sel ==-1){
             perror("error in select");
@@ -373,6 +404,8 @@ int main(int argc, char* argv[]){
         else if(sel>0){
             if(FD_ISSET(*pipeTafd[0], &read_fds)){
                 writeToLog(serdebug, "SERVER: TARGETS WIN");
+                targettaken = 0;
+                first_set_of_targets_arrived = true;
                 memset(sockmsg, '\0', MAX_MSG_LEN);
                 if ((read(*pipeTafd[0], sockmsg, MAX_MSG_LEN)) == -1) { // reads from drone ntargets
                     perror("error in reading from pipe");
@@ -387,7 +420,7 @@ int main(int argc, char* argv[]){
                 }
                 else {
                     sscanf(sockmsg, "T[%d]", &ntargets);
-                    targets *target[ntargets];
+                    
                     // Sending the numeber of targets to the drone and window
                     if((write(pipeDrfd[1], tar, strlen(tar))) == -1){
                         perror("error in writing to pipe");
@@ -516,12 +549,25 @@ int main(int argc, char* argv[]){
             }
             
             if(FD_ISSET(pipeDrfd[0], &read_fds)){
-                if ((read(pipeDrfd[0], drone, sizeof(Drone))) == -1) { // reads from drone
+                /*char buff[4];
+                if((read(pipeDrfd[0], buff, sizeof(buff)-1)) == -1){
                     perror("error in reading from pipe");
                     writeToLog(errors, "SERVER: error in reading from pipe drone");
                     exit(EXIT_FAILURE);
                 }
-                printf("SERVER: drone position: (%d, %d)\n", drone->x, drone->y);
+                writeToLog(serdebug, buff);
+                if(strcmp(buff, "coo")==0){*/
+                    if ((read(pipeDrfd[0], drone, sizeof(Drone))) == -1) { // reads from drone
+                    perror("error in reading from pipe");
+                    writeToLog(errors, "SERVER: error in reading from pipe drone");
+                    exit(EXIT_FAILURE);
+                    }
+                    printf("SERVER: drone position: (%d, %d)\n", drone->x, drone->y);
+                /*}
+                else if(strcmp(buff, "sto") == 0){
+                    stopReceived=true;
+                }*/
+                
             }
             // writeToLog(serdebug,"SERVER: writing to window\n");
             if((write(pipeWdfd[1], coo, strlen(coo))) == -1){
@@ -534,13 +580,32 @@ int main(int argc, char* argv[]){
                 writeToLog(errors, "SERVER: error in writing to pipe window the drone");
                 exit(EXIT_FAILURE);
             }
-        }  
+        } 
+        if(first_set_of_targets_arrived){
+            for (int i = 0; i< ntargets; i++){
+                if (!(target[i]->taken) && isTargetTaken(drone->x, drone->y, target[i]->x, target[i]->y)){
+                    target[i]->taken = true;
+                    targettaken++;
+                }
+            }
+            if(targettaken==ntargets){
+                writeToLog(serdebug, "SERVER: all targets taken");
+                if(write(*pipeTafd[1], ge, strlen(ge)) == -1){
+                    perror("error in writing to pipe");
+                    writeToLog(errors, "SERVER: error in writing to pipe targets");
+                    exit(EXIT_FAILURE);
+                }
+                targettaken = 0;
+            }
+        }
+        
         /*
         if (strcmp(stop, sockmsg) == 0){
             stopReceived = true;
         }*/
     }
-
+    //writeToLog(serdebug, "SERVER: stop message received");
+    
     // waits window to terminate
     for (int i = 0; i < NUMCLIENT; i++){
         if (waitpid(pidch[i], NULL, 0)==-1){
