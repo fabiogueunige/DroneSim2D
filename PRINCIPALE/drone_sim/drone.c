@@ -231,10 +231,10 @@ int main(int argc, char* argv[]){
     fd_set write_fds;
     FD_ZERO(&read_fds);
     //FD_ZERO(&write_fds);
-    char * string = argv[4];   // i
+    /*char * string = argv[4];   // i
     pid_t server_pid;
     server_pid = atoi(string);
-    writeToLog(drdebug, string);
+    writeToLog(drdebug, string);*/
     int keyfd; //readable file descriptor for key pressed in input 
     sscanf(argv[1], "%d", &keyfd);
     char input;

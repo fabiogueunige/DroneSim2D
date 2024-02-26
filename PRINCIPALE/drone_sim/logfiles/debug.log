@@ -1,8 +1,10 @@
-Mon Feb 26 16:04:31 2024
+Mon Feb 26 16:50:47 2024
+ => MASTER: The game is in local mode
+Mon Feb 26 16:50:47 2024
  => SERVER: process started
-Mon Feb 26 16:04:31 2024
+Mon Feb 26 16:50:48 2024
  => DRONE: process started
-Mon Feb 26 16:04:31 2024
+Mon Feb 26 16:50:48 2024
  => DRONE: pipes opened
 INPUT: process started
 OBSTACLES: process started
@@ -11,131 +13,77 @@ Socket server started
 TARGETS: process started
 TARGETS: connected to serverSocket
 Socket server started
-Mon Feb 26 16:04:33 2024
- => obs
-Mon Feb 26 16:04:33 2024
+Mon Feb 26 16:50:50 2024
  => WINDOW: process started
-Mon Feb 26 16:04:33 2024
+Mon Feb 26 16:50:50 2024
  => WINDOW: pipe opened
-Mon Feb 26 16:04:34 2024
+Mon Feb 26 16:50:50 2024
  => WATCH DOG: process started
-Mon Feb 26 16:04:34 2024
+Mon Feb 26 16:50:50 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:04:34 2024
+Mon Feb 26 16:50:50 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:04:34 2024
+Mon Feb 26 16:50:50 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:04:34 2024
+Mon Feb 26 16:50:50 2024
  => WATCH DOG: INPUT received signal
-Mon Feb 26 16:04:35 2024
+Mon Feb 26 16:50:51 2024
  => tar
-Mon Feb 26 16:04:43 2024
- => obs
-Mon Feb 26 16:04:44 2024
+Mon Feb 26 16:51:00 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:04:44 2024
+Mon Feb 26 16:51:00 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:04:44 2024
+Mon Feb 26 16:51:00 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:04:44 2024
+Mon Feb 26 16:51:00 2024
  => WATCH DOG: INPUT received signal
-Mon Feb 26 16:04:53 2024
+Mon Feb 26 16:51:00 2024
  => obs
-Mon Feb 26 16:04:54 2024
+Mon Feb 26 16:51:10 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:04:54 2024
+Mon Feb 26 16:51:10 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:04:54 2024
+Mon Feb 26 16:51:10 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:04:54 2024
+Mon Feb 26 16:51:10 2024
  => WATCH DOG: INPUT received signal
-Mon Feb 26 16:05:03 2024
+Mon Feb 26 16:51:10 2024
  => obs
-Mon Feb 26 16:05:04 2024
+Mon Feb 26 16:51:20 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:04 2024
+Mon Feb 26 16:51:20 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:04 2024
+Mon Feb 26 16:51:20 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:04 2024
+Mon Feb 26 16:51:20 2024
  => WATCH DOG: INPUT received signal
-Mon Feb 26 16:05:13 2024
+Mon Feb 26 16:51:20 2024
  => obs
-Mon Feb 26 16:05:14 2024
+Mon Feb 26 16:51:30 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:14 2024
+Mon Feb 26 16:51:30 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:14 2024
+Mon Feb 26 16:51:30 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:14 2024
+Mon Feb 26 16:51:30 2024
  => WATCH DOG: INPUT received signal
-Mon Feb 26 16:05:23 2024
+Mon Feb 26 16:51:30 2024
  => obs
-Mon Feb 26 16:05:24 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:24 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:24 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:24 2024
- => WATCH DOG: INPUT received signal
-Mon Feb 26 16:05:33 2024
- => obs
-Mon Feb 26 16:05:34 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:34 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:34 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:34 2024
- => WATCH DOG: INPUT received signal
-Mon Feb 26 16:05:43 2024
- => obs
-Mon Feb 26 16:05:44 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:44 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:44 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:44 2024
- => WATCH DOG: INPUT received signal
-Mon Feb 26 16:05:50 2024
- => tar
-Mon Feb 26 16:05:53 2024
- => obs
-Mon Feb 26 16:05:54 2024
- => WATCH DOG: sending signals to processes
-SERVER: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:54 2024
- => WATCH DOG: SERVER received signal
-DRONE: signal SIGUSR1 received from WATCH DOG
-Mon Feb 26 16:05:54 2024
- => WATCH DOG: DRONE received signal
-INPUT: signal SIGUSR1 received from WATCH DOG
-SERVER: terminating with return value 0...
-Mon Feb 26 16:05:54 2024
+Mon Feb 26 16:51:32 2024
  => DRONE: Exiting program...
+SERVER: terminating with return value 0...
