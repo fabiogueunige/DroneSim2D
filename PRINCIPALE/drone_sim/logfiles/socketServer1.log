@@ -4,5 +4,16 @@ Message received from client
 TI
 Message sent to parent process
 TI
-T[12]4.000,20.000|5.000,18.000|3.000,7.000|2.000,15.000|4.000,22.000|2.000,8.000|2.000,33.000|5.000,19.000|3.000,28.000|3.000,7.000|3.000,22.000|2.000,5.000
-Message sent to parent process
+T[13]74.000,26.000|75.000,3.000|49.000,34.000|41.000,41.000|45.000,26.000|56.000,6.000|25.000,15.000|9.000,46.000|79.000,27.000|2.000,15.000|56.000,25.000|58.000,35.000|49.000,8.000
+SOCKSERVER: Message received from server
+GE
+Message echo:
+GE
+SOCKSERVER: Message sent to client
+T[10]70.000,10.000|6.000,11.000|38.000,19.000|40.000,44.000|65.000,13.000|66.000,10.000|58.000,33.000|43.000,28.000|69.000,2.000|65.000,31.000
+SOCKSERVER: Message received from server
+STOP
+Message echo:
+STOP
+SOCKSERVER: Message sent to client
+SOCKSERVER: Exiting with return value 0

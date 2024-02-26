@@ -6,7 +6,6 @@
 #include <unistd.h> 
 #include <stdlib.h>
 #include <sys/wait.h>
-#include <signal.h>
 #include <termios.h>
 #include <sys/mman.h>
 #include <stdbool.h>
@@ -15,6 +14,7 @@
 #include <netinet/in.h>
 #include <netdb.h> 
 #include <arpa/inet.h>
+#include <sys/select.h>
 
 #define MAX_TARGETS 20
 #define MAX_MSG_LEN 1024
@@ -28,44 +28,29 @@ typedef struct {
     bool taken;
 } targets;
 
-
-
-void sig_handler(int signo, siginfo_t *info, void *context) {
-
-    if (signo == SIGUSR1) {
-        FILE *debug = fopen("logfiles/debug.log", "a");
-        // SIGUSR1 received
-        wd_pid = info->si_pid;
-        fprintf(debug, "%s\n", "TARGETS: signal SIGUSR1 received from WATCH DOG");
-        kill(wd_pid, SIGUSR1);
-        fclose(debug);
-    }
-    
-    if (signo == SIGUSR2){
-        FILE *debug = fopen("logfiles/debug.log", "a");
-        fprintf(debug, "%s\n", "TARGETS: terminating by WATCH DOG");
-        fclose(debug);
-        exit(EXIT_FAILURE);
-    }
-    if(signo == SIGINT){
-        //pressed q or CTRL+C
-        printf("TARGETS: Terminating with return value 0...");
-        FILE *debug = fopen("logfiles/debug.log", "a");
-        fprintf(debug, "%s\n", "TARGETS: terminating with return value 0...");
-        fclose(debug);
-        sigint_rec = true;
-    }
-    
-}
-
 void writeToLog(FILE * logFile, const char *message) {
     fprintf(logFile, "%s\n", message);
     fflush(logFile);
 }
 
-void Send(int sock, char *msg, FILE *tardebug){
+void Receive(int sockfd, char *buffer, FILE *debug) {
     FILE *error = fopen("logfiles/errors.log", "a");
-    if (send(sock, msg, strlen(msg), 0) == -1) {
+    if(recv(sockfd, buffer, MAX_MSG_LEN, 0) < 0) {
+        writeToLog(error, "SOCKSERVER: Error receiving message from client");
+        exit(EXIT_FAILURE);
+    }
+    writeToLog(debug, buffer);
+    //char msg[MAX_MSG_LEN] = buffer;
+    if(send(sockfd, buffer, strlen(buffer)+1, 0) < 0) {
+        writeToLog(error, "SOCKSERVER: Error sending message to client");
+        exit(EXIT_FAILURE);
+    }
+    fclose(error);
+}
+
+void Send(int sock, char *msg, FILE *debug){
+    FILE *error = fopen("logfiles/errors.log", "a");
+    if (send(sock, msg, strlen(msg) + 1, 0) == -1) {
         perror("send");
         writeToLog(error, "TARGETS: error in sending message to server");
         exit(EXIT_FAILURE);
@@ -76,13 +61,15 @@ void Send(int sock, char *msg, FILE *tardebug){
         writeToLog(error, "TARGETS: error in receiving message from server");
         exit(EXIT_FAILURE);
     }
-    writeToLog(tardebug, recvmsg);
+    writeToLog(debug, "Message echo:");
+    writeToLog(debug, recvmsg);
     if(strcmp(recvmsg, msg) != 0){
         writeToLog(error, "TARGETS: echo is not equal to the message sent");
         exit(EXIT_FAILURE);
     }
     fclose(error);
 }
+
 
 int main (int argc, char *argv[]) 
 {
@@ -97,23 +84,26 @@ int main (int argc, char *argv[])
     //struct hostent *server; put for ip address
 
     struct hostent *server;
-    char ipAddress[20] = "130.251.107.87";
-    //130.251.107.87
-    int port = 40000;
+    int port = 40000; // default port
     int sock;
     char sockmsg[MAX_MSG_LEN];
+    float r,c;
     int rows = 0, cols = 0;
     char stop[] = "STOP";
     char message [] = "TI";
     char ge[] = "GE";
     bool stopReceived = false;
-    
+    bool ge_flag = false;
+    fd_set readfds;
+    FD_ZERO(&readfds);
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
         exit(EXIT_FAILURE);
     }
     writeToLog(debug, "TARGETS: process started");
     printf("TARGETS: process started\n");
+
+    sscanf(argv[1], "%d", &port);
 
     sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1) {
@@ -127,7 +117,7 @@ int main (int argc, char *argv[])
     server_address.sin_port = htons(port);  
 
     // convert the string in ip address
-    if ((inet_pton(AF_INET, ipAddress, &server_address.sin_addr)) <0) {
+    if ((inet_pton(AF_INET, argv[2], &server_address.sin_addr)) < 0) {
         perror("inet_pton");
         writeToLog(errors, "TARGETS: error in inet_pton() in converting IP address");
         return 1;
@@ -149,29 +139,6 @@ int main (int argc, char *argv[])
     }
     writeToLog(tardebug, "TARGETS: message TI sent to server");
 
-    // SIGNALS
-    struct sigaction sa; //initialize sigaction
-    sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
-    sa.sa_sigaction = sig_handler;
-
-    // Register the signal handler for SIGUSR1
-    if (sigaction(SIGUSR1, &sa, NULL) == -1) {
-        perror("sigaction");
-        writeToLog(errors, "TARGETS: error in sigaction()");
-        exit(EXIT_FAILURE);
-    }
-
-    if(sigaction(SIGUSR2, &sa, NULL) == -1){
-        perror("sigaction");
-        writeToLog(errors, "INPUT: error in sigaction()");
-        exit(EXIT_FAILURE);
-    }
-
-    if (sigaction(SIGINT, &sa, NULL) == -1) {
-        perror("Error setting up SIGINT handler");
-        writeToLog(errors, "SERVER: error in sigaction()");
-        exit(EXIT_FAILURE);
-    }
 
     // receiving rows and cols from server
     if ((recv(sock, sockmsg, MAX_MSG_LEN, 0)) < 0) {
@@ -181,22 +148,27 @@ int main (int argc, char *argv[])
     writeToLog(tardebug, "TARGETS: message received from server");
     writeToLog(tardebug, sockmsg);
     // setting rows and cols
-    sscanf(sockmsg, "%d,%d", &rows, &cols);
-    
+    char *format = "%f,%f";
+    sscanf(sockmsg, format, &r, &c);
+    rows = (int)r;
+    cols = (int)c;
+    printf("TARGETS: rows = %d, cols = %d\n", rows, cols);
     sleep(2);
-    while(!sigint_rec){
+    while(!stopReceived){
         time_t t = time(NULL);
+        ge_flag = false;
         srand(time(NULL)); // for change every time the seed of rand()
-        ntargets = rand() % MAX_TARGETS;
+        ntargets = rand() % (MAX_TARGETS-1)+1;
         sprintf(msg, "TARGETS: ntargets = %d", ntargets);
         writeToLog(tardebug, msg);
         char pos_targets[ntargets][10];
-        
         char targetStr[MAX_MSG_LEN];
         char temp[50];
         // add number of targets to the string
         sprintf(targetStr, "T[%d]", ntargets);
-
+        if (ntargets == 0){
+            strcat(targetStr, "|");
+        }
         for(int i = 0; i<ntargets; i++){
             target[i] = malloc(sizeof(targets));
             // generates random coordinates for targets
@@ -206,42 +178,44 @@ int main (int argc, char *argv[])
             target[i]->taken = false;
             sprintf(temp, "%.3f,%.3f|", target[i]->x, target[i]->y);
             strcat(targetStr, temp);
-            sprintf(pos_targets[i], "%.3f,%.3f", target[i]->x, target[i]->y);
-            writeToLog(tardebug, pos_targets[i]);
-            printf("TARGETS: target %d: x = %.3f, y = %.3f\n", i, target[i]->x, target[i]->y);
-            //sprintf(pos_targets[i], "%d,%d", targets[i].x, targets[i].y);
-            
+            sprintf(msg,"TARGETS: target %d: x = %.3f, y = %.3f\n", i, target[i]->x, target[i]->y);
+            writeToLog(tardebug, msg);
         }
-        if(ntargets != 0){
-            targetStr[strlen(targetStr)-1] = '\0'; // remove the last |
-        }
+        targetStr[strlen(targetStr)-1] = '\0'; // remove the last |
         writeToLog(tardebug, targetStr);
-        /*if(send(sock, targetStr, strlen(targetStr) + 1, 0) == -1){
-            perror("send");
-            writeToLog(errors, "TARGETS: error in sending message to server");
-            exit(EXIT_FAILURE);
-        }*/
+
+        // Send the targets to the socket server
         Send(sock, targetStr, tardebug);
-        /* Put in server child
-        if ((write(pipeSefd[1], &ntargets, sizeof(int))) == -1){
-            perror("error in writing to pipe");
-            writeToLog(errors, "TARGETS: error in writing to pipe");
-        }
-        for(int i = 0; i<ntargets; i++){
-            if ((write(pipeSefd[1], target[i],sizeof(targets))) == -1){
-                perror("error in writing to pipe");
-                writeToLog(errors, "TARGETS: error in writing to pipe");
+        
+        while(!ge_flag){
+            FD_SET(sock, &readfds);
+            int sel = select(sock+1, &readfds, NULL, NULL, NULL);
+            if (sel<0){
+                writeToLog(errors, "TARGETS: error in select");
+                perror("select");
+                exit(EXIT_FAILURE);
+            }
+            else if (sel>0){
+                if(FD_ISSET(sock, &readfds)){
+                    writeToLog(tardebug, "Reading message sent via socket");
+                    char buffer[MAX_MSG_LEN];
+                    Receive(sock, buffer, tardebug);
+                    if(strcmp(buffer, stop) == 0){
+                        writeToLog(tardebug, "TARGETS: STOP message received from server");
+                        stopReceived = true;
+                        ge_flag = true;
+                    }
+                    else if(strcmp(buffer, ge) == 0){
+                        ge_flag = true;
+                        writeToLog(tardebug, "TARGETS: GE message received from server");
+                    }
+                }
             }
         }
-        */
-       // change time with GE
-        time_t t2 = time(NULL);
-        while(t2-t < 60){
-            t2 = time(NULL);
-        }
     }
+    writeToLog(tardebug, "TARGETS: exiting with return value 0");
     // freeing memory
-    for(int i = 0; i<20; i++){
+    for(int i = 0; i<ntargets; i++){
         free(target[i]);
     }
     close(sock);
