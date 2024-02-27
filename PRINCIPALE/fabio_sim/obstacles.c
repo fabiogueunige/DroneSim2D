@@ -31,6 +31,7 @@ struct obstacle {
     float y;
 };
 
+/*
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
     if (signo == SIGUSR1) {
@@ -57,7 +58,7 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
         sigint_rec = true;
     }
     
-}
+}*/
 
 void writeToLog(FILE * logFile, const char *message) {
     fprintf(logFile, "%s\n", message);
@@ -168,7 +169,7 @@ int main (int argc, char *argv[])
     }
     writeToLog(obsdebug, "OBSTACLES: message OI sent to server");
 
-    struct sigaction sa; //initialize sigaction
+    /*struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
     sa.sa_sigaction = sig_handler;
 
@@ -189,7 +190,7 @@ int main (int argc, char *argv[])
         perror("Error setting up SIGINT handler");
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
-    }
+    }*/
 
     // receiving rows and cols from server
     if ((recv(sock, sockmsg, MAX_MSG_LEN, 0)) < 0) {
@@ -208,7 +209,7 @@ int main (int argc, char *argv[])
     sleep(1); // wait for server to read rows and cols
     // obstacle generation cycle
     int sel;
-    while(!stopReceived){
+    while(!stopReceived /*|| !sigint_rec*/){
         //time_t t = time(NULL);
         srand(time(NULL));
         nobstacles = rand() % MAX_OBSTACLES;
@@ -240,13 +241,7 @@ int main (int argc, char *argv[])
 
         // Sending the obstacles to the socket server
         Send(sock, obstacleStr, obsdebug);
-        // wait 60 seconds before generating new obstacles
-
-        // checking if the process has terminated (put after the read of the socket
-        /* USA SELECT con timeout
-        if (strcmp(stop, sockmsg) == 0){
-            stopReceived = true;
-        }*/
+        
         struct timeval timeout;
         timeout.tv_sec = 10;
         timeout.tv_usec = 0;
@@ -268,16 +263,11 @@ int main (int argc, char *argv[])
                 if(strcmp(buffer, stop) == 0){
                     writeToLog(obsdebug, "OBSTACLES: STOP message received from server");
                     stopReceived = true;
-                    //exit(EXIT_SUCCESS); // VEDERE MEGLIO COME FARE L'EXIT SE CON FLAG O XON LA SYS CALL
                 }
             }
         }
         else{
             writeToLog(obsdebug, "OBSTACLES: timeout expired");
-            /*time_t t2 = time(NULL); 
-        while(t2 - t < 60){
-            t2 = time(NULL);
-        }*/
         }
         
     }

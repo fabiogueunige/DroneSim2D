@@ -1,513 +1,94 @@
-Tue Feb 27 18:10:45 2024
+Tue Feb 27 18:46:49 2024
  => SERVER: generating the map
-Tue Feb 27 18:10:45 2024
+Tue Feb 27 18:46:49 2024
  => SERVER: pipes opened
-Tue Feb 27 18:10:45 2024
+Tue Feb 27 18:46:49 2024
  => SERVER: rows and cols sent to window and drone
-Tue Feb 27 18:10:45 2024
+Tue Feb 27 18:46:49 2024
  => SERVER: binding...
-Tue Feb 27 18:10:45 2024
+Tue Feb 27 18:46:49 2024
  => SERVER: listening...
-Tue Feb 27 18:10:45 2024
+Tue Feb 27 18:46:49 2024
  => SERVER: pipes opened
-Tue Feb 27 18:10:45 2024
+Tue Feb 27 18:46:49 2024
  => SERVER: pipes converted in strings
-Tue Feb 27 18:10:46 2024
+Tue Feb 27 18:46:51 2024
  => SERVER: connection accepted
-Tue Feb 27 18:10:46 2024
+Tue Feb 27 18:46:51 2024
  => SERVER: forked
-Tue Feb 27 18:10:47 2024
+Tue Feb 27 18:46:51 2024
  => SERVER: connection accepted
-Tue Feb 27 18:10:47 2024
+Tue Feb 27 18:46:51 2024
  => SERVER: forked
-Tue Feb 27 18:10:47 2024
+Tue Feb 27 18:46:52 2024
  => SERVER: reading the pipe with sockets
-Tue Feb 27 18:10:47 2024
+Tue Feb 27 18:46:52 2024
  => OI
-Tue Feb 27 18:10:47 2024
+Tue Feb 27 18:46:52 2024
  => SERVER: pipeObfd set
-Tue Feb 27 18:10:47 2024
+Tue Feb 27 18:46:52 2024
  => TI
-Tue Feb 27 18:10:47 2024
+Tue Feb 27 18:46:52 2024
  => SERVER: pipeTafd set
-Tue Feb 27 18:10:47 2024
+Tue Feb 27 18:46:52 2024
  => SERVER: OBSTACLE WIN
-Tue Feb 27 18:10:47 2024
- => O[15]67.000,8.000|14.000,25.000|4.000,13.000|7.000,27.000|95.000,46.000|75.000,39.000|55.000,41.000|5.000,31.000|8.000,37.000|73.000,48.000|62.000,37.000|75.000,6.000|11.000,38.000|81.000,6.000|36.000,40.000
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 0 position: (67, 8)
+Tue Feb 27 18:46:52 2024
+ => O[12]12.000,16.000|62.000,1.000|82.000,25.000|42.000,34.000|97.000,8.000|90.000,42.000|36.000,34.000|72.000,25.000|6.000,20.000|74.000,14.000|11.000,5.000|59.000,24.000
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 0 position: (12, 16)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 1 position: (14, 25)
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 1 position: (62, 1)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 2 position: (4, 13)
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 2 position: (82, 25)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 3 position: (7, 27)
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 3 position: (42, 34)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 4 position: (95, 46)
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 4 position: (97, 8)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 5 position: (75, 39)
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 5 position: (90, 42)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 6 position: (55, 41)
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 6 position: (36, 34)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 7 position: (5, 31)
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 7 position: (72, 25)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 8 position: (8, 37)
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 8 position: (6, 20)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 9 position: (73, 48)
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 9 position: (74, 14)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 10 position: (62, 37)
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 10 position: (11, 5)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 11 position: (75, 6)
+Tue Feb 27 18:46:52 2024
+ => SERVER: obstacle 11 position: (59, 24)
 
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 12 position: (11, 38)
-
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 13 position: (81, 6)
-
-Tue Feb 27 18:10:47 2024
- => SERVER: obstacle 14 position: (36, 40)
-
-Tue Feb 27 18:10:49 2024
+Tue Feb 27 18:46:53 2024
  => SERVER: TARGETS WIN
-Tue Feb 27 18:10:49 2024
- => T[11]71.000,16.000|9.000,26.000|65.000,31.000|70.000,25.000|97.000,17.000|54.000,47.000|95.000,4.000|81.000,7.000|66.000,40.000|82.000,4.000|16.000,20.000
-Tue Feb 27 18:10:49 2024
- => SERVER: target 0 position: (71, 16)
+Tue Feb 27 18:46:53 2024
+ => T[6]66.000,22.000|21.000,38.000|97.000,34.000|93.000,9.000|81.000,6.000|5.000,24.000
+Tue Feb 27 18:46:53 2024
+ => SERVER: target 0 position: (66, 22)
 
-Tue Feb 27 18:10:49 2024
- => SERVER: target 1 position: (9, 26)
+Tue Feb 27 18:46:53 2024
+ => SERVER: target 1 position: (21, 38)
 
-Tue Feb 27 18:10:49 2024
- => SERVER: target 2 position: (65, 31)
+Tue Feb 27 18:46:53 2024
+ => SERVER: target 2 position: (97, 34)
 
-Tue Feb 27 18:10:49 2024
- => SERVER: target 3 position: (70, 25)
+Tue Feb 27 18:46:53 2024
+ => SERVER: target 3 position: (93, 9)
 
-Tue Feb 27 18:10:49 2024
- => SERVER: target 4 position: (97, 17)
+Tue Feb 27 18:46:53 2024
+ => SERVER: target 4 position: (81, 6)
 
-Tue Feb 27 18:10:49 2024
- => SERVER: target 5 position: (54, 47)
-
-Tue Feb 27 18:10:49 2024
- => SERVER: target 6 position: (95, 4)
-
-Tue Feb 27 18:10:49 2024
- => SERVER: target 7 position: (81, 7)
-
-Tue Feb 27 18:10:49 2024
- => SERVER: target 8 position: (66, 40)
-
-Tue Feb 27 18:10:49 2024
- => SERVER: target 9 position: (82, 4)
-
-Tue Feb 27 18:10:49 2024
- => SERVER: target 10 position: (16, 20)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: OBSTACLE WIN
-Tue Feb 27 18:10:57 2024
- => O[19]57.000,2.000|10.000,18.000|75.000,4.000|24.000,13.000|76.000,26.000|47.000,33.000|9.000,3.000|31.000,21.000|68.000,31.000|70.000,37.000|11.000,34.000|26.000,1.000|10.000,16.000|45.000,35.000|49.000,24.000|69.000,2.000|57.000,20.000|59.000,11.000|31.000,23.000
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 0 position: (57, 2)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 1 position: (10, 18)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 2 position: (75, 4)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 3 position: (24, 13)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 4 position: (76, 26)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 5 position: (47, 33)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 6 position: (9, 3)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 7 position: (31, 21)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 8 position: (68, 31)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 9 position: (70, 37)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 10 position: (11, 34)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 11 position: (26, 1)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 12 position: (10, 16)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 13 position: (45, 35)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 14 position: (49, 24)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 15 position: (69, 2)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 16 position: (57, 20)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 17 position: (59, 11)
-
-Tue Feb 27 18:10:57 2024
- => SERVER: obstacle 18 position: (31, 23)
-
-Tue Feb 27 18:11:07 2024
- => SERVER: OBSTACLE WIN
-Tue Feb 27 18:11:07 2024
- => O[10]57.000,22.000|59.000,17.000|53.000,28.000|24.000,17.000|2.000,31.000|82.000,12.000|27.000,21.000|22.000,19.000|9.000,35.000|74.000,34.000
-Tue Feb 27 18:11:07 2024
- => SERVER: obstacle 0 position: (57, 22)
-
-Tue Feb 27 18:11:07 2024
- => SERVER: obstacle 1 position: (59, 17)
-
-Tue Feb 27 18:11:07 2024
- => SERVER: obstacle 2 position: (53, 28)
-
-Tue Feb 27 18:11:07 2024
- => SERVER: obstacle 3 position: (24, 17)
-
-Tue Feb 27 18:11:07 2024
- => SERVER: obstacle 4 position: (2, 31)
-
-Tue Feb 27 18:11:07 2024
- => SERVER: obstacle 5 position: (82, 12)
-
-Tue Feb 27 18:11:07 2024
- => SERVER: obstacle 6 position: (27, 21)
-
-Tue Feb 27 18:11:07 2024
- => SERVER: obstacle 7 position: (22, 19)
-
-Tue Feb 27 18:11:07 2024
- => SERVER: obstacle 8 position: (9, 35)
-
-Tue Feb 27 18:11:07 2024
- => SERVER: obstacle 9 position: (74, 34)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: OBSTACLE WIN
-Tue Feb 27 18:11:17 2024
- => O[14]63.000,43.000|48.000,20.000|97.000,7.000|7.000,37.000|14.000,6.000|3.000,40.000|81.000,43.000|3.000,33.000|64.000,23.000|7.000,41.000|72.000,45.000|20.000,35.000|91.000,6.000|33.000,42.000
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 0 position: (63, 43)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 1 position: (48, 20)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 2 position: (97, 7)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 3 position: (7, 37)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 4 position: (14, 6)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 5 position: (3, 40)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 6 position: (81, 43)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 7 position: (3, 33)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 8 position: (64, 23)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 9 position: (7, 41)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 10 position: (72, 45)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 11 position: (20, 35)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 12 position: (91, 6)
-
-Tue Feb 27 18:11:17 2024
- => SERVER: obstacle 13 position: (33, 42)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: OBSTACLE WIN
-Tue Feb 27 18:11:27 2024
- => O[15]31.000,40.000|89.000,8.000|65.000,6.000|69.000,40.000|25.000,39.000|75.000,30.000|32.000,33.000|48.000,42.000|55.000,10.000|16.000,30.000|42.000,28.000|22.000,47.000|11.000,36.000|28.000,15.000|45.000,20.000
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 0 position: (31, 40)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 1 position: (89, 8)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 2 position: (65, 6)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 3 position: (69, 40)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 4 position: (25, 39)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 5 position: (75, 30)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 6 position: (32, 33)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 7 position: (48, 42)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 8 position: (55, 10)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 9 position: (16, 30)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 10 position: (42, 28)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 11 position: (22, 47)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 12 position: (11, 36)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 13 position: (28, 15)
-
-Tue Feb 27 18:11:27 2024
- => SERVER: obstacle 14 position: (45, 20)
-
-Tue Feb 27 18:11:37 2024
- => SERVER: OBSTACLE WIN
-Tue Feb 27 18:11:37 2024
- => O[8]87.000,45.000|13.000,28.000|87.000,20.000|68.000,38.000|59.000,14.000|19.000,16.000|62.000,26.000|90.000,9.000
-Tue Feb 27 18:11:37 2024
- => SERVER: obstacle 0 position: (87, 45)
-
-Tue Feb 27 18:11:37 2024
- => SERVER: obstacle 1 position: (13, 28)
-
-Tue Feb 27 18:11:37 2024
- => SERVER: obstacle 2 position: (87, 20)
-
-Tue Feb 27 18:11:37 2024
- => SERVER: obstacle 3 position: (68, 38)
-
-Tue Feb 27 18:11:37 2024
- => SERVER: obstacle 4 position: (59, 14)
-
-Tue Feb 27 18:11:37 2024
- => SERVER: obstacle 5 position: (19, 16)
-
-Tue Feb 27 18:11:37 2024
- => SERVER: obstacle 6 position: (62, 26)
-
-Tue Feb 27 18:11:37 2024
- => SERVER: obstacle 7 position: (90, 9)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: OBSTACLE WIN
-Tue Feb 27 18:11:47 2024
- => O[12]10.000,25.000|34.000,36.000|72.000,21.000|77.000,48.000|93.000,24.000|65.000,27.000|22.000,31.000|14.000,37.000|51.000,30.000|65.000,34.000|63.000,9.000|71.000,10.000
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 0 position: (10, 25)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 1 position: (34, 36)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 2 position: (72, 21)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 3 position: (77, 48)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 4 position: (93, 24)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 5 position: (65, 27)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 6 position: (22, 31)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 7 position: (14, 37)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 8 position: (51, 30)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 9 position: (65, 34)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 10 position: (63, 9)
-
-Tue Feb 27 18:11:47 2024
- => SERVER: obstacle 11 position: (71, 10)
-
-Tue Feb 27 18:11:57 2024
- => SERVER: OBSTACLE WIN
-Tue Feb 27 18:11:57 2024
- => O[7]97.000,4.000|46.000,22.000|91.000,20.000|34.000,40.000|36.000,14.000|55.000,15.000|63.000,25.000
-Tue Feb 27 18:11:57 2024
- => SERVER: obstacle 0 position: (97, 4)
-
-Tue Feb 27 18:11:57 2024
- => SERVER: obstacle 1 position: (46, 22)
-
-Tue Feb 27 18:11:57 2024
- => SERVER: obstacle 2 position: (91, 20)
-
-Tue Feb 27 18:11:57 2024
- => SERVER: obstacle 3 position: (34, 40)
-
-Tue Feb 27 18:11:57 2024
- => SERVER: obstacle 4 position: (36, 14)
-
-Tue Feb 27 18:11:57 2024
- => SERVER: obstacle 5 position: (55, 15)
-
-Tue Feb 27 18:11:57 2024
- => SERVER: obstacle 6 position: (63, 25)
-
-Tue Feb 27 18:12:07 2024
- => SERVER: OBSTACLE WIN
-Tue Feb 27 18:12:07 2024
- => O[1]25.000,27.000
-Tue Feb 27 18:12:07 2024
- => SERVER: obstacle 0 position: (25, 27)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: OBSTACLE WIN
-Tue Feb 27 18:12:17 2024
- => O[13]35.000,34.000|63.000,33.000|18.000,21.000|10.000,15.000|27.000,40.000|32.000,35.000|14.000,17.000|41.000,18.000|37.000,32.000|11.000,3.000|36.000,39.000|27.000,41.000|23.000,38.000
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 0 position: (35, 34)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 1 position: (63, 33)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 2 position: (18, 21)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 3 position: (10, 15)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 4 position: (27, 40)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 5 position: (32, 35)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 6 position: (14, 17)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 7 position: (41, 18)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 8 position: (37, 32)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 9 position: (11, 3)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 10 position: (36, 39)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 11 position: (27, 41)
-
-Tue Feb 27 18:12:17 2024
- => SERVER: obstacle 12 position: (23, 38)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: OBSTACLE WIN
-Tue Feb 27 18:12:27 2024
- => O[13]92.000,38.000|94.000,9.000|44.000,38.000|15.000,4.000|32.000,44.000|84.000,29.000|9.000,8.000|14.000,33.000|31.000,43.000|25.000,22.000|95.000,37.000|26.000,15.000|76.000,48.000
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 0 position: (92, 38)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 1 position: (94, 9)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 2 position: (44, 38)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 3 position: (15, 4)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 4 position: (32, 44)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 5 position: (84, 29)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 6 position: (9, 8)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 7 position: (14, 33)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 8 position: (31, 43)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 9 position: (25, 22)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 10 position: (95, 37)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 11 position: (26, 15)
-
-Tue Feb 27 18:12:27 2024
- => SERVER: obstacle 12 position: (76, 48)
-
-Tue Feb 27 18:12:37 2024
- => SERVER: OBSTACLE WIN
-Tue Feb 27 18:12:37 2024
- => O[5]3.000,4.000|5.000,13.000|90.000,27.000|60.000,35.000|45.000,5.000
-Tue Feb 27 18:12:37 2024
- => SERVER: obstacle 0 position: (3, 4)
-
-Tue Feb 27 18:12:37 2024
- => SERVER: obstacle 1 position: (5, 13)
-
-Tue Feb 27 18:12:37 2024
- => SERVER: obstacle 2 position: (90, 27)
-
-Tue Feb 27 18:12:37 2024
- => SERVER: obstacle 3 position: (60, 35)
-
-Tue Feb 27 18:12:37 2024
- => SERVER: obstacle 4 position: (45, 5)
+Tue Feb 27 18:46:53 2024
+ => SERVER: target 5 position: (5, 24)
 

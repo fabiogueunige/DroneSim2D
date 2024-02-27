@@ -29,7 +29,7 @@ typedef struct {
     float y;
     bool taken;
 } targets;
-
+/*
 void sig_handler(int signo, siginfo_t *info, void *context) {
 
     if (signo == SIGUSR1) {
@@ -56,7 +56,7 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
         sigint_rec = true;
     }
     
-}
+}*/
 
 void writeToLog(FILE * logFile, const char *message) {
     fprintf(logFile, "%s\n", message);
@@ -171,7 +171,7 @@ int main (int argc, char *argv[])
     writeToLog(tardebug, "TARGETS: message TI sent to server");
 
     // SIGNALS
-    struct sigaction sa; //initialize sigaction
+    /*struct sigaction sa; //initialize sigaction
     sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
     sa.sa_sigaction = sig_handler;
 
@@ -193,7 +193,7 @@ int main (int argc, char *argv[])
         writeToLog(errors, "SERVER: error in sigaction()");
         exit(EXIT_FAILURE);
     }
-
+    */
     // receiving rows and cols from server
     if ((recv(sock, sockmsg, MAX_MSG_LEN, 0)) < 0) {
         writeToLog(errors, "Error receiving message from server");
@@ -208,7 +208,7 @@ int main (int argc, char *argv[])
     cols = (int)c;
     printf("TARGETS: rows = %d, cols = %d\n", rows, cols);
     sleep(2);
-    while(!stopReceived){
+    while(!stopReceived /*|| !sigint_rec*/){
         time_t t = time(NULL);
         ge_flag = false;
         srand(time(NULL)); // for change every time the seed of rand()

@@ -367,9 +367,8 @@ int main(int argc, char* argv[]){
         if ((read(pipeSefd[0], msg, sizeof(msg))) == -1){
             perror("error in reading from pipe");
             writeToLog(errors, "DRONE: error in reading from pipe rows");
-            exit(EXIT_FAILURE);
         }
-    }while(strcmp(msg, start) != 0);
+    }while(strcmp(msg, start) != 0 || sigint_rec);
 
     writeToLog(drdebug,"DRONE: Starting the computation after socket connection");
     

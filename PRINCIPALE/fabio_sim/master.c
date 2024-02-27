@@ -68,7 +68,7 @@ int main(int argc, char* argv[]){
     int portTO = 40000;
     char portStrSe[10];
     char portStrTO[10];
-    char ipAddress[20] = "192.168.177.196";
+    char ipAddress[20] = "130.251.40.100";
     int nprc = 0;
 
     // CREATING PIPE
