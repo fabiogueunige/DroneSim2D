@@ -263,6 +263,7 @@ int main (int argc, char *argv[])
                 if(strcmp(buffer, stop) == 0){
                     writeToLog(obsdebug, "OBSTACLES: STOP message received from server");
                     stopReceived = true;
+                    //exit(EXIT_SUCCESS); // VEDERE MEGLIO COME FARE L'EXIT SE CON FLAG O XON LA SYS CALL
                 }
             }
         }

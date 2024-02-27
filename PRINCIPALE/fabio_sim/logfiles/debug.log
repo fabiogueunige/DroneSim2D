@@ -1,14 +1,14 @@
-Tue Feb 27 18:46:49 2024
+Tue Feb 27 18:49:18 2024
  => MASTER: The game is in local mode
-Tue Feb 27 18:46:52 2024
- => MASTER: Watchdog for single player is running
-24
+Tue Feb 27 18:49:21 2024
+ => MASTER: Watchdog for input game is running
+ 2024
  => WINDOW: process started
-Tue Feb 27 18:46:49 2024
+Tue Feb 27 18:49:18 2024
  => WINDOW: pipe opened
-Tue Feb 27 18:46:50 2024
+Tue Feb 27 18:49:18 2024
  => DRONE: process started
-Tue Feb 27 18:46:50 2024
+Tue Feb 27 18:49:18 2024
  => DRONE: pipes opened
 INPUT: process started
 OBSTACLES: process started
@@ -17,32 +17,36 @@ Socket server started
 TARGETS: process started
 TARGETS: connected to serverSocket
 Socket server started
-Tue Feb 27 18:46:52 2024
+Tue Feb 27 18:49:20 2024
  => obs
-Tue Feb 27 18:46:52 2024
+Tue Feb 27 18:49:21 2024
  => WATCH DOG: process started
-Tue Feb 27 18:46:52 2024
+Tue Feb 27 18:49:21 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Tue Feb 27 18:46:52 2024
+Tue Feb 27 18:49:21 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Tue Feb 27 18:46:52 2024
+Tue Feb 27 18:49:21 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Tue Feb 27 18:46:52 2024
+Tue Feb 27 18:49:21 2024
  => WATCH DOG: INPUT received signal
-Tue Feb 27 18:46:53 2024
+Tue Feb 27 18:49:22 2024
  => tar
-Tue Feb 27 18:47:02 2024
+Tue Feb 27 18:49:30 2024
+ => obs
+Tue Feb 27 18:49:31 2024
  => WATCH DOG: sending signals to processes
 SERVER: signal SIGUSR1 received from WATCH DOG
-Tue Feb 27 18:47:02 2024
+Tue Feb 27 18:49:31 2024
  => WATCH DOG: SERVER received signal
 DRONE: signal SIGUSR1 received from WATCH DOG
-Tue Feb 27 18:47:02 2024
+Tue Feb 27 18:49:31 2024
  => WATCH DOG: DRONE received signal
 INPUT: signal SIGUSR1 received from WATCH DOG
-Tue Feb 27 18:47:02 2024
+Tue Feb 27 18:49:31 2024
+ => WATCH DOG: INPUT received signal
+Tue Feb 27 18:49:33 2024
  => DRONE: Exiting program...
 SERVER: terminating with return value 0...

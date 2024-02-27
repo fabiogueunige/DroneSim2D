@@ -2,19 +2,43 @@ TI
 TARGETS: message TI sent to server
 TARGETS: message received from server
 50.000,100.000
-TARGETS: ntargets = 6
-TARGETS: target 0: x = 66.000, y = 22.000
+TARGETS: ntargets = 16
+TARGETS: target 0: x = 84.000, y = 14.000
 
-TARGETS: target 1: x = 21.000, y = 38.000
+TARGETS: target 1: x = 79.000, y = 25.000
 
-TARGETS: target 2: x = 97.000, y = 34.000
+TARGETS: target 2: x = 25.000, y = 17.000
 
-TARGETS: target 3: x = 93.000, y = 9.000
+TARGETS: target 3: x = 35.000, y = 22.000
 
-TARGETS: target 4: x = 81.000, y = 6.000
+TARGETS: target 4: x = 34.000, y = 42.000
 
-TARGETS: target 5: x = 5.000, y = 24.000
+TARGETS: target 5: x = 74.000, y = 45.000
 
-T[6]66.000,22.000|21.000,38.000|97.000,34.000|93.000,9.000|81.000,6.000|5.000,24.000
+TARGETS: target 6: x = 28.000, y = 19.000
+
+TARGETS: target 7: x = 50.000, y = 2.000
+
+TARGETS: target 8: x = 61.000, y = 5.000
+
+TARGETS: target 9: x = 80.000, y = 33.000
+
+TARGETS: target 10: x = 38.000, y = 37.000
+
+TARGETS: target 11: x = 33.000, y = 34.000
+
+TARGETS: target 12: x = 38.000, y = 36.000
+
+TARGETS: target 13: x = 26.000, y = 37.000
+
+TARGETS: target 14: x = 45.000, y = 21.000
+
+TARGETS: target 15: x = 13.000, y = 23.000
+
+T[16]84.000,14.000|79.000,25.000|25.000,17.000|35.000,22.000|34.000,42.000|74.000,45.000|28.000,19.000|50.000,2.000|61.000,5.000|80.000,33.000|38.000,37.000|33.000,34.000|38.000,36.000|26.000,37.000|45.000,21.000|13.000,23.000
 Message echo:
-T[6]66.000,22.000|21.000,38.000|97.000,34.000|93.000,9.000|81.000,6.000|5.000,24.000
+T[16]84.000,14.000|79.000,25.000|25.000,17.000|35.000,22.000|34.000,42.000|74.000,45.000|28.000,19.000|50.000,2.000|61.000,5.000|80.000,33.000|38.000,37.000|33.000,34.000|38.000,36.000|26.000,37.000|45.000,21.000|13.000,23.000
+Reading message sent via socket
+STOP
+TARGETS: STOP message received from server
+TARGETS: exiting with return value 0
