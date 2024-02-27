@@ -15,6 +15,7 @@
 #include <netinet/in.h>
 #include <netdb.h> 
 #include <arpa/inet.h>
+#include <errno.h>
 
 #include <sys/select.h>
 
@@ -206,6 +207,7 @@ int main (int argc, char *argv[])
     
     sleep(1); // wait for server to read rows and cols
     // obstacle generation cycle
+    int sel;
     while(!stopReceived){
         //time_t t = time(NULL);
         srand(time(NULL));
@@ -249,9 +251,12 @@ int main (int argc, char *argv[])
         timeout.tv_sec = 10;
         timeout.tv_usec = 0;
         FD_SET(sock, &readfds);
-        int sel = select(sock+1, &readfds, NULL, NULL, &timeout);
+        do {
+            sel = select(sock+1, &readfds, NULL, NULL, &timeout);
+        }
+        while(sel<0 && errno==EINTR);
         if (sel<0){
-            writeToLog(errors, "TARGETS: error in select");
+            writeToLog(errors, "OBSTACLE: error in select");
             perror("select");
             exit(EXIT_FAILURE);
         }

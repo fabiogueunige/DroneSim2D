@@ -16,6 +16,7 @@
 #include <netdb.h> 
 #include <arpa/inet.h>
 #include <sys/select.h>
+#include <errno.h>
 
 #define MAX_TARGETS 20
 #define MAX_MSG_LEN 1024
@@ -239,10 +240,13 @@ int main (int argc, char *argv[])
 
         // Send the targets to the socket server
         Send(sock, targetStr, tardebug);
-        
+        int sel;
         while(!ge_flag){
             FD_SET(sock, &readfds);
-            int sel = select(sock+1, &readfds, NULL, NULL, NULL);
+            do{
+                sel = select(sock+1, &readfds, NULL, NULL, NULL);
+            }
+            while(sel<0 && errno==EINTR);
             if (sel<0){
                 writeToLog(errors, "TARGETS: error in select");
                 perror("select");

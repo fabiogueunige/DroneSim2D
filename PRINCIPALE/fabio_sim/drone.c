@@ -247,6 +247,8 @@ int main(int argc, char* argv[]){
     bool is_on_drone[20] = {false}; // vector to check if the i-th obstacle is on the drone when generated
     char msg[100]; // message to write on debug file
     char *coo = "coo";
+    char start[] = "START";
+
     // FILE Opening
     if (debug == NULL || errors == NULL){
         perror("error in opening log files");
@@ -311,7 +313,7 @@ int main(int argc, char* argv[]){
     targets *target[20]; //targets
 
     // READS WINDOW DIMENSIONS
-    int rows, cols;
+    int rows = 0, cols = 0;
     if ((read(pipeSefd[0], &rows, sizeof(int))) == -1){
         perror("error in reading from pipe");
         writeToLog(errors, "DRONE: error in reading from pipe rows");
@@ -360,6 +362,16 @@ int main(int argc, char* argv[]){
         edges[i+2*rows+cols]->x = i;
         edges[i+2*rows+cols]->y = 0;
     }
+
+    do {
+        if ((read(pipeSefd[0], msg, sizeof(msg))) == -1){
+            perror("error in reading from pipe");
+            writeToLog(errors, "DRONE: error in reading from pipe rows");
+            exit(EXIT_FAILURE);
+        }
+    }while(strcmp(msg, start) != 0);
+
+    writeToLog(drdebug,"DRONE: Starting the computation after socket connection");
     
     // MAIN LOOP
     while(!sigint_rec){

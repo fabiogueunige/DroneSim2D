@@ -354,8 +354,6 @@ int main(char argc, char*argv[]){
                     
                 
                 if(tar[i]->taken == false){
-                    sprintf(msg, "WINDOW:I see a target %d: x = %d, y = %d", i, tar[i]->x, tar[i]->y);
-                    writeToLog(winfile, msg);
                     wattron(win, COLOR_PAIR(4) | A_BOLD);
                     mvwprintw(win, tar[i]->y, tar[i]->x, "%c", tar_symbol);
                     wattroff(win, COLOR_PAIR(4) | A_BOLD);

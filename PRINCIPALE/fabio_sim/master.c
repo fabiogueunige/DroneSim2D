@@ -68,7 +68,7 @@ int main(int argc, char* argv[]){
     int portTO = 40000;
     char portStrSe[10];
     char portStrTO[10];
-    char ipAddress[20] = "130.251.41.239";
+    char ipAddress[20] = "192.168.177.196";
     int nprc = 0;
 
     // CREATING PIPE
@@ -184,6 +184,7 @@ int main(int argc, char* argv[]){
         if (!right_key){
             char *wd[] = {"./wd", pidStr[SERVER], pidStr[DRONE], pidStr[INPUT], NULL};
             sleep(1);
+            writeToLog(debug, "MASTER: Watchdog for input game is running");
             proIds[WATCHDOG] = spawn("./wd", wd);
         }
     }
@@ -198,12 +199,14 @@ int main(int argc, char* argv[]){
         if (!right_key){
             char *wd[] = {"./wd", pidStr[OBSTACLES], pidStr[TARGETS], NULL};
             sleep(1);
+            writeToLog(debug, "MASTER: Watchdog for target and obstacles is running");
             proIds[WATCHDOG] = spawn("./wd", wd);
         }
     }
     if (right_key){
         char *wd[] = {"./wd", pidStr[SERVER], pidStr[DRONE], pidStr[INPUT], pidStr[OBSTACLES], pidStr[TARGETS], NULL};
         sleep(1);
+        writeToLog(debug, "MASTER: Watchdog for single player is running");
         proIds[WATCHDOG] = spawn("./wd", wd);
     }
 

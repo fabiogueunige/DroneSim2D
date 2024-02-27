@@ -176,7 +176,7 @@ int main(int argc, char* argv[]){
             }
             sleep(1);
         }
-        if (toMode){
+        /*if (toMode){
             if (kill(obstacle_pid, SIGUSR1) == -1) {   // send SIGUSR1 to obstacle
                 perror("kill obstacle");
                 writeToLog(errors, "WATCH DOG: error in kill obstacle");
@@ -188,7 +188,7 @@ int main(int argc, char* argv[]){
                 perror("kill target");
                 writeToLog(errors, "WATCH DOG: error in kill target");
             }
-        }
+        }*/
 
         time_t t2 = time(NULL);
         while(t2-t<10){
@@ -286,7 +286,7 @@ int main(int argc, char* argv[]){
             // sends a signal to all processes to check they are alive
         }
 
-        if (toMode) {
+        /*if (toMode) {
             obstacle_check = FALSE;
             targets_check = FALSE;
 
@@ -342,7 +342,7 @@ int main(int argc, char* argv[]){
             }
             else
                 printf("WATCH DOG: DRONE received signal\n");
-        }
+        }*/
     }
     fclose(debug);
     fclose(errors);

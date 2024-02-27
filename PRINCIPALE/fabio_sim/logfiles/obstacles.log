@@ -1,0 +1,331 @@
+OI
+OBSTACLES: message OI sent to server
+OBSTACLES: message received from server
+50.000,100.000
+OBSTACLES: number of obstacles = 15
+OBSTACLES: obstacle 0 created at (67.000, 8.000)
+
+OBSTACLES: obstacle 1 created at (14.000, 25.000)
+
+OBSTACLES: obstacle 2 created at (4.000, 13.000)
+
+OBSTACLES: obstacle 3 created at (7.000, 27.000)
+
+OBSTACLES: obstacle 4 created at (95.000, 46.000)
+
+OBSTACLES: obstacle 5 created at (75.000, 39.000)
+
+OBSTACLES: obstacle 6 created at (55.000, 41.000)
+
+OBSTACLES: obstacle 7 created at (5.000, 31.000)
+
+OBSTACLES: obstacle 8 created at (8.000, 37.000)
+
+OBSTACLES: obstacle 9 created at (73.000, 48.000)
+
+OBSTACLES: obstacle 10 created at (62.000, 37.000)
+
+OBSTACLES: obstacle 11 created at (75.000, 6.000)
+
+OBSTACLES: obstacle 12 created at (11.000, 38.000)
+
+OBSTACLES: obstacle 13 created at (81.000, 6.000)
+
+OBSTACLES: obstacle 14 created at (36.000, 40.000)
+
+O[15]67.000,8.000|14.000,25.000|4.000,13.000|7.000,27.000|95.000,46.000|75.000,39.000|55.000,41.000|5.000,31.000|8.000,37.000|73.000,48.000|62.000,37.000|75.000,6.000|11.000,38.000|81.000,6.000|36.000,40.000
+Message echo:
+O[15]67.000,8.000|14.000,25.000|4.000,13.000|7.000,27.000|95.000,46.000|75.000,39.000|55.000,41.000|5.000,31.000|8.000,37.000|73.000,48.000|62.000,37.000|75.000,6.000|11.000,38.000|81.000,6.000|36.000,40.000
+OBSTACLES: timeout expired
+OBSTACLES: number of obstacles = 19
+OBSTACLES: obstacle 0 created at (57.000, 2.000)
+
+OBSTACLES: obstacle 1 created at (10.000, 18.000)
+
+OBSTACLES: obstacle 2 created at (75.000, 4.000)
+
+OBSTACLES: obstacle 3 created at (24.000, 13.000)
+
+OBSTACLES: obstacle 4 created at (76.000, 26.000)
+
+OBSTACLES: obstacle 5 created at (47.000, 33.000)
+
+OBSTACLES: obstacle 6 created at (9.000, 3.000)
+
+OBSTACLES: obstacle 7 created at (31.000, 21.000)
+
+OBSTACLES: obstacle 8 created at (68.000, 31.000)
+
+OBSTACLES: obstacle 9 created at (70.000, 37.000)
+
+OBSTACLES: obstacle 10 created at (11.000, 34.000)
+
+OBSTACLES: obstacle 11 created at (26.000, 1.000)
+
+OBSTACLES: obstacle 12 created at (10.000, 16.000)
+
+OBSTACLES: obstacle 13 created at (45.000, 35.000)
+
+OBSTACLES: obstacle 14 created at (49.000, 24.000)
+
+OBSTACLES: obstacle 15 created at (69.000, 2.000)
+
+OBSTACLES: obstacle 16 created at (57.000, 20.000)
+
+OBSTACLES: obstacle 17 created at (59.000, 11.000)
+
+OBSTACLES: obstacle 18 created at (31.000, 23.000)
+
+O[19]57.000,2.000|10.000,18.000|75.000,4.000|24.000,13.000|76.000,26.000|47.000,33.000|9.000,3.000|31.000,21.000|68.000,31.000|70.000,37.000|11.000,34.000|26.000,1.000|10.000,16.000|45.000,35.000|49.000,24.000|69.000,2.000|57.000,20.000|59.000,11.000|31.000,23.000
+Message echo:
+O[19]57.000,2.000|10.000,18.000|75.000,4.000|24.000,13.000|76.000,26.000|47.000,33.000|9.000,3.000|31.000,21.000|68.000,31.000|70.000,37.000|11.000,34.000|26.000,1.000|10.000,16.000|45.000,35.000|49.000,24.000|69.000,2.000|57.000,20.000|59.000,11.000|31.000,23.000
+OBSTACLES: timeout expired
+OBSTACLES: number of obstacles = 10
+OBSTACLES: obstacle 0 created at (57.000, 22.000)
+
+OBSTACLES: obstacle 1 created at (59.000, 17.000)
+
+OBSTACLES: obstacle 2 created at (53.000, 28.000)
+
+OBSTACLES: obstacle 3 created at (24.000, 17.000)
+
+OBSTACLES: obstacle 4 created at (2.000, 31.000)
+
+OBSTACLES: obstacle 5 created at (82.000, 12.000)
+
+OBSTACLES: obstacle 6 created at (27.000, 21.000)
+
+OBSTACLES: obstacle 7 created at (22.000, 19.000)
+
+OBSTACLES: obstacle 8 created at (9.000, 35.000)
+
+OBSTACLES: obstacle 9 created at (74.000, 34.000)
+
+O[10]57.000,22.000|59.000,17.000|53.000,28.000|24.000,17.000|2.000,31.000|82.000,12.000|27.000,21.000|22.000,19.000|9.000,35.000|74.000,34.000
+Message echo:
+O[10]57.000,22.000|59.000,17.000|53.000,28.000|24.000,17.000|2.000,31.000|82.000,12.000|27.000,21.000|22.000,19.000|9.000,35.000|74.000,34.000
+OBSTACLES: timeout expired
+OBSTACLES: number of obstacles = 14
+OBSTACLES: obstacle 0 created at (63.000, 43.000)
+
+OBSTACLES: obstacle 1 created at (48.000, 20.000)
+
+OBSTACLES: obstacle 2 created at (97.000, 7.000)
+
+OBSTACLES: obstacle 3 created at (7.000, 37.000)
+
+OBSTACLES: obstacle 4 created at (14.000, 6.000)
+
+OBSTACLES: obstacle 5 created at (3.000, 40.000)
+
+OBSTACLES: obstacle 6 created at (81.000, 43.000)
+
+OBSTACLES: obstacle 7 created at (3.000, 33.000)
+
+OBSTACLES: obstacle 8 created at (64.000, 23.000)
+
+OBSTACLES: obstacle 9 created at (7.000, 41.000)
+
+OBSTACLES: obstacle 10 created at (72.000, 45.000)
+
+OBSTACLES: obstacle 11 created at (20.000, 35.000)
+
+OBSTACLES: obstacle 12 created at (91.000, 6.000)
+
+OBSTACLES: obstacle 13 created at (33.000, 42.000)
+
+O[14]63.000,43.000|48.000,20.000|97.000,7.000|7.000,37.000|14.000,6.000|3.000,40.000|81.000,43.000|3.000,33.000|64.000,23.000|7.000,41.000|72.000,45.000|20.000,35.000|91.000,6.000|33.000,42.000
+Message echo:
+O[14]63.000,43.000|48.000,20.000|97.000,7.000|7.000,37.000|14.000,6.000|3.000,40.000|81.000,43.000|3.000,33.000|64.000,23.000|7.000,41.000|72.000,45.000|20.000,35.000|91.000,6.000|33.000,42.000
+OBSTACLES: timeout expired
+OBSTACLES: number of obstacles = 15
+OBSTACLES: obstacle 0 created at (31.000, 40.000)
+
+OBSTACLES: obstacle 1 created at (89.000, 8.000)
+
+OBSTACLES: obstacle 2 created at (65.000, 6.000)
+
+OBSTACLES: obstacle 3 created at (69.000, 40.000)
+
+OBSTACLES: obstacle 4 created at (25.000, 39.000)
+
+OBSTACLES: obstacle 5 created at (75.000, 30.000)
+
+OBSTACLES: obstacle 6 created at (32.000, 33.000)
+
+OBSTACLES: obstacle 7 created at (48.000, 42.000)
+
+OBSTACLES: obstacle 8 created at (55.000, 10.000)
+
+OBSTACLES: obstacle 9 created at (16.000, 30.000)
+
+OBSTACLES: obstacle 10 created at (42.000, 28.000)
+
+OBSTACLES: obstacle 11 created at (22.000, 47.000)
+
+OBSTACLES: obstacle 12 created at (11.000, 36.000)
+
+OBSTACLES: obstacle 13 created at (28.000, 15.000)
+
+OBSTACLES: obstacle 14 created at (45.000, 20.000)
+
+O[15]31.000,40.000|89.000,8.000|65.000,6.000|69.000,40.000|25.000,39.000|75.000,30.000|32.000,33.000|48.000,42.000|55.000,10.000|16.000,30.000|42.000,28.000|22.000,47.000|11.000,36.000|28.000,15.000|45.000,20.000
+Message echo:
+O[15]31.000,40.000|89.000,8.000|65.000,6.000|69.000,40.000|25.000,39.000|75.000,30.000|32.000,33.000|48.000,42.000|55.000,10.000|16.000,30.000|42.000,28.000|22.000,47.000|11.000,36.000|28.000,15.000|45.000,20.000
+OBSTACLES: timeout expired
+OBSTACLES: number of obstacles = 8
+OBSTACLES: obstacle 0 created at (87.000, 45.000)
+
+OBSTACLES: obstacle 1 created at (13.000, 28.000)
+
+OBSTACLES: obstacle 2 created at (87.000, 20.000)
+
+OBSTACLES: obstacle 3 created at (68.000, 38.000)
+
+OBSTACLES: obstacle 4 created at (59.000, 14.000)
+
+OBSTACLES: obstacle 5 created at (19.000, 16.000)
+
+OBSTACLES: obstacle 6 created at (62.000, 26.000)
+
+OBSTACLES: obstacle 7 created at (90.000, 9.000)
+
+O[8]87.000,45.000|13.000,28.000|87.000,20.000|68.000,38.000|59.000,14.000|19.000,16.000|62.000,26.000|90.000,9.000
+Message echo:
+O[8]87.000,45.000|13.000,28.000|87.000,20.000|68.000,38.000|59.000,14.000|19.000,16.000|62.000,26.000|90.000,9.000
+OBSTACLES: timeout expired
+OBSTACLES: number of obstacles = 12
+OBSTACLES: obstacle 0 created at (10.000, 25.000)
+
+OBSTACLES: obstacle 1 created at (34.000, 36.000)
+
+OBSTACLES: obstacle 2 created at (72.000, 21.000)
+
+OBSTACLES: obstacle 3 created at (77.000, 48.000)
+
+OBSTACLES: obstacle 4 created at (93.000, 24.000)
+
+OBSTACLES: obstacle 5 created at (65.000, 27.000)
+
+OBSTACLES: obstacle 6 created at (22.000, 31.000)
+
+OBSTACLES: obstacle 7 created at (14.000, 37.000)
+
+OBSTACLES: obstacle 8 created at (51.000, 30.000)
+
+OBSTACLES: obstacle 9 created at (65.000, 34.000)
+
+OBSTACLES: obstacle 10 created at (63.000, 9.000)
+
+OBSTACLES: obstacle 11 created at (71.000, 10.000)
+
+O[12]10.000,25.000|34.000,36.000|72.000,21.000|77.000,48.000|93.000,24.000|65.000,27.000|22.000,31.000|14.000,37.000|51.000,30.000|65.000,34.000|63.000,9.000|71.000,10.000
+Message echo:
+O[12]10.000,25.000|34.000,36.000|72.000,21.000|77.000,48.000|93.000,24.000|65.000,27.000|22.000,31.000|14.000,37.000|51.000,30.000|65.000,34.000|63.000,9.000|71.000,10.000
+OBSTACLES: timeout expired
+OBSTACLES: number of obstacles = 7
+OBSTACLES: obstacle 0 created at (97.000, 4.000)
+
+OBSTACLES: obstacle 1 created at (46.000, 22.000)
+
+OBSTACLES: obstacle 2 created at (91.000, 20.000)
+
+OBSTACLES: obstacle 3 created at (34.000, 40.000)
+
+OBSTACLES: obstacle 4 created at (36.000, 14.000)
+
+OBSTACLES: obstacle 5 created at (55.000, 15.000)
+
+OBSTACLES: obstacle 6 created at (63.000, 25.000)
+
+O[7]97.000,4.000|46.000,22.000|91.000,20.000|34.000,40.000|36.000,14.000|55.000,15.000|63.000,25.000
+Message echo:
+O[7]97.000,4.000|46.000,22.000|91.000,20.000|34.000,40.000|36.000,14.000|55.000,15.000|63.000,25.000
+OBSTACLES: timeout expired
+OBSTACLES: number of obstacles = 1
+OBSTACLES: obstacle 0 created at (25.000, 27.000)
+
+O[1]25.000,27.000
+Message echo:
+O[1]25.000,27.000
+OBSTACLES: timeout expired
+OBSTACLES: number of obstacles = 13
+OBSTACLES: obstacle 0 created at (35.000, 34.000)
+
+OBSTACLES: obstacle 1 created at (63.000, 33.000)
+
+OBSTACLES: obstacle 2 created at (18.000, 21.000)
+
+OBSTACLES: obstacle 3 created at (10.000, 15.000)
+
+OBSTACLES: obstacle 4 created at (27.000, 40.000)
+
+OBSTACLES: obstacle 5 created at (32.000, 35.000)
+
+OBSTACLES: obstacle 6 created at (14.000, 17.000)
+
+OBSTACLES: obstacle 7 created at (41.000, 18.000)
+
+OBSTACLES: obstacle 8 created at (37.000, 32.000)
+
+OBSTACLES: obstacle 9 created at (11.000, 3.000)
+
+OBSTACLES: obstacle 10 created at (36.000, 39.000)
+
+OBSTACLES: obstacle 11 created at (27.000, 41.000)
+
+OBSTACLES: obstacle 12 created at (23.000, 38.000)
+
+O[13]35.000,34.000|63.000,33.000|18.000,21.000|10.000,15.000|27.000,40.000|32.000,35.000|14.000,17.000|41.000,18.000|37.000,32.000|11.000,3.000|36.000,39.000|27.000,41.000|23.000,38.000
+Message echo:
+O[13]35.000,34.000|63.000,33.000|18.000,21.000|10.000,15.000|27.000,40.000|32.000,35.000|14.000,17.000|41.000,18.000|37.000,32.000|11.000,3.000|36.000,39.000|27.000,41.000|23.000,38.000
+OBSTACLES: timeout expired
+OBSTACLES: number of obstacles = 13
+OBSTACLES: obstacle 0 created at (92.000, 38.000)
+
+OBSTACLES: obstacle 1 created at (94.000, 9.000)
+
+OBSTACLES: obstacle 2 created at (44.000, 38.000)
+
+OBSTACLES: obstacle 3 created at (15.000, 4.000)
+
+OBSTACLES: obstacle 4 created at (32.000, 44.000)
+
+OBSTACLES: obstacle 5 created at (84.000, 29.000)
+
+OBSTACLES: obstacle 6 created at (9.000, 8.000)
+
+OBSTACLES: obstacle 7 created at (14.000, 33.000)
+
+OBSTACLES: obstacle 8 created at (31.000, 43.000)
+
+OBSTACLES: obstacle 9 created at (25.000, 22.000)
+
+OBSTACLES: obstacle 10 created at (95.000, 37.000)
+
+OBSTACLES: obstacle 11 created at (26.000, 15.000)
+
+OBSTACLES: obstacle 12 created at (76.000, 48.000)
+
+O[13]92.000,38.000|94.000,9.000|44.000,38.000|15.000,4.000|32.000,44.000|84.000,29.000|9.000,8.000|14.000,33.000|31.000,43.000|25.000,22.000|95.000,37.000|26.000,15.000|76.000,48.000
+Message echo:
+O[13]92.000,38.000|94.000,9.000|44.000,38.000|15.000,4.000|32.000,44.000|84.000,29.000|9.000,8.000|14.000,33.000|31.000,43.000|25.000,22.000|95.000,37.000|26.000,15.000|76.000,48.000
+OBSTACLES: timeout expired
+OBSTACLES: number of obstacles = 5
+OBSTACLES: obstacle 0 created at (3.000, 4.000)
+
+OBSTACLES: obstacle 1 created at (5.000, 13.000)
+
+OBSTACLES: obstacle 2 created at (90.000, 27.000)
+
+OBSTACLES: obstacle 3 created at (60.000, 35.000)
+
+OBSTACLES: obstacle 4 created at (45.000, 5.000)
+
+O[5]3.000,4.000|5.000,13.000|90.000,27.000|60.000,35.000|45.000,5.000
+Message echo:
+O[5]3.000,4.000|5.000,13.000|90.000,27.000|60.000,35.000|45.000,5.000
+Reading message sent via socket
+STOP
+OBSTACLES: STOP message received from server
+OBSTACLES: exiting with return value 0
