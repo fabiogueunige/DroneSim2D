@@ -2,108 +2,75 @@ OI
 OBSTACLES: message OI sent to server
 OBSTACLES: message received from server
 50.000,100.000
-OBSTACLES: number of obstacles = 12
-OBSTACLES: obstacle 0 created at (63.000, 44.000)
+OBSTACLES: number of obstacles = 17
+OBSTACLES: obstacle 0 created at (2.000, 46.000)
 
-OBSTACLES: obstacle 1 created at (14.000, 21.000)
+OBSTACLES: obstacle 1 created at (77.000, 40.000)
 
-OBSTACLES: obstacle 2 created at (81.000, 31.000)
+OBSTACLES: obstacle 2 created at (34.000, 26.000)
 
-OBSTACLES: obstacle 3 created at (20.000, 33.000)
+OBSTACLES: obstacle 3 created at (60.000, 40.000)
 
-OBSTACLES: obstacle 4 created at (51.000, 1.000)
+OBSTACLES: obstacle 4 created at (84.000, 35.000)
 
-OBSTACLES: obstacle 5 created at (8.000, 25.000)
+OBSTACLES: obstacle 5 created at (90.000, 40.000)
 
-OBSTACLES: obstacle 6 created at (57.000, 3.000)
+OBSTACLES: obstacle 6 created at (80.000, 20.000)
 
-OBSTACLES: obstacle 7 created at (35.000, 26.000)
+OBSTACLES: obstacle 7 created at (37.000, 46.000)
 
-OBSTACLES: obstacle 8 created at (2.000, 44.000)
+OBSTACLES: obstacle 8 created at (57.000, 31.000)
 
-OBSTACLES: obstacle 9 created at (37.000, 28.000)
+OBSTACLES: obstacle 9 created at (33.000, 35.000)
 
-OBSTACLES: obstacle 10 created at (64.000, 9.000)
+OBSTACLES: obstacle 10 created at (44.000, 47.000)
 
-OBSTACLES: obstacle 11 created at (93.000, 36.000)
+OBSTACLES: obstacle 11 created at (54.000, 14.000)
 
-O[12]63.000,44.000|14.000,21.000|81.000,31.000|20.000,33.000|51.000,1.000|8.000,25.000|57.000,3.000|35.000,26.000|2.000,44.000|37.000,28.000|64.000,9.000|93.000,36.000
+OBSTACLES: obstacle 12 created at (62.000, 34.000)
+
+OBSTACLES: obstacle 13 created at (43.000, 16.000)
+
+OBSTACLES: obstacle 14 created at (40.000, 45.000)
+
+OBSTACLES: obstacle 15 created at (5.000, 25.000)
+
+OBSTACLES: obstacle 16 created at (51.000, 32.000)
+
+O[17]2.000,46.000|77.000,40.000|34.000,26.000|60.000,40.000|84.000,35.000|90.000,40.000|80.000,20.000|37.000,46.000|57.000,31.000|33.000,35.000|44.000,47.000|54.000,14.000|62.000,34.000|43.000,16.000|40.000,45.000|5.000,25.000|51.000,32.000
 Message echo:
-O[12]63.000,44.000|14.000,21.000|81.000,31.000|20.000,33.000|51.000,1.000|8.000,25.000|57.000,3.000|35.000,26.000|2.000,44.000|37.000,28.000|64.000,9.000|93.000,36.000
+O[17]2.000,46.000|77.000,40.000|34.000,26.000|60.000,40.000|84.000,35.000|90.000,40.000|80.000,20.000|37.000,46.000|57.000,31.000|33.000,35.000|44.000,47.000|54.000,14.000|62.000,34.000|43.000,16.000|40.000,45.000|5.000,25.000|51.000,32.000
 OBSTACLES: timeout expired
-OBSTACLES: number of obstacles = 6
-OBSTACLES: obstacle 0 created at (78.000, 35.000)
+OBSTACLES: number of obstacles = 13
+OBSTACLES: obstacle 0 created at (24.000, 34.000)
 
-OBSTACLES: obstacle 1 created at (86.000, 30.000)
+OBSTACLES: obstacle 1 created at (23.000, 3.000)
 
-OBSTACLES: obstacle 2 created at (57.000, 43.000)
+OBSTACLES: obstacle 2 created at (57.000, 12.000)
 
-OBSTACLES: obstacle 3 created at (50.000, 30.000)
+OBSTACLES: obstacle 3 created at (71.000, 43.000)
 
-OBSTACLES: obstacle 4 created at (60.000, 41.000)
+OBSTACLES: obstacle 4 created at (51.000, 39.000)
 
-OBSTACLES: obstacle 5 created at (25.000, 2.000)
+OBSTACLES: obstacle 5 created at (78.000, 16.000)
 
-O[6]78.000,35.000|86.000,30.000|57.000,43.000|50.000,30.000|60.000,41.000|25.000,2.000
+OBSTACLES: obstacle 6 created at (40.000, 32.000)
+
+OBSTACLES: obstacle 7 created at (74.000, 2.000)
+
+OBSTACLES: obstacle 8 created at (44.000, 44.000)
+
+OBSTACLES: obstacle 9 created at (57.000, 29.000)
+
+OBSTACLES: obstacle 10 created at (98.000, 47.000)
+
+OBSTACLES: obstacle 11 created at (87.000, 8.000)
+
+OBSTACLES: obstacle 12 created at (11.000, 27.000)
+
+O[13]24.000,34.000|23.000,3.000|57.000,12.000|71.000,43.000|51.000,39.000|78.000,16.000|40.000,32.000|74.000,2.000|44.000,44.000|57.000,29.000|98.000,47.000|87.000,8.000|11.000,27.000
 Message echo:
-O[6]78.000,35.000|86.000,30.000|57.000,43.000|50.000,30.000|60.000,41.000|25.000,2.000
-OBSTACLES: timeout expired
-OBSTACLES: number of obstacles = 12
-OBSTACLES: obstacle 0 created at (50.000, 35.000)
-
-OBSTACLES: obstacle 1 created at (6.000, 31.000)
-
-OBSTACLES: obstacle 2 created at (16.000, 1.000)
-
-OBSTACLES: obstacle 3 created at (3.000, 6.000)
-
-OBSTACLES: obstacle 4 created at (83.000, 33.000)
-
-OBSTACLES: obstacle 5 created at (44.000, 40.000)
-
-OBSTACLES: obstacle 6 created at (75.000, 44.000)
-
-OBSTACLES: obstacle 7 created at (54.000, 33.000)
-
-OBSTACLES: obstacle 8 created at (42.000, 2.000)
-
-OBSTACLES: obstacle 9 created at (79.000, 13.000)
-
-OBSTACLES: obstacle 10 created at (53.000, 43.000)
-
-OBSTACLES: obstacle 11 created at (42.000, 24.000)
-
-O[12]50.000,35.000|6.000,31.000|16.000,1.000|3.000,6.000|83.000,33.000|44.000,40.000|75.000,44.000|54.000,33.000|42.000,2.000|79.000,13.000|53.000,43.000|42.000,24.000
-Message echo:
-O[12]50.000,35.000|6.000,31.000|16.000,1.000|3.000,6.000|83.000,33.000|44.000,40.000|75.000,44.000|54.000,33.000|42.000,2.000|79.000,13.000|53.000,43.000|42.000,24.000
-OBSTACLES: timeout expired
-OBSTACLES: number of obstacles = 6
-OBSTACLES: obstacle 0 created at (30.000, 48.000)
-
-OBSTACLES: obstacle 1 created at (45.000, 43.000)
-
-OBSTACLES: obstacle 2 created at (31.000, 44.000)
-
-OBSTACLES: obstacle 3 created at (52.000, 43.000)
-
-OBSTACLES: obstacle 4 created at (43.000, 9.000)
-
-OBSTACLES: obstacle 5 created at (29.000, 32.000)
-
-O[6]30.000,48.000|45.000,43.000|31.000,44.000|52.000,43.000|43.000,9.000|29.000,32.000
-Message echo:
-O[6]30.000,48.000|45.000,43.000|31.000,44.000|52.000,43.000|43.000,9.000|29.000,32.000
-OBSTACLES: timeout expired
-OBSTACLES: number of obstacles = 3
-OBSTACLES: obstacle 0 created at (38.000, 18.000)
-
-OBSTACLES: obstacle 1 created at (9.000, 5.000)
-
-OBSTACLES: obstacle 2 created at (2.000, 19.000)
-
-O[3]38.000,18.000|9.000,5.000|2.000,19.000
-Message echo:
-O[3]38.000,18.000|9.000,5.000|2.000,19.000
+O[13]24.000,34.000|23.000,3.000|57.000,12.000|71.000,43.000|51.000,39.000|78.000,16.000|40.000,32.000|74.000,2.000|44.000,44.000|57.000,29.000|98.000,47.000|87.000,8.000|11.000,27.000
 Reading message sent via socket
 STOP
 OBSTACLES: STOP message received from server

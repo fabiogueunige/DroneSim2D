@@ -322,12 +322,15 @@ int main(int argc, char* argv[]){
 
     // Generating all the server children for socket connection
     for (int i = 0; i < NUMCLIENT; i++){ // for make sure that obstacles and targets are ready to send data
+        do{
         client_sock = accept(sock, NULL, NULL); // accept the connection
+        }while(client_sock == -1 && errno == EINTR);
         writeToLog(serdebug, "SERVER: connection accepted");
-        if (client_sock == -1) {
+        /*if (client_sock == -1) {
             perror("accept");
+            writeToLog(errors, "SERVER: error in accept()");
             return 1;
-        }
+        }*/
         sprintf(fd_str, "%d", client_sock);
         char id[5];
         sprintf(id, "%d", i);

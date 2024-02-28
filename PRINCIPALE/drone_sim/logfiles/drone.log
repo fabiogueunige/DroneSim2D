@@ -1,2 +1,72 @@
-Wed Feb 28 14:16:56 2024
+Wed Feb 28 14:38:02 2024
  => DRONE: rows = 50, cols = 100
+Wed Feb 28 14:38:08 2024
+ => DRONE: Starting the computation after socket connection
+Wed Feb 28 14:38:09 2024
+ => DRONE: reading obstacles and targets
+Wed Feb 28 14:38:09 2024
+ => DRONE: reading obstacles
+Wed Feb 28 14:38:09 2024
+ => DRONE: number of obstacles: 15
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 0 at (69, 22)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 1 at (8, 38)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 2 at (46, 41)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 3 at (98, 34)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 4 at (72, 12)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 5 at (50, 45)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 6 at (62, 24)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 7 at (22, 20)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 8 at (79, 44)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 9 at (61, 24)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 10 at (96, 26)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 11 at (28, 3)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 12 at (96, 3)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 13 at (17, 39)
+
+Wed Feb 28 14:38:09 2024
+ => DRONE: obstacle 14 at (56, 48)
+
+Wed Feb 28 14:38:10 2024
+ => DRONE: reading obstacles and targets
+Wed Feb 28 14:38:10 2024
+ => DRONE: reading targets
+Wed Feb 28 14:38:10 2024
+ => DRONE: number of targets: 3
+
+Wed Feb 28 14:38:10 2024
+ => DRONE: target 0 at (6, 8)
+
+Wed Feb 28 14:38:10 2024
+ => DRONE: target 1 at (70, 37)
+
+Wed Feb 28 14:38:10 2024
+ => DRONE: target 2 at (28, 45)
+

@@ -2,28 +2,20 @@ TI
 TARGETS: message TI sent to server
 TARGETS: message received from server
 50.000,100.000
-TARGETS: ntargets = 9
-TARGETS: target 0: x = 53.000, y = 5.000
+TARGETS: ntargets = 5
+TARGETS: target 0: x = 63.000, y = 39.000
 
-TARGETS: target 1: x = 28.000, y = 3.000
+TARGETS: target 1: x = 9.000, y = 44.000
 
-TARGETS: target 2: x = 33.000, y = 27.000
+TARGETS: target 2: x = 66.000, y = 27.000
 
-TARGETS: target 3: x = 71.000, y = 7.000
+TARGETS: target 3: x = 25.000, y = 17.000
 
-TARGETS: target 4: x = 36.000, y = 32.000
+TARGETS: target 4: x = 32.000, y = 34.000
 
-TARGETS: target 5: x = 48.000, y = 31.000
-
-TARGETS: target 6: x = 69.000, y = 38.000
-
-TARGETS: target 7: x = 6.000, y = 10.000
-
-TARGETS: target 8: x = 11.000, y = 46.000
-
-T[9]53.000,5.000|28.000,3.000|33.000,27.000|71.000,7.000|36.000,32.000|48.000,31.000|69.000,38.000|6.000,10.000|11.000,46.000
+T[5]63.000,39.000|9.000,44.000|66.000,27.000|25.000,17.000|32.000,34.000
 Message echo:
-T[9]53.000,5.000|28.000,3.000|33.000,27.000|71.000,7.000|36.000,32.000|48.000,31.000|69.000,38.000|6.000,10.000|11.000,46.000
+T[5]63.000,39.000|9.000,44.000|66.000,27.000|25.000,17.000|32.000,34.000
 Reading message sent via socket
 STOP
 TARGETS: STOP message received from server
