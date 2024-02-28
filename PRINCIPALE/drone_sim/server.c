@@ -217,28 +217,7 @@ int main(int argc, char* argv[]){
     window_pid = spawn("konsole", argw); // spawn the child process
     close(pipeWdfd[0]);
 
-    struct sigaction sa; //initialize sigaction
-    sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
-    sa.sa_sigaction = sig_handler;
-
-    // Register the signal handler for SIGUSR1
-    if (sigaction(SIGUSR1, &sa, NULL) == -1) {
-        perror("sigaction");
-        writeToLog(errors, "SERVER: error in sigaction()");
-        exit(EXIT_FAILURE);
-    }
-
-    if(sigaction(SIGUSR2, &sa, NULL) == -1){
-        perror("sigaction");
-        writeToLog(errors, "SERVER: error in sigaction()");
-        exit(EXIT_FAILURE);
-    }
-
-    if (sigaction(SIGINT, &sa, NULL) == -1) {
-        perror("Error setting up SIGINT handler");
-        writeToLog(errors, "SERVER: error in sigaction()");
-        exit(EXIT_FAILURE);
-    }
+    
 
     // Drone pipe and select
     fd_set read_fds;
@@ -274,6 +253,29 @@ int main(int argc, char* argv[]){
     }
     writeToLog(serdebug, "SERVER: rows and cols sent to window and drone");
 
+    struct sigaction sa; //initialize sigaction
+    sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
+    sa.sa_sigaction = sig_handler;
+
+    // Register the signal handler for SIGUSR1
+    if (sigaction(SIGUSR1, &sa, NULL) == -1) {
+        perror("sigaction");
+        writeToLog(errors, "SERVER: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+
+    if(sigaction(SIGUSR2, &sa, NULL) == -1){
+        perror("sigaction");
+        writeToLog(errors, "SERVER: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+
+    if (sigaction(SIGINT, &sa, NULL) == -1) {
+        perror("Error setting up SIGINT handler");
+        writeToLog(errors, "SERVER: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+    
     // SOCKET IMPLEMENTATION
     // generating socket
     int sock = socket(AF_INET, SOCK_STREAM, 0);

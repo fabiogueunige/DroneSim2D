@@ -68,7 +68,7 @@ int main(int argc, char* argv[]){
     int portTO = 40000;
     char portStrSe[10];
     char portStrTO[10];
-    char ipAddress[20] = "192.168.1.61";
+    char ipAddress[20] = "192.168.85.196";
     int nprc = 0;
 
     // CREATING PIPE
@@ -180,41 +180,25 @@ int main(int argc, char* argv[]){
         usleep(500000);
         for (size_t i = 0; i < (nprc); ++i) {  // this for cycle passes  to pidString all elements of pidList
             sprintf(pidStr[i], "%d", proIds[i]);
-        }/*
-        if (!right_key){
-            char *wd[] = {"./wd", pidStr[SERVER], pidStr[DRONE], pidStr[INPUT], NULL};
-            sleep(1);
-            writeToLog(debug, "MASTER: Watchdog for input game is running");
-            proIds[WATCHDOG] = spawn("./wd", wd);
-        } Se rimanesse così togliere right key come booleana*/
+        }
     }
     if (keyy == 't' || right_key){
         nprc = 5;
         proIds[OBSTACLES] = spawn("./obstacles", obstacles_path);
         usleep(500000);
         proIds[TARGETS] = spawn("./targets", targets_path);
-        for (size_t i = 3; i < (nprc); ++i) {  // this for cycle passes  to pidString all elements of pidList
+        /*for (size_t i = 3; i < (nprc); ++i) {  // this for cycle passes  to pidString all elements of pidList
             sprintf(pidStr[i], "%d", proIds[i]);
-        }
-        /*
-        if (!right_key){
-            char *wd[] = {"./wd", pidStr[OBSTACLES], pidStr[TARGETS], NULL};
-            sleep(1);
-            writeToLog(debug, "MASTER: Watchdog for target and obstacles is running");
-            proIds[WATCHDOG] = spawn("./wd", wd);
-        }
-        */
-    }/*
-    if (right_key){
-        char *wd[] = {"./wd", pidStr[SERVER], pidStr[DRONE], pidStr[INPUT], pidStr[OBSTACLES], pidStr[TARGETS], NULL};
+        }*/
+        
+    }
+    if (keyy != 't'){
+        char *wd[] = {"./wd", pidStr[SERVER], pidStr[DRONE], pidStr[INPUT], NULL};
         sleep(1);
-        writeToLog(debug, "MASTER: Watchdog for single player is running");
+        writeToLog(debug, "MASTER: Watchdog for input game is running");
         proIds[WATCHDOG] = spawn("./wd", wd);
-    }*/
-    char *wd[] = {"./wd", pidStr[SERVER], pidStr[DRONE], pidStr[INPUT], NULL};
-    sleep(1);
-    writeToLog(debug, "MASTER: Watchdog for input game is running");
-    proIds[WATCHDOG] = spawn("./wd", wd);
+    }
+    
 
     // Waiting for processes to end
     for(int i = 0; i < (nprc + 1); i++){   //waits for all processes to end

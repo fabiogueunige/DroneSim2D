@@ -365,8 +365,8 @@ int main(int argc, char* argv[]){
 
     do {
         if ((read(pipeSefd[0], msg, sizeof(msg))) == -1){
-            perror("error in reading from pipe");
-            writeToLog(errors, "DRONE: error in reading from pipe rows");
+            perror("error in reading from pipe start");
+            writeToLog(errors, "DRONE: error in reading from pipe start");
         }
     }while(strcmp(msg, start) != 0 || sigint_rec);
 
