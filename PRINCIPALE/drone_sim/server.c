@@ -183,6 +183,7 @@ int main(int argc, char* argv[]){
     char sockmsg[MAX_MSG_LEN];
     char *token;
     char stop[] = "STOP";
+    char start[] = "START";
     char ge[] = "GE";
     bool stopReceived = false;
     bool first_set_of_targets_arrived = false;
@@ -215,29 +216,28 @@ int main(int argc, char* argv[]){
     char *argw[] = {"Konsole","-e","./window", piperd[0], NULL};  // path of window process
     window_pid = spawn("konsole", argw); // spawn the child process
     close(pipeWdfd[0]);
-  
 
-    writeToLog(serdebug, "SERVER: reading the pipe with sockets");
-    for (int i= 0; i < NUMCLIENT; i++){
-        char buffer[MAX_MSG_LEN];
-        if ((read(pipe_fd[i*2+1][0], buffer, MAX_MSG_LEN)) == -1) { // reads from obstacles
-            perror("error in reading from pipe from sockChild 1");
-            writeToLog(errors, "SERVER: error in reading from pipe sockChild 1");
-            exit(EXIT_FAILURE);
-        }
-        writeToLog(serdebug, buffer);
-        if (strcmp(buffer, ti) == 0)
-        {
-            pipeTafd[0] = &pipe_fd[i*2+1][0];
-            pipeTafd[1] = &pipe_fd[i*2][1];
-            writeToLog(serdebug, "SERVER: pipeTafd set");
-        }
-        if (strcmp(buffer, oi) == 0)
-        {
-            pipeObfd[0] = &pipe_fd[i*2+1][0];
-            pipeObfd[1] = &pipe_fd[i*2][1];
-            writeToLog(serdebug, "SERVER: pipeObfd set");
-        }
+    struct sigaction sa; //initialize sigaction
+    sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
+    sa.sa_sigaction = sig_handler;
+
+    // Register the signal handler for SIGUSR1
+    if (sigaction(SIGUSR1, &sa, NULL) == -1) {
+        perror("sigaction");
+        writeToLog(errors, "SERVER: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+
+    if(sigaction(SIGUSR2, &sa, NULL) == -1){
+        perror("sigaction");
+        writeToLog(errors, "SERVER: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+
+    if (sigaction(SIGINT, &sa, NULL) == -1) {
+        perror("Error setting up SIGINT handler");
+        writeToLog(errors, "SERVER: error in sigaction()");
+        exit(EXIT_FAILURE);
     }
 
     // Drone pipe and select
@@ -273,10 +273,6 @@ int main(int argc, char* argv[]){
         exit(EXIT_FAILURE);
     }
     writeToLog(serdebug, "SERVER: rows and cols sent to window and drone");
-    // these strings are for make the window knowing which type of data it will receive
-    char *obs = "obs";
-    char *tar = "tar";
-    char *coo = "coo";
 
     // SOCKET IMPLEMENTATION
     // generating socket
@@ -285,6 +281,7 @@ int main(int argc, char* argv[]){
         perror("socket");
         return 1;
     }
+    
     // Bind the socket
     struct sockaddr_in server_address;
     memset(&server_address, 0, sizeof(server_address));
@@ -345,30 +342,44 @@ int main(int argc, char* argv[]){
         close(pipe_fd[i*2+1][1]);
     }
     usleep(500000);
+ 
+    writeToLog(serdebug, "SERVER: reading the pipe with sockets");
+    for (int i= 0; i < NUMCLIENT; i++){
+        char buffer[MAX_MSG_LEN];
+        if ((read(pipe_fd[i*2+1][0], buffer, MAX_MSG_LEN)) == -1) { // reads from obstacles
+            perror("error in reading from pipe from sockChild 1");
+            writeToLog(errors, "SERVER: error in reading from pipe sockChild 1");
+            exit(EXIT_FAILURE);
+        }
+        writeToLog(serdebug, buffer);
+        if (strcmp(buffer, ti) == 0)
+        {
+            pipeTafd[0] = &pipe_fd[i*2+1][0];
+            pipeTafd[1] = &pipe_fd[i*2][1];
+            writeToLog(serdebug, "SERVER: pipeTafd set");
+        }
+        if (strcmp(buffer, oi) == 0)
+        {
+            pipeObfd[0] = &pipe_fd[i*2+1][0];
+            pipeObfd[1] = &pipe_fd[i*2][1];
+            writeToLog(serdebug, "SERVER: pipeObfd set");
+        }
+    }
+
+    // Starting the drone
+    if ((write(pipeDrfd[1], start, strlen(start) + 1)) == -1) { // writes to drone
+        perror("error in writing to pipe");
+        writeToLog(errors, "SERVER: error in writing to pipe drone to make him start");
+        exit(EXIT_FAILURE);
+    }
+
+    // these strings are for make the window knowing which type of data it will receive
+    char *obs = "obs";
+    char *tar = "tar";
+    char *coo = "coo";
 
    // SIGNALS
-    struct sigaction sa; //initialize sigaction
-    sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
-    sa.sa_sigaction = sig_handler;
-
-    // Register the signal handler for SIGUSR1
-    if (sigaction(SIGUSR1, &sa, NULL) == -1) {
-        perror("sigaction");
-        writeToLog(errors, "SERVER: error in sigaction()");
-        exit(EXIT_FAILURE);
-    }
-
-    if(sigaction(SIGUSR2, &sa, NULL) == -1){
-        perror("sigaction");
-        writeToLog(errors, "SERVER: error in sigaction()");
-        exit(EXIT_FAILURE);
-    }
-
-    if (sigaction(SIGINT, &sa, NULL) == -1) {
-        perror("Error setting up SIGINT handler");
-        writeToLog(errors, "SERVER: error in sigaction()");
-        exit(EXIT_FAILURE);
-    }
+    
     int count = 0;
     float num1, num2;
     int sel;

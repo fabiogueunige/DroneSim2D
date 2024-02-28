@@ -1,8 +1,672 @@
-Mon Feb 26 17:04:44 2024
+Tue Feb 27 18:49:18 2024
  => WINDOW: curses mode started
-Mon Feb 26 17:04:44 2024
+Tue Feb 27 18:49:18 2024
  => WINDOW: colors initialized
-Mon Feb 26 17:04:44 2024
+Tue Feb 27 18:49:18 2024
  => WINDOW: max rows and cols taken
-Mon Feb 26 17:04:44 2024
+Tue Feb 27 18:49:18 2024
  => WINDOW: pipe set
+Tue Feb 27 18:49:18 2024
+ => WINDOW: rows = 50, cols = 100
+Tue Feb 27 18:49:18 2024
+ => WINDOW: window moved after resizing
+Tue Feb 27 18:49:18 2024
+ => WINDOW: window created
+Tue Feb 27 18:49:20 2024
+ => obs
+Tue Feb 27 18:49:20 2024
+ => WINDOW: number of obstacles 6
+Tue Feb 27 18:49:20 2024
+ => WINDOW: obstacle 0: x = 13, y = 27
+Tue Feb 27 18:49:20 2024
+ => WINDOW: obstacle 1: x = 46, y = 6
+Tue Feb 27 18:49:20 2024
+ => WINDOW: obstacle 2: x = 98, y = 15
+Tue Feb 27 18:49:20 2024
+ => WINDOW: obstacle 3: x = 22, y = 30
+Tue Feb 27 18:49:20 2024
+ => WINDOW: obstacle 4: x = 40, y = 36
+Tue Feb 27 18:49:20 2024
+ => WINDOW: obstacle 5: x = 51, y = 7
+Tue Feb 27 18:49:20 2024
+ => coo
+Tue Feb 27 18:49:20 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:20 2024
+ => coo
+Tue Feb 27 18:49:20 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:20 2024
+ => coo
+Tue Feb 27 18:49:20 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:20 2024
+ => coo
+Tue Feb 27 18:49:20 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:20 2024
+ => coo
+Tue Feb 27 18:49:20 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:21 2024
+ => coo
+Tue Feb 27 18:49:21 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:21 2024
+ => coo
+Tue Feb 27 18:49:21 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:21 2024
+ => coo
+Tue Feb 27 18:49:21 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:21 2024
+ => coo
+Tue Feb 27 18:49:21 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:21 2024
+ => coo
+Tue Feb 27 18:49:21 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:21 2024
+ => coo
+Tue Feb 27 18:49:21 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:21 2024
+ => coo
+Tue Feb 27 18:49:21 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:21 2024
+ => coo
+Tue Feb 27 18:49:21 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:21 2024
+ => coo
+Tue Feb 27 18:49:21 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:21 2024
+ => coo
+Tue Feb 27 18:49:21 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:22 2024
+ => coo
+Tue Feb 27 18:49:22 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:22 2024
+ => tar
+Tue Feb 27 18:49:22 2024
+ => WINDOW: number of targets 16
+Tue Feb 27 18:49:22 2024
+ => 84,14
+Tue Feb 27 18:49:22 2024
+ => 79,25
+Tue Feb 27 18:49:22 2024
+ => 25,17
+Tue Feb 27 18:49:22 2024
+ => 35,22
+Tue Feb 27 18:49:22 2024
+ => 34,42
+Tue Feb 27 18:49:22 2024
+ => 74,45
+Tue Feb 27 18:49:22 2024
+ => 28,19
+Tue Feb 27 18:49:22 2024
+ => 50,2
+Tue Feb 27 18:49:22 2024
+ => 61,5
+Tue Feb 27 18:49:22 2024
+ => 80,33
+Tue Feb 27 18:49:22 2024
+ => 38,37
+Tue Feb 27 18:49:22 2024
+ => 33,34
+Tue Feb 27 18:49:22 2024
+ => 38,36
+Tue Feb 27 18:49:22 2024
+ => 26,37
+Tue Feb 27 18:49:22 2024
+ => 45,21
+Tue Feb 27 18:49:22 2024
+ => 13,23
+Tue Feb 27 18:49:22 2024
+ => coo
+Tue Feb 27 18:49:22 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:22 2024
+ => coo
+Tue Feb 27 18:49:22 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:22 2024
+ => coo
+Tue Feb 27 18:49:22 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:22 2024
+ => coo
+Tue Feb 27 18:49:22 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:22 2024
+ => coo
+Tue Feb 27 18:49:22 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:22 2024
+ => coo
+Tue Feb 27 18:49:22 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:22 2024
+ => coo
+Tue Feb 27 18:49:22 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:22 2024
+ => coo
+Tue Feb 27 18:49:22 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:22 2024
+ => coo
+Tue Feb 27 18:49:22 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:22 2024
+ => coo
+Tue Feb 27 18:49:22 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:23 2024
+ => coo
+Tue Feb 27 18:49:23 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:23 2024
+ => coo
+Tue Feb 27 18:49:23 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:23 2024
+ => coo
+Tue Feb 27 18:49:23 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:23 2024
+ => coo
+Tue Feb 27 18:49:23 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:23 2024
+ => coo
+Tue Feb 27 18:49:23 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:23 2024
+ => coo
+Tue Feb 27 18:49:23 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:23 2024
+ => coo
+Tue Feb 27 18:49:23 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:23 2024
+ => coo
+Tue Feb 27 18:49:23 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:23 2024
+ => coo
+Tue Feb 27 18:49:23 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:23 2024
+ => coo
+Tue Feb 27 18:49:23 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:24 2024
+ => coo
+Tue Feb 27 18:49:24 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:24 2024
+ => coo
+Tue Feb 27 18:49:24 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:24 2024
+ => coo
+Tue Feb 27 18:49:24 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:24 2024
+ => coo
+Tue Feb 27 18:49:24 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:24 2024
+ => coo
+Tue Feb 27 18:49:24 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:24 2024
+ => coo
+Tue Feb 27 18:49:24 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:24 2024
+ => coo
+Tue Feb 27 18:49:24 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:24 2024
+ => coo
+Tue Feb 27 18:49:24 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:24 2024
+ => coo
+Tue Feb 27 18:49:24 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:24 2024
+ => coo
+Tue Feb 27 18:49:24 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:25 2024
+ => coo
+Tue Feb 27 18:49:25 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:25 2024
+ => coo
+Tue Feb 27 18:49:25 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:25 2024
+ => coo
+Tue Feb 27 18:49:25 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:25 2024
+ => coo
+Tue Feb 27 18:49:25 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:25 2024
+ => coo
+Tue Feb 27 18:49:25 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:25 2024
+ => coo
+Tue Feb 27 18:49:25 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:25 2024
+ => coo
+Tue Feb 27 18:49:25 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:25 2024
+ => coo
+Tue Feb 27 18:49:25 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:25 2024
+ => coo
+Tue Feb 27 18:49:25 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:25 2024
+ => coo
+Tue Feb 27 18:49:25 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:26 2024
+ => coo
+Tue Feb 27 18:49:26 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:26 2024
+ => coo
+Tue Feb 27 18:49:26 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:26 2024
+ => coo
+Tue Feb 27 18:49:26 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:26 2024
+ => coo
+Tue Feb 27 18:49:26 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:26 2024
+ => coo
+Tue Feb 27 18:49:26 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:26 2024
+ => coo
+Tue Feb 27 18:49:26 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:26 2024
+ => coo
+Tue Feb 27 18:49:26 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:26 2024
+ => coo
+Tue Feb 27 18:49:26 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:26 2024
+ => coo
+Tue Feb 27 18:49:26 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:26 2024
+ => coo
+Tue Feb 27 18:49:26 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:27 2024
+ => coo
+Tue Feb 27 18:49:27 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:27 2024
+ => coo
+Tue Feb 27 18:49:27 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:27 2024
+ => coo
+Tue Feb 27 18:49:27 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:27 2024
+ => coo
+Tue Feb 27 18:49:27 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:27 2024
+ => coo
+Tue Feb 27 18:49:27 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:27 2024
+ => coo
+Tue Feb 27 18:49:27 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:27 2024
+ => coo
+Tue Feb 27 18:49:27 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:27 2024
+ => coo
+Tue Feb 27 18:49:27 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:27 2024
+ => coo
+Tue Feb 27 18:49:27 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:27 2024
+ => coo
+Tue Feb 27 18:49:27 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:28 2024
+ => coo
+Tue Feb 27 18:49:28 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:29 2024
+ => coo
+Tue Feb 27 18:49:29 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:29 2024
+ => coo
+Tue Feb 27 18:49:29 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:29 2024
+ => coo
+Tue Feb 27 18:49:29 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:29 2024
+ => coo
+Tue Feb 27 18:49:29 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:29 2024
+ => coo
+Tue Feb 27 18:49:29 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:29 2024
+ => coo
+Tue Feb 27 18:49:29 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:29 2024
+ => coo
+Tue Feb 27 18:49:29 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:29 2024
+ => coo
+Tue Feb 27 18:49:29 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:29 2024
+ => coo
+Tue Feb 27 18:49:29 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:29 2024
+ => coo
+Tue Feb 27 18:49:29 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:30 2024
+ => coo
+Tue Feb 27 18:49:30 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:30 2024
+ => coo
+Tue Feb 27 18:49:30 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:30 2024
+ => coo
+Tue Feb 27 18:49:30 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:30 2024
+ => coo
+Tue Feb 27 18:49:30 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:30 2024
+ => coo
+Tue Feb 27 18:49:30 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:30 2024
+ => coo
+Tue Feb 27 18:49:30 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:30 2024
+ => obs
+Tue Feb 27 18:49:30 2024
+ => WINDOW: number of obstacles 19
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 0: x = 38, y = 19
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 1: x = 96, y = 34
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 2: x = 51, y = 16
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 3: x = 15, y = 19
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 4: x = 9, y = 31
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 5: x = 38, y = 12
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 6: x = 53, y = 9
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 7: x = 89, y = 37
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 8: x = 17, y = 3
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 9: x = 44, y = 8
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 10: x = 74, y = 27
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 11: x = 7, y = 41
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 12: x = 52, y = 23
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 13: x = 36, y = 25
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 14: x = 56, y = 25
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 15: x = 18, y = 45
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 16: x = 73, y = 29
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 17: x = 67, y = 31
+Tue Feb 27 18:49:30 2024
+ => WINDOW: obstacle 18: x = 12, y = 11
+Tue Feb 27 18:49:30 2024
+ => coo
+Tue Feb 27 18:49:30 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:30 2024
+ => coo
+Tue Feb 27 18:49:30 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:30 2024
+ => coo
+Tue Feb 27 18:49:30 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:30 2024
+ => coo
+Tue Feb 27 18:49:30 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:30 2024
+ => coo
+Tue Feb 27 18:49:30 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:31 2024
+ => coo
+Tue Feb 27 18:49:31 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:31 2024
+ => coo
+Tue Feb 27 18:49:31 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:31 2024
+ => coo
+Tue Feb 27 18:49:31 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:31 2024
+ => coo
+Tue Feb 27 18:49:31 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:31 2024
+ => coo
+Tue Feb 27 18:49:31 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:31 2024
+ => coo
+Tue Feb 27 18:49:31 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:31 2024
+ => coo
+Tue Feb 27 18:49:31 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:31 2024
+ => coo
+Tue Feb 27 18:49:31 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:31 2024
+ => coo
+Tue Feb 27 18:49:31 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:31 2024
+ => coo
+Tue Feb 27 18:49:31 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:32 2024
+ => coo
+Tue Feb 27 18:49:32 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:32 2024
+ => coo
+Tue Feb 27 18:49:32 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:32 2024
+ => coo
+Tue Feb 27 18:49:32 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:32 2024
+ => coo
+Tue Feb 27 18:49:32 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:32 2024
+ => coo
+Tue Feb 27 18:49:32 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:32 2024
+ => coo
+Tue Feb 27 18:49:32 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:32 2024
+ => coo
+Tue Feb 27 18:49:32 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:32 2024
+ => coo
+Tue Feb 27 18:49:32 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:32 2024
+ => coo
+Tue Feb 27 18:49:32 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:32 2024
+ => coo
+Tue Feb 27 18:49:32 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:33 2024
+ => coo
+Tue Feb 27 18:49:33 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:33 2024
+ => coo
+Tue Feb 27 18:49:33 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:33 2024
+ => coo
+Tue Feb 27 18:49:33 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:33 2024
+ => coo
+Tue Feb 27 18:49:33 2024
+ => WINDOW: reading drone
+Tue Feb 27 18:49:33 2024
+ => coo
+Tue Feb 27 18:49:33 2024
+ => WINDOW: reading drone

@@ -6,6 +6,7 @@
 #include <unistd.h> 
 #include <stdlib.h>
 #include <sys/wait.h>
+#include <signal.h>
 #include <termios.h>
 #include <sys/mman.h>
 #include <stdbool.h>
@@ -15,6 +16,7 @@
 #include <netdb.h> 
 #include <arpa/inet.h>
 #include <sys/select.h>
+#include <errno.h>
 
 #define MAX_TARGETS 20
 #define MAX_MSG_LEN 1024
@@ -27,11 +29,40 @@ typedef struct {
     float y;
     bool taken;
 } targets;
+/*
+void sig_handler(int signo, siginfo_t *info, void *context) {
+
+    if (signo == SIGUSR1) {
+        FILE *debug = fopen("logfiles/debug.log", "a");
+        // SIGUSR1 received
+        wd_pid = info->si_pid;
+        fprintf(debug, "%s\n", "TARGETS: signal SIGUSR1 received from WATCH DOG");
+        kill(wd_pid, SIGUSR1);
+        fclose(debug);
+    }
+    
+    if (signo == SIGUSR2){
+        FILE *debug = fopen("logfiles/debug.log", "a");
+        fprintf(debug, "%s\n", "TARGETS: terminating by WATCH DOG");
+        fclose(debug);
+        exit(EXIT_FAILURE);
+    }
+    if(signo == SIGINT){
+        //pressed q or CTRL+C
+        printf("TARGETS: Terminating with return value 0...");
+        FILE *debug = fopen("logfiles/debug.log", "a");
+        fprintf(debug, "%s\n", "TARGETS: terminating with return value 0...");
+        fclose(debug);
+        sigint_rec = true;
+    }
+    
+}*/
 
 void writeToLog(FILE * logFile, const char *message) {
     fprintf(logFile, "%s\n", message);
     fflush(logFile);
 }
+
 
 void Receive(int sockfd, char *buffer, FILE *debug) {
     FILE *error = fopen("logfiles/errors.log", "a");
@@ -124,10 +155,11 @@ int main (int argc, char *argv[])
     }
     
     // Connect to the server
-    do {
-        writeToLog(tardebug, "TARGET: trying to connect to serverSocket");
+    if ((connect(sock, (struct sockaddr*)&server_address, sizeof(server_address))) == -1) {
+        perror("connect");
+        writeToLog(errors, "TARGETS: error in connecting to server");
+        return 1;
     }
-    while ((connect(sock, (struct sockaddr*)&server_address, sizeof(server_address))));
     writeToLog(debug, "TARGETS: connected to serverSocket");
 
     
@@ -138,7 +170,30 @@ int main (int argc, char *argv[])
     }
     writeToLog(tardebug, "TARGETS: message TI sent to server");
 
+    // SIGNALS
+    /*struct sigaction sa; //initialize sigaction
+    sa.sa_flags = SA_SIGINFO; // Use sa_sigaction field instead of sa_handler
+    sa.sa_sigaction = sig_handler;
 
+    // Register the signal handler for SIGUSR1
+    if (sigaction(SIGUSR1, &sa, NULL) == -1) {
+        perror("sigaction");
+        writeToLog(errors, "TARGETS: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+
+    if(sigaction(SIGUSR2, &sa, NULL) == -1){
+        perror("sigaction");
+        writeToLog(errors, "INPUT: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+
+    if (sigaction(SIGINT, &sa, NULL) == -1) {
+        perror("Error setting up SIGINT handler");
+        writeToLog(errors, "SERVER: error in sigaction()");
+        exit(EXIT_FAILURE);
+    }
+    */
     // receiving rows and cols from server
     if ((recv(sock, sockmsg, MAX_MSG_LEN, 0)) < 0) {
         writeToLog(errors, "Error receiving message from server");
@@ -153,7 +208,7 @@ int main (int argc, char *argv[])
     cols = (int)c;
     printf("TARGETS: rows = %d, cols = %d\n", rows, cols);
     sleep(2);
-    while(!stopReceived){
+    while(!stopReceived /*|| !sigint_rec*/){
         time_t t = time(NULL);
         ge_flag = false;
         srand(time(NULL)); // for change every time the seed of rand()
@@ -185,10 +240,13 @@ int main (int argc, char *argv[])
 
         // Send the targets to the socket server
         Send(sock, targetStr, tardebug);
-        
+        int sel;
         while(!ge_flag){
             FD_SET(sock, &readfds);
-            int sel = select(sock+1, &readfds, NULL, NULL, NULL);
+            do{
+                sel = select(sock+1, &readfds, NULL, NULL, NULL);
+            }
+            while(sel<0 && errno==EINTR);
             if (sel<0){
                 writeToLog(errors, "TARGETS: error in select");
                 perror("select");
