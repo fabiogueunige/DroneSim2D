@@ -88,6 +88,9 @@ void Send(int sock, char *msg, FILE *obsdebug){
 }
 
 void Receive(int sockfd, char *buffer, FILE *debug) {
+    /*
+    Function for receiving a message from the client and echoing it back to the client. 
+    */
     FILE *error = fopen("logfiles/errors.log", "a");
     if(recv(sockfd, buffer, MAX_MSG_LEN, 0) < 0) {
         writeToLog(error, "SOCKSERVER: Error receiving message from client");

@@ -29,34 +29,6 @@ typedef struct {
     float y;
     bool taken;
 } targets;
-/*
-void sig_handler(int signo, siginfo_t *info, void *context) {
-
-    if (signo == SIGUSR1) {
-        FILE *debug = fopen("logfiles/debug.log", "a");
-        // SIGUSR1 received
-        wd_pid = info->si_pid;
-        fprintf(debug, "%s\n", "TARGETS: signal SIGUSR1 received from WATCH DOG");
-        kill(wd_pid, SIGUSR1);
-        fclose(debug);
-    }
-    
-    if (signo == SIGUSR2){
-        FILE *debug = fopen("logfiles/debug.log", "a");
-        fprintf(debug, "%s\n", "TARGETS: terminating by WATCH DOG");
-        fclose(debug);
-        exit(EXIT_FAILURE);
-    }
-    if(signo == SIGINT){
-        //pressed q or CTRL+C
-        printf("TARGETS: Terminating with return value 0...");
-        FILE *debug = fopen("logfiles/debug.log", "a");
-        fprintf(debug, "%s\n", "TARGETS: terminating with return value 0...");
-        fclose(debug);
-        sigint_rec = true;
-    }
-    
-}*/
 
 void writeToLog(FILE * logFile, const char *message) {
     fprintf(logFile, "%s\n", message);
@@ -65,6 +37,9 @@ void writeToLog(FILE * logFile, const char *message) {
 
 
 void Receive(int sockfd, char *buffer, FILE *debug) {
+    /*
+    Function for receiving a message from the client and echoing it back to the client. 
+    */
     FILE *error = fopen("logfiles/errors.log", "a");
     if(recv(sockfd, buffer, MAX_MSG_LEN, 0) < 0) {
         writeToLog(error, "SOCKSERVER: Error receiving message from client");
@@ -80,6 +55,9 @@ void Receive(int sockfd, char *buffer, FILE *debug) {
 }
 
 void Send(int sock, char *msg, FILE *debug){
+    /*
+    Function to send a message and receive an echo.
+    */
     FILE *error = fopen("logfiles/errors.log", "a");
     if (send(sock, msg, strlen(msg) + 1, 0) == -1) {
         perror("send");

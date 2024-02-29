@@ -222,7 +222,6 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
     }
 }
 
-// lock() per impedire che altri usino il log file -> unlock()
 int main(int argc, char* argv[]){
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
@@ -231,10 +230,6 @@ int main(int argc, char* argv[]){
     fd_set write_fds;
     FD_ZERO(&read_fds);
     //FD_ZERO(&write_fds);
-    /*char * string = argv[4];   // i
-    pid_t server_pid;
-    server_pid = atoi(string);
-    writeToLog(drdebug, string);*/
     int keyfd; //readable file descriptor for key pressed in input 
     sscanf(argv[1], "%d", &keyfd);
     char input;
@@ -536,11 +531,6 @@ int main(int argc, char* argv[]){
                         F[i] = F[i] + FORCE_MODULE * vf[i];
                     break;
                 case 'q':
-                    /*if(kill(server_pid, SIGINT) == -1){
-                        perror("error in sending signal to server");
-                        writeToLog(errors, "DRONE: error in sending ending signal to server");
-                        exit(EXIT_SUCCESS);  // Exit the program
-                    }*/
                     writeToLog(debug, "DRONE: Exiting program...");
                     exit(EXIT_SUCCESS);
                 case 'u':
@@ -593,13 +583,8 @@ int main(int argc, char* argv[]){
             frx += calculateRepulsiveForcex(x, y, edges[i]->x, edges[i]->y, vx-5);
             fry += calculateRepulsiveForcey(x, y, edges[i]->x, edges[i]->y, vy-5);
         }
-        //F[0]+=frx;
-        //F[1]+=fry;
-        //F[0]-=fax;
-        //F[1]-=fay;
         printf("frx: %d fry: %d\n", frx, fry);
         printf("fax: %d fay: %d\n", fax, fay);
-        //updatePosition(&x, &y, &vx, &vy, T, F[0], F[1]);
         updatePosition(&x, &y, &vx, &vy, T, F[0]+frx+fax, F[1]+ fry+fay);
 
         if (x<0 || x>cols || y<0 || y>rows){ // if the drone is out of bounds
@@ -630,16 +615,6 @@ int main(int argc, char* argv[]){
         drone->fx = F[0];
         drone->fy = F[1];
 
-        /*if((write(pipeSefd[1], "coo", strlen("coo"))) == -1){
-            perror("error in writing to pipe");
-            writeToLog(errors, "DRONE: error in writing coo to pipe");
-            exit(EXIT_FAILURE);
-        }*/
-        /*if((write(pipeSefd[1], coo, strlen(coo))) == -1){
-            perror("error in writing to pipe");
-            writeToLog(errors, "DRONE: error in writing coo to pipe server");
-            exit(EXIT_FAILURE);
-        }*/
         if ((write(pipeSefd[1], drone, sizeof(Drone))) == -1){
             perror("error in writing to pipe");
             writeToLog(errors, "DRONE: error in writing to pipe x");

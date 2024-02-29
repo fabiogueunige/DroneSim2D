@@ -25,6 +25,10 @@ void writeToLog(FILE * logFile, const char *message) {
 }
 
 void Receive(int sockfd, char *buffer, int *pipetowritefd, FILE *sckfile) {
+    /*
+    Function for receiving a message from the client and echoing it back to the client. 
+    It also writes to its parent the message received through the pipe given as input.
+    */
     FILE *error = fopen("logfiles/errors.log", "a");
     if(recv(sockfd, buffer, MAX_MSG_LEN, 0) < 0) {
         writeToLog(error, "SOCKSERVER: Error receiving message from client");
@@ -45,6 +49,9 @@ void Receive(int sockfd, char *buffer, int *pipetowritefd, FILE *sckfile) {
 }
 
 void Send(int sock, char *msg, FILE *debug){
+    /*
+    Function to send a message and receive an echo.
+    */
     FILE *error = fopen("logfiles/errors.log", "a");
     if (send(sock, msg, strlen(msg) + 1, 0) == -1) {
         perror("send");
@@ -81,16 +88,12 @@ int main (int argc, char *argv[]) {
     char ge[] = "GE";
     bool stopReceived = false;
 
-
-    sscanf(argv[4], "%d", &identifier);
+    sscanf(argv[4], "%d", &identifier); // the server identifies which child is receiving targets and which obs
     sprintf(msg, "logfiles/socketServer%d.log",identifier);
 
     FILE * sockdebug = fopen(msg, "w");
     writeToLog(sockdebug, "Socket server started");
-    
-    // strlen = numero caratteri di una stringa
-    // sizeof = numero di byte di un tipo di dato (non sicuro -> sostituidci)
-
+    // imoprt the pipe and sock fd from the parent process
     sscanf(argv[1], "%d", &sockfd);
     sscanf(argv[2], "%d", &pipeSe[0]);
     sscanf(argv[3], "%d", &pipeSe[1]);
@@ -120,14 +123,6 @@ int main (int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
     while (!stopReceived) {
-        /*memset(msg, '\0', MAX_MSG_LEN);
-        Receive(sockfd, msg, &pipeSe[1], sockdebug);*/
-        //writeToLog(sockdebug, "SOCKSERVER: Pipe sent to parent process");
-
-        
-        /*struct timeval tv;
-        tv.tv_sec = 1;
-        tv.tv_usec = 0;*/
 
         FD_SET(pipeSe[0], &readfds);
         FD_SET(sockfd, &readfds);
