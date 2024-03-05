@@ -16,8 +16,6 @@ This simulation environment implents several different processes to manage all t
 All the processes exchange data through shared memeory or pipes between them and all of them are chldren of the master process.   
 
 
-![Video](https://github.com/leleviola/arp/blob/resources/resources/Video%20del%2015-01-2024%2023%3A29%3A18.webm)
-
 ## Repository Architecture
 
 This github package contains **drone_sim** folder that is the main folder. Insided that there are:  
@@ -46,10 +44,8 @@ This several process are important to build a modular project and gives differen
 The balckboard receives information through the shared memory, but the axcess to the data is reguled and controlled by a semaphore.
 
 The drone compute the position information with the second Newton Law considering as the sum of all the forces the value taken by the input, subtracting the friction forces and calculating the acceleration.  
-So, with this parametr, appliyng the Kinematics law for a rigid body, it computes the position of the robot in the arena. This position is given to the window process that draw the drone's position in the space.  
+So, with this parametr, aplliyng th Kinematics law for a rigid body, it computes the position of the robot in the arena. This position is given to the window process that draw the drone's position in the space.  
 We need to specify that, even if the velocity is different from zero, if its module isn't > 5, the drone will not move. This is due to the fact that coordinates must be integer, while velocity and the other variables are floats (so it is because of an approximation). 
-When the drone is close to obstacle, they apply to it a repulsive force, modeled following the Lathombe-Kathib model. This for each obstacle in the window, including the edges, that are considered as obstacles. When the drone exits from the window (due to bug or other causes) it respawn automatically to the spawn point, which is set exatly at the centre of the window.
-For better reaching target, a small attractive force has been setted, which is active when the drone is close to it.
 
 KEYS INSTRUCTIONS:
 E: MOVE UP
@@ -118,6 +114,7 @@ There are several areas in which this project can be better. The most of them wi
 - data exchange: change the data sharing from the shared memory to pipes that reads and writes on file descriptors. Useful because the shared memory is more easy to implement , but it is not good for the data safety and privacy
 - Socket: to implement an open acess to the drone simulator from different point and machines
 - Targets and obstacles: implement two processes that generate target and obstacle that the drone has to reach and avoid. It can be implemented also a scoreBoard.
+- The drone gives problems when moving in coordinates that contains x = 0 or y = 0 (it stops if the velocity is too low).
 
 ## Licence
 
