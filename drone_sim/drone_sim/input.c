@@ -76,10 +76,18 @@ char getKeyPress() {
 int main(int argc, char* argv[]){
     FILE * debug = fopen("logfiles/debug.log", "a");
     FILE * errors = fopen("logfiles/errors.log", "a");
-    writeToLog(debug, "INPUT: process started");
-    printf("INPUT: process started\n");
     char ch;
     int writefd;
+
+    if (debug == NULL || errors == NULL) {
+        printf("INPUT: error opening log files\n");
+        exit(EXIT_FAILURE);
+    }
+
+    writeToLog(debug, "INPUT: process started");
+    fclose(debug);
+    printf("INPUT: process started\n");
+    
     sscanf(argv[1], "%d", &writefd);
     // SIGNALS
     struct sigaction sa; //initialize sigaction
@@ -109,8 +117,15 @@ int main(int argc, char* argv[]){
             //flags->exit_flag = true;
             exit_flag = true;
         }
-        write(writefd, &ch, sizeof(char));
+        if ((write(writefd, &ch, sizeof(char))) == -1) {
+            perror("write");
+            writeToLog(errors, "INPUT: error in write to drone");
+            exit(EXIT_FAILURE);
+        }
         fsync(writefd);
     }
+
+
+    fclose(errors);
     return 0;
 }

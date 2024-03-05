@@ -63,7 +63,7 @@ void sig_handler(int signo, siginfo_t *info, void *context) {
     }
     if (signo == SIGUSR2) {
         // input has already terminated, so 
-        printf("WATCH DOG: quitting program and returning 0, terminating drone and server...\n");
+        printf("WATCH DOG: quitting program and returning 0, terminating obstacles and server...\n");
         kill(server_pid, SIGINT);
         exit(EXIT_SUCCESS);
     }
@@ -106,15 +106,19 @@ int main(int argc, char* argv[]){
     char * string1 = argv[1];   // s
     char * string2 = argv[2];   // d
     char * string3 = argv[3];   // i
+
     server_pid = atoi(string1);
     drone_pid = atoi(string2);
     input_pid = atoi(string3);
+
     
     while(1){
+        time_t t = time(NULL);
         writeToLog(debug, "WATCH DOG: sending signals to processes");
         server_check = FALSE;
         input_check = FALSE;
         drone_check = FALSE;
+
         if (kill(server_pid, SIGUSR1) == -1) {  // send SIGUSR1 to server
             perror("kill server");
             writeToLog(errors, "WATCH DOG: error in kill server");
@@ -133,11 +137,10 @@ int main(int argc, char* argv[]){
         }
         sleep(1);
 
-        sleep(10); // timeout
-
-        /* Here we decided to identificate wich process stopped working using 3 different if in order to make, 
-        in the 2nd assignment, the watch dog to close and reopen only the process that stopped working, then if after a certain 
-        number of times it doesn't respond, we will terminate it. In firt assignment we only make it terminate the whole program.*/
+        time_t t2 = time(NULL);
+        while(t2-t<10){
+            t2 = time(NULL);
+        }
 
         if(server_check==FALSE) //checks if server responded
         {
@@ -160,7 +163,7 @@ int main(int argc, char* argv[]){
             printf("WATCH DOG: SERVER received signal\n");
         
 
-        if(drone_check==FALSE) //checks if server responded
+        if(drone_check==FALSE) //checks if drone responded
         {
             writeToLog(debug, "WATCH DOG: DRONE is not responding, terminating the program...");
             if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
@@ -180,7 +183,7 @@ int main(int argc, char* argv[]){
         else
             printf("WATCH DOG: DRONE received signal\n");
         
-        if(input_check==FALSE) //checks if server responded
+        if(input_check==FALSE) //checks if input responded
         {
             writeToLog(debug, "WATCH DOG: INPUT is not responding, terminating the program...");
             if (kill(server_pid, SIGUSR2) == -1) {  // send SIGUSR1 to server
@@ -199,7 +202,6 @@ int main(int argc, char* argv[]){
         }
         else
             printf("WATCH DOG: INPUT received signal\n");
-        // sends a signal to all processes to check they are alive
     }
     fclose(debug);
     fclose(errors);
